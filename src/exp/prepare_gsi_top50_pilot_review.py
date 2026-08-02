@@ -78,8 +78,12 @@ def draw_overview_card(sheet: Image.Image, item: pd.Series, x: int, y: int) -> N
     )
 
 
-def build_overview_pages(top50: pd.DataFrame) -> tuple[list[Path], dict[str, str]]:
-    OVERVIEW_DIR.mkdir(parents=True, exist_ok=True)
+def build_overview_pages(
+    top50: pd.DataFrame,
+    output_dir: Path = OVERVIEW_DIR,
+    title: str = "GSI top-50 full-resolution pilot review — overview",
+) -> tuple[list[Path], dict[str, str]]:
+    output_dir.mkdir(parents=True, exist_ok=True)
     outputs: list[Path] = []
     page_by_review_id: dict[str, str] = {}
     for page_number, start in enumerate(range(0, len(top50), 4), start=1):
@@ -88,7 +92,7 @@ def build_overview_pages(top50: pd.DataFrame) -> tuple[list[Path], dict[str, str
         draw = ImageDraw.Draw(sheet)
         draw.text(
             (25, 14),
-            "GSI top-50 full-resolution pilot review — overview",
+            title,
             font=TITLE_FONT,
             fill="#102A43",
         )
@@ -102,7 +106,7 @@ def build_overview_pages(top50: pd.DataFrame) -> tuple[list[Path], dict[str, str
             x = 20 + (position % 2) * 1610
             y = 100 + (position // 2) * 1135
             draw_overview_card(sheet, item, x, y)
-        destination = OVERVIEW_DIR / f"overview_p{page_number:02d}.jpg"
+        destination = output_dir / f"overview_p{page_number:02d}.jpg"
         sheet.save(destination, format="JPEG", quality=94, optimize=True)
         outputs.append(destination)
         for review_id in page["review_id"]:
@@ -110,7 +114,7 @@ def build_overview_pages(top50: pd.DataFrame) -> tuple[list[Path], dict[str, str
     return outputs, page_by_review_id
 
 
-def build_detail_page(item: pd.Series) -> Path | None:
+def build_detail_page(item: pd.Series, output_dir: Path = DETAIL_DIR) -> Path | None:
     source_path = ROOT / item["full_photo_path"]
     with Image.open(source_path) as source:
         image = source.convert("RGB")
@@ -171,8 +175,8 @@ def build_detail_page(item: pd.Series) -> Path | None:
                     stroke_width=3,
                     stroke_fill="#102A43",
                 )
-    DETAIL_DIR.mkdir(parents=True, exist_ok=True)
-    destination = DETAIL_DIR / (
+    output_dir.mkdir(parents=True, exist_ok=True)
+    destination = output_dir / (
         f"rank{int(item['global_priority_rank']):02d}_{item['review_id']}_detail.jpg"
     )
     sheet.save(destination, format="JPEG", quality=94, optimize=True)
