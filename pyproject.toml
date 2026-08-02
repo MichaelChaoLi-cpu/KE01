@@ -3,6 +3,16 @@ name = "KE01"
 version = "0.0.1"
 dependencies = [
     "dvc>=3.67.1",
+    "geopandas>=1.1.4",
+    "mapbox-vector-tile>=2.2.0",
+    "matplotlib>=3.11.1",
+    "mercantile>=1.2.1",
+    "opencv-python-headless>=5.0.0.93",
+    "openpyxl>=3.1.5",
+    "pandas>=3.0.5",
+    "pyarrow>=25.0.0",
+    "torch>=2.13.0",
+    "transformers>=5.14.1",
 ]
 
 authors = [
