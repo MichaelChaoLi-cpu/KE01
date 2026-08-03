@@ -1,0 +1,742 @@
+doc_type: actionbrief
+version: 0.1.0
+
+datasetDictionary:
+  population_and_boundaries:
+    datasetSourceName: 2020 Population Census T001231 and e-Stat Kumamoto small-area geography
+    datasetDescription: Population, household, age-structure, 125 m mesh, disclosure-group, and municipality geography used in the final baseline, exposure, and spatial assignments.
+    datasetAttribute: other
+    datasetProvider: Statistics Bureau of Japan and e-Stat
+    datasetGenerationInfo: Official 2020 census tabulation joined to official mesh and small-area geometries; suppressed values remain missing and disclosure groups are preserved.
+    datasetPeriod: 2020 census reference year
+    datasetScale: Kumamoto Prefecture; 62,945 populated meshes and 36,657 disclosure groups
+    datasetSpatialResolution: Populated 125 m mesh, official disclosure group, and small-area municipality geometry
+    datasetTemporalResolution: Single census reference year
+    datasetPreprocessingInfo: Decoded CP932 source, standardized readable fields, retained official suppression, formed disclosure groups, calculated older-age shares, and projected geographies for spatial analysis.
+  mapped_buildings:
+    datasetSourceName: GSI vector-map building polygons, 2026-04-01 release
+    datasetDescription: Building polygons used only to construct mapped building-count and footprint-area exposure proxies for housing-loss allocation.
+    datasetAttribute: geojson
+    datasetProvider: Geospatial Information Authority of Japan
+    datasetGenerationInfo: Building features were extracted from prefecture-covering GSI vector tiles at zoom 15 and clipped to Kumamoto Prefecture.
+    datasetPeriod: Release dated 2026-04-01
+    datasetScale: Kumamoto Prefecture; 1,036,590 mapped building polygons
+    datasetSpatialResolution: Individual mapped building polygon at GSI vector-tile resolution
+    datasetTemporalResolution: Single map release
+    datasetPreprocessingInfo: Deduplicated tile-edge features, validated geometry, calculated footprint area, and aggregated counts and areas to census disclosure groups by representative point.
+  designated_shelters:
+    datasetSourceName: 43000_1_designated_shelters.csv
+    datasetDescription: Official designated-shelter points used for nominal nearest-shelter access and the Minami Ward operational screening.
+    datasetAttribute: table
+    datasetProvider: Geospatial Information Authority of Japan
+    datasetGenerationInfo: Kumamoto Prefecture designated-shelter release retrieved on 2026-08-02; operational and cooling status are not inferred from listing presence.
+    datasetPeriod: Response-time release available 2026-08-02
+    datasetScale: Kumamoto Prefecture; 1,315 facility points
+    datasetSpatialResolution: Facility point coordinates
+    datasetTemporalResolution: Single response-time snapshot
+    datasetPreprocessingInfo: Standardized ten official fields, preserved blank operational fields as missing, validated coordinates, created point geometry, and calculated straight-line nearest-shelter distance.
+  official_housing_damage:
+    datasetSourceName: FDMA and Kumamoto City earthquake damage reports through 2026-08-01
+    datasetDescription: Time-stamped official housing-damage totals used to constrain full- and half-collapse scenario totals.
+    datasetAttribute: other
+    datasetProvider: Fire and Disaster Management Agency and Kumamoto City
+    datasetGenerationInfo: Five report snapshots were manually transcribed with source organization, report number, page, geography, time, and status.
+    datasetPeriod: 2026-07-28 to 2026-08-01
+    datasetScale: Kumamoto Prefecture and reported subareas; 5 snapshots
+    datasetSpatialResolution: Prefecture or explicitly reported municipality/ward
+    datasetTemporalResolution: Irregular official report snapshots
+    datasetPreprocessingInfo: Harmonized timestamps and damage classes, retained source provenance, and selected the latest usable prefecture totals of 181 full and 245 half collapses.
+  damage_evidence:
+    datasetSourceName: Official geolocated and geographically bounded damage claims through 2026-08-02
+    datasetDescription: Confirmed or probable official damage claims used as contextual evidence, not as building-level labels.
+    datasetAttribute: other
+    datasetProvider: Fire and Disaster Management Agency and Kumamoto City
+    datasetGenerationInfo: Nine claims were registered from official reports with evidence tier, location precision, damage class, and source traceability.
+    datasetPeriod: 2026-07-28 to 2026-08-02
+    datasetScale: Kumamoto Prefecture; 9 evidence claims
+    datasetSpatialResolution: Point, municipality, ward, or other explicitly bounded reported geography
+    datasetTemporalResolution: Irregular report observations
+    datasetPreprocessingInfo: Standardized evidence IDs, timestamps, location precision, verification status, and functional-loss interpretation while preserving uncertainty.
+  service_disruption:
+    datasetSourceName: Official shelter occupancy, water, and cooling-related reports through 2026-08-02
+    datasetDescription: Time-stamped operational observations used only for the Minami Ward shelter, occupancy, water, and cooling screening.
+    datasetAttribute: other
+    datasetProvider: Fire and Disaster Management Agency and Kumamoto City
+    datasetGenerationInfo: Fourteen observations were extracted from official reports with geography, disruption type, affected count, and provenance.
+    datasetPeriod: 2026-07-28 to 2026-08-02
+    datasetScale: Kumamoto Prefecture and reported municipalities/wards; 14 observations
+    datasetSpatialResolution: Reported prefecture, municipality, ward, or facility context
+    datasetTemporalResolution: Irregular report observations
+    datasetPreprocessingInfo: Harmonized timestamps, disruption categories, occupancy and outage counts, and cooling-loss evidence; missing fields remain unknown rather than zero.
+  event_heat:
+    datasetSourceName: JMA AMeDAS event-window daily summaries
+    datasetDescription: Observed daily maximum and minimum air temperatures for five Kumamoto stations during the first seven event days.
+    datasetAttribute: table
+    datasetProvider: Japan Meteorological Agency
+    datasetGenerationInfo: Hourly AMeDAS observations were refreshed through 2026-08-03 18:50 JST and aggregated to station-day summaries with partial-day status.
+    datasetPeriod: 2026-07-28 to 2026-08-03
+    datasetScale: Five event stations; 35 station-days
+    datasetSpatialResolution: Weather-station point
+    datasetTemporalResolution: Daily summaries derived from hourly observations
+    datasetPreprocessingInfo: Standardized station metadata, calculated daily extrema and completeness, flagged the latest partial day, and derived hot-day and hot-night indicators only when supported.
+  historical_event_window_heat:
+    datasetSourceName: JMA matching-date historical summaries for five event stations
+    datasetDescription: Five-year matching-date station data used to form the pooled historical median and observed range for the 30-day event window.
+    datasetAttribute: table
+    datasetProvider: Japan Meteorological Agency
+    datasetGenerationInfo: Daily JMA observations for the same five event stations were aligned by event day across 2021-2025.
+    datasetPeriod: Matching 2021-2025 dates for July 28 to August 26
+    datasetScale: Five stations by five years by 30 days; 750 station-year-days
+    datasetSpatialResolution: Weather-station point
+    datasetTemporalResolution: Daily
+    datasetPreprocessingInfo: Parsed JMA daily tables, standardized units and station metadata, aligned dates to event day, and calculated threshold indicators without forecasting 2026 conditions.
+  historical_spatial_heat:
+    datasetSourceName: JMA matching-date historical summaries for 17 Kumamoto-area stations
+    datasetDescription: Five-year station history used for MODIS calibration and municipality expected high-heat scenario days.
+    datasetAttribute: table
+    datasetProvider: Japan Meteorological Agency
+    datasetGenerationInfo: Daily observations from 17 stations were collected for the same 30-day seasonal window in each year from 2021 through 2025.
+    datasetPeriod: Matching 2021-2025 dates for July 28 to August 26
+    datasetScale: Seventeen stations by five years by 30 days; 2,550 station-year-days
+    datasetSpatialResolution: Weather-station point
+    datasetTemporalResolution: Daily
+    datasetPreprocessingInfo: Parsed and quality-checked daily extrema, retained 2,546 complete temperature records, calculated threshold indicators, and interpolated five-year mean high-heat counts to municipalities.
+  modis_surface_heat:
+    datasetSourceName: Terra MOD11A2 and Aqua MYD11A2 eight-day land-surface temperature
+    datasetDescription: Historical daytime and nighttime land-surface temperature used only to represent spatial heat heterogeneity and calibrate historical air-temperature surfaces.
+    datasetAttribute: raster
+    datasetProvider: NASA Land Processes Distributed Active Archive Center
+    datasetGenerationInfo: Eighty Terra and Aqua source files covering matching 2021-2025 seasonal periods were processed over Kumamoto Prefecture.
+    datasetPeriod: Matching seasonal periods in 2021-2025
+    datasetScale: Kumamoto Prefecture; 8,661 approximately 1 km pixels from 80 files
+    datasetSpatialResolution: Approximately 1 km MODIS sinusoidal pixel
+    datasetTemporalResolution: Eight-day composite, aggregated across matching five-year periods
+    datasetPreprocessingInfo: Applied strict and relaxed quality masks, converted scaled Kelvin to Celsius, averaged Terra and Aqua products without spatial gap filling, and retained coverage-support metadata.
+  mortality_baseline:
+    datasetSourceName: e-Stat Vital Statistics all-cause deaths, 2020-2024
+    datasetDescription: Official municipality-age death counts and 2020 population denominators used to construct the age-65-plus mortality baseline; only the 45 age-65-plus municipality rows enter final estimation.
+    datasetAttribute: table
+    datasetProvider: Ministry of Health, Labour and Welfare via e-Stat
+    datasetGenerationInfo: Annual municipality all-cause deaths for 2020-2024 were pooled and linked to the fixed 2020 census population denominator.
+    datasetPeriod: Deaths 2020-2024; population reference year 2020
+    datasetScale: 45 Kumamoto municipalities; 45 age-65-plus analytical rows
+    datasetSpatialResolution: Municipality, with Kumamoto City wards consolidated
+    datasetTemporalResolution: Five-year pooled annual baseline
+    datasetPreprocessingInfo: Parsed official tables, standardized municipality codes, consolidated wards, pooled age-65-plus deaths, and calculated annual mortality rates per 100,000 using the declared fixed denominator.
+  cooling_engineering_parameters:
+    datasetSourceName: Japanese shelter-space, gymnasium HVAC-load, and efficiency guidance
+    datasetDescription: Literature and guidance values used to define Low, Central, and High cooling-electricity demand bundles.
+    datasetAttribute: other
+    datasetProvider: Cabinet Office; Ministry of Land, Infrastructure, Transport and Tourism; Agency for Natural Resources and Energy
+    datasetGenerationInfo: The analysis combines a 3.5 m2 per-person shelter area with documented HVAC load and efficiency concepts into three transparent planning bundles.
+    datasetPeriod: Guidance available before or during the 2026 response
+    datasetScale: Three engineering scenario bundles applied to 36,657 disclosure groups
+    datasetSpatialResolution: Non-spatial parameter set applied to each disclosure group
+    datasetTemporalResolution: Static scenario assumptions
+    datasetPreprocessingInfo: Encoded Low, Central, and High load density, COP, diversity, and operating-hour combinations; calculated demand while leaving verified supply and power gap missing.
+  cooling_effect:
+    datasetSourceName: Katz et al. 2025 no-air-conditioning mortality effect
+    datasetDescription: Published no-cooling versus cooling relative odds ratio used for the 30-day mortality planning contrast under identical outdoor heat.
+    datasetAttribute: other
+    datasetProvider: Katz et al., JAMA Internal Medicine
+    datasetGenerationInfo: Lag-0 primary estimate was transcribed as relative odds ratio 1.08 with 95% confidence interval 1.01 to 1.15; the with-cooling extreme-heat odds ratio is 1.03.
+    datasetPeriod: Published 2025
+    datasetScale: One central effect estimate and its 95% confidence interval
+    datasetSpatialResolution: Non-spatial transferred literature estimate
+    datasetTemporalResolution: Static effect parameter
+    datasetPreprocessingInfo: Applied the effect only between effective-cooling and no-effective-cooling states, held outdoor heat fixed, and varied only the published effect interval for uncertainty.
+
+variableDictionary:
+  municipality:
+    variableNameInDataset: Municipality
+    variableNameInArticle: Municipality
+    variableAttribute: categorical
+    variableUnit: name
+    variableDescription: Forty-five-unit reporting geography with Kumamoto City wards consolidated where required.
+    variableSource: population_and_boundaries and derived municipality analytical products
+    observationNumber: 45
+  total_population:
+    variableNameInDataset: Total Population
+    variableNameInArticle: Total population
+    variableAttribute: count
+    variableUnit: persons
+    variableDescription: Official 2020 census resident count at mesh or disclosure-group level.
+    variableSource: population_and_boundaries
+    observationNumber: 36657
+  population_age_65_plus:
+    variableNameInDataset: Population Age 65+
+    variableNameInArticle: Population age 65 or older
+    variableAttribute: count
+    variableUnit: persons
+    variableDescription: Official age-65-plus resident count at the disclosure geography.
+    variableSource: population_and_boundaries
+    observationNumber: 36657
+  population_age_65_plus_share:
+    variableNameInDataset: Population Age 65+ Share
+    variableNameInArticle: Population age 65 or older share
+    variableAttribute: continuous
+    variableUnit: proportion
+    variableDescription: Population Age 65+ divided by Total Population within each disclosure group.
+    variableSource: population_and_boundaries
+    observationNumber: 36657
+  general_households:
+    variableNameInDataset: General Households
+    variableNameInArticle: General households
+    variableAttribute: count
+    variableUnit: households
+    variableDescription: Official 2020 census general-household count used as the housing exposure denominator.
+    variableSource: population_and_boundaries
+    observationNumber: 36657
+  mapped_building_count:
+    variableNameInDataset: Mapped Building Count
+    variableNameInArticle: Mapped building count
+    variableAttribute: count
+    variableUnit: mapped polygons
+    variableDescription: Unique GSI building polygons assigned to a disclosure group; not a dwelling or damage count.
+    variableSource: mapped_buildings and population disclosure-group exposure grid
+    observationNumber: 36657
+  mapped_building_footprint_area:
+    variableNameInDataset: Mapped Building Footprint Area m2
+    variableNameInArticle: Mapped building footprint area
+    variableAttribute: continuous
+    variableUnit: m2
+    variableDescription: Total mapped building-polygon footprint area within a disclosure group.
+    variableSource: mapped_buildings and population disclosure-group exposure grid
+    observationNumber: 36657
+  nearest_designated_shelter_distance:
+    variableNameInDataset: Nearest Designated Shelter Distance m
+    variableNameInArticle: Nearest designated-shelter distance
+    variableAttribute: continuous
+    variableUnit: m
+    variableDescription: Straight-line distance from a disclosure-group representative point to the nearest listed designated shelter.
+    variableSource: designated_shelters and population disclosure-group exposure grid
+    observationNumber: 36657
+  observation_time:
+    variableNameInDataset: Observation Time
+    variableNameInArticle: Observation time
+    variableAttribute: other
+    variableUnit: JST timestamp
+    variableDescription: Timestamp attached to an official damage, evidence, occupancy, or service observation.
+    variableSource: official_housing_damage, damage_evidence, and service_disruption
+    observationNumber: 28
+  observed_evacuee_count:
+    variableNameInDataset: Observed Evacuee Count
+    variableNameInArticle: Observed public-shelter occupants
+    variableAttribute: count
+    variableUnit: persons
+    variableDescription: Reported public-shelter occupants at the stated geography and observation time.
+    variableSource: service_disruption
+    observationNumber: 8
+  observed_water_outage_households:
+    variableNameInDataset: Observed Water Outage Households
+    variableNameInArticle: Observed water-outage households
+    variableAttribute: count
+    variableUnit: households
+    variableDescription: Reported households without water service at the stated geography and time.
+    variableSource: service_disruption
+    observationNumber: 2
+  cooling_loss_confirmed:
+    variableNameInDataset: Cooling Loss Confirmed
+    variableNameInArticle: Confirmed cooling loss
+    variableAttribute: boolean
+    variableUnit: yes/no
+    variableDescription: Indicator of direct evidence that cooling was unavailable at a reported facility or location.
+    variableSource: service_disruption
+    observationNumber: 14
+  full_collapse_buildings:
+    variableNameInDataset: Full Collapse Buildings
+    variableNameInArticle: Full-collapse buildings
+    variableAttribute: count
+    variableUnit: residences
+    variableDescription: Official full-collapse count; the latest usable prefecture snapshot constrains the scenario total.
+    variableSource: official_housing_damage
+    observationNumber: 4
+  half_collapse_buildings:
+    variableNameInDataset: Half Collapse Buildings
+    variableNameInArticle: Half-collapse buildings
+    variableAttribute: count
+    variableUnit: residences
+    variableDescription: Official half-collapse count used with explicit functional-loss weights.
+    variableSource: official_housing_damage
+    observationNumber: 3
+  epicentral_distance:
+    variableNameInDataset: Epicentral Distance km
+    variableNameInArticle: Epicentral distance
+    variableAttribute: continuous
+    variableUnit: km
+    variableDescription: Straight-line distance from each disclosure-group representative point to 32.6 N, 130.7 E.
+    variableSource: population disclosure-group exposure grid
+    observationNumber: 36657
+  expected_functionally_lost_residences:
+    variableNameInDataset: Expected Functionally Lost Residences
+    variableNameInArticle: Expected functionally lost residences
+    variableAttribute: continuous
+    variableUnit: residences
+    variableDescription: Central total-constrained spatial allocation of structural residence loss.
+    variableSource: population disclosure-group exposure grid
+    observationNumber: 36657
+  expected_functionally_lost_residences_lower:
+    variableNameInDataset: Expected Functionally Lost Residences Lower Bound
+    variableNameInArticle: Expected functionally lost residences lower bound
+    variableAttribute: continuous
+    variableUnit: residences
+    variableDescription: Pointwise minimum across 27 housing-loss allocation scenarios.
+    variableSource: population disclosure-group exposure grid
+    observationNumber: 36657
+  expected_functionally_lost_residences_upper:
+    variableNameInDataset: Expected Functionally Lost Residences Upper Bound
+    variableNameInArticle: Expected functionally lost residences upper bound
+    variableAttribute: continuous
+    variableUnit: residences
+    variableDescription: Pointwise maximum across 27 housing-loss allocation scenarios.
+    variableSource: population disclosure-group exposure grid
+    observationNumber: 36657
+  affected_population_age_65_plus:
+    variableNameInDataset: Estimated Affected Population Age 65+
+    variableNameInArticle: Estimated affected population age 65 or older
+    variableAttribute: continuous
+    variableUnit: persons
+    variableDescription: Age-65-plus population multiplied by the central modeled housing-loss share; not observed displacement.
+    variableSource: population disclosure-group exposure grid
+    observationNumber: 36657
+  affected_population_age_65_plus_lower:
+    variableNameInDataset: Estimated Affected Population Age 65+ Lower Bound
+    variableNameInArticle: Estimated affected older population lower bound
+    variableAttribute: continuous
+    variableUnit: persons
+    variableDescription: Older-person exposure calculated from the pointwise lower housing-loss share.
+    variableSource: population disclosure-group exposure grid
+    observationNumber: 36657
+  affected_population_age_65_plus_upper:
+    variableNameInDataset: Estimated Affected Population Age 65+ Upper Bound
+    variableNameInArticle: Estimated affected older population upper bound
+    variableAttribute: continuous
+    variableUnit: persons
+    variableDescription: Older-person exposure calculated from the pointwise upper housing-loss share.
+    variableSource: population disclosure-group exposure grid
+    observationNumber: 36657
+  damage_evidence_cutoff:
+    variableNameInDataset: Damage Evidence Cutoff
+    variableNameInArticle: Damage evidence cutoff
+    variableAttribute: other
+    variableUnit: JST timestamp
+    variableDescription: Latest official damage snapshot used by the housing-loss allocation.
+    variableSource: official_housing_damage and population disclosure-group exposure grid
+    observationNumber: 36657
+  daily_maximum_air_temperature:
+    variableNameInDataset: Daily Maximum Air Temperature C
+    variableNameInArticle: Daily maximum air temperature
+    variableAttribute: continuous
+    variableUnit: deg C
+    variableDescription: JMA station daily maximum air temperature in event and historical matching windows.
+    variableSource: event_heat, historical_event_window_heat, and historical_spatial_heat
+    observationNumber: 3331
+  daily_minimum_air_temperature:
+    variableNameInDataset: Daily Minimum Air Temperature C
+    variableNameInArticle: Daily minimum air temperature
+    variableAttribute: continuous
+    variableUnit: deg C
+    variableDescription: JMA station daily minimum air temperature in event and historical matching windows.
+    variableSource: event_heat, historical_event_window_heat, and historical_spatial_heat
+    observationNumber: 3331
+  hot_day_indicator:
+    variableNameInDataset: Hot Day Indicator
+    variableNameInArticle: Hot-day indicator
+    variableAttribute: boolean
+    variableUnit: 0/1
+    variableDescription: One when daily maximum air temperature is at least 35 deg C.
+    variableSource: event_heat, historical_event_window_heat, and historical_spatial_heat
+    observationNumber: 3326
+  hot_night_indicator:
+    variableNameInDataset: Hot Night Indicator
+    variableNameInArticle: Hot-night indicator
+    variableAttribute: boolean
+    variableUnit: 0/1
+    variableDescription: One when daily minimum air temperature is at least 25 deg C.
+    variableSource: event_heat, historical_event_window_heat, and historical_spatial_heat
+    observationNumber: 3315
+  historical_daytime_lst:
+    variableNameInDataset: Historical Daytime Land Surface Temperature C
+    variableNameInArticle: Historical daytime land-surface temperature
+    variableAttribute: continuous
+    variableUnit: deg C
+    variableDescription: Strict-quality equal-weight Terra and Aqua daytime land-surface-temperature mean.
+    variableSource: modis_surface_heat
+    observationNumber: 8452
+  historical_nighttime_lst:
+    variableNameInDataset: Historical Nighttime Land Surface Temperature C
+    variableNameInArticle: Historical nighttime land-surface temperature
+    variableAttribute: continuous
+    variableUnit: deg C
+    variableDescription: Strict-quality equal-weight Terra and Aqua nighttime land-surface-temperature mean.
+    variableSource: modis_surface_heat
+    observationNumber: 8489
+  coverage_optimized_daytime_lst:
+    variableNameInDataset: Coverage-Optimized Historical Daytime Land Surface Temperature C
+    variableNameInArticle: Coverage-optimized historical daytime land-surface temperature
+    variableAttribute: continuous
+    variableUnit: deg C
+    variableDescription: Strict-quality daytime value when available, otherwise relaxed-quality value, with no spatial gap filling.
+    variableSource: modis_surface_heat
+    observationNumber: 8579
+  coverage_optimized_nighttime_lst:
+    variableNameInDataset: Coverage-Optimized Historical Nighttime Land Surface Temperature C
+    variableNameInArticle: Coverage-optimized historical nighttime land-surface temperature
+    variableAttribute: continuous
+    variableUnit: deg C
+    variableDescription: Strict-quality nighttime value when available, otherwise relaxed-quality value, with no spatial gap filling.
+    variableSource: modis_surface_heat
+    observationNumber: 8579
+  station_calibrated_historical_air_temperature:
+    variableNameInDataset: Station-Calibrated Historical Air Temperature C
+    variableNameInArticle: Station-calibrated historical air temperature
+    variableAttribute: continuous
+    variableUnit: deg C
+    variableDescription: Daytime or nighttime historical air-temperature surface retained only when cross-validation improves on a mean-only benchmark.
+    variableSource: historical_spatial_heat, modis_surface_heat, and heat-calibration analysis
+    observationNumber: 17322
+  interpolation_uncertainty:
+    variableNameInDataset: Interpolation Uncertainty C
+    variableNameInArticle: Heat-surface prediction uncertainty
+    variableAttribute: continuous
+    variableUnit: deg C
+    variableDescription: Selected leave-one-station-out RMSE combined with spatial surface sensitivity.
+    variableSource: heat-calibration analysis
+    observationNumber: 17322
+  expected_high_heat_days:
+    variableNameInDataset: Expected High-Heat Scenario Days
+    variableNameInArticle: Expected high-heat scenario days
+    variableAttribute: continuous
+    variableUnit: days in 30-day window
+    variableDescription: Five-year mean days meeting either hot-day or hot-night threshold, interpolated to municipality centroids.
+    variableSource: historical_spatial_heat and municipality cooling-loss mortality scenario
+    observationNumber: 45
+  no_placement_older_person_days:
+    variableNameInDataset: No-Placement Unprotected Older-Person-Days
+    variableNameInArticle: No-placement unprotected older-person-days
+    variableAttribute: continuous
+    variableUnit: person-days
+    variableDescription: Estimated affected age-65-plus population multiplied by the 30-day planning horizon.
+    variableSource: no-verified-placement cooling-need grid
+    observationNumber: 36657
+  power_demand_scenario:
+    variableNameInDataset: Power Demand Scenario
+    variableNameInArticle: Power-demand scenario
+    variableAttribute: categorical
+    variableUnit: Low/Central/High
+    variableDescription: Engineering bundle combining load density, COP, diversity, and daily operating hours.
+    variableSource: cooling_engineering_parameters and cooling-electricity scenario grid
+    observationNumber: 109971
+  minimum_shelter_living_area:
+    variableNameInDataset: Minimum Shelter Living Area m2 per Person
+    variableNameInArticle: Minimum shelter living area per person
+    variableAttribute: continuous
+    variableUnit: m2/person
+    variableDescription: Fixed shelter-space parameter of 3.5 square metres per person.
+    variableSource: cooling_engineering_parameters
+    observationNumber: 109971
+  cooling_load_density:
+    variableNameInDataset: Cooling Load Density W per m2
+    variableNameInArticle: Cooling load density
+    variableAttribute: continuous
+    variableUnit: W/m2
+    variableDescription: Scenario thermal-load density of 127, 134, or 141 watts per square metre.
+    variableSource: cooling_engineering_parameters
+    observationNumber: 109971
+  cooling_system_cop:
+    variableNameInDataset: Scenario Cooling System COP
+    variableNameInArticle: Cooling-system coefficient of performance
+    variableAttribute: continuous
+    variableUnit: ratio
+    variableDescription: Scenario cooling-system COP of 4.0, 3.0, or 2.5.
+    variableSource: cooling_engineering_parameters
+    observationNumber: 109971
+  peak_load_diversity_factor:
+    variableNameInDataset: Scenario Peak Load Diversity Factor
+    variableNameInArticle: Peak-load diversity factor
+    variableAttribute: continuous
+    variableUnit: proportion
+    variableDescription: Scenario peak diversity factor of 0.8, 0.9, or 1.0.
+    variableSource: cooling_engineering_parameters
+    observationNumber: 109971
+  cooling_operating_hours:
+    variableNameInDataset: Scenario Cooling Operating Hours per Day
+    variableNameInArticle: Cooling operating hours per day
+    variableAttribute: continuous
+    variableUnit: hours/day
+    variableDescription: Scenario daily cooling operation of 12, 18, or 24 hours.
+    variableSource: cooling_engineering_parameters
+    observationNumber: 109971
+  required_peak_cooling_power:
+    variableNameInDataset: Required Peak Cooling Electric Power kW
+    variableNameInArticle: Required peak cooling electric power
+    variableAttribute: continuous
+    variableUnit: kW
+    variableDescription: Demand-side peak electricity required for protective cooling; available supply is not estimated.
+    variableSource: cooling-electricity scenario grid
+    observationNumber: 109971
+  required_daily_cooling_electricity:
+    variableNameInDataset: Required Daily Cooling Electricity kWh
+    variableNameInArticle: Required daily cooling electricity
+    variableAttribute: continuous
+    variableUnit: kWh/day
+    variableDescription: Required peak cooling power multiplied by scenario daily operating hours.
+    variableSource: cooling-electricity scenario grid
+    observationNumber: 109971
+  baseline_mortality_rate:
+    variableNameInDataset: Baseline Mortality Rate per 100,000
+    variableNameInArticle: Baseline mortality rate
+    variableAttribute: continuous
+    variableUnit: deaths per 100,000 person-years
+    variableDescription: Pooled 2020-2024 age-65-plus all-cause deaths divided by five times the fixed 2020 population.
+    variableSource: mortality_baseline
+    observationNumber: 45
+  baseline_daily_mortality_probability:
+    variableNameInDataset: Baseline Daily Mortality Probability
+    variableNameInArticle: Baseline daily mortality probability
+    variableAttribute: continuous
+    variableUnit: probability/day
+    variableDescription: Annualized municipality age-65-plus baseline mortality rate converted to a daily probability.
+    variableSource: municipality cooling-loss mortality scenario
+    observationNumber: 45
+  effective_cooling_high_heat_daily_probability:
+    variableNameInDataset: Effective-Cooling High-Heat Daily Mortality Probability
+    variableNameInArticle: Effective-cooling high-heat daily mortality probability
+    variableAttribute: continuous
+    variableUnit: probability/day
+    variableDescription: Baseline odds multiplied by the published with-cooling extreme-heat odds ratio.
+    variableSource: cooling_effect and municipality cooling-loss mortality scenario
+    observationNumber: 45
+  no_cooling_relative_odds_ratio:
+    variableNameInDataset: No-Effective-Cooling Relative Odds Ratio
+    variableNameInArticle: No-cooling versus cooling relative odds ratio
+    variableAttribute: continuous
+    variableUnit: odds ratio
+    variableDescription: Published central relative odds ratio of 1.08 comparing no air conditioning with air conditioning.
+    variableSource: cooling_effect
+    observationNumber: 45
+  no_cooling_relative_odds_ratio_lower:
+    variableNameInDataset: No-Effective-Cooling Relative Odds Ratio Lower 95% CI
+    variableNameInArticle: No-cooling relative odds ratio lower 95% confidence limit
+    variableAttribute: continuous
+    variableUnit: odds ratio
+    variableDescription: Published lower 95% confidence limit of 1.01.
+    variableSource: cooling_effect
+    observationNumber: 45
+  no_cooling_relative_odds_ratio_upper:
+    variableNameInDataset: No-Effective-Cooling Relative Odds Ratio Upper 95% CI
+    variableNameInArticle: No-cooling relative odds ratio upper 95% confidence limit
+    variableAttribute: continuous
+    variableUnit: odds ratio
+    variableDescription: Published upper 95% confidence limit of 1.15.
+    variableSource: cooling_effect
+    observationNumber: 45
+  effective_cooling_30_day_risk:
+    variableNameInDataset: Effective-Cooling 30-Day Mortality Risk
+    variableNameInArticle: Effective-cooling 30-day mortality risk
+    variableAttribute: continuous
+    variableUnit: probability/30 days
+    variableDescription: Cumulative 30-day municipality mortality risk with effective cooling on expected high-heat days.
+    variableSource: municipality cooling-loss mortality scenario
+    observationNumber: 45
+  no_effective_cooling_30_day_risk:
+    variableNameInDataset: No-Effective-Cooling 30-Day Mortality Risk
+    variableNameInArticle: No-effective-cooling 30-day mortality risk
+    variableAttribute: continuous
+    variableUnit: probability/30 days
+    variableDescription: Cumulative 30-day municipality mortality risk without effective cooling on expected high-heat days.
+    variableSource: municipality cooling-loss mortality scenario
+    observationNumber: 45
+  cooling_loss_incremental_risk:
+    variableNameInDataset: Cooling-Loss Incremental Mortality Risk per 100,000
+    variableNameInArticle: Cooling-loss incremental mortality risk
+    variableAttribute: continuous
+    variableUnit: excess risk per 100,000
+    variableDescription: Absolute difference between no-effective-cooling and effective-cooling 30-day risks per 100,000.
+    variableSource: municipality cooling-loss mortality scenario
+    observationNumber: 45
+  cooling_loss_relative_burden_increase:
+    variableNameInDataset: Cooling-Loss Relative 30-Day Mortality Burden Increase %
+    variableNameInArticle: Relative 30-day mortality burden increase without cooling
+    variableAttribute: continuous
+    variableUnit: percent
+    variableDescription: Relative increase in modeled 30-day mortality burden without effective cooling versus with effective cooling.
+    variableSource: municipality cooling-loss mortality scenario
+    observationNumber: 45
+  cooling_loss_relative_burden_lower:
+    variableNameInDataset: Cooling-Loss Relative 30-Day Mortality Burden Increase % Lower 95% CI
+    variableNameInArticle: Relative mortality burden increase lower 95% confidence limit
+    variableAttribute: continuous
+    variableUnit: percent
+    variableDescription: Relative-burden scenario evaluated with the lower published cooling-effect limit.
+    variableSource: municipality cooling-loss mortality scenario
+    observationNumber: 45
+  cooling_loss_relative_burden_upper:
+    variableNameInDataset: Cooling-Loss Relative 30-Day Mortality Burden Increase % Upper 95% CI
+    variableNameInArticle: Relative mortality burden increase upper 95% confidence limit
+    variableAttribute: continuous
+    variableUnit: percent
+    variableDescription: Relative-burden scenario evaluated with the upper published cooling-effect limit.
+    variableSource: municipality cooling-loss mortality scenario
+    observationNumber: 45
+  incremental_cooling_loss_excess_deaths:
+    variableNameInDataset: Incremental Cooling-Loss-Related Excess Deaths
+    variableNameInArticle: Incremental cooling-loss-related excess deaths
+    variableAttribute: continuous
+    variableUnit: expected deaths/30 days
+    variableDescription: Absolute risk difference multiplied by the no-placement population equivalent; a planning magnitude, not observed deaths.
+    variableSource: municipality cooling-loss mortality scenario
+    observationNumber: 45
+
+figureDictionary:
+  fig_kumamoto_population_and_older_age_vulnerability_baseline:
+    figureId: fig_kumamoto_population_and_older_age_vulnerability_baseline
+    figurePath: data/results/figures/Figure_kumamoto_population_and_older_age_vulnerability_baseline.png
+    figureCaption: Population and Older-Age Vulnerability in Kumamoto
+    figureAim: Establish the prefecture-wide population and older-age spatial baseline.
+    figureExplanation: Maps residents per populated 125 m mesh and age-65-plus share by official disclosure group, highlighting the spatial mismatch between population concentration and older-age vulnerability.
+    figureSuitableSection: Results - Population and vulnerability baseline
+  fig_minami_ward_shelter_and_cooling_risk_screening:
+    figureId: fig_minami_ward_shelter_and_cooling_risk_screening
+    figurePath: data/results/figures/Figure_minami_ward_shelter_and_cooling_risk_screening.png
+    figureCaption: Minami Ward Shelter and Cooling-Risk Screening
+    figureAim: Summarize operational shelter, occupancy, water, and cooling context in Minami Ward.
+    figureExplanation: Combines older residents, listed shelters, confirmed unavailable facilities, contextual outage geography, and the time course of reported occupancy and water outages; shelter listing does not verify operation or cooling.
+    figureSuitableSection: Results - Early operational context
+  fig_event_window_daytime_and_nighttime_heat_scenario:
+    figureId: fig_event_window_daytime_and_nighttime_heat_scenario
+    figurePath: data/results/figures/Figure_event_window_daytime_and_nighttime_heat_scenario.png
+    figureCaption: Event-Window Daytime and Nighttime Heat
+    figureAim: Compare observed 2026 station heat with the matching 2021-2025 historical envelope.
+    figureExplanation: Shows five-station daily maximum and minimum temperatures through August 3 against the pooled historical median, observed range, and 35 deg C daytime and 25 deg C nighttime thresholds; the latest day is partial.
+    figureSuitableSection: Results - Event heat context
+  fig_historical_modis_and_station_calibrated_heat_spatial_heterogeneity:
+    figureId: fig_historical_modis_and_station_calibrated_heat_spatial_heterogeneity
+    figurePath: data/results/figures/Figure_historical_modis_and_station_calibrated_heat_spatial_heterogeneity.png
+    figureCaption: Historical Heat Spatial Heterogeneity and Calibration
+    figureAim: Display historical daytime and nighttime surface heat, calibrated air temperature, and prediction uncertainty.
+    figureExplanation: Six panels contrast MODIS land-surface temperature with station-calibrated historical air-temperature surfaces and uncertainty; black pixels are outside the station-observed land-surface-temperature range rather than missing values.
+    figureSuitableSection: Results - Historical spatial heat heterogeneity
+  fig_functional_housing_loss_and_older_person_exposure:
+    figureId: fig_functional_housing_loss_and_older_person_exposure
+    figurePath: data/results/figures/Figure_functional_housing_loss_and_older_person_exposure.png
+    figureCaption: Functional Housing Loss and Older-Person Exposure
+    figureAim: Map total-constrained structural housing loss and associated older-person exposure.
+    figureExplanation: Places official reported evidence beside the central allocation of 303.5 functionally lost residences and the corresponding age-65-plus exposure surface. The allocation is a scenario nowcast, not image-based building classification.
+    figureSuitableSection: Results - Housing loss and older-person exposure
+  fig_older_person_cooling_protection_need_and_placement_deficit:
+    figureId: fig_older_person_cooling_protection_need_and_placement_deficit
+    figurePath: data/results/figures/Figure_older_person_cooling_protection_need_and_placement_deficit.png
+    figureCaption: Older-Person Cooling Need and Placement Bound
+    figureAim: Map cooling-assessment population, no-placement person-day bound, and nominal shelter access.
+    figureExplanation: Shows the central 246-person cooling-assessment population, pointwise upper 30-day no-placement demand bound, and nearest listed shelter distance. The bound does not assert zero actual cooled placement.
+    figureSuitableSection: Results - Cooling-protection need
+  fig_emergency_cooling_electricity_requirement_distribution:
+    figureId: fig_emergency_cooling_electricity_requirement_distribution
+    figurePath: data/results/figures/Figure_emergency_cooling_electricity_requirement_distribution.png
+    figureCaption: Emergency Cooling Electricity Requirements
+    figureAim: Quantify municipality demand and prefecture sensitivity across engineering scenarios.
+    figureExplanation: Maps Central-scenario peak power and daily electricity demand and compares prefecture totals of 262, 622, and 1,164 kWh per day under Low, Central, and High assumptions. Verified supply and power gaps are excluded.
+    figureSuitableSection: Results - Cooling electricity demand
+  fig_cooling_loss_related_incremental_mortality_risk_distribution:
+    figureId: fig_cooling_loss_related_incremental_mortality_risk_distribution
+    figurePath: data/results/figures/Figure_cooling_loss_related_incremental_mortality_risk_distribution.png
+    figureCaption: Cooling-Loss Mortality Risk Distribution
+    figureAim: Map expected high-heat days and the absolute and relative cooling-loss mortality contrasts.
+    figureExplanation: Holds outdoor heat fixed and shows municipality expected high-heat days, incremental risk per 100,000 affected older persons, and relative 30-day burden increase without effective cooling; the prefecture-weighted central increase is 5.34%.
+    figureSuitableSection: Results - Cooling-loss health-risk scenario
+
+tableDictionary:
+  table_municipality_housing_loss_and_older_person_cooling_need_summary:
+    tableId: table_municipality_housing_loss_and_older_person_cooling_need_summary
+    tablePath: data/results/tables/Table_municipality_housing_loss_and_older_person_cooling_need_summary.xlsx
+    tableCaption: Municipality Housing Loss and Cooling Need
+    tableAim: Compare modeled housing loss, affected older residents, and the no-placement bound across municipalities.
+    tableExplanation: Reports 45 municipalities in six columns, including central and scenario-range housing loss and older-person exposure plus 30-day no-placement person-days; modeled values are not inspection counts or observed displacement.
+    tableSuitableSection: Results - Housing loss and cooling need
+  table_municipality_cooling_electricity_planning_summary:
+    tableId: table_municipality_cooling_electricity_planning_summary
+    tablePath: data/results/tables/Table_municipality_cooling_electricity_planning_summary.xlsx
+    tableCaption: Municipality Cooling Electricity Planning Summary
+    tableAim: Compare Central-scenario cooling electricity requirements across municipalities.
+    tableExplanation: Reports affected older population, no-placement person-days, historical high-heat days, peak cooling power, and daily cooling electricity for 45 municipalities; demand does not imply a verified supply shortage.
+    tableSuitableSection: Results - Cooling electricity demand
+  table_municipality_cooling_loss_health_risk_summary:
+    tableId: table_municipality_cooling_loss_health_risk_summary
+    tablePath: data/results/tables/Table_municipality_cooling_loss_health_risk_summary.xlsx
+    tableCaption: Municipality Cooling-Loss Health-Risk Summary
+    tableAim: Compare the 30-day cooled-versus-uncooled mortality planning contrast across municipalities.
+    tableExplanation: Reports expected high-heat days, incremental excess-death scenarios, and central, lower, and upper relative mortality-burden increases for 45 municipalities. Values are literature-transferred planning scenarios, not observed deaths.
+    tableSuitableSection: Results - Cooling-loss health-risk scenario
+
+analysisStructureBrief:
+  overview: >-
+    The analysis links observed earthquake response evidence to a transparent
+    planning chain: baseline population and facilities, historical and event
+    heat, total-constrained housing-loss allocation, older-person cooling need,
+    demand-side electricity requirements, and a literature-anchored 30-day
+    mortality contrast. Every model input is traceable to a final variable or
+    explicit scenario parameter, and all outputs link to completed figures and
+    municipality tables.
+  levels:
+    - levelName: Baseline and Operational Context
+      levelAim: Describe population vulnerability, listed shelters, damage evidence, occupancy, water outages, and confirmed cooling interruptions without imputation.
+      inputs:
+        - 2020 population and boundaries
+        - Designated-shelter points
+        - Official damage, evidence, and service observations
+      modelOrMethod: Descriptive spatial overlay and time-ordered reporting; no causal model or missing-value imputation is used.
+      outputs:
+        - "Figure: Population and Older-Age Vulnerability in Kumamoto"
+        - "Figure: Minami Ward Shelter and Cooling-Risk Screening"
+      interpretation: Establishes who may be vulnerable and where response constraints were reported, while distinguishing nominal facility presence from verified operation or effective cooling.
+    - levelName: Event and Historical Heat Context
+      levelAim: Compare observed event heat with historical matching dates and estimate historical spatial heat heterogeneity.
+      inputs:
+        - Five-station 2026 event-window JMA data
+        - Five-station and 17-station 2021-2025 matching-date JMA data
+        - Terra and Aqua MODIS land-surface temperature
+      modelOrMethod: Daily threshold classification, pooled historical envelopes, leave-one-station-out model selection, and inverse-distance-squared residual or municipality interpolation. Historical surfaces are scenarios, not forecasts.
+      outputs:
+        - "Figure: Event-Window Daytime and Nighttime Heat"
+        - "Figure: Historical Heat Spatial Heterogeneity and Calibration"
+        - "Variable: Expected High-Heat Scenario Days"
+      interpretation: Quantifies common outdoor heat conditions and spatial heterogeneity without claiming that the earthquake changed outdoor temperature.
+    - levelName: Housing-Loss Allocation and Older-Person Exposure
+      levelAim: Allocate official structural-loss totals across disclosure groups and estimate the associated older population.
+      inputs:
+        - Full- and half-collapse official totals
+        - General households, mapped building count, and mapped footprint area
+        - Epicentral distance and population age 65 or older
+      modelOrMethod: Twenty-seven scenarios combine three exposure proxies, three exponential distance-decay scales, and three half-collapse weights. The normalized pointwise median is constrained to 303.5 central functionally lost residences, and population exposure uses the modeled housing-loss share.
+      outputs:
+        - "Figure: Functional Housing Loss and Older-Person Exposure"
+        - "Table: Municipality Housing Loss and Cooling Need"
+        - "Analysis product: Population disclosure-group exposure grid"
+      interpretation: Produces a sensitivity-bounded allocation nowcast, not building classification, verified habitability, displacement, or individual exposure.
+    - levelName: Cooling Protection and Electricity Demand
+      levelAim: Translate modeled older-person exposure into a 30-day placement bound and protective-cooling electricity demand.
+      inputs:
+        - Estimated affected population age 65 or older
+        - Thirty-day planning horizon
+        - Low, Central, and High engineering parameter bundles
+      modelOrMethod: No-placement person-days equal the cooling-assessment population times 30. Thermal load uses 3.5 m2 per person and scenario load density; peak electric power divides diversified thermal load by COP, and daily electricity multiplies power by operating hours.
+      outputs:
+        - "Figure: Older-Person Cooling Need and Placement Bound"
+        - "Figure: Emergency Cooling Electricity Requirements"
+        - "Table: Municipality Cooling Electricity Planning Summary"
+        - "Analysis products: Cooling-need grid and cooling-electricity scenario grid"
+      interpretation: Estimates demand needed to protect potentially affected older residents. It does not estimate verified placement, available power, or an emergency power gap.
+    - levelName: Cooling-Loss Mortality Contrast
+      levelAim: Estimate the 30-day health-risk contrast between effective-cooling and no-effective-cooling states under identical outdoor heat.
+      inputs:
+        - Municipality age-65-plus mortality baseline
+        - Expected High-Heat Scenario Days
+        - No-placement population equivalent
+        - Katz et al. cooling-effect estimate and 95% confidence interval
+      modelOrMethod: Converts annual baseline rates to daily probabilities, applies the with-cooling heat odds ratio, then applies the no-cooling versus cooling relative odds ratio on high-heat days and compounds 30-day risks. The estimand is a transferred planning contrast, not a causal earthquake effect.
+      outputs:
+        - "Figure: Cooling-Loss Mortality Risk Distribution"
+        - "Table: Municipality Cooling-Loss Health-Risk Summary"
+        - "Analysis product: Municipality cooling-loss mortality scenario"
+      interpretation: Indicates where loss of effective cooling could raise older-person mortality risk if protection is not restored; it does not report observed or earthquake-attributable deaths.

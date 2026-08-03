@@ -54,7 +54,7 @@ individual destroyed buildings, observe displacement, verify shelter cooling
 capacity, estimate available electricity supply, or identify
 earthquake-attributable deaths.
 
-## 2. Theoretical Background / Conceptual Framework / Problem Formulation
+## 2. Theoretical Background  /  Conceptual Framework  /  Problem Formulation
 
 ### Mechanism
 
@@ -94,11 +94,15 @@ final analytical dataset.
 
 ## 3. Data Overview
 
+The final data sources and their analytical scope are restricted to components
+actually consumed by a completed figure, table, or estimation stage.
+
 ### Data Actually Used
 
 | data component | source and coverage | analysis unit | records used | final role |
 |---|---|---|---:|---|
 | Population and boundaries | 2020 Population Census and e-Stat small-area geography | populated 125 m mesh / disclosure group | 62,945 meshes; 36,657 groups | population baseline, older-person exposure, municipality assignment |
+| Mapped buildings | GSI vector-map building polygons, 2026-04-01 release | building polygon | 1,036,590 | building-count and footprint exposure proxies for housing-loss allocation |
 | Designated shelters | GSI designated-shelter release available during the response | facility point | 1,315 | nominal shelter access and Minami Ward screening |
 | Official housing damage | time-stamped government reports through 2026-08-01 | prefecture or reported subarea | 5 snapshots | constrains structural residence-loss totals |
 | Damage evidence | official geolocated or geographically bounded claims through 2026-08-02 | evidence claim | 9 | contextual confirmed/probable evidence only |
@@ -150,7 +154,7 @@ interpreted as one jointly realized prefecture interval.
 - The mortality effect is transferred from older institutional residents outside
   Japan; its reported interval covers only effect-parameter uncertainty.
 
-## 4. Variable Construction / Key Variables
+## 4. Variable Construction  /  Key Variables
 
 All variables below are final variables used in at least one completed figure or
 table.
@@ -248,6 +252,10 @@ auditable planning chain in which every modeled output is constrained by an
 observed total or an explicit scenario parameter. Observed evidence, spatial
 allocation, engineering demand, and health-risk transfer are reported as
 separate stages.
+
+The Section 4 variables and inputs provide the readable, final quantities used
+at every stage below; variables excluded in Section 4 are not introduced into
+the identification strategy.
 
 ### Stage-Specific Strategy
 
@@ -477,6 +485,14 @@ X_m=\sum_{g\in\mathcal{G}_m}X_g.
 power values are selected before aggregation. Pointwise bounds remain
 sensitivity endpoints rather than joint confidence intervals.
 
+### Symbol Consistency and Interpretation Limits
+
+The equations reuse the same symbols across stages; each new symbol is defined
+when it first appears. The resulting surfaces are planning scenarios rather than
+building inspections, observed displacement, verified cooling placement, power
+shortages, causal earthquake effects, or observed deaths. Pointwise sensitivity
+bounds and transferred effect intervals must retain their stated interpretations.
+
 ## 7. Analytical Workflow
 
 | step | variables used | method | completed output | claim status |
@@ -494,6 +510,9 @@ The completed evidence chain supports spatial prioritization for assessment,
 cooling placement, and demand-side electricity planning. It does not close the
 operational capacity or causal mortality questions because the required
 placement, facility, supply, and individual-health observations are absent.
+These are the workflow interpretation limits: completed outputs support
+prioritization and demand planning, but not verified operational sufficiency or
+causal mortality attribution.
 
 ## 8. Figure and Table Plan
 
