@@ -124,34 +124,54 @@ Section focus: Early decision support under delayed damage statistics and measur
 
 ### Data Scope
 
-- Data sources reviewed: 17
-- Variables summarized: 187
+- Data sources reviewed: 37
+- Variables summarized: 521
 - Distribution plots generated: 80
 - Files skipped during briefing: 2
 
 | Data source | Rows | Columns |
 | --- | ---: | ---: |
-| Data source 1 | 1315 | 10 |
-| Data source 2 | 1713 | 16 |
-| Data source 3 | 36657 | 19 |
-| Data source 4 | 62945 | 10 |
-| Data source 5 | 66 | 8 |
-| Data source 6 | 7 | 9 |
-| Data source 7 | 4 | 13 |
-| Data source 8 | 2045 | 9 |
-| Data source 9 | 7671 | 9 |
-| Data source 10 | 2910 | 13 |
-| Data source 11 | 11 | 8 |
-| Data source 12 | 2910 | 9 |
-| Data source 13 | 18 | 11 |
-| Data source 14 | 2910 | 13 |
-| Data source 15 | 1315 | 10 |
-| Data source 16 | 1713 | 16 |
-| Data source 17 | 46 | 4 |
+| Data source 1 | 9 | 26 |
+| Data source 2 | 1315 | 11 |
+| Data source 3 | 1315 | 10 |
+| Data source 4 | 1713 | 17 |
+| Data source 5 | 1713 | 16 |
+| Data source 6 | 36657 | 26 |
+| Data source 7 | 1036590 | 9 |
+| Data source 8 | 5 | 17 |
+| Data source 9 | 35 | 19 |
+| Data source 10 | 300 | 16 |
+| Data source 11 | 2550 | 18 |
+| Data source 12 | 2561 | 14 |
+| Data source 13 | 1660 | 8 |
+| Data source 14 | 917 | 13 |
+| Data source 15 | 4470 | 15 |
+| Data source 16 | 8661 | 15 |
+| Data source 17 | 36657 | 19 |
+| Data source 18 | 62945 | 10 |
+| Data source 19 | 14 | 24 |
+| Data source 20 | 62945 | 24 |
+| Data source 21 | 36657 | 33 |
+| Data source 22 | 9608 | 6 |
+| Data source 23 | 316 | 8 |
+| Data source 24 | 12 | 9 |
+| Data source 25 | 170 | 12 |
+| Data source 26 | 4 | 13 |
+| Data source 27 | 80 | 11 |
+| Data source 28 | 2045 | 9 |
+| Data source 29 | 7671 | 9 |
+| Data source 30 | 2910 | 13 |
+| Data source 31 | 11 | 8 |
+| Data source 32 | 2910 | 9 |
+| Data source 33 | 18 | 11 |
+| Data source 34 | 2910 | 13 |
+| Data source 35 | 1315 | 10 |
+| Data source 36 | 1713 | 16 |
+| Data source 37 | 46 | 4 |
 
 ### Time-Series Candidates
 
-Potential time-series structure was detected in 2 data source(s).
+Potential time-series structure was detected in 17 data source(s).
 Specific source files and original column names remain in the data-briefing artifacts, not in AnaSOP.
 
 ### Data Limitations
@@ -160,6 +180,98 @@ Specific source files and original column names remain in the data-briefing arti
 - Treat this section as exploratory; final variable decisions belong to Section 4.
 - AnaSOP intentionally avoids raw dataset names, source file paths, and original column names.
 ## 4. Variable Construction  /  Key Variables
+
+### Evidence Architecture and Construction Rules
+
+The rapid assessment uses four linked analytical tables rather than forcing official totals, incident reports, service interruptions, and modeled grid exposure into a single building-level dataset.
+
+1. **Housing Damage Snapshots** preserve each official report time as a separate prefecture- or municipality-level claim.
+2. **Damage Evidence Registry** stores one evidence claim at one observation time and spatial resolution. A row may describe one asset, multiple assets reported together, or an updated claim about an earlier event.
+3. **Service Disruption Snapshots** distinguish policy coverage, such as an evacuation instruction, from observed evacuation, power loss, water loss, or cooling loss.
+4. **Grid Exposure Estimates** contain the population and mapped-building denominators needed for estimation, but housing-loss and affected-population fields remain missing until spatial damage evidence supports allocation.
+
+Construction follows these non-negotiable rules:
+
+- Blank official-report cells are unknown, not zero.
+- Every record retains observation time, source organization, source URL, report number, and source page.
+- Prefecture totals are never spread uniformly across buildings or population grids.
+- Evacuation-instruction coverage is not observed evacuation and is not confirmed loss of cooling.
+- Municipality-only incident descriptions retain missing coordinates; coordinates are never inferred from a municipality centroid and presented as an event location.
+- Later evidence is linked through a supersession field rather than overwriting earlier claims.
+- Official housing totals, image-supported evidence, and modeled loss estimates remain analytically separate.
+
+The initial official time series records an early report in which the Kumamoto housing total was not yet reported and subsequent preliminary prefecture snapshots. The latest acquired prefecture snapshot reports 181 fully collapsed, 245 half-collapsed, and 1,419 partially damaged residences, totaling 1,845 reported affected residences. A Kumamoto City snapshot provides the first sub-prefecture split: Minami Ward reported four fully collapsed residences and approximately 35 additional residences ranging from partial damage to half collapse. City pre-assessment further identifies Tomiai and Jonan as the principal housing-damage cluster, but the remaining prefecture total is not yet spatially allocated.
+
+### Housing Damage Snapshot Variables
+
+| variable_name | full_name | role | formal_definition | construction_or_coding | is_final_variable |
+|---|---|---|---|---|---|
+| Snapshot ID | Official Housing-Damage Snapshot ID | linkage | Unique identifier for one geographic claim in one official report snapshot. | Constructed from reporting organization, report number, and geographic unit. | yes |
+| Observation Time | Official Report Observation Time | time index | Time at which the official situation report was issued. | Parsed as a timezone-aware timestamp and normalized internally to UTC. | yes |
+| Geographic Level | Housing-Damage Reporting Geography | spatial scale | Spatial resolution represented by the reported counts. | Coded as prefecture, municipality, or another explicitly reported aggregate; it is never assumed to be building-level. | yes |
+| Municipality | Reported Municipality | spatial linkage | Municipality to which the claim applies, when reported separately. | Missing for prefecture-level totals. | yes |
+| Full Collapse Buildings | Officially Reported Fully Collapsed Residences | observed outcome | Number of residences classified as fully collapsed in the report snapshot. | Retained as a nullable integer; blank source cells remain missing. | yes |
+| Half Collapse Buildings | Officially Reported Half-Collapsed Residences | observed outcome | Number of residences classified as half-collapsed in the report snapshot. | Retained as a nullable integer; blank source cells remain missing. | yes |
+| Partial Damage Buildings | Officially Reported Partially Damaged Residences | observed outcome | Number of residences classified as partially damaged in the report snapshot. | Retained as a nullable integer; blank source cells remain missing. | yes |
+| Reported Affected Buildings | Officially Reported Affected Residences | observed outcome | Sum of the reported residential damage categories included in the source table. | Validated against the component total when all relevant components are present. | yes |
+| Data Status | Official Housing-Damage Data Status | quality control | Whether the value is reported, preliminary, revised, or absent from the official table. | Explicit categorical field; an absent early total is coded as not reported, not zero. | yes |
+
+### Damage Evidence Registry Variables
+
+| variable_name | full_name | role | formal_definition | construction_or_coding | is_final_variable |
+|---|---|---|---|---|---|
+| Evidence ID | Damage Evidence Claim ID | linkage | Unique identifier for one claim at one observation time and spatial resolution. | Constructed from source report, place code, asset or event type, and sequence number. | yes |
+| Event ID | Persistent Damage Event ID | longitudinal linkage | Identifier joining multiple reports or evidence claims about the same event. | Remains stable when a later claim updates an earlier claim. | yes |
+| Observation Time | Damage Evidence Observation Time | time index | Time associated with the evidence claim. | Parsed as a timezone-aware timestamp; it refers to report availability unless a more precise acquisition time is documented. | yes |
+| Municipality | Damage Evidence Municipality | spatial linkage | Municipality in which the reported event occurred. | Retained from the source; it does not imply a precise point. | yes |
+| Place Description | Reported Place or Asset Description | reference | Source-supported description of the damaged place or asset. | Transcribed conservatively without adding an unreported facility identity. | yes |
+| Latitude | Damage Evidence Latitude | spatial linkage | North-south coordinate of the evidence location in decimal degrees. | Missing until a source supports geolocation. | yes |
+| Longitude | Damage Evidence Longitude | spatial linkage | East-west coordinate of the evidence location in decimal degrees. | Missing until a source supports geolocation. | yes |
+| Coordinate Precision | Damage Evidence Coordinate Precision | uncertainty | Spatial precision of the evidence location. | Coded as exact, approximate, municipality only, or unknown. | yes |
+| Coordinate Uncertainty m | Estimated Coordinate Uncertainty | uncertainty | Approximate radial uncertainty of a geolocated point in metres. | Missing for municipality-only claims; it is not calculated from a municipality centroid. | yes |
+| Asset Type | Damaged Asset Category | stratification | Functional category of the reported asset. | Coded as residential, commercial, industrial, infrastructure, or other supported category. | yes |
+| Observed Damage Type | Source-Observed Damage Mechanism | damage evidence | Reported physical damage, such as buckling, floor collapse, debris, or access obstruction. | Retains the source-supported mechanism without converting it directly to a dwelling-loss count. | yes |
+| Structural Damage Class | Evidence-Based Structural Damage Class | observed outcome | Structural severity supported by the current evidence. | Coded as confirmed collapse, confirmed severe damage, probable severe damage, observed non-collapse damage, or not assessable. | yes |
+| Functional Housing Loss Status | Functional Loss of Heat-Protective Housing | main outcome | Whether the evidence supports loss of safe, accessible, cooling-capable residential shelter. | Coded as confirmed loss, probable loss, uncertain, no supported loss, or not applicable for nonresidential assets. | yes |
+| Habitability Status | Evidence-Based Habitability Status | intermediate outcome | Whether a residence can safely be occupied based on available evidence. | Coded separately from structural damage and remains pending until inspection where necessary. | yes |
+| Heat Protection Loss Mechanism | Mechanism of Lost Household Heat Protection | mechanism | Pathway through which a residence may cease to protect occupants from heat. | Structural unsafety, evacuation, power outage, water outage, access obstruction, or unknown; multiple claims may later be linked to one event. | yes |
+| Reported Affected Asset Count | Number of Assets Represented by the Claim | aggregation weight | Count of assets explicitly represented by one evidence claim. | May exceed one for an aggregate incident; it must not be treated as one row per building. | yes |
+| Evidence Tier | Damage Evidence Strength Tier | uncertainty | Ordered category reflecting source authority, geolocation, and directness. | Tier A is an official inspected or clearly geolocated claim; Tier B is an official approximate incident; lower tiers may hold geolocated ground imagery or supporting aerial signals. | yes |
+| Verification Status | Damage Evidence Verification Status | quality control | Current verification state of the claim. | Distinguishes official reported, geolocated, manually reviewed, image supported, contradicted, and pending states. | yes |
+| Supersedes Evidence ID | Prior Damage Evidence Claim ID | longitudinal linkage | Earlier claim updated by the current evidence record. | Missing for the first claim; later records link backward without deleting history. | yes |
+
+### Service Disruption Snapshot Variables
+
+| variable_name | full_name | role | formal_definition | construction_or_coding | is_final_variable |
+|---|---|---|---|---|---|
+| Disruption Snapshot ID | Service or Occupancy Disruption Snapshot ID | linkage | Unique identifier for one type of disruption at one observation time and geography. | Constructed from source report, geography, and disruption type. | yes |
+| Disruption Type | Service or Occupancy Disruption Type | mechanism | Type of disruption that may reduce access to heat protection. | Includes evacuation instruction, power outage, water outage, road isolation, shelter closure, or another explicitly observed disruption. | yes |
+| Service Status | Disruption Operational Status | time-varying state | Current state of the reported disruption. | Coded as in effect, resolved, partially restored, or unknown. | yes |
+| Reported Affected Households | Official Disruption-Coverage Households | exposure scope | Households covered by the official disruption or instruction. | Nullable integer; interpretation follows Disruption Type and does not imply observed displacement. | yes |
+| Reported Affected People | Official Disruption-Coverage Population | exposure scope | People covered by the official disruption or instruction. | Nullable integer; an evacuation-instruction count is a policy-coverage denominator. | yes |
+| Observed Evacuee Count | Observed Number of Evacuees | observed outcome | People documented as having evacuated or entered shelters. | Remains missing when only an instruction-coverage count is available. | yes |
+| Observed Power Outage Customers | Observed Electricity Outage Customers | mechanism | Customer connections reported without electricity. | Retained separately from population and household counts. | yes |
+| Observed Water Outage Households | Observed Water-Service Outage Households | mechanism | Households reported without water service. | Nullable integer with observation time and source. | yes |
+| Cooling Loss Confirmed | Confirmed Loss of Effective Cooling | main explanatory | Indicator that available evidence confirms loss of usable cooling. | False for evacuation instruction alone; it becomes true only with direct facility, household, or service evidence. | yes |
+| Evidence Tier | Service Disruption Evidence Strength Tier | uncertainty | Strength and spatial specificity of the disruption claim. | Official aggregate and verified facility-level observations remain distinguishable. | yes |
+
+### Grid Exposure Estimate Variables
+
+The grid table uses the finest official population disclosure geography. A disclosure group can contain one mesh or multiple officially linked meshes. Population totals are never duplicated across member cells.
+
+| variable_name | full_name | role | formal_definition | construction_or_coding | is_final_variable |
+|---|---|---|---|---|---|
+| Disclosure Group Code | Official Population Disclosure Group ID | linkage | Identifier for the finest geography at which all selected population variables are disclosed. | Retained from the population preprocessing workflow. | yes |
+| Functional Housing Loss Status | Grid Functional Housing-Loss Estimation Status | main outcome status | Whether functional housing loss has been estimated for the grid. | Initially not yet estimated; updated only when damage evidence can be spatially linked. | yes |
+| Expected Functionally Lost Buildings | Expected Number of Functionally Lost Buildings | main outcome | Sum of calibrated building-level functional-loss probabilities in the grid. | (E[D_g]=\sum_{i\in g}p_i); remains missing until probabilities are estimated. | yes |
+| Confirmed Functionally Lost Buildings | Confirmed Functionally Lost Buildings in Grid | lower-bound outcome | Count of buildings with sufficiently strong confirmed functional-loss evidence. | Reported separately from expected loss and remains missing until confirmed evidence is geolocated. | yes |
+| Estimated Affected Population | Expected Population Associated with Functional Housing Loss | exposure outcome | Population expected to occupy functionally lost housing under an explicit allocation model. | Not calculated by multiplying the whole grid population by an unlocalized prefecture damage share. | yes |
+| Estimated Affected Population Age 65+ | Expected Affected Population Age 65 or Older | primary exposure outcome | Expected number of residents age 65 or older associated with functional housing loss. | Estimated only after housing loss is localized and an allocation rule is specified. | yes |
+| Estimated Affected Population Age 75+ | Expected Affected Population Age 75 or Older | exposure outcome | Expected number of residents age 75 or older associated with functional housing loss. | Uses the same uncertainty-aware allocation as the age-65-or-older measure. | yes |
+| Estimated Affected Population Age 85+ | Expected Affected Population Age 85 or Older | exposure outcome | Expected number of residents age 85 or older associated with functional housing loss. | Uses the same uncertainty-aware allocation as the age-65-or-older measure. | yes |
+| Heat Exposure Status | Grid Heat-Exposure Input Status | quality control | Whether event-window heat exposure has been constructed for the grid. | Initially pending heat input; satellite surface temperature alone cannot finalize this status. | yes |
+| Estimation Status | Grid Exposure Estimation Status | quality control | Readiness of the grid for affected-population estimation. | Initially pending damage localization; later states must identify the completed evidence and model stage. | yes |
+| Damage Evidence Cutoff | Latest Damage Evidence Time Used | time index | Most recent evidence time included in the grid estimate. | Stored as a timezone-aware timestamp and updated when the grid estimates are rerun. | yes |
 
 ### Designated Shelter Variables
 
@@ -222,3 +334,358 @@ Facility distances are straight-line distances from the centre of each populated
 | Nearest Welfare Facility Distance m | Straight-Line Distance to Nearest Welfare Facility | accessibility | Euclidean distance to the nearest MLIT welfare-facility point. | Uses the 2023 reference layer and does not verify current operation or admission capacity. | yes |
 | Nearest Public Office or Hall Distance m | Straight-Line Distance to Nearest Public Office or Public Hall | accessibility | Euclidean distance to the nearest MLIT public-office or public-hall point. | Uses the 2022 reference layer; presence does not imply shelter designation or cooling availability. | yes |
 | Nearest School Distance m | Straight-Line Distance to Nearest School | accessibility | Euclidean distance to the nearest MLIT school point. | Uses the 2023 reference layer; presence does not imply shelter designation or cooling availability. | yes |
+
+### Station Heat and Historical Scenario Variables
+
+Event-window heat is constructed from quality-checked ten-minute observations at five
+stations. The line-figure historical scenario uses matching calendar dates from 2021-2025
+at Kumamoto and Yatsushiro, while the prefecture-wide spatial baseline uses the same dates
+at 17 temperature-reporting stations. Missing observations remain missing; no temperature
+or humidity values are imputed or clipped. Station air temperature is not interpreted as
+indoor temperature or, before the spatial model is evaluated, as a complete prefecture-wide
+heat surface.
+
+| variable_name | full_name | role | formal_definition | construction_or_coding | is_final_variable |
+|---|---|---|---|---|---|
+| Station Name | JMA AMeDAS Station Name | stratification | Official English name of the observation station. | Retained from the station metadata snapshot. | yes |
+| Observation Date | JMA Observation Date | time index | Local calendar date of the event-window observation in Japan Standard Time. | Ten-minute timestamps are parsed in Asia/Tokyo and aggregated by calendar day. | yes |
+| Historical Year | Historical Heat Scenario Year | scenario index | Source year for one matched historical daily observation. | Restricted to 2021-2025. | yes |
+| Scenario Date | Matched 2026 Heat Scenario Calendar Date | scenario time index | Calendar date obtained by anchoring a historical month and day to the 2026 event window. | Restricted to 2026-07-28 through 2026-08-26. | yes |
+| Event Day | Days Since the 2026 Kumamoto Earthquake | time index | Number of local calendar days since 2026-07-28. | The earthquake date is day 0; the historical scenario covers days 0-29. | yes |
+| Daily Maximum Air Temperature C | Daily Maximum Near-Surface Air Temperature in Degrees Celsius | main explanatory | Maximum station air temperature observed during the local calendar day. | Calculated from quality-checked ten-minute event observations or retained from the official historical daily table. | yes |
+| Daily Minimum Air Temperature C | Daily Minimum Near-Surface Air Temperature in Degrees Celsius | main explanatory | Minimum station air temperature observed during the local calendar day. | Calculated from quality-checked ten-minute event observations or retained from the official historical daily table. | yes |
+| Daily Mean Relative Humidity % | Daily Mean Relative Humidity Percentage | main explanatory | Arithmetic mean of available relative-humidity observations during the local calendar day. | Calculated from quality-checked ten-minute event observations or retained when reported in the official historical daily table; missing values are not imputed. | yes |
+| Hot Day Indicator | Daily Maximum Air Temperature at Least 35 C | heat threshold | Indicator that daily maximum air temperature is at least 35 C. | A partial event day above the threshold can be confirmed true; a partial day below the threshold remains missing. | yes |
+| Hot Night Indicator | Daily Minimum Air Temperature at Least 25 C | heat threshold | Indicator that daily minimum air temperature is at least 25 C. | Evaluated only for a complete event day or a reported historical day; incomplete event days remain missing. | yes |
+| Daily Observation Completeness % | Share of Expected Ten-Minute Temperature Observations Available | quality control | Percentage of the expected 144 ten-minute temperature records available for a station-day. | Observation count divided by 144 and multiplied by 100; capped at 100. | yes |
+| Daily Record Status | Daily Station Heat Record Completeness Status | quality control | Whether the event station-day contains all expected ten-minute temperature observations. | Coded as complete for 144 observations and partial otherwise. | yes |
+| Temperature Record Complete | Historical Daily Temperature-Record Completeness Indicator | quality control | Whether mean, maximum, and minimum air temperature are all reported for one historical station-day. | True only when all three official temperature fields are non-missing; 2,546 of 2,550 spatial-baseline station-days are complete. | yes |
+
+### Historical MODIS Spatial Heat Variables
+
+The satellite grid summarizes matching calendar periods from 2021-2025 using Terra and Aqua
+eight-day land-surface-temperature products at approximately 1 km resolution. Only pixels
+with mandatory quality assurance marked good, data quality marked good, and reported land-
+surface-temperature error no greater than 1 K are retained. Terra and Aqua product means
+receive equal weight. Cloud-affected and lower-quality values remain missing; no spatial or
+temporal gap filling is used. Land-surface temperature is a spatial covariate and is not
+interpreted as near-surface air temperature, indoor temperature, or a forecast.
+
+| variable_name | full_name | role | formal_definition | construction_or_coding | is_final_variable |
+|---|---|---|---|---|---|
+| MODIS Pixel ID | Stable MODIS Sinusoidal Grid-Cell ID | linkage | Identifier combining source tile, row, and column for one approximately 1 km satellite cell. | Retained for each pixel whose centre lies inside Kumamoto Prefecture. | yes |
+| Historical Daytime Land Surface Temperature C | Strict-Quality Historical Daytime Land Surface Temperature in Degrees Celsius | spatial heat covariate | Mean daytime satellite land-surface temperature for the matched July 28-August 26 periods in 2021-2025. | Calculated separately within Terra and Aqua from valid eight-day composites, then averaged across available product means with equal product weight. | yes |
+| Historical Nighttime Land Surface Temperature C | Strict-Quality Historical Nighttime Land Surface Temperature in Degrees Celsius | spatial heat covariate | Mean nighttime satellite land-surface temperature for the matched July 28-August 26 periods in 2021-2025. | Uses the same strict quality rule and equal-product construction as the daytime measure. | yes |
+| MODIS Valid Observation Count | Number of Strict-Quality MODIS Land-Surface-Temperature Observations | quality control | Number of valid Terra and Aqua eight-day observations contributing to the relevant daytime or nighttime pixel estimate. | Stored separately for daytime and nighttime; a zero count remains missing in the corresponding temperature field. | yes |
+| Historical Land Surface Temperature SD C | Historical Within-Pixel Land-Surface-Temperature Standard Deviation in Degrees Celsius | sensitivity | Sample standard deviation of all strict-quality Terra and Aqua observations for the relevant daytime or nighttime pixel. | Stored separately for daytime and nighttime and used to identify temporally unstable satellite estimates. | yes |
+| Station-Calibrated Historical Air Temperature C | Station-Calibrated Historical Near-Surface Air Temperature in Degrees Celsius | modeled heat outcome | Historical maximum air temperature for the daytime model or minimum air temperature for the nighttime model predicted at a MODIS pixel. | Estimated from the 17-station historical baseline using the matched daytime or nighttime satellite covariate and a cross-validated spatial residual model; produced only when out-of-station validation supports the model. | yes |
+| Spatial Heat Anomaly C | Station-Calibrated Spatial Heat Anomaly in Degrees Celsius | heterogeneity outcome | Difference between a pixel's station-calibrated historical air temperature and the prefecture-wide population-relevant reference temperature for the same period. | Calculated separately for daytime and nighttime after calibration; positive values indicate a historically warmer location, not an event forecast. | yes |
+| Interpolation Uncertainty C | Out-of-Station Spatial Prediction Uncertainty in Degrees Celsius | uncertainty | Estimated prediction uncertainty for the station-calibrated air-temperature surface. | Derived from leave-one-station-out prediction errors and local distance or support of the residual spatial model; reported separately for daytime and nighttime. | yes |
+
+## 5. Identification Strategy
+
+### Design Principle
+
+The current phase uses descriptive evidence triangulation rather than causal identification.
+Official observations are preserved at their reported time and geography, then linked only
+when coordinates or explicit place descriptions permit. The screening combines three
+independent dimensions: the spatial baseline of Population Age 65+, the reported
+Tomiai/Jonan housing-damage concentration, and direct evidence of shelter, water, power, or
+cooling disruption. Agreement across dimensions raises operational priority but does not
+convert a location into a confirmed housing-loss or heat-injury case.
+
+### Screening Specification
+
+- Population Age 65+ is mapped at its official disclosure-group geography without assigning
+  residents to damaged buildings.
+- Facility Name, Latitude, and Longitude locate designated shelters. Designation alone is
+  not interpreted as current operation or available cooling.
+- Cooling Loss Confirmed and Heat Protection Loss Mechanism identify direct evidence of
+  lost cooling protection. Evidence Tier and Verification Status remain visible in the
+  supporting table.
+- Observed Evacuee Count and Observed Water Outage Households are plotted as separate
+  time-stamped series. They are not added, multiplied, or interpreted as the same population.
+- Reported housing-damage concentrations are contextual areas, while point symbols are
+  reserved for facilities with explicit coordinates.
+
+This strategy directly produces Minami Ward Shelter and Cooling Risk Screening in Section 8.
+The time-stamped evidence ledger remains an internal analytical input rather than a result.
+The current phase cannot identify a causal effect of earthquake exposure on heat outcomes,
+estimate indoor temperature, infer that all older residents in a highlighted area were
+displaced, or calculate the shelter cooling-capacity gap defined in Section 1.
+
+### Station Heat Scenario Design
+
+The heat component is a descriptive event-window comparison. Daily Maximum Air Temperature
+C and Daily Minimum Air Temperature C from five event-period stations are compared with the
+same calendar dates observed at Kumamoto and Yatsushiro in 2021-2025. The historical
+distribution supplies a calendar-matched scenario envelope; it is not a meteorological
+forecast, confidence interval, or counterfactual estimate of temperatures without the
+earthquake.
+
+Daytime and nighttime heat are analyzed separately because a high daily maximum and a warm
+overnight minimum represent different recovery conditions. Hot Day Indicator uses the
+pre-specified threshold of 35 C and Hot Night Indicator uses 25 C. Daily Record Status is
+retained visually: partial-day observations may confirm that the daytime threshold has
+already been crossed, but cannot establish a below-threshold day or classify a hot night.
+Station observations are not spatially interpolated to population grids in this phase.
+
+### Historical Spatial Heat Design
+
+The spatial component estimates historical heat heterogeneity, not event-period weather.
+Historical Daytime Land Surface Temperature C is paired with the 2021-2025 station mean of
+Daily Maximum Air Temperature C, and Historical Nighttime Land Surface Temperature C is
+paired with the station mean of Daily Minimum Air Temperature C. Temperature Record
+Complete restricts the station target to complete historical days. MODIS Valid Observation
+Count determines pixel eligibility before calibration.
+
+The calibration is evaluated out of station. A prefecture-wide mean-only model, a satellite-
+only linear calibration, and a satellite calibration with inverse-distance residual
+interpolation are compared by leave-one-station-out prediction. The model with the lowest
+cross-validated root-mean-square error is retained separately for daytime and nighttime. If
+neither satellite-based candidate improves on the mean-only model, Station-Calibrated
+Historical Air Temperature C is not interpreted as a supported spatial air-temperature
+surface; the figure is restricted to land-surface-temperature patterns and the failed
+validation result. This design is descriptive and cannot establish earthquake effects,
+indoor temperature, individual heat dose, or a future forecast.
+
+## 6. Main Estimation Framework
+
+### Primary Framework: Evidence-Constrained Operational Screening
+
+The map is a layered descriptive screen. For a mapped area \(A\), the older-population
+baseline is summarized as
+
+\[
+N_{65+,A} = \sum_{g \in A} N_{65+,g}.
+\]
+
+\(N_{65+,A}\) is the number of residents age 65 or older in area \(A\), \(g\) indexes an
+official population disclosure group intersecting that area, and \(N_{65+,g}\) is Population
+Age 65+ in group \(g\). This total is a residential baseline, not an estimate of affected or
+displaced older residents.
+
+For each observed time \(t\), the operational panel retains
+
+\[
+Y_t \in \{E_t, W_t\}.
+\]
+
+\(Y_t\) denotes the displayed operational observation, \(E_t\) is Observed Evacuee Count,
+and \(W_t\) is Observed Water Outage Households. The two series use separate axes and are
+never combined into a composite outcome.
+
+A facility receives a confirmed cooling-interruption marker only when Cooling Loss
+Confirmed is true and its location is supported by Latitude and Longitude. This is a
+classification rule, not a fitted probability model. Facilities without a confirmed marker
+remain unknown with respect to post-earthquake cooling unless direct operational evidence
+states otherwise.
+
+### Secondary Framework: Calendar-Matched Heat Scenario
+
+Let \(Z^{k}_{syd}\) denote the observed daily station temperature for outcome
+\(k \in \{\max,\min\}\), station \(s\), historical year
+\(y \in \{2021,\ldots,2025\}\), and event day \(d \in \{0,\ldots,29\}\).
+For each outcome and event day, the historical center is
+
+\[
+M^{k}_{d} = \operatorname{median}_{s,y}\left(Z^{k}_{syd}\right),
+\]
+
+and the descriptive historical envelope is
+
+\[
+B^{k}_{d} = \left[
+\min_{s,y}\left(Z^{k}_{syd}\right),
+\max_{s,y}\left(Z^{k}_{syd}\right)
+\right].
+\]
+
+The envelope contains the ten calendar-matched station-year observations available for
+each event day: two stations across five historical years. It describes observed historical
+range and is not an uncertainty interval. Current 2026 values \(O^{k}_{sd}\) from the five
+event stations are overlaid through the latest available observation date. Hot-day and
+hot-night classifications are
+
+\[
+H^{\max}_{sd}=\mathbb{1}\left(O^{\max}_{sd}\geq 35\right),
+\qquad
+H^{\min}_{sd}=\mathbb{1}\left(O^{\min}_{sd}\geq 25\right).
+\]
+
+For a partial station-day, \(H^{\max}_{sd}=1\) is allowed once 35 C has been observed;
+otherwise it remains missing. \(H^{\min}_{sd}\) remains missing until the station-day is
+complete. This prevents incomplete observations from being treated as safe days or nights.
+
+### Tertiary Framework: Cross-Validated Spatial Heat Calibration
+
+For heat period \(k \in \{day,night\}\), define the station climatological target as
+
+\[
+\bar{T}^{k}_{s} = \frac{1}{n_s}\sum_{j=1}^{n_s} T^{k}_{sj}.
+\]
+
+\(\bar{T}^{k}_{s}\) is the mean historical station air temperature at station \(s\),
+\(T^{day}_{sj}\) is Daily Maximum Air Temperature C on complete historical station-day
+\(j\), \(T^{night}_{sj}\) is Daily Minimum Air Temperature C, and \(n_s\) is the number of
+complete historical station-days at station \(s\).
+
+The satellite-only calibration is
+
+\[
+\bar{T}^{k}_{s} = \beta^{k}_{0} + \beta^{k}_{1} L^{k}_{s} + r^{k}_{s}.
+\]
+
+\(\beta^{k}_{0}\) is the period-specific intercept, \(\beta^{k}_{1}\) is the period-specific
+satellite calibration coefficient, \(L^{k}_{s}\) is Historical Daytime Land Surface
+Temperature C or Historical Nighttime Land Surface Temperature C sampled at station \(s\),
+and \(r^{k}_{s}\) is the station residual.
+
+For candidate inverse-distance power \(p\) and neighbor count \(q\), the spatial residual at
+pixel \(g\) is
+
+\[
+\hat{r}^{k}_{g}(p,q) =
+\frac{\sum_{s \in N_q(g)}(d_{gs}+\delta)^{-p}r^{k}_{s}}
+{\sum_{s \in N_q(g)}(d_{gs}+\delta)^{-p}}.
+\]
+
+\(N_q(g)\) is the set of the \(q\) nearest eligible stations to pixel \(g\), \(d_{gs}\) is
+their projected distance, and \(\delta\) is a small fixed distance constant that prevents
+division by zero. Candidate values of \(p\) and \(q\) are selected only through leave-one-
+station-out prediction. The combined prediction is
+
+\[
+\hat{T}^{k}_{g} = \hat{\beta}^{k}_{0} + \hat{\beta}^{k}_{1}L^{k}_{g}
++ \hat{r}^{k}_{g}.
+\]
+
+\(\hat{T}^{k}_{g}\) is Station-Calibrated Historical Air Temperature C at pixel \(g\),
+\(L^{k}_{g}\) is the corresponding historical land-surface temperature, and the hatted
+terms are fitted values from the selected candidate. The mean-only, satellite-only, and
+combined candidates are compared using
+
+\[
+RMSE^{k}_{LOO} =
+\sqrt{\frac{1}{S}\sum_{s=1}^{S}
+\left(\bar{T}^{k}_{s}-\hat{T}^{k}_{s,-s}\right)^2}.
+\]
+
+\(RMSE^{k}_{LOO}\) is the leave-one-station-out root-mean-square error, \(S\) is the number
+of eligible stations, and \(\hat{T}^{k}_{s,-s}\) is the prediction for station \(s\) from a
+model fitted without that station. Mean absolute error and mean signed error are reported as
+supporting diagnostics, but model selection uses \(RMSE^{k}_{LOO}\).
+
+For a supported surface, the population-referenced spatial anomaly is
+
+\[
+A^{k}_{g} = \hat{T}^{k}_{g} -
+\frac{\sum_g P_g\hat{T}^{k}_{g}}{\sum_g P_g}.
+\]
+
+\(A^{k}_{g}\) is Spatial Heat Anomaly C and \(P_g\) is Total Population assigned to pixel
+\(g\) from the populated small-area grid. This centers the map on where residents live
+rather than on unpopulated mountain area. Prediction uncertainty is
+
+\[
+U^{k}_{g} = \sqrt{\left(RMSE^{k}_{LOO}\right)^2
++ \operatorname{SD}_{s}\left(\hat{T}^{k}_{g,-s}\right)^2}.
+\]
+
+\(U^{k}_{g}\) is Interpolation Uncertainty C and
+\(\operatorname{SD}_{s}(\hat{T}^{k}_{g,-s})\) is the pixel-level standard deviation among
+the leave-one-station-out fitted surfaces. It combines observed out-of-station error with
+sensitivity to omission of any one station; it is not a probabilistic confidence interval.
+
+### Sensitivity and Failure-Mode Plan
+
+- Population disclosure groups that cross the Minami Ward boundary are clipped only for
+  display; their official counts are not area-weighted into new population estimates.
+- The figure distinguishes designated shelters from facilities with confirmed cooling or
+  water failure so that nominal availability is not mistaken for operational availability.
+- Official observations at different times are retained separately to reveal changing
+  occupancy and outage conditions.
+- Missing cooling, power, water, or housing fields remain unknown rather than zero.
+- The Tomiai/Jonan concentration is shown as an officially reported contextual zone, not a
+  count or probability surface.
+- The historical heat band uses the observed minimum and maximum rather than a model-based
+  interval because only ten station-year observations are available per event day.
+- Event-period station values are shown individually, and partial station-days are marked
+  separately rather than completed through imputation.
+- The heat scenario does not estimate indoor temperature, heat illness, mortality, or a
+  prefecture-wide temperature surface.
+- The spatial heat model uses only strict-quality satellite observations. A pixel is eligible
+  for primary calibration only when both Terra and Aqua contribute and at least five valid
+  observations are available for the relevant daytime or nighttime period.
+- Relaxed satellite quality criteria are reserved for a sensitivity comparison and never
+  overwrite the strict-quality primary surface.
+- Mean-only, satellite-only, and satellite-plus-residual candidates are compared by leave-
+  one-station-out error; residual interpolation is not retained merely because it appears
+  spatially smoother.
+- Pixels outside the land-surface-temperature range represented by eligible stations are
+  flagged as extrapolation and are not used for precise local temperature claims.
+- Historical Land Surface Temperature SD C and MODIS Valid Observation Count remain visible
+  as support diagnostics so that cloud-limited or temporally unstable pixels are not treated
+  as equally reliable.
+- Spatial Heat Anomaly C describes a 2021-2025 matching-season pattern. It is not a forecast
+  for the next month and does not substitute for event-period station or forecast data.
+- Results remain inconclusive for the full deficit \(Gap_s(t)\) until effective cooled
+  capacity and expected older-person demand are observed or estimated.
+
+## 7. Analytical Workflow
+
+| step | variables used | formula/model used | generated figure/table title | theory or claim evaluated | support status |
+|---|---|---|---|---|---|
+| 1. Define the Minami Ward screening frame and older-population baseline | Population Age 65+, Latitude, Longitude | \(N_{65+,A} = \sum_{g \in A} N_{65+,g}\), used only as a residential baseline | Minami Ward Shelter and Cooling Risk Screening | Older residents are spatially heterogeneous within the affected ward | Descriptively supported; affected status remains unknown |
+| 2. Overlay nominal shelter access and confirmed facility interruption | Facility Name, Latitude, Longitude, Cooling Loss Confirmed, Heat Protection Loss Mechanism | Evidence-constrained facility classification rule | Minami Ward Shelter and Cooling Risk Screening | Shelter designation does not guarantee usable cooling after the earthquake | Partially supported by confirmed facility failures; unreported facilities remain unknown |
+| 3. Add reported damage-concentration context | Geographic Level, Municipality, Evidence Tier, Verification Status | Contextual overlay without building-level allocation | Minami Ward Shelter and Cooling Risk Screening | Tomiai and Jonan require prioritized verification because official pre-assessment reports concentrated housing damage | Supported only at the reported contextual geography |
+| 4. Plot changing evacuation and water-outage observations | Observation Time, Observed Evacuee Count, Observed Water Outage Households | \(Y_t \in \{E_t, W_t\}\) | Minami Ward Shelter and Cooling Risk Screening | Cooling-protection conditions change over time and should not be represented by one static snapshot | Supported for the observed municipal and Jonan series |
+| 5. Preserve the internal evidence ledger | Observation Time, Geographic Level, Municipality, Full Collapse Buildings, Half Collapse Buildings, Partial Damage Buildings, Observed Evacuee Count, Observed Power Outage Customers, Observed Water Outage Households, Heat Protection Loss Mechanism, Cooling Loss Confirmed, Evidence Tier, Verification Status | No cross-domain aggregation; one reported observation per row | Internal analytical input; excluded from results | Early decisions can use official observations while retaining uncertainty and spatial limits | Supported as documentation; not a standalone research result or affected-population estimate |
+| 6. Construct the calendar-matched daytime heat scenario | Station Name, Historical Year, Scenario Date, Event Day, Daily Maximum Air Temperature C, Hot Day Indicator, Daily Record Status | Historical daily median and observed minimum-maximum envelope; overlay 2026 station values and the 35 C threshold | Event-Window Daytime and Nighttime Heat Scenario | Recovery-period daytime heat may reach levels requiring active cooling even while damage assessment remains incomplete | Descriptively supported for station locations; the historical envelope is not a forecast |
+| 7. Construct the calendar-matched nighttime heat scenario | Station Name, Historical Year, Scenario Date, Event Day, Daily Minimum Air Temperature C, Hot Night Indicator, Daily Record Status | Historical daily median and observed minimum-maximum envelope; overlay 2026 station values and the 25 C threshold | Event-Window Daytime and Nighttime Heat Scenario | Warm nights may limit overnight physiological recovery and extend cooling needs beyond daytime hours | Descriptively supported for complete station-days; partial nights remain unclassified |
+| 8. Construct the strict-quality historical satellite grid | MODIS Pixel ID, Historical Daytime Land Surface Temperature C, Historical Nighttime Land Surface Temperature C, MODIS Valid Observation Count, Historical Land Surface Temperature SD C | Strict quality screening, equal Terra-Aqua product weighting, and no gap filling | Historical MODIS and Station-Calibrated Heat Spatial Heterogeneity | Matching-season surface heat is spatially heterogeneous across Kumamoto Prefecture | Descriptively supported where both products and at least five strict-quality observations are available |
+| 9. Calibrate satellite heat against historical station air temperature | Station Name, Temperature Record Complete, Daily Maximum Air Temperature C, Daily Minimum Air Temperature C, Historical Daytime Land Surface Temperature C, Historical Nighttime Land Surface Temperature C | Mean-only, linear satellite, and satellite-plus-residual candidates compared by \(RMSE^{k}_{LOO}\) | Historical MODIS and Station-Calibrated Heat Spatial Heterogeneity | Satellite surface temperature can provide spatial information about near-surface daytime and nighttime heat rankings | Supported only if a satellite-based candidate outperforms the mean-only model out of station; otherwise rejected |
+| 10. Map population-referenced heat heterogeneity and prediction support | Station-Calibrated Historical Air Temperature C, Spatial Heat Anomaly C, Interpolation Uncertainty C, Total Population, MODIS Valid Observation Count | \(A^{k}_{g}\) and \(U^{k}_{g}\), with extrapolation and low-support pixels flagged | Historical MODIS and Station-Calibrated Heat Spatial Heterogeneity | Historically warmer populated locations may require stronger heat-protection planning after loss of housing function | Provides a historical vulnerability layer only; event risk still requires current observations or forecasts |
+| 11. Test readiness for the central cooling-deficit question | Functional Housing Loss Status, Estimated Affected Population Age 65+, Heat Exposure Status, Observed Evacuee Count, Cooling Loss Confirmed | Compare required inputs with the deficit definition in Section 1 | Deferred outputs in Section 8 | Verified effective cooled capacity must be compared with expected heat-vulnerable demand | Inconclusive until capacity and localized housing-loss inputs are available; historical spatial heat does not establish current displaced demand |
+
+The checkpoint for this phase remains partial. Minami Ward Shelter and Cooling Risk
+Screening supports spatial priority screening, Event-Window Daytime and Nighttime Heat
+Scenario tests the station-based 30-day heat component, and Historical MODIS and Station-
+Calibrated Heat Spatial Heterogeneity can add a validated historical spatial pattern. The
+historical spatial output does not establish event-period grid temperature and none of the
+current outputs quantifies a shelter-level cooling deficit.
+
+## 8. Figure and Table Plan
+
+The planned output set links the existing population, early operational screening, and
+station-heat figures to the next spatial-estimation stages. Existing figures are retained
+as working outputs but return to pending while the critique findings are corrected. The
+MODIS-based output is intended to characterize historical spatial heat heterogeneity; it is
+not a weather forecast, indoor-temperature estimate, or substitute for station air
+temperature.
+
+### Figures
+
+| title | what it expresses | figure type | subpanels | key variables | status |
+|---|---|---|---:|---|---|
+| Kumamoto Population and Older-Age Vulnerability Baseline | Establishes the prefecture-wide population baseline and spatial concentration of older residents before linking earthquake loss and heat exposure. | map | 2 | Total Population, Population Age 65+ Share, Population Age 65+, Municipality | pending |
+| Minami Ward Shelter and Cooling Risk Screening | Locates older residents, designated shelters, the reported Tomiai/Jonan damage concentration, verified unavailable facilities, and changing evacuation and water-outage observations without estimating a numerical cooling-capacity deficit. | map and line | 2 | Population Age 65+, Latitude, Longitude, Facility Name, Observation Time, Observed Evacuee Count, Observed Water Outage Households, Cooling Loss Confirmed, Habitability Status, Heat Protection Loss Mechanism, Evidence Tier, Verification Status | pending |
+| Event-Window Daytime and Nighttime Heat Scenario | Compares observed 2026 daytime and nighttime station temperatures with the matching 2021-2025 historical scenario while distinguishing complete and partial event days; the historical continuation is a scenario, not a weather forecast. | line | 2 | Station Name, Observation Date, Historical Year, Scenario Date, Event Day, Daily Maximum Air Temperature C, Daily Minimum Air Temperature C, Hot Day Indicator, Hot Night Indicator, Daily Observation Completeness %, Daily Record Status | pending |
+| Historical MODIS and Station-Calibrated Heat Spatial Heterogeneity | Uses matching-period historical MODIS daytime and nighttime land-surface temperature together with historical station air temperature to estimate a station-calibrated spatial heat pattern for Kumamoto Prefecture. | map | 3 | Historical Daytime Land Surface Temperature C, Historical Nighttime Land Surface Temperature C, MODIS Valid Observation Count, Station-Calibrated Historical Air Temperature C, Spatial Heat Anomaly C, Interpolation Uncertainty C | pending |
+| Functional Housing Loss and Older-Person Exposure | Separates the confirmed building-loss lower bound, expected functional housing loss, and estimated older population associated with localized housing loss. | map | 3 | Functional Housing Loss Status, Confirmed Functionally Lost Buildings, Expected Functionally Lost Buildings, Estimated Affected Population Age 65+, Estimation Status, Damage Evidence Cutoff | pending |
+
+### Tables
+
+| title | what it expresses | rows | columns | row meaning | column meaning | status |
+|---|---|---:|---:|---|---|---|
+
+No table is currently included in the research results. The time-stamped evidence ledger
+is retained only as an internal analytical input.
+
+### Deferred Outputs Required for the Full Research Objective
+
+- A shelter-level effective cooled-capacity deficit table remains deferred until verified
+  cooling equipment, backup power, usable cooled space, occupancy, and accessibility inputs
+  are acquired and confirmed in Section 4.
+- A building-loss calibration and validation output remains deferred until geolocated
+  official inspection or damage-certificate labels become available.
