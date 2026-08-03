@@ -46,7 +46,9 @@ outdoor heat scenario.
 - Damage cutoff used by the modeled allocation: 2026-08-01 17:00 JST.
 - Event heat observations currently used: 2026-07-28 through 2026-08-03.
 
-### Study Design and Claim Boundary
+### Study Design Declaration
+
+- Research type: applied
 
 This is an applied, evidence-constrained scenario study. It combines observed
 official context with transparent model-based allocations. It does not identify

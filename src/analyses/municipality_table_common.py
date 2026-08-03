@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 from pathlib import Path
+from math import isfinite
 from typing import Sequence
 
 import geopandas as gpd
@@ -136,8 +137,33 @@ def build_master_summary() -> pd.DataFrame:
     return master
 
 
+def _visible_number(value: float, decimals: int = 1, thousands: bool = True) -> str:
+    """Format a value compactly without hiding a supported nonzero as zero."""
+    require(isfinite(float(value)), "Cannot format a non-finite result")
+    visible_decimals = decimals
+    while value != 0 and round(float(value), visible_decimals) == 0:
+        visible_decimals += 1
+    grouping = "," if thousands else ""
+    return f"{value:{grouping}.{visible_decimals}f}"
+
+
 def scenario_range(lower: pd.Series, upper: pd.Series) -> pd.Series:
-    return lower.map(lambda value: f"{value:,.1f}") + "–" + upper.map(lambda value: f"{value:,.1f}")
+    return lower.map(_visible_number) + "–" + upper.map(_visible_number)
+
+
+def _nonzero_number_format(value: float, base_format: str) -> str:
+    """Increase precision only when the base format would render nonzero as zero."""
+    if not isinstance(value, (int, float, np.integer, np.floating)):
+        return base_format
+    if not isfinite(float(value)) or value == 0 or "." not in base_format:
+        return base_format
+    decimals = len(base_format.rsplit(".", 1)[1])
+    if round(float(value), decimals) != 0:
+        return base_format
+    while round(float(value), decimals) == 0:
+        decimals += 1
+    prefix = "#,##0" if "," in base_format else "0"
+    return prefix + "." + ("0" * decimals)
 
 
 def write_result_workbook(
@@ -177,7 +203,8 @@ def write_result_workbook(
                 cell.fill = PatternFill("solid", fgColor="F8FAFD")
     for column_index, number_format in formats.items():
         for row_index in range(2, 47):
-            sheet.cell(row_index, column_index).number_format = number_format
+            cell = sheet.cell(row_index, column_index)
+            cell.number_format = _nonzero_number_format(cell.value, number_format)
     for column_index, width in enumerate([24, 23, 24, 24, 25, 25], start=1):
         sheet.column_dimensions[get_column_letter(column_index)].width = width
     sheet.freeze_panes = "B2"

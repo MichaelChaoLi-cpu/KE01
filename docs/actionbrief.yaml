@@ -593,6 +593,11 @@ figureDictionary:
     figureId: fig_kumamoto_population_and_older_age_vulnerability_baseline
     figurePath: data/results/figures/Figure_kumamoto_population_and_older_age_vulnerability_baseline.png
     figureCaption: Population and Older-Age Vulnerability in Kumamoto
+    figurePanelCount: 2
+    figureNote: >-
+      Panel a maps residents per populated 125 m mesh, with outlined municipalities
+      providing damage-report context. Panel b maps the share of residents aged 65
+      or older by official disclosure group using the same prefecture extent.
     figureAim: Establish the prefecture-wide population and older-age spatial baseline.
     figureExplanation: Maps residents per populated 125 m mesh and age-65-plus share by official disclosure group, highlighting the spatial mismatch between population concentration and older-age vulnerability.
     figureSuitableSection: Results - Population and vulnerability baseline
@@ -600,6 +605,12 @@ figureDictionary:
     figureId: fig_minami_ward_shelter_and_cooling_risk_screening
     figurePath: data/results/figures/Figure_minami_ward_shelter_and_cooling_risk_screening.png
     figureCaption: Minami Ward Shelter and Cooling-Risk Screening
+    figurePanelCount: 2
+    figureNote: >-
+      Panel a maps older residents, listed designated shelters, confirmed unavailable
+      shelters, and the Tomiai and Jonan outage context in Minami Ward. Panel b plots
+      reported public-shelter occupants and Jonan water-outage households over time,
+      including the latest Minami Ward occupancy observation.
     figureAim: Summarize operational shelter, occupancy, water, and cooling context in Minami Ward.
     figureExplanation: Combines older residents, listed shelters, confirmed unavailable facilities, contextual outage geography, and the time course of reported occupancy and water outages; shelter listing does not verify operation or cooling.
     figureSuitableSection: Results - Early operational context
@@ -607,6 +618,12 @@ figureDictionary:
     figureId: fig_event_window_daytime_and_nighttime_heat_scenario
     figurePath: data/results/figures/Figure_event_window_daytime_and_nighttime_heat_scenario.png
     figureCaption: Event-Window Daytime and Nighttime Heat
+    figurePanelCount: 2
+    figureNote: >-
+      Panel a shows daily maximum air temperature at five event stations against the
+      matching historical median, pooled range, and daytime threshold. Panel b shows
+      the corresponding daily minimum air temperatures and nighttime threshold; open
+      markers and dashed terminal segments denote partial station-days.
     figureAim: Compare observed 2026 station heat with the matching 2021-2025 historical envelope.
     figureExplanation: Shows five-station daily maximum and minimum temperatures through August 3 against the pooled historical median, observed range, and 35 deg C daytime and 25 deg C nighttime thresholds; the latest day is partial.
     figureSuitableSection: Results - Event heat context
@@ -614,6 +631,14 @@ figureDictionary:
     figureId: fig_historical_modis_and_station_calibrated_heat_spatial_heterogeneity
     figurePath: data/results/figures/Figure_historical_modis_and_station_calibrated_heat_spatial_heterogeneity.png
     figureCaption: Historical Heat Spatial Heterogeneity and Calibration
+    figurePanelCount: 6
+    figureNote: >-
+      Panels a and d map historical daytime and nighttime MODIS land-surface
+      temperature. Panels b and e map the corresponding station-calibrated daytime
+      and nighttime air-temperature surfaces. Panels c and f map daytime and
+      nighttime prediction uncertainty. Station markers identify JMA sites, and
+      pixels outside the station-observed land-surface-temperature range are shown
+      separately from missing data.
     figureAim: Display historical daytime and nighttime surface heat, calibrated air temperature, and prediction uncertainty.
     figureExplanation: Six panels contrast MODIS land-surface temperature with station-calibrated historical air-temperature surfaces and uncertainty; black pixels are outside the station-observed land-surface-temperature range rather than missing values.
     figureSuitableSection: Results - Historical spatial heat heterogeneity
@@ -621,6 +646,13 @@ figureDictionary:
     figureId: fig_functional_housing_loss_and_older_person_exposure
     figurePath: data/results/figures/Figure_functional_housing_loss_and_older_person_exposure.png
     figureCaption: Functional Housing Loss and Older-Person Exposure
+    figurePanelCount: 3
+    figureNote: >-
+      Panel a maps geographically bounded official residence-loss evidence and the
+      prefecture snapshot used to constrain scenario totals. Panel b maps central
+      expected structural residence loss across disclosure groups with epicentral
+      distance guides. Panel c maps the associated central exposure of residents
+      aged 65 or older.
     figureAim: Map total-constrained structural housing loss and associated older-person exposure.
     figureExplanation: Places official reported evidence beside the central allocation of 303.5 functionally lost residences and the corresponding age-65-plus exposure surface. The allocation is a scenario nowcast, not image-based building classification.
     figureSuitableSection: Results - Housing loss and older-person exposure
@@ -628,6 +660,12 @@ figureDictionary:
     figureId: fig_older_person_cooling_protection_need_and_placement_deficit
     figurePath: data/results/figures/Figure_older_person_cooling_protection_need_and_placement_deficit.png
     figureCaption: Older-Person Cooling Need and Placement Bound
+    figurePanelCount: 3
+    figureNote: >-
+      Panel a maps the central older-person cooling-assessment population. Panel b
+      maps the pointwise high 30-day no-placement older-person-day planning bound,
+      whose values are not additive. Panel c maps straight-line distance to the
+      nearest listed designated shelter without asserting operation or cooling.
     figureAim: Map cooling-assessment population, no-placement person-day bound, and nominal shelter access.
     figureExplanation: Shows the central 246-person cooling-assessment population, pointwise upper 30-day no-placement demand bound, and nearest listed shelter distance. The bound does not assert zero actual cooled placement.
     figureSuitableSection: Results - Cooling-protection need
@@ -635,6 +673,12 @@ figureDictionary:
     figureId: fig_emergency_cooling_electricity_requirement_distribution
     figurePath: data/results/figures/Figure_emergency_cooling_electricity_requirement_distribution.png
     figureCaption: Emergency Cooling Electricity Requirements
+    figurePanelCount: 3
+    figureNote: >-
+      Panel a maps Central-scenario required peak cooling electric power by
+      municipality. Panel b maps Central-scenario required daily cooling electricity
+      by municipality. Panel c compares prefecture-wide peak power and daily energy
+      requirements under the Low, Central, and High engineering bundles.
     figureAim: Quantify municipality demand and prefecture sensitivity across engineering scenarios.
     figureExplanation: Maps Central-scenario peak power and daily electricity demand and compares prefecture totals of 262, 622, and 1,164 kWh per day under Low, Central, and High assumptions. Verified supply and power gaps are excluded.
     figureSuitableSection: Results - Cooling electricity demand
@@ -642,6 +686,13 @@ figureDictionary:
     figureId: fig_cooling_loss_related_incremental_mortality_risk_distribution
     figurePath: data/results/figures/Figure_cooling_loss_related_incremental_mortality_risk_distribution.png
     figureCaption: Cooling-Loss Mortality Risk Distribution
+    figurePanelCount: 3
+    figureNote: >-
+      Panel a maps expected high-heat days during the 30-day historical scenario.
+      Panel b maps incremental mortality risk per 100,000 affected older persons
+      without effective cooling. Panel c maps the relative increase in 30-day
+      mortality burden and reports the prefecture-weighted central contrast and
+      transferred effect interval.
     figureAim: Map expected high-heat days and the absolute and relative cooling-loss mortality contrasts.
     figureExplanation: Holds outdoor heat fixed and shows municipality expected high-heat days, incremental risk per 100,000 affected older persons, and relative 30-day burden increase without effective cooling; the prefecture-weighted central increase is 5.34%.
     figureSuitableSection: Results - Cooling-loss health-risk scenario
