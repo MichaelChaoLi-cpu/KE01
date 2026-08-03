@@ -285,9 +285,14 @@ def write_csv(path: Path, rows: list[dict]) -> None:
         writer.writerows(rows)
 
 
-def save_candidate_assets(candidates: list[dict], args: argparse.Namespace) -> None:
-    crops_dir = OUTPUT_DIR / "candidate_crops"
-    sheets_dir = OUTPUT_DIR / "contact_sheets"
+def save_candidate_assets(
+    candidates: list[dict],
+    args: argparse.Namespace,
+    output_dir: Path = OUTPUT_DIR,
+    sheet_title: str = "Hikawa CLIP damage-candidate triage",
+) -> None:
+    crops_dir = output_dir / "candidate_crops"
+    sheets_dir = output_dir / "contact_sheets"
     crops_dir.mkdir(parents=True, exist_ok=True)
     sheets_dir.mkdir(parents=True, exist_ok=True)
     # These folders contain only deterministic outputs from this script. Remove stale
@@ -322,7 +327,7 @@ def save_candidate_assets(candidates: list[dict], args: argparse.Namespace) -> N
         draw = ImageDraw.Draw(canvas)
         draw.text(
             (20, 18),
-            f"Hikawa CLIP damage-candidate triage — page {page_index}",
+            f"{sheet_title} — page {page_index}",
             fill="black",
             font=font,
         )
