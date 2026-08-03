@@ -34,8 +34,7 @@ DISRUPTION_PATH = (
     ROOT / "data/processed/kumamoto_service_disruption_snapshots_preprocessed.parquet"
 )
 OUTPUT_DIR = ROOT / "data/results/figures"
-OUTPUT_PNG = OUTPUT_DIR / "Figure_02_minami_ward_shelter_cooling_risk_screening.png"
-OUTPUT_PDF = OUTPUT_DIR / "Figure_02_minami_ward_shelter_cooling_risk_screening.pdf"
+OUTPUT_PNG = OUTPUT_DIR / "Figure_minami_ward_shelter_and_cooling_risk_screening.png"
 
 
 def _longitude(value: float, _: int) -> str:
@@ -390,10 +389,8 @@ def main() -> None:
     _plot_operational_series(axes[1])
     fig.subplots_adjust(left=0.065, right=0.935, top=0.92, bottom=0.10, wspace=0.26)
     fig.savefig(OUTPUT_PNG, dpi=400, bbox_inches="tight", facecolor="white")
-    fig.savefig(OUTPUT_PDF, dpi=400, bbox_inches="tight", facecolor="white")
     plt.close(fig)
     print(f"saved: {OUTPUT_PNG}")
-    print(f"saved: {OUTPUT_PDF}")
 
 
 if __name__ == "__main__":

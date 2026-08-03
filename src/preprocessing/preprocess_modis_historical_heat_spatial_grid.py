@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
-"""Build a strict-QC historical MODIS heat grid for Kumamoto Prefecture.
+"""Build strict- and relaxed-QA historical MODIS heat grids for Kumamoto.
 
 Terra and Aqua product means are given equal weight so that unequal cloud
 availability does not allow one satellite to dominate the climatological mean.
-Cloud-affected and lower-quality observations remain missing; no spatial or
-temporal imputation is performed.
+The coverage-optimized field uses the strict-QA mean whenever available and the
+relaxed-QA mean only where every strict-QA observation is missing. Cloud-
+affected observations remain missing; no spatial interpolation is performed.
 """
 
 from __future__ import annotations
@@ -45,6 +46,13 @@ def strict_qc_mask(qc: np.ndarray) -> np.ndarray:
     data_quality = (qc >> 2) & 0b11
     lst_error = (qc >> 6) & 0b11
     return (mandatory == 0) & (data_quality == 0) & (lst_error == 0)
+
+
+def relaxed_qc_mask(qc: np.ndarray) -> np.ndarray:
+    mandatory = qc & 0b11
+    data_quality = (qc >> 2) & 0b11
+    lst_error = (qc >> 6) & 0b11
+    return (mandatory <= 1) & (data_quality == 0) & (lst_error <= 1)
 
 
 def tile_window(h: int, v: int, prefecture_geometry):
@@ -116,7 +124,8 @@ def main() -> int:
                 continue
             shape = window["inside"].shape
             window["accumulators"] = {
-                (product, period): empty_accumulator(shape)
+                (quality, product, period): empty_accumulator(shape)
+                for quality in ("Strict", "Relaxed")
                 for product in PRODUCTS
                 for period in PERIODS
             }
@@ -140,12 +149,17 @@ def main() -> int:
                     hdf.select(f"QC_{period}")[row0:row1, col0:col1],
                     dtype=np.uint8,
                 )
-                valid = inside & (raw >= 7500) & (raw != 0) & strict_qc_mask(qc)
                 values_c = raw.astype(np.float64) * 0.02 - 273.15
-                accumulator = state["accumulators"][(product, period)]
-                accumulator["sum"][valid] += values_c[valid]
-                accumulator["sum_of_squares"][valid] += values_c[valid] ** 2
-                accumulator["count"][valid] += 1
+                raw_valid = inside & (raw >= 7500) & (raw != 0)
+                quality_masks = {
+                    "Strict": raw_valid & strict_qc_mask(qc),
+                    "Relaxed": raw_valid & relaxed_qc_mask(qc),
+                }
+                for quality, valid in quality_masks.items():
+                    accumulator = state["accumulators"][(quality, product, period)]
+                    accumulator["sum"][valid] += values_c[valid]
+                    accumulator["sum_of_squares"][valid] += values_c[valid] ** 2
+                    accumulator["count"][valid] += 1
         finally:
             hdf.end()
 
@@ -169,50 +183,85 @@ def main() -> int:
         }
 
         for period in PERIODS:
-            product_means = []
-            total_sum = np.zeros(inside.shape, dtype=np.float64)
-            total_squares = np.zeros(inside.shape, dtype=np.float64)
-            total_count = np.zeros(inside.shape, dtype=np.uint16)
-            for product in PRODUCTS:
-                accumulator = state["accumulators"][(product, period)]
-                product_means.append(
-                    safe_mean(accumulator["sum"], accumulator["count"])
-                )
-                total_sum += accumulator["sum"]
-                total_squares += accumulator["sum_of_squares"]
-                total_count += accumulator["count"]
-
-            stacked_means = np.stack(product_means)
-            available_products = np.sum(~np.isnan(stacked_means), axis=0)
-            combined_mean = np.divide(
-                np.nansum(stacked_means, axis=0),
-                available_products,
-                out=np.full(inside.shape, np.nan, dtype=np.float64),
-                where=available_products > 0,
-            )
-            numerator = total_squares - np.divide(
-                total_sum**2,
-                total_count,
-                out=np.zeros(inside.shape, dtype=np.float64),
-                where=total_count > 0,
-            )
-            standard_deviation = np.sqrt(
-                np.divide(
-                    np.maximum(numerator, 0),
-                    total_count - 1,
-                    out=np.full(inside.shape, np.nan, dtype=np.float64),
-                    where=total_count > 1,
-                )
-            )
             label = "Daytime" if period == "Day" else "Nighttime"
-            data[f"Historical {label} Land Surface Temperature C"] = combined_mean[
-                inside
-            ]
-            data[f"MODIS {label} Valid Observation Count"] = total_count[inside]
-            data[f"Historical {label} Land Surface Temperature SD C"] = (
-                standard_deviation[inside]
+            summaries: dict[str, dict[str, np.ndarray]] = {}
+            for quality in ("Strict", "Relaxed"):
+                product_means = []
+                total_sum = np.zeros(inside.shape, dtype=np.float64)
+                total_squares = np.zeros(inside.shape, dtype=np.float64)
+                total_count = np.zeros(inside.shape, dtype=np.uint16)
+                for product in PRODUCTS:
+                    accumulator = state["accumulators"][(quality, product, period)]
+                    product_means.append(
+                        safe_mean(accumulator["sum"], accumulator["count"])
+                    )
+                    total_sum += accumulator["sum"]
+                    total_squares += accumulator["sum_of_squares"]
+                    total_count += accumulator["count"]
+
+                stacked_means = np.stack(product_means)
+                available_products = np.sum(~np.isnan(stacked_means), axis=0)
+                combined_mean = np.divide(
+                    np.nansum(stacked_means, axis=0),
+                    available_products,
+                    out=np.full(inside.shape, np.nan, dtype=np.float64),
+                    where=available_products > 0,
+                )
+                numerator = total_squares - np.divide(
+                    total_sum**2,
+                    total_count,
+                    out=np.zeros(inside.shape, dtype=np.float64),
+                    where=total_count > 0,
+                )
+                standard_deviation = np.sqrt(
+                    np.divide(
+                        np.maximum(numerator, 0),
+                        total_count - 1,
+                        out=np.full(inside.shape, np.nan, dtype=np.float64),
+                        where=total_count > 1,
+                    )
+                )
+                summaries[quality] = {
+                    "mean": combined_mean,
+                    "count": total_count,
+                    "sd": standard_deviation,
+                    "products": available_products,
+                }
+
+                prefix = "" if quality == "Strict" else "Relaxed-QA "
+                data[f"{prefix}Historical {label} Land Surface Temperature C"] = (
+                    combined_mean[inside]
+                )
+                data[f"{prefix}MODIS {label} Valid Observation Count"] = (
+                    total_count[inside]
+                )
+                data[f"{prefix}Historical {label} Land Surface Temperature SD C"] = (
+                    standard_deviation[inside]
+                )
+                data[f"{prefix}MODIS {label} Available Product Count"] = (
+                    available_products[inside]
+                )
+
+            strict = summaries["Strict"]
+            relaxed = summaries["Relaxed"]
+            strict_primary = (
+                ~np.isnan(strict["mean"])
+                & (strict["count"] >= 5)
+                & (strict["products"] == 2)
             )
-            data[f"MODIS {label} Available Product Count"] = available_products[inside]
+            strict_limited = ~np.isnan(strict["mean"])
+            relaxed_only = np.isnan(strict["mean"]) & ~np.isnan(relaxed["mean"])
+            coverage_mean = np.where(
+                ~np.isnan(strict["mean"]), strict["mean"], relaxed["mean"]
+            )
+            support = np.full(inside.shape, "missing", dtype=object)
+            support[relaxed_only] = "relaxed_only"
+            support[strict_limited] = "strict_limited"
+            support[strict_primary] = "strict_primary"
+            data[f"Coverage-Optimized Historical {label} Land Surface Temperature C"] = (
+                coverage_mean[inside]
+            )
+            data[f"Historical {label} LST Support Tier"] = support[inside]
 
         half = PIXEL_SIZE_M / 2
         geometries = [
@@ -239,9 +288,15 @@ def main() -> int:
     for label in ("Daytime", "Nighttime"):
         count = grid[f"MODIS {label} Valid Observation Count"]
         available = grid[f"Historical {label} Land Surface Temperature C"].notna()
+        coverage = grid[
+            f"Coverage-Optimized Historical {label} Land Surface Temperature C"
+        ].notna()
+        support = grid[f"Historical {label} LST Support Tier"].value_counts()
         print(
             f"{label}: {available.sum():,}/{len(grid):,} pixels with strict-QC data; "
-            f"median valid observations={count[available].median():.0f}"
+            f"{coverage.sum():,}/{len(grid):,} with strict-first relaxed-QA fallback; "
+            f"median strict observations={count[available].median():.0f}; "
+            f"support tiers={support.to_dict()}"
         )
     return 0
 

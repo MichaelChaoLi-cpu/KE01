@@ -25,11 +25,7 @@ HISTORICAL_PATH = (
 )
 OUTPUT_PNG = (
     ROOT
-    / "data/results/figures/Figure_03_event_window_daytime_nighttime_heat_scenario.png"
-)
-OUTPUT_PDF = (
-    ROOT
-    / "data/results/figures/Figure_03_event_window_daytime_nighttime_heat_scenario.pdf"
+    / "data/results/figures/Figure_event_window_daytime_and_nighttime_heat_scenario.png"
 )
 
 EVENT_START = date(2026, 7, 28)
@@ -278,13 +274,11 @@ def main() -> None:
     fig.subplots_adjust(left=0.105, right=0.985, top=0.985, bottom=0.235, hspace=0.24)
     OUTPUT_PNG.parent.mkdir(parents=True, exist_ok=True)
     fig.savefig(OUTPUT_PNG, dpi=400, bbox_inches="tight", facecolor="white")
-    fig.savefig(OUTPUT_PDF, bbox_inches="tight", facecolor="white")
     plt.close(fig)
 
     complete_days = int(event["Daily Record Status"].eq("complete").sum())
     partial_days = int(event["Daily Record Status"].eq("partial").sum())
     print(f"Saved: {OUTPUT_PNG.relative_to(ROOT)}")
-    print(f"Saved: {OUTPUT_PDF.relative_to(ROOT)}")
     print(
         f"Event observations: {len(event)} station-days "
         f"({complete_days} complete, {partial_days} partial); "
