@@ -3,6 +3,7 @@ name = "KE01"
 version = "0.0.1"
 dependencies = [
     "dvc>=3.67.1",
+    "earthaccess>=0.18.0",
     "geopandas>=1.1.4",
     "mapbox-vector-tile>=2.2.0",
     "matplotlib>=3.11.1",
@@ -11,6 +12,8 @@ dependencies = [
     "openpyxl>=3.1.5",
     "pandas>=3.0.5",
     "pyarrow>=25.0.0",
+    "pyhdf>=0.11.7",
+    "seaborn>=0.13.2",
     "torch>=2.13.0",
     "transformers>=5.14.1",
 ]
