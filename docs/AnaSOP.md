@@ -7,32 +7,26 @@ Analysis Standard Operating Procedure
 
 - Research question: During the first 30 days after the 2026 Kumamoto earthquake, where are older residents likely to lose effective protection from heat, and which shelters face a deficit in accessible cooling capacity under uncertainty about housing damage?
 - Why it matters: Emergency decisions concern whether vulnerable residents can remain safe, not only whether a roof is visibly collapsed. A house may cease to provide heat protection because it is structurally unsafe, inaccessible, without power or water, or abandoned after nearby ground failure. Reframing the endpoint as loss of effective heat-protective shelter links early damage evidence directly to cooling allocation.
-- Data support currently visible: Government aerial photographs and official incident reports provide early damage evidence; deformation and secondary-hazard products can localize high-risk zones; processed small-area population data provide counts of older residents and vulnerable older households. Post-event heat, building footprints, shelter attributes, outages, and registered damage outcomes remain incomplete or pending.
-- Key readable variables or data scope: Building-level probability of functional housing loss; confirmed damage lower bound; older residents and older households exposed by grid; observed and scenario-based heat stress; shelter accessibility, occupancy, air-conditioning, backup power, and effective cooled capacity.
-- What would verify it: Later official building inspections should be spatially concentrated in high-probability loss grids; observed shelter demand or displacement should rise with estimated loss of heat-protective housing; and shelters classified as cooling-deficit locations should show demand exceeding verified cooled capacity during hot periods.
-- What would falsify or weaken it: Image and hazard proxies fail to predict later inspected damage; high-risk grids show little displacement; temperatures remain below hazardous levels; or nearby shelters retain sufficient accessible cooled capacity throughout the event window.
-- Required next feasibility check: Acquire building footprints, gridded shaking or hazard measures, shelter facility attributes, outage information, and a defensible post-event weather source; determine whether later official damage records can be spatially linked for validation.
+- Data support currently visible: Official residence-damage snapshots constrain a prefecture total; epicentral distance, mapped exposure, and processed small-area population data support a transparent grid allocation with explicit bounds. Event-period station observations and historical spatial heat describe the common outdoor hazard. Designated shelters and selected facility interruptions are mapped, but verified occupancy, usable cooled space, operating air-conditioning, backup power, and resident placement remain incomplete.
+- Key readable variables or data scope: Expected functionally lost residences and scenario bounds; older residents and older households associated with housing loss; common outdoor heat conditions; current residence or placement status; effective cooled capacity; unprotected older-person cooling demand; required electric power; and cooling-loss-related incremental health risk.
+- What would verify it: Later official residence inspections should be spatially concentrated in grids with larger expected loss; observed placement or displacement should rise with estimated loss of heat-protective housing; and locations classified as cooling deficits should show demand exceeding verified cooled capacity.
+- What would falsify or weaken it: The residence-loss allocation fails against later inspections; most affected older residents retain functioning home cooling or relocate privately to cooled environments; or verified cooled capacity is sufficient for all people requiring protection throughout the event window.
+- Required next feasibility check: Acquire time-stamped resident-placement, shelter occupancy, usable cooled-space, air-conditioning, backup-power, and indoor-temperature evidence; determine whether later official damage and displacement records can be spatially linked for validation.
 
 ### Supporting Research Questions
 
 #### Supporting Point 1
 
 - Role relative to central point: measurement
-- Research question: How many buildings were confirmed, probable, or at elevated probability of becoming uninhabitable, and how uncertain is the expected loss count in each analysis grid?
-- Why it matters: A single deep-learning label would overstate precision. A layered estimate preserves immediate operational value while distinguishing observed damage from modeled risk.
-- Data support currently visible: Government post-event photographs cover the focal municipalities; official reports provide a small confirmed lower bound; image-screening experiments show that generic zero-shot recognition can rank scenes but cannot independently identify or count collapsed houses.
-- Key readable variables or data scope: Confirmed incident indicator, building footprint, image visibility and quality, pre/post change evidence, roof or debris anomaly, shaking intensity, distance to mapped displacement boundary, secondary-hazard exposure, building vulnerability proxy, and validation status.
-- What would verify it: A damage-specific model calibrated against geolocated manual or official labels should recover later inspected damage with acceptable precision, recall, spatial calibration, and count error.
-- What would falsify or weaken it: Pre/post registration remains unavailable, official cases cannot be geolocated, roof-intact structural failures dominate, or probability estimates are poorly calibrated against later inspection records.
-- Required next feasibility check: Confirm building-footprint coverage and registration-quality imagery; construct damage-specific validation labels; compare an image-only baseline against a multimodal model using hazard and building context.
+- Research question: How many residences are expected to lose safe function, where are they plausibly concentrated, and how sensitive is the allocation to distance decay, exposure proxy, and treatment of half-collapse residences?
+- Why it matters: Early official totals are operationally useful but not geolocated. A transparent total-constrained scenario can support planning without claiming that mapped building polygons reveal individual residential damage.
+- Data support currently visible: Official full- and half-collapse residence totals, an official epicenter, general-household counts, mapped building exposure, and populated disclosure groups support twenty-seven allocation scenarios.
+- Key readable variables or data scope: Epicentral Distance km, General Households, Mapped Building Count, Mapped Building Footprint Area m2, Expected Functionally Lost Residences, pointwise scenario bounds, and confirmed evidence retained at its reported geography.
+- What would verify it: Later geolocated inspections or damage certificates should concentrate in grids with larger expected loss, and municipality totals should show acceptable calibration and rank agreement.
+- What would falsify or weaken it: Later inspections have little spatial agreement with the allocation, the official total changes materially, or the selected exposure proxies allocate loss to nonresidential or unoccupied areas.
+- Required next feasibility check: Update official totals as assessments mature and acquire geolocated inspection labels for calibration and validation.
 
-For grid (g), report an expected count rather than an unqualified destroyed-building count:
-
-\[
-E[D_g] = \sum_{i \in g} p_i,
-\]
-
-where \(p_i\) is the calibrated probability that building \(i\) has lost safe habitability. Report confirmed cases separately as a lower bound and retain uncertainty intervals around \(E[D_g]\).
+For grid \(g\), report the total-constrained scenario allocation \(L_{g,s}\), its ensemble central value, and its pointwise scenario range. Confirmed evidence remains separate and is never filled by the modeled allocation.
 
 #### Supporting Point 2
 
@@ -42,30 +36,30 @@ where \(p_i\) is the calibrated probability that building \(i\) has lost safe ha
 - Data support currently visible: Population and vulnerable-household counts are available at fine grid or official disclosure-group geography, with explicit suppression handling.
 - Key readable variables or data scope: Total population, older-population counts and shares, older single-person and older-couple households, expected functionally lost dwellings, residential building stock, and grid-level exposure uncertainty.
 - What would verify it: Estimated affected populations should be consistent with later displacement, shelter-registration, welfare-check, or damage-certificate counts after accounting for residents who relocate privately.
-- What would falsify or weaken it: Population baselines are too outdated, disclosure aggregation prevents meaningful spatial linkage, or housing-loss probability has no measurable relationship with subsequent displacement.
-- Required next feasibility check: Build common grid geometry, link residential building footprints to population disclosure groups, and test alternative allocation rules instead of assuming uniform population within a grid.
+- What would falsify or weaken it: Population baselines are too outdated, disclosure aggregation prevents meaningful spatial linkage, or scenario-estimated housing loss has no measurable relationship with subsequent displacement or placement need.
+- Required next feasibility check: Compare the completed disclosure-group scenario with later displacement, placement, welfare-check, and damage-certificate records; test alternative occupancy assumptions as those observations become available.
 
 #### Supporting Point 3
 
-- Role relative to central point: heat mechanism
-- Research question: What daytime and nighttime heat-stress conditions are plausible during days 0-30, and how do they differ from the same calendar period in 2021-2025?
-- Why it matters: Satellite land-surface temperature alone does not measure the air temperature experienced by people and cannot provide a reliable one-month forecast. A combined observed, forecast, and historical-scenario design is needed.
-- Data support currently visible: Event-window station observations and historical weather records are partially available; gridded satellite surface temperature and operational heat-stress or forecast data remain to be acquired.
-- Key readable variables or data scope: Maximum air temperature, minimum air temperature, humidity or heat-stress index, hot-day and hot-night duration, land-surface temperature anomaly, forecast scenario, and uncertainty band.
-- What would verify it: Independent stations and gridded products should show consistent spatial and temporal heat rankings, and realized temperatures should fall within the pre-specified scenario intervals.
-- What would falsify or weaken it: Persistent cloud prevents useful satellite retrievals, historical years poorly represent current conditions, or land-surface temperature does not agree with near-surface heat stress in populated grids.
-- Required next feasibility check: Compare station observations, operational forecasts, and satellite products; choose explicit daytime and nighttime thresholds before calculating exposure.
+- Role relative to central point: cooling-protection mechanism
+- Research question: Under the same outdoor weather, how many affected older residents lose the effective indoor cooling previously supplied by a usable home, and for how many person-days would that protection remain unavailable without correct placement?
+- Why it matters: The earthquake does not cause the outdoor temperature scenario. It changes whether an older resident can remain in a safe cooled indoor environment. Ambient heat therefore modifies the consequence of cooling loss but is not the treatment contrast.
+- Data support currently visible: Event-window station observations and historical spatial heat describe the common outdoor hazard; modeled residence loss identifies an upper-bound population requiring cooling assessment. Direct indoor temperature, functioning household cooling, resident destination, and duration without effective cooling remain unavailable.
+- Key readable variables or data scope: Estimated Affected Population Age 65+, Heat Protection Loss Mechanism, Cooling Loss Confirmed, Effective Cooled Capacity, Cooling Capacity Gap, outdoor air temperature, indoor temperature under cooled and uncooled states, and unprotected older-person-days.
+- What would verify it: Time-stamped placement, household or shelter cooling status, and indoor-temperature measurements show that residents classified as protected occupy functioning cooled spaces while deficit locations experience longer or hotter indoor exposure.
+- What would falsify or weaken it: Most affected older residents retain functioning home cooling, relocate promptly to private cooled environments, or measured indoor conditions do not differ meaningfully between classified protection states.
+- Required next feasibility check: Collect resident-placement and cooling-status observations, verify effective cooled capacity, and obtain indoor-temperature evidence or a defensible building-thermal scenario before estimating a health effect.
 
 #### Supporting Point 4
 
 - Role relative to central point: policy decision
-- Research question: Which shelters have insufficient effective cooled capacity for the expected number of heat-vulnerable displaced residents within an accessible catchment?
-- Why it matters: Shelter location alone does not establish protection. Air-conditioning, backup electricity, usable cooled floor area, current occupancy, operating hours, transport access, and the needs of residents with limited mobility determine effective capacity.
+- Research question: Which placements, shelter capacities, and emergency power allocations can close the cooling-protection deficit, and how much one-month incremental mortality risk could be avoided under the same outdoor weather?
+- Why it matters: Shelter location alone does not establish protection. Air-conditioning, backup electricity, usable cooled floor area, current occupancy, operating hours, transport access, and the needs of residents with limited mobility determine whether correct placement actually restores cooling protection.
 - Data support currently visible: Public shelter locations can support an initial accessibility layer, but verified cooling equipment, power resilience, occupancy, and usable capacity are not yet present in the analytical data.
-- Key readable variables or data scope: Expected older displaced residents, travel time or distance, shelter occupancy, accessible cooled spaces, air-conditioning status, backup power, outage duration, medical support, and effective cooled capacity.
-- What would verify it: Facility checks or operational records confirm that predicted deficit shelters have demand exceeding functioning cooled capacity during hazardous heat periods.
+- Key readable variables or data scope: Expected older residents requiring cooling assessment, travel time or distance, shelter occupancy, accessible cooled spaces, air-conditioning status, backup power, outage duration, Effective Cooled Capacity, Cooling Capacity Gap, required peak electric power, required daily electricity, and cooling-loss-related incremental mortality risk.
+- What would verify it: Facility checks and placement records confirm demand and functioning cooled capacity; follow-up health evidence is consistent with lower risk among residents who receive effective cooling after accounting for the common outdoor weather.
 - What would falsify or weaken it: Most exposed residents remain in safe cooled housing, relocate outside public shelters, or shelters have larger functioning capacity than public records imply.
-- Required next feasibility check: Obtain or rapidly survey shelter HVAC, backup-power, occupancy, accessibility, and usable-capacity attributes; define a transparent catchment-allocation rule.
+- Required next feasibility check: Obtain or rapidly survey shelter HVAC, backup-power, occupancy, accessibility, usable-capacity, and resident-placement attributes; define a transparent catchment-allocation rule and a defensible cooled-versus-uncooled health-risk contrast.
 
 For shelter (s) and day (t), define a decision-facing deficit:
 
@@ -79,18 +73,18 @@ A positive value indicates that expected older-person demand exceeds verified ef
 
 - Event: The 2026 Kumamoto earthquake beginning on 2026-07-28.
 - Geographic frame: Kumamoto Prefecture for consistent mapping, with primary implementation in Uki City, Hikawa Town, and Yatsushiro City.
-- Units of analysis: Buildings for loss probability; harmonized small-area grids for population and heat exposure; shelter catchments for cooling-capacity decisions.
+- Units of analysis: Residences for structural functional loss; harmonized small-area grids for population and cooling-protection need; resident-days for duration without effective cooling; and shelter catchments for placement and power decisions.
 - Population: All residents, with primary strata for ages 65+, 75+, and 85+, older single-person households, and older-couple households.
 - Immediate period: Days 0-14 for rapid response.
-- Extended period: Days 0-30 for heat-exposure and shelter planning.
+- Extended period: Days 0-30 for cooling-protection, placement, power, and health-risk planning.
 - Historical heat reference: Matching calendar periods in 2021-2025.
-- Damage reporting layers: Confirmed observed cases, probable image-supported cases, and modeled elevated-risk buildings must remain separate.
+- Damage reporting layers: Confirmed or probable reported residence evidence and modeled scenario allocations must remain separate.
 
 ### Study Design Declaration
 
 - Research type: applied
-- Study design: Two-stage applied rapid-assessment study. Stage 1 produces an uncertainty-aware nowcast of functional housing loss, older-person exposure, heat stress, and shelter cooling deficits. Stage 2 validates and recalibrates the nowcast when official building inspections, displacement records, or shelter operations data become available.
-- Interpretation limit: The initial products estimate where loss and unmet cooling demand are likely; they do not establish an exact destroyed-building count, identify earthquake-attributable deaths, or prove that every resident assigned to a high-risk grid was displaced.
+- Study design: Two-stage applied rapid-assessment study. Stage 1 produces an uncertainty-aware nowcast of structural residence loss, older residents requiring cooling assessment, placement deficits, and the power needed to restore protection under a common outdoor-weather scenario. Stage 2 validates and recalibrates the nowcast when official inspections, displacement, placement, indoor-temperature, shelter-operation, or health records become available.
+- Interpretation limit: The initial products estimate where loss and unmet cooling demand are plausible. They do not establish an exact destroyed-residence count, prove displacement, infer indoor temperature from satellite data, or identify earthquake-attributable deaths. Mortality is reported only as a cooled-versus-uncooled scenario contrast when a compatible effect estimate is available.
 
 ## 2. Theoretical Background  /  Conceptual Framework  /  Problem Formulation
 
@@ -99,26 +93,28 @@ Section focus: Early decision support under delayed damage statistics and measur
 
 ### Research Gap
 
-- Rapid disaster mapping often treats visible structural destruction as the endpoint, while heat-health planning treats population, weather, and shelters separately. This separation cannot answer whether older residents have lost access to a safe cooled environment.
+- Rapid disaster mapping often treats visible structural destruction as the endpoint, while heat-health planning treats population, weather, indoor protection, and shelters separately. This separation cannot answer whether older residents have lost access to the cooling adaptation that protected them before the earthquake.
 - Post-event-only aerial images can detect some large debris fields but miss roof-intact buckling and internal damage. Generic image-recognition scores are therefore unsuitable as direct destroyed-building counts.
 - Official damage statistics arrive later, but delayed labels create an opportunity for retrospective validation of an early nowcasting model rather than a reason to postpone all analysis.
 
 ### Conceptual Framework
 
 - The policy-relevant construct is functional loss of heat-protective shelter, defined as collapse, unsafe occupancy, inaccessible housing, or loss of essential cooling-enabling services. It is broader than visually confirmed roof collapse and narrower than general earthquake exposure.
-- The pathway is: earthquake shaking and ground failure -> probability of functional housing loss -> displacement or reduced household cooling -> heat exposure interacting with older-age vulnerability -> demand for accessible cooled shelter.
-- Deep learning contributes evidence to the housing-loss probability but does not determine the final label alone. Official incident reports, deformation and secondary-hazard layers, building context, image visibility, and later inspection records provide complementary evidence.
+- The pathway is: earthquake shaking and ground failure -> structural residence loss -> loss of usable home cooling -> unprotected older-person-days under the same outdoor weather -> increased health risk unless effective cooled placement is restored.
+- Outdoor temperature is a common background condition in both protection states. The analytical contrast is effective cooling versus no effective cooling, not earthquake weather versus non-earthquake weather.
+- Aerial imagery and deep-learning screens remain contextual evidence because current image quality cannot validate individual residence loss. Official totals, mapped exposure, explicit scenario assumptions, and later inspection records determine the auditable allocation and validation path.
 - Older residents may remain at home, move to public shelters, stay with relatives, sleep in vehicles, or relocate elsewhere. Shelter-demand estimates must therefore use scenarios rather than equate housing loss with public-shelter occupancy.
-- Scope boundary: The study prioritizes early spatial decision support and validation. It does not initially claim causal health effects or complete building-level loss enumeration.
+- Scope boundary: The study prioritizes early spatial decision support and validation. It does not initially claim a causal mortality effect, infer indoor exposure without measurement or a documented thermal model, or enumerate individual damaged residences.
 
 ### Problem Formulation
 
-- Stage 1 estimates a calibrated probability of functional housing loss for each building where evidence permits and aggregates expected counts to a common grid. It reports confirmed, probable, and modeled-risk layers separately.
-- Stage 1 combines grid-level expected housing loss with older-population and household vulnerability, then overlays observed and scenario-based daytime and nighttime heat stress.
-- Expected vulnerable demand is allocated to reachable shelters under explicit mobility and relocation scenarios. Effective cooled capacity is measured from functioning equipment, power resilience, usable space, and current occupancy.
-- The primary decision output is a map and table of cooling-protection deficits with uncertainty intervals and evidence grades, supported by separate housing-loss, population, heat, and shelter-capacity components.
+- Stage 1 allocates official structural residence-loss totals to grids under explicit distance-decay, exposure-proxy, and half-collapse scenarios while retaining confirmed evidence at its reported geography.
+- Stage 1 combines grid-level expected residence loss with older-population vulnerability to identify residents requiring cooling assessment. It does not equate this population with observed displacement or confirmed cooling loss.
+- Cooling demand is allocated to reachable effective cooled placements under explicit mobility and relocation scenarios. Effective Cooled Capacity is constrained by functioning equipment, power resilience, usable cooled space, accessibility, and current occupancy.
+- The primary decision outputs are cooling-protection need, unprotected older-person-days, and the peak power and daily electricity needed to close the deficit. The common outdoor heat scenario determines how urgent cooling is but does not define the earthquake exposure.
+- A later mortality output compares otherwise identical outdoor-weather states with and without effective cooling. It is deferred until a compatible indoor-temperature or cooling-effect response and duration assumptions are documented.
 - Stage 2 compares early predictions with later official inspection, displacement, and shelter-use data. Prediction error, calibration, and missed-case analysis are research outcomes in their own right.
-- Interpretation limit: A building-loss probability is not an inspection result; expected affected population is not observed displacement; satellite land-surface temperature is not indoor heat; nominal shelter capacity is not effective cooled capacity; and a risk nowcast is not a causal estimate of mortality.
+- Interpretation limit: A modeled residence-loss allocation is not an inspection result; expected affected population is not observed displacement or confirmed cooling loss; satellite land-surface temperature is not indoor heat; nominal shelter capacity is not Effective Cooled Capacity; and a cooled-versus-uncooled risk scenario is not a causal estimate of earthquake-attributable mortality.
 
 ## 3. Data Overview
 
@@ -262,13 +258,30 @@ The grid table uses the finest official population disclosure geography. A discl
 | variable_name | full_name | role | formal_definition | construction_or_coding | is_final_variable |
 |---|---|---|---|---|---|
 | Disclosure Group Code | Official Population Disclosure Group ID | linkage | Identifier for the finest geography at which all selected population variables are disclosed. | Retained from the population preprocessing workflow. | yes |
-| Functional Housing Loss Status | Grid Functional Housing-Loss Estimation Status | main outcome status | Whether functional housing loss has been estimated for the grid. | Initially not yet estimated; updated only when damage evidence can be spatially linked. | yes |
-| Expected Functionally Lost Buildings | Expected Number of Functionally Lost Buildings | main outcome | Sum of calibrated building-level functional-loss probabilities in the grid. | (E[D_g]=\sum_{i\in g}p_i); remains missing until probabilities are estimated. | yes |
-| Confirmed Functionally Lost Buildings | Confirmed Functionally Lost Buildings in Grid | lower-bound outcome | Count of buildings with sufficiently strong confirmed functional-loss evidence. | Reported separately from expected loss and remains missing until confirmed evidence is geolocated. | yes |
-| Estimated Affected Population | Expected Population Associated with Functional Housing Loss | exposure outcome | Population expected to occupy functionally lost housing under an explicit allocation model. | Not calculated by multiplying the whole grid population by an unlocalized prefecture damage share. | yes |
-| Estimated Affected Population Age 65+ | Expected Affected Population Age 65 or Older | primary exposure outcome | Expected number of residents age 65 or older associated with functional housing loss. | Estimated only after housing loss is localized and an allocation rule is specified. | yes |
-| Estimated Affected Population Age 75+ | Expected Affected Population Age 75 or Older | exposure outcome | Expected number of residents age 75 or older associated with functional housing loss. | Uses the same uncertainty-aware allocation as the age-65-or-older measure. | yes |
-| Estimated Affected Population Age 85+ | Expected Affected Population Age 85 or Older | exposure outcome | Expected number of residents age 85 or older associated with functional housing loss. | Uses the same uncertainty-aware allocation as the age-65-or-older measure. | yes |
+| Epicentral Distance km | Grid Distance from the Official Epicenter in Kilometres | hazard proxy | Straight-line distance from the disclosure-group representative point to the official epicenter at 32.6 degrees north and 130.7 degrees east. | Calculated in JGD2011 / Japan Plane Rectangular CS II; distance is a proxy for shaking exposure rather than an observed intensity measure. | yes |
+| Housing Loss Allocation Weight | Central Structural Housing-Loss Allocation Weight | modeled allocation | Nonnegative central ensemble weight assigned to one disclosure group, normalized to sum to one across Kumamoto Prefecture. | Derived from the median spatial pattern across distance-decay and exposure-proxy specifications, then renormalized to the central residence-loss total. | yes |
+| Housing Loss Scenario Count | Number of Structural Housing-Loss Scenarios | sensitivity | Number of specifications in the housing-loss ensemble. | Twenty-seven scenarios combine three distance-decay scales, three exposure proxies, and three half-collapse functional-loss weights. | yes |
+| Distance Decay Scenario Set km | Epicentral-Distance Decay Scale Set in Kilometres | sensitivity | Candidate values of \(\lambda\) in the distance-decay term \(\exp(-d_g/\lambda)\). | Fixed at 10, 20, and 40 km; no value is interpreted as an estimated physical attenuation coefficient. | yes |
+| Half-Collapse Functional Loss Weight Set | Half-Collapse Functional-Loss Scenario Weight Set | sensitivity | Candidate values of \(\theta\) in \(T_s=F+\theta_s H\). | Fixed at 0, 0.5, and 1; partial damage is excluded from structural functional loss. | yes |
+| Housing Exposure Proxy Set | Residential Exposure Allocation Proxy Set | sensitivity | Alternative grid denominators used to distribute each scenario total. | General Households, Mapped Building Count, and Mapped Building Footprint Area m2 are evaluated separately; building variables remain exposure proxies rather than observed residential use or structural vulnerability. | yes |
+| Structural Housing Loss Central Total Residences | Central Scenario Total of Structurally Functionally Lost Residences | scenario total | Official full-collapse residences plus one-half of official half-collapse residences at the damage evidence cutoff. | Used only to constrain the central spatial allocation; it is not a newly observed total. | yes |
+| Functional Housing Loss Status | Grid Functional Housing-Loss Estimation Status | main outcome status | Whether the grid has a structural residence-loss scenario estimate and an eligible exposure denominator. | Coded as structural scenario estimated or no residential exposure denominator. | yes |
+| Expected Functionally Lost Residences | Central Expected Number of Structurally Functionally Lost Residences | main outcome | Central residence-loss estimate allocated to the grid under the normalized ensemble-median spatial pattern. | Sums to the central scenario total across Kumamoto Prefecture; it is a scenario allocation, not an inspection count. | yes |
+| Expected Functionally Lost Residences Lower Bound | Pointwise Lower Structural Residence-Loss Scenario Bound | uncertainty | Minimum grid estimate across the twenty-seven housing-loss scenarios. | A pointwise scenario bound; values must not be summed and interpreted as one jointly realized prefecture scenario. | yes |
+| Expected Functionally Lost Residences Upper Bound | Pointwise Upper Structural Residence-Loss Scenario Bound | uncertainty | Maximum grid estimate across the twenty-seven housing-loss scenarios. | A pointwise scenario bound; values must not be summed and interpreted as one jointly realized prefecture scenario. | yes |
+| Confirmed Functionally Lost Residences | Confirmed Functionally Lost Residences at Supported Geography | lower-bound outcome | Residence count supported by confirmed functional-loss evidence at the geography reported by the source. | Remains missing at grid level because current confirmed residence totals are not geolocated to disclosure groups. | yes |
+| Estimated Affected Population | Population Associated with Central Structural Residence-Loss Scenario | exposure outcome | \(E[N_g]=N_g\min(1,E[L_g]/G_g)\), where \(G_g\) is General Households. | Estimates residents associated with modeled structural residence loss; it is not observed displacement. | yes |
+| Estimated Affected Population Lower Bound | Pointwise Lower Affected-Population Scenario Bound | uncertainty | Total population multiplied by the pointwise lower modeled residence-loss share. | Retains the same proportional occupancy assumption as the central estimate. | yes |
+| Estimated Affected Population Upper Bound | Pointwise Upper Affected-Population Scenario Bound | uncertainty | Total population multiplied by the pointwise upper modeled residence-loss share. | Retains the same proportional occupancy assumption as the central estimate. | yes |
+| Estimated Affected Population Age 65+ | Population Age 65 or Older Associated with Central Structural Residence-Loss Scenario | primary exposure outcome | \(E[N_{65+,g}]=N_{65+,g}\min(1,E[L_g]/G_g)\). | Scenario estimate of older residents associated with structural residence loss; not observed displacement. | yes |
+| Estimated Affected Population Age 65+ Lower Bound | Pointwise Lower Affected Population Age 65 or Older Scenario Bound | uncertainty | Population Age 65+ multiplied by the pointwise lower modeled residence-loss share. | Used to express model-specification sensitivity. | yes |
+| Estimated Affected Population Age 65+ Upper Bound | Pointwise Upper Affected Population Age 65 or Older Scenario Bound | uncertainty | Population Age 65+ multiplied by the pointwise upper modeled residence-loss share. | Used to express model-specification sensitivity. | yes |
+| Estimated Affected Population Age 75+ | Population Age 75 or Older Associated with Central Structural Residence-Loss Scenario | exposure outcome | Uses the same central residence-loss share as the age-65-or-older estimate. | Scenario estimate; not observed displacement. | yes |
+| Estimated Affected Population Age 75+ Lower Bound | Pointwise Lower Affected Population Age 75 or Older Scenario Bound | uncertainty | Population Age 75+ multiplied by the pointwise lower modeled residence-loss share. | Used to express model-specification sensitivity. | yes |
+| Estimated Affected Population Age 75+ Upper Bound | Pointwise Upper Affected Population Age 75 or Older Scenario Bound | uncertainty | Population Age 75+ multiplied by the pointwise upper modeled residence-loss share. | Used to express model-specification sensitivity. | yes |
+| Estimated Affected Population Age 85+ | Population Age 85 or Older Associated with Central Structural Residence-Loss Scenario | exposure outcome | Uses the same central residence-loss share as the age-65-or-older estimate. | Scenario estimate; not observed displacement. | yes |
+| Estimated Affected Population Age 85+ Lower Bound | Pointwise Lower Affected Population Age 85 or Older Scenario Bound | uncertainty | Population Age 85+ multiplied by the pointwise lower modeled residence-loss share. | Used to express model-specification sensitivity. | yes |
+| Estimated Affected Population Age 85+ Upper Bound | Pointwise Upper Affected Population Age 85 or Older Scenario Bound | uncertainty | Population Age 85+ multiplied by the pointwise upper modeled residence-loss share. | Used to express model-specification sensitivity. | yes |
 | Heat Exposure Status | Grid Heat-Exposure Input Status | quality control | Whether event-window heat exposure has been constructed for the grid. | Initially pending heat input; satellite surface temperature alone cannot finalize this status. | yes |
 | Estimation Status | Grid Exposure Estimation Status | quality control | Readiness of the grid for affected-population estimation. | Initially pending damage localization; later states must identify the completed evidence and model stage. | yes |
 | Damage Evidence Cutoff | Latest Damage Evidence Time Used | time index | Most recent evidence time included in the grid estimate. | Stored as a timezone-aware timestamp and updated when the grid estimates are rerun. | yes |
@@ -382,6 +395,146 @@ interpreted as near-surface air temperature, indoor temperature, or a forecast.
 | Spatial Heat Anomaly C | Station-Calibrated Spatial Heat Anomaly in Degrees Celsius | heterogeneity outcome | Difference between a pixel's station-calibrated historical air temperature and the prefecture-wide population-relevant reference temperature for the same period. | Calculated separately for daytime and nighttime after calibration; positive values indicate a historically warmer location, not an event forecast. | yes |
 | Interpolation Uncertainty C | Out-of-Station Spatial Prediction Uncertainty in Degrees Celsius | uncertainty | Estimated prediction uncertainty for the station-calibrated air-temperature surface. | Derived from leave-one-station-out prediction errors and local distance or support of the residual spatial model; reported separately for daytime and nighttime. | yes |
 
+### Confirmed Preprocessing and Evidence Rules
+
+The following rules apply to the selected analysis variables. Numeric fields are coerced
+to numeric values, date and time fields are parsed as datetimes, text identifiers are
+trimmed, and status fields may be stored as categorical values. Geometry is preserved in
+the geospatial outputs. Missing values are not imputed or recoded as zero, rows are not
+deleted because one selected field is missing, and counts are not clipped, winsorized, or
+log-transformed. Quality, evidence-tier, verification, and data-status fields remain in the
+analysis inputs. Variables for which no defensible source has been acquired remain pending
+and must not be populated with invented observations.
+
+### Mortality Reference Variables
+
+Official municipality-level age-65-or-older all-cause deaths for 2020-2024 and the 2020
+population denominator are available for all 45 Kumamoto Prefecture municipalities. The
+denominator is held fixed across five years, so the resulting rate is a planning baseline
+rather than a period-specific person-year rate. Outdoor temperature-mortality candidates
+remain non-final because they do not identify the cooling-loss contrast.
+
+| variable_name | full_name | role | formal_definition | construction_or_coding | is_final_variable |
+|---|---|---|---|---|---|
+| Municipality Code | Official Municipality Code | linkage | Stable code for a Kumamoto Prefecture municipality. | Retained as five-character text; the five Kumamoto City wards are aggregated to city code 43100 to match the mortality baseline. | yes |
+| Municipality | Municipality Name | spatial linkage | Municipality represented by the mortality reference record. | Harmonized to the 45-municipality boundary and summary-table naming system. | yes |
+| Age Group | Mortality Reference Age Group | stratification | Age band to which the population, deaths, and response estimate apply. | The main mortality scenario selects the 65+ record. | yes |
+| Baseline Period Start | Mortality Baseline Period Start Date | time index | First date included in the baseline mortality estimate. | Parsed as 2020-01-01. | yes |
+| Baseline Period End | Mortality Baseline Period End Date | time index | Last date included in the baseline mortality estimate. | Parsed as 2024-12-31. | yes |
+| Population at Risk | Mortality Baseline Population at Risk | denominator | 2020 Census population in the selected municipality and age group. | Retained as a nonnegative count without imputation and held fixed across the five baseline years. | yes |
+| All-Cause Deaths | Baseline All-Cause Death Count | mortality numerator | Pooled 2020-2024 all-cause deaths in the selected municipality and age group. | Final vital-statistics counts are summed across the five years. | yes |
+| Baseline Mortality Rate per 100,000 | Age-Specific Baseline Mortality Rate per 100,000 Population | baseline risk | (B_m=100000 D_m/(5N_m)). | (D_m) is pooled 2020-2024 age-65-or-older all-cause deaths and (N_m) is the fixed 2020 age-65-or-older population. | yes |
+| Mortality Data Status | Mortality Reference Data Status | quality control | Availability and denominator status of the mortality input. | Coded as final pooled deaths with an approximate fixed-2020-population denominator. | yes |
+| Estimate ID | Temperature-Mortality Response Estimate ID | linkage | Unique identifier for one candidate exposure-response estimate. | Constructed from study, region, age group, exposure metric, and model specification. | no |
+| Study Region | Temperature-Mortality Study Region | applicability | Geographic population from which the response estimate was obtained. | Retained from the source and evaluated for transferability to Kumamoto. | no |
+| Exposure Metric | Temperature-Mortality Exposure Metric | model input definition | Temperature variable used by the response estimate. | Must distinguish maximum, minimum, mean, apparent, or another explicitly defined temperature metric. | no |
+| Reference Temperature C | Temperature-Mortality Reference Temperature in Degrees Celsius | model reference | Temperature relative to which heat-related risk is evaluated. | Retained from the selected model or estimated only under a documented estimation framework. | no |
+| Relative Risk per 1 C Increase | Temperature-Mortality Relative Risk per 1 Degree Celsius Increase | exposure-response parameter | Multiplicative mortality risk change associated with a 1 C increase under the source model. | Used only when the source specification is compatible with the selected exposure metric, threshold, age group, and lag structure. | no |
+| Relative Risk Lower 95% Confidence Interval | Lower 95% Confidence Limit for Temperature-Mortality Relative Risk | uncertainty | Lower confidence limit for Relative Risk per 1 C Increase. | Retained with the point estimate and propagated through scenario uncertainty. | no |
+| Relative Risk Upper 95% Confidence Interval | Upper 95% Confidence Limit for Temperature-Mortality Relative Risk | uncertainty | Upper confidence limit for Relative Risk per 1 C Increase. | Retained with the point estimate and propagated through scenario uncertainty. | no |
+| Minimum Lag Days | Minimum Temperature-Mortality Lag | model specification | Earliest lag day included in the response estimate. | Retained as a nonnegative integer. | no |
+| Maximum Lag Days | Maximum Temperature-Mortality Lag | model specification | Latest lag day included in the response estimate. | Retained as a nonnegative integer no smaller than Minimum Lag Days. | no |
+| Estimate Applicability Status | Kumamoto Applicability Status of the Temperature-Mortality Estimate | quality control | Assessment of whether an estimate is suitable for the study population and exposure definition. | Coded as pending review, applicable, sensitivity only, or rejected with a documented reason. | no |
+
+### Cooling-Loss Mortality Planning Scenario Variables
+
+The mortality scenario uses a direct cooled-versus-uncooled effect estimate for older
+institutional residents during extreme heat. It is transferred to Kumamoto only as a
+planning parameter. Outdoor weather is identical in both cooling states, and the current
+calculation uses the no-verified-placement demand-side bound rather than observed exposure.
+
+| variable_name | full_name | role | formal_definition | construction_or_coding | is_final_variable |
+|---|---|---|---|---|---|
+| Expected High-Heat Scenario Days | Expected High-Heat Days in the 30-Day Planning Window | background heat scenario | \(H^{heat}_m=IDW_4(5^{-1}\sum_y\sum_t I^{heat}_{s,y,t})\). | A high-heat day has either JMA Hot Day Indicator or Hot Night Indicator equal to one; station five-year means are interpolated to municipality centroids with four-neighbor inverse-distance weighting. | yes |
+| Baseline Daily Mortality Probability | Municipality Age-65-or-Older Daily Baseline Mortality Probability | baseline risk | \(p_m=B_m/(100000\times365.25)\). | Converts the annualized municipality baseline rate to a daily probability. | yes |
+| Effective-Cooling High-Heat Daily Mortality Probability | Modeled Daily Mortality Probability During High Heat with Effective Cooling | protected state | \(p^{cool}_m=OR^{cool}o_m/(1+OR^{cool}o_m)\). | \(o_m=p_m/(1-p_m)\) and \(OR^{cool}=1.03\), the published high-heat odds ratio in older institutional residents with air conditioning. | yes |
+| No-Effective-Cooling Relative Odds Ratio | Relative Odds of Death During High Heat without versus with Effective Cooling | cooling-loss effect | \(ROR=1.08\). | Primary published lag-0 interaction estimate; transferred from older institutional residents outside Japan. | yes |
+| No-Effective-Cooling Relative Odds Ratio Lower 95% CI | Lower 95% Confidence Limit for the Cooling-Loss Relative Odds Ratio | effect uncertainty | \(ROR^L=1.01\). | Published lower confidence limit; transfer uncertainty is not included. | yes |
+| No-Effective-Cooling Relative Odds Ratio Upper 95% CI | Upper 95% Confidence Limit for the Cooling-Loss Relative Odds Ratio | effect uncertainty | \(ROR^U=1.15\). | Published upper confidence limit; transfer uncertainty is not included. | yes |
+| Cooling-Loss Daily Mortality Risk Contrast | Daily Mortality Probability Difference without versus with Effective Cooling | modeled contrast | \(\delta_m=ROR\,o^{cool}_m/(1+ROR\,o^{cool}_m)-p^{cool}_m\). | Holds outdoor high-heat conditions fixed and changes only the cooling state. | yes |
+| Effective-Cooling 30-Day Mortality Risk | 30-Day Mortality Risk with Effective Cooling | protected-state outcome | \(r^{cool}_m=1-(1-p_m)^{H-H^{heat}_m}(1-p^{cool}_m)^{H^{heat}_m}\). | Accumulates daily risk across the 30-day window without adding an unestimated duration-response multiplier. | yes |
+| No-Effective-Cooling 30-Day Mortality Risk | 30-Day Mortality Risk without Effective Cooling | unprotected-state outcome | \(r^{no\ cool}_m=1-(1-p_m)^{H-H^{heat}_m}(1-p^{no\ cool}_m)^{H^{heat}_m}\). | Uses the same outdoor high-heat days as the protected state and changes only cooling status. | yes |
+| Cooling-Loss Relative 30-Day Mortality Burden Increase % | Relative Increase in 30-Day Mortality Burden without Effective Cooling | modeled relative outcome | \(M_m=100(r^{no\ cool}_m/r^{cool}_m-1)\). | Main Panel C metric; expresses relative rather than absolute burden. | yes |
+| Cooling-Loss Relative 30-Day Mortality Burden Increase % Lower 95% CI | Lower Effect-Estimate Limit for the Relative 30-Day Mortality Burden Increase | effect uncertainty | \(M^L_m=100(r^{no\ cool,L}_m/r^{cool}_m-1)\). | Varies only the published cooling-loss relative-odds parameter. | yes |
+| Cooling-Loss Relative 30-Day Mortality Burden Increase % Upper 95% CI | Upper Effect-Estimate Limit for the Relative 30-Day Mortality Burden Increase | effect uncertainty | \(M^U_m=100(r^{no\ cool,U}_m/r^{cool}_m-1)\). | Varies only the published cooling-loss relative-odds parameter. | yes |
+| Cooling-Loss Incremental Mortality Risk per 100,000 | 30-Day Cooling-Loss Incremental Mortality Risk per 100,000 Affected Older Persons | modeled risk | \(R_m=100000(r^{no\ cool}_m-r^{cool}_m)\). | Central absolute risk difference under the five-year matching-period high-heat scenario. | yes |
+| Cooling-Loss Incremental Mortality Risk per 100,000 Lower 95% CI | Lower Effect-Estimate Limit for Incremental Mortality Risk per 100,000 | effect uncertainty | \(R^L_m=100000(r^{no\ cool,L}_m-r^{cool}_m)\). | Varies only the published cooling-loss relative-odds parameter. | yes |
+| Cooling-Loss Incremental Mortality Risk per 100,000 Upper 95% CI | Upper Effect-Estimate Limit for Incremental Mortality Risk per 100,000 | effect uncertainty | \(R^U_m=100000(r^{no\ cool,U}_m-r^{cool}_m)\). | Varies only the published cooling-loss relative-odds parameter. | yes |
+| Incremental Cooling-Loss-Related Excess Deaths | Expected Incremental Deaths under the No-Verified-Placement Scenario | modeled outcome | \(\Delta D_m=(PD^{NP}_m/H)(r^{no\ cool}_m-r^{cool}_m)\). | Retained for the municipality table but not used as the main Panel C metric; does not represent observed deaths. | yes |
+| Incremental Cooling-Loss-Related Excess Deaths Lower 95% CI | Lower Effect-Estimate Limit for Incremental Cooling-Loss-Related Excess Deaths | effect uncertainty | \(\Delta D^L_m=(PD^{NP}_m/H)(r^{no\ cool,L}_m-r^{cool}_m)\). | Varies only the published cooling-effect parameter; housing, heat-scenario, baseline-rate, and transfer uncertainty are not included. | yes |
+| Incremental Cooling-Loss-Related Excess Deaths Upper 95% CI | Upper Effect-Estimate Limit for Incremental Cooling-Loss-Related Excess Deaths | effect uncertainty | \(\Delta D^U_m=(PD^{NP}_m/H)(r^{no\ cool,U}_m-r^{cool}_m)\). | Varies only the published cooling-effect parameter; housing, heat-scenario, baseline-rate, and transfer uncertainty are not included. | yes |
+| Cooling-Loss Mortality Scenario Status | Cooling-Loss Mortality Scenario Evidence Status | quality control | Categorical evidence status. | Coded as a literature-anchored, no-verified-placement planning scenario; not observed or earthquake-attributable mortality. | yes |
+
+### Cooling-Protection Planning Scenario Variables
+
+The early planning scenario uses the modeled older-person cooling-assessment population
+over a fixed 30-day horizon. It assumes no **verified** effective cooled placement only to
+construct a demand-side upper bound. It does not assume that physical shelter capacity is
+zero, and it does not identify the actual cooling-capacity gap.
+
+| variable_name | full_name | role | formal_definition | construction_or_coding | is_final_variable |
+|---|---|---|---|---|---|
+| Cooling Protection Planning Horizon Days | Cooling-Protection Planning Horizon in Days | scenario parameter | \(H=30\). | Fixed to the one-month post-earthquake planning window. | yes |
+| No-Placement Unprotected Older-Person-Days | Central No-Verified-Placement Older-Person-Days Planning Bound | demand-side planning bound | \(PD^{NP}_g=H E[N_{65+,g}]\). | Central structural residence-loss scenario multiplied by 30 days; not observed exposure or an actual placement deficit. | yes |
+| No-Placement Unprotected Older-Person-Days Lower Bound | Lower No-Verified-Placement Older-Person-Days Scenario Bound | uncertainty | \(PD^{NP,L}_g=H E[N^L_{65+,g}]\). | Uses the pointwise lower housing-loss scenario; values are not a jointly realized prefecture-wide lower scenario. | yes |
+| No-Placement Unprotected Older-Person-Days Upper Bound | Upper No-Verified-Placement Older-Person-Days Scenario Bound | uncertainty | \(PD^{NP,U}_g=H E[N^U_{65+,g}]\). | Uses the pointwise upper housing-loss scenario; values are not a jointly realized prefecture-wide upper scenario. | yes |
+| Cooling Protection Scenario Status | Cooling-Protection Scenario Evidence Status | quality control | Categorical scenario status. | Coded as no verified placement demand-side bound; prevents interpretation as observed cooling loss or zero physical capacity. | yes |
+
+### Pending Shelter Cooling and Power Variables
+
+These fields require facility-level operational verification. A designated-shelter record
+alone does not establish current opening, occupancy, cooling availability, electric supply,
+or backup-power capacity.
+
+| variable_name | full_name | role | formal_definition | construction_or_coding | is_final_variable |
+|---|---|---|---|---|---|
+| Current Shelter Occupancy | Current Number of Shelter Occupants | demand driver | People currently occupying the facility at Observation Time. | Time-stamped verified count; a designated capacity or evacuation-instruction population is not substituted. | no |
+| Available Cooled Floor Area m2 | Operational Cooled Floor Area in Square Metres | cooling capacity input | Floor area that can currently maintain protective indoor conditions. | Verified facility value; nominal building area is not assumed to be cooled area. | no |
+| HVAC Cooling Capacity kW Thermal | Heating, Ventilation, and Air Conditioning Cooling Capacity in Thermal Kilowatts | cooling capacity input | Available thermal cooling output of operational equipment. | Sum of verified operational equipment capacities at Observation Time. | no |
+| Cooling System COP | Cooling System Coefficient of Performance | conversion parameter | Ratio of delivered thermal cooling power to electric input power. | Facility-specific verified value where available; otherwise a clearly labelled scenario parameter. | no |
+| Cooling Operating Hours per Day | Daily Cooling Operating Hours | energy parameter | Number of hours per day for which protective cooling is expected to operate. | Facility-specific schedule where verified; otherwise a labelled scenario value. | no |
+| Verified Available Grid Power kW | Verified Grid Electric Power Available to the Facility | available supply | Grid electric power available for cooling and other critical loads at Observation Time. | Time-stamped facility verification; nominal connection capacity is retained separately if operational availability is unknown. | no |
+| Backup Generator Capacity kW | Operational Backup Generator Electric Capacity | available supply | Electric output capacity of operational backup generation. | Verified nameplate and operational status; unavailable or untested equipment is not counted as available. | no |
+| Backup Power Duration Hours | Expected Backup Power Duration | resilience | Hours for which verified backup generation can operate under available fuel and load. | Estimated from verified fuel, consumption, and usable capacity or retained from a documented facility assessment. | no |
+| Non-Cooling Critical Load kW | Facility Non-Cooling Critical Electric Load | competing demand | Electric load required for lighting, communications, medical devices, water, and other non-cooling functions. | Verified or explicitly scenario-based; subtracted before power is assigned to cooling. | no |
+| Facility Power Data Status | Facility Cooling and Power Data Status | quality control | Completeness and operational validity of the facility audit. | Coded as verified, partial, scenario only, unavailable, or outdated. | no |
+| Evidence Tier | Facility Cooling and Power Evidence Strength Tier | uncertainty | Strength and directness of the facility-level evidence. | Direct operational measurement remains distinct from administrative records or assumptions. | no |
+| Verification Status | Facility Cooling and Power Verification Status | quality control | Current verification state of one facility record. | Time-stamped categorical field linked by Common ID. | no |
+
+### Cooling Electricity Demand Scenario Parameters
+
+The demand-side power calculation uses three internally consistent engineering scenarios.
+All three hold Estimated Affected Population Age 65+ at its central structural residence-
+loss scenario value so that prefecture totals can be compared and summed. The parameters
+do not describe installed equipment at any specific shelter.
+
+| variable_name | full_name | role | formal_definition | construction_or_coding | is_final_variable |
+|---|---|---|---|---|---|
+| Power Demand Scenario | Emergency Cooling Electricity Demand Scenario | scenario linkage | One of Low, Central, or High. | Defines one complete parameter bundle; parameters from different bundles are never mixed. | yes |
+| Minimum Shelter Living Area m2 per Person | Minimum Planned Shelter Living Area per Person | demand parameter | \(a=3.5\) square metres per person. | Anchored to the Cabinet Office shelter guidance; used as cooled-area demand, not observed occupied floor area. | yes |
+| Cooling Load Density W per m2 | Scenario Cooling Thermal Load Density | demand parameter | \(r_z \in \{127,134,141\}\) watts per square metre for scenario \(z\). | Low and High use the MLIT gymnasium cooling-load case bounds; Central is their midpoint. | yes |
+| Cooling Thermal Load W per Person | Protective Cooling Thermal Load per Person in Watts | derived demand parameter | \(q_z=a r_z\). | Equals 444.5, 469.0, and 493.5 watts per person in Low, Central, and High. | yes |
+| Scenario Cooling System COP | Scenario Cooling-System Coefficient of Performance | conversion parameter | \(COP_z \in \{4.0,3.0,2.5\}\). | Research scenarios ordered from more efficient to less efficient cooling; COP is thermal cooling delivered divided by electric input. | yes |
+| Scenario Peak Load Diversity Factor | Scenario Cooling Peak Load Diversity Factor | demand parameter | \(f_z \in \{0.8,0.9,1.0\}\). | Research scenarios for the fraction of individual peak loads occurring simultaneously. | yes |
+| Scenario Cooling Operating Hours per Day | Scenario Daily Cooling Operating Hours | energy parameter | \(h_z \in \{12,18,24\}\) hours per day. | Research scenarios reflecting daytime-only through continuous protective cooling. | yes |
+| Cooling Power Scenario Status | Cooling-Power Scenario Evidence Status | quality control | Categorical evidence status. | Coded as demand side only with no verified supply; the output is not an observed facility load or power gap. | yes |
+
+### Cooling-Power Result Variables
+
+These variables distinguish finalized demand-side power scenarios from supply-side
+outcomes that still require operational inputs. The finalized health-planning variables
+are defined in the preceding cooling-loss mortality scenario subsection.
+
+| variable_name | full_name | role | formal_definition | construction_or_coding | is_final_variable |
+|---|---|---|---|---|---|
+| Cooling Thermal Load kW | Required Protective Cooling Thermal Load in Kilowatts | modeled demand | \(Q_{g,z}=N^{need}_g q_z/1000\). | Central cooling-assessment population multiplied by the scenario per-person thermal load. | yes |
+| Required Peak Cooling Electric Power kW | Required Peak Electric Power for Protective Cooling | modeled demand | \(P^{req}_{g,z}=Q_{g,z}f_z/COP_z\). | Thermal load multiplied by the scenario diversity factor and divided by scenario COP. | yes |
+| Required Daily Cooling Electricity kWh | Required Daily Electricity for Protective Cooling | modeled energy demand | \(E^{req}_{g,z}=P^{req}_{g,z}h_z\). | Required peak power multiplied by scenario daily operating hours; reported separately from peak power. | yes |
+| Verified Available Electric Power kW | Verified Electric Power Available for Cooling | available supply | \(A_g = max(0, G_g + B_g - L_g)\). | Available grid power plus operational backup generation minus non-cooling critical load, with all components evaluated at the same observation time. | no |
+| Emergency Cooling Power Gap kW | Unmet Peak Electric Power for Protective Cooling | operational outcome | \(Gap_g = max(0, P_g - A_g)\). | Positive values indicate additional peak electric power required under the specified scenario. | no |
+| Effective Cooled Capacity | Effective Number of People Receiving Protective Cooling | intermediate outcome | TBD | Limited by verified occupancy, cooled space, operational thermal capacity, and available electric power. | no |
+| Cooling Capacity Gap | Number of Heat-Vulnerable People Without Effective Cooling Capacity | operational outcome | TBD | Difference between the population requiring protective cooling and Effective Cooled Capacity, bounded below by zero. | no |
+
 ## 5. Identification Strategy
 
 ### Design Principle
@@ -448,6 +601,67 @@ Historical Air Temperature C is not interpreted as a supported spatial air-tempe
 surface; the figure is restricted to land-surface-temperature patterns and the failed
 validation result. This design is descriptive and cannot establish earthquake effects,
 indoor temperature, individual heat dose, or a future forecast.
+
+### Structural Residence-Loss Scenario Design
+
+The housing-loss component is a total-constrained spatial scenario rather than a fitted
+fragility model. Epicentral Distance km represents relative proximity to the earthquake,
+while General Households, Mapped Building Count, and Mapped Building Footprint Area m2
+provide alternative exposure denominators. Building polygons do not identify residential
+use, construction material, age, occupancy, or structural condition. They therefore enter
+as alternative allocation proxies and are never assigned an unvalidated vulnerability
+coefficient.
+
+Official full-collapse and half-collapse residence totals determine the scenario totals.
+Full collapse receives weight one, half collapse receives alternative functional-loss
+weights of 0, 0.5, and 1, and partial damage is excluded. Distance-decay scales of 10, 20,
+and 40 km are crossed with the three exposure denominators and the three half-collapse
+weights to form twenty-seven scenarios. The central grid estimate uses the ensemble-median
+spatial pattern, renormalized to the official full-collapse total plus one-half of the
+half-collapse total. Current confirmed residence losses are not assigned to disclosure
+groups because the official counts are not geolocated at that resolution.
+
+This design produces Functional Housing Loss and Older-Person Exposure and supplies the
+housing-loss input for later mortality and cooling analyses. It estimates where reported
+structural residence loss is more plausibly concentrated under explicit assumptions. It
+does not identify an individual damaged residence, estimate a causal distance effect,
+represent observed displacement, or include service-related cooling loss within the
+structural residence-loss count.
+
+### Cooling-Protection Contrast and Output Order
+
+The downstream estimand is loss of effective cooling protection under a common outdoor-
+weather scenario. Estimated Affected Population Age 65+ identifies residents requiring a
+cooling assessment after modeled structural residence loss; it is not yet the number who
+are displaced or uncooled. A resident is counted as effectively protected only when a
+usable home, private placement, or accessible shelter has verified functioning cooling,
+power, usable cooled space, and available capacity for that resident at the relevant time.
+
+The output order follows the mechanism. Older-Person Cooling Protection Need and Placement
+Deficit first maps cooling-assessment need and the no-verified-placement planning bound.
+Emergency Cooling Electricity Requirement Distribution next estimates demand-side peak
+power and daily energy under approved Low, Central, and High engineering bundles. It does
+not estimate actual supply or the power gap until facility power is verified. Cooling-Loss-
+Related Incremental Mortality Risk Distribution is last because it requires both duration
+without cooling and a compatible comparison of health risk with and without effective
+cooling at the same outdoor temperature.
+
+Municipality-Level Housing Loss, Cooling Demand, and Health-Risk Summary then consolidates
+the completed scenario chain at the 45-municipality level. It includes only finalized
+demand-side and literature-anchored variables. It does not add empty columns for effective
+placement, verified supply, or a power gap, and it does not convert missing operational
+evidence to zero.
+
+This is a planning scenario rather than causal identification. Ambient heat data determine
+the background conditions under which cooling is needed, but the earthquake exposure is
+loss of cooling protection. A general outdoor temperature-mortality association cannot by
+itself identify the incremental effect of cooling loss. The numerical planning scenario
+therefore uses the accepted direct comparison of mortality during extreme heat among older
+institutional residents without versus with air conditioning. Its transfer from a non-Japan
+institutional population, the no-verified-placement demand bound, and the historical heat
+scenario preclude causal or predictive interpretation. Actual mortality impact remains
+unidentified until placement, individual cooling status, and event-period exposure are
+observed.
 
 ## 6. Main Estimation Framework
 
@@ -597,6 +811,271 @@ U^{k}_{g} = \sqrt{\left(RMSE^{k}_{LOO}\right)^2
 the leave-one-station-out fitted surfaces. It combines observed out-of-station error with
 sensitivity to omission of any one station; it is not a probabilistic confidence interval.
 
+### Quaternary Framework: Total-Constrained Structural Residence-Loss Scenarios
+
+For disclosure group \(g\) and distance-decay scale \(\lambda\), the epicentral-distance
+term is
+
+\[
+h_{g,\lambda}=\exp\left(-\frac{d_g}{\lambda}\right).
+\]
+
+\(h_{g,\lambda}\) is the distance-decay weight, \(d_g\) is Epicentral Distance km, and
+\(\lambda\) is one of 10, 20, or 40 km. These values describe scenario decay and are not
+estimated ground-motion attenuation coefficients.
+
+For scenario \(s=(\lambda,m,\theta)\), the normalized spatial allocation weight is
+
+\[
+q_{g,s}=\frac{X_{g,m}h_{g,\lambda}}
+{\sum_j X_{j,m}h_{j,\lambda}}.
+\]
+
+\(q_{g,s}\) is the scenario-specific allocation weight, \(m\) indexes the selected exposure
+proxy, and \(X_{g,m}\) is General Households, Mapped Building Count, or Mapped Building
+Footprint Area m2 for group \(g\). The index \(j\) runs over all eligible disclosure groups
+in Kumamoto Prefecture.
+
+The structural functional-loss total for scenario \(s\) is
+
+\[
+T_s=F+\theta_s H.
+\]
+
+\(T_s\) is the scenario total of functionally lost residences, \(F\) is the latest official
+full-collapse residence total, \(H\) is the latest official half-collapse residence total,
+and \(\theta_s\) is 0, 0.5, or 1. Partial Damage Buildings is not included in \(T_s\).
+The scenario allocation is
+
+\[
+L_{g,s}=T_s q_{g,s}.
+\]
+
+\(L_{g,s}\) is the expected residence loss in group \(g\) under scenario \(s\). Let
+\(\widetilde{L}_g=\operatorname{median}_s(L_{g,s})\). The central estimate is constrained to
+\(T_0=F+0.5H\) through
+
+\[
+E[L_g]=T_0\frac{\widetilde{L}_g}{\sum_j\widetilde{L}_j}.
+\]
+
+\(E[L_g]\) is Expected Functionally Lost Residences and \(T_0\) is Structural Housing Loss
+Central Total Residences. The pointwise scenario range is
+
+\[
+L_g^{lo}=\min_s L_{g,s},
+\qquad
+L_g^{hi}=\max_s L_{g,s}.
+\]
+
+\(L_g^{lo}\) is Expected Functionally Lost Residences Lower Bound and \(L_g^{hi}\) is
+Expected Functionally Lost Residences Upper Bound. They are specification bounds at one
+grid, not confidence limits, and their sums do not represent one jointly realized
+prefecture scenario.
+
+For population stratum \(a\), affected population associated with structural residence loss
+is
+
+\[
+E[N_{a,g}]=N_{a,g}\min\left(1,\frac{E[L_g]}{G_g}\right).
+\]
+
+\(E[N_{a,g}]\) is the estimated affected population in stratum \(a\), \(N_{a,g}\) is the
+corresponding population count, and \(G_g\) is General Households. The same transformation
+is applied to \(L_g^{lo}\) and \(L_g^{hi}\) to construct the pointwise affected-population
+bounds. This proportional occupancy rule does not identify which residents were displaced.
+
+### Quinary Framework: Cooling Protection, Power, and Incremental Health Risk
+
+For disclosure group \(g\) and day \(t\), the initial population requiring cooling
+assessment is
+
+\[
+N^{need}_{g,t}=E[N_{65+,g}].
+\]
+
+\(N^{need}_{g,t}\) is the planning need associated with the central structural residence-
+loss scenario and \(E[N_{65+,g}]\) is Estimated Affected Population Age 65+. This is a
+conservative demand-side screening population, not observed displacement or confirmed loss
+of cooling. Its lower and upper versions use the corresponding affected-population scenario
+bounds.
+
+Let \(x_{g,s,t}\) be the number of residents from group \(g\) assigned to effective cooled
+placement \(s\) on day \(t\). Valid assignments must satisfy accessibility and capacity:
+
+\[
+\sum_g x_{g,s,t} \leq C^{eff}_{s,t}.
+\]
+
+\(C^{eff}_{s,t}\) is Effective Cooled Capacity at placement \(s\), constrained by Current
+Shelter Occupancy, Available Cooled Floor Area m2, HVAC Cooling Capacity kW Thermal,
+Verified Available Grid Power kW, backup power, accessibility, and contemporaneous
+operational status. Nominal shelter acceptance or floor area alone does not determine
+\(C^{eff}_{s,t}\).
+
+The remaining cooling-protection deficit is
+
+\[
+U_{g,t}=\max\left(0,N^{need}_{g,t}-\sum_s x_{g,s,t}\right),
+\]
+
+and cumulative unprotected exposure over the 30-day planning window is
+
+\[
+PD_g=\sum_{t=0}^{29}U_{g,t}.
+\]
+
+\(U_{g,t}\) is Cooling Capacity Gap assigned back to origin group \(g\), and \(PD_g\) is
+Unprotected Older-Person-Days. When placement or effective capacity is unverified, these
+variables remain missing. A separate demand-side upper-bound scenario may set verified
+placement to zero, but it must be labelled as a no-placement planning bound rather than an
+observed deficit.
+
+For the demand-side planning figure, the cooling-protection population is fixed to the
+central assessment population, \(N^{cool}_g=N^{need}_g=E[N_{65+,g}]\), in every engineering
+scenario \(z\). Per-person thermal load is
+
+\[
+q_z=a r_z,
+\]
+
+where \(a\) is Minimum Shelter Living Area m2 per Person and \(r_z\) is Cooling Load Density
+W per m2. The approved Low, Central, and High bundles use \(a=3.5\),
+\(r_z=(127,134,141)\), Scenario Cooling System COP \((4.0,3.0,2.5)\), Scenario Peak Load
+Diversity Factor \((0.8,0.9,1.0)\), and Scenario Cooling Operating Hours per Day
+\((12,18,24)\), respectively. These are planning scenarios rather than facility observations.
+Required thermal load is
+
+\[
+Q_{g,z}=\frac{N^{cool}_g q_z}{1000},
+\]
+
+where \(Q_{g,z}\) is Cooling Thermal Load kW. Required peak electric power and daily
+electricity are
+
+\[
+P^{req}_{g,z}=\frac{Q_{g,z}f_z}{COP_z},
+\qquad
+E^{req}_{g,z}=P^{req}_{g,z}h_z.
+\]
+
+\(P^{req}_{g,z}\) is Required Peak Cooling Electric Power kW, \(f_z\) is Scenario Peak Load
+Diversity Factor, \(COP_z\) is Scenario Cooling System COP, \(E^{req}_{g,z}\) is Required
+Daily Cooling Electricity kWh, and \(h_z\) is Scenario Cooling Operating Hours per Day.
+Peak power and daily energy are never interchanged. Municipality values sum disclosure
+groups assigned by representative point; the prefecture sensitivity panel sums the same
+central assessment population under each complete engineering bundle.
+
+Verified electric power available for cooling is
+
+\[
+A_{s,t}=\max\left(0,G_{s,t}+B_{s,t}-L^{critical}_{s,t}\right),
+\]
+
+where \(A_{s,t}\) is the verified available electric power, \(G_{s,t}\) is Verified
+Available Grid Power kW, \(B_{s,t}\) is Backup Generator Capacity kW, and
+\(L^{critical}_{s,t}\) is Non-Cooling Critical Load kW. The emergency power gap is
+
+\[
+Gap^{power}_{s,t}=\max\left(0,P^{req}_{s,t}-A_{s,t}\right).
+\]
+
+\(Gap^{power}_{s,t}\) is Emergency Cooling Power Gap kW. Missing supply components do not
+equal zero. The current demand-side figure therefore reports \(P^{req}\) and \(E^{req}\)
+only; Verified Available Electric Power kW and Emergency Cooling Power Gap kW remain missing.
+
+For the mortality planning scenario, municipality \(m\)'s daily baseline probability is
+
+\[
+p_m=\frac{B_m}{100000\times365.25},
+\]
+
+where \(p_m\) is Baseline Daily Mortality Probability and \(B_m\) is Baseline Mortality
+Rate per 100,000. Let \(o_m=p_m/(1-p_m)\) be the corresponding baseline odds. The
+effective-cooling high-heat probability is
+
+\[
+p^{cool}_m=\frac{OR^{cool}o_m}{1+OR^{cool}o_m},
+\]
+
+where \(p^{cool}_m\) is Effective-Cooling High-Heat Daily Mortality Probability and
+\(OR^{cool}=1.03\) is the published high-heat odds ratio in institutions with air
+conditioning. The no-effective-cooling probability is
+
+\[
+p^{no\ cool}_m=\frac{ROR\,o^{cool}_m}{1+ROR\,o^{cool}_m},
+\]
+
+where \(p^{no\ cool}_m\) is the daily high-heat mortality probability without effective
+cooling, \(o^{cool}_m=p^{cool}_m/(1-p^{cool}_m)\), and \(ROR=1.08\) is the accepted
+relative odds ratio comparing institutions without versus with air conditioning. The
+published 95% confidence limits are \(ROR^L=1.01\) and \(ROR^U=1.15\).
+
+The effective-cooling and no-effective-cooling 30-day risks are
+
+\[
+r^{cool}_m=1-(1-p_m)^{H-H^{heat}_m}
+(1-p^{cool}_m)^{H^{heat}_m},
+\]
+
+\[
+r^{no\ cool}_m=1-(1-p_m)^{H-H^{heat}_m}
+(1-p^{no\ cool}_m)^{H^{heat}_m},
+\]
+
+where \(r^{cool}_m\) is Effective-Cooling 30-Day Mortality Risk,
+\(r^{no\ cool}_m\) is No-Effective-Cooling 30-Day Mortality Risk,
+\(H^{heat}_m\) is Expected High-Heat Scenario Days, and \(H=30\). Daily survival is
+accumulated across the planning window; no additional nonlinear duration-response
+multiplier is imposed.
+
+The relative and absolute cooling-loss contrasts are
+
+\[
+M_m=100\left(\frac{r^{no\ cool}_m}{r^{cool}_m}-1\right),
+\]
+
+\[
+R_m=100000\left(r^{no\ cool}_m-r^{cool}_m\right),
+\]
+
+\[
+\Delta D_m=\frac{PD^{NP}_m}{H}
+\left(r^{no\ cool}_m-r^{cool}_m\right),
+\]
+
+where \(M_m\) is Cooling-Loss Relative 30-Day Mortality Burden Increase %,
+\(R_m\) is Cooling-Loss Incremental Mortality Risk per 100,000,
+\(PD^{NP}_m\) is No-Placement Unprotected Older-Person-Days, and \(\Delta D_m\) is
+Incremental Cooling-Loss-Related Excess Deaths. Outdoor weather is identical in both
+cooling states. Panel C reports \(M_m\); \(\Delta D_m\) is retained for the municipality
+table. The lower and upper results vary only \(ROR\); they are effect-estimate confidence
+limits, not complete uncertainty intervals. The estimate is a transferable planning
+scenario and not observed, forecast, causal, or earthquake-attributable mortality.
+
+### Municipality Summary Aggregation
+
+For an additive grid-level result, the municipality summary uses
+
+\[
+X_m=\sum_{g\in\mathcal{G}_m}X_g,
+\]
+
+where \(X_m\) is the municipality total, \(X_g\) is the corresponding disclosure-group
+value, and \(\mathcal{G}_m\) is the set of disclosure groups assigned to municipality
+\(m\) by representative point. This aggregation is used for Expected Functionally Lost
+Residences, Estimated Affected Population Age 65+, and No-Placement Unprotected
+Older-Person-Days. Lower and upper columns sum pointwise bounds and are not interpreted as
+joint municipality confidence intervals.
+
+Required Peak Cooling Electric Power kW and Required Daily Cooling Electricity kWh select
+the Central Power Demand Scenario before municipality summation. Expected High-Heat
+Scenario Days, Incremental Cooling-Loss-Related Excess Deaths, and Cooling-Loss Relative
+30-Day Mortality Burden Increase % are retained from the municipality mortality scenario.
+The 45 rows are ordered by central Estimated Affected Population Age 65+ from highest to
+lowest. No prefecture total row is added because pointwise lower and upper housing bounds
+are not jointly additive.
+
 ### Sensitivity and Failure-Mode Plan
 
 - Population disclosure groups that cross the Minami Ward boundary are clipped only for
@@ -617,20 +1096,46 @@ sensitivity to omission of any one station; it is not a probabilistic confidence
 - The spatial heat model uses only strict-quality satellite observations. A pixel is eligible
   for primary calibration only when both Terra and Aqua contribute and at least five valid
   observations are available for the relevant daytime or nighttime period.
-- Relaxed satellite quality criteria are reserved for a sensitivity comparison and never
-  overwrite the strict-quality primary surface.
+- A strict-first historical satellite mean is retained. Relaxed-quality observations fill
+  only pixels with no strict-quality mean and never overwrite an available strict value.
 - Mean-only, satellite-only, and satellite-plus-residual candidates are compared by leave-
   one-station-out error; residual interpolation is not retained merely because it appears
   spatially smoother.
 - Pixels outside the land-surface-temperature range represented by eligible stations are
   flagged as extrapolation and are not used for precise local temperature claims.
-- Historical Land Surface Temperature SD C and MODIS Valid Observation Count remain visible
-  as support diagnostics so that cloud-limited or temporally unstable pixels are not treated
-  as equally reliable.
+- Historical Land Surface Temperature SD C, MODIS Valid Observation Count, and quality
+  support tier remain in the analytical data even when quality hatching is omitted from the
+  result figure.
+- The residence-loss main estimate is repeated across 10, 20, and 40 km distance-decay
+  scales, three exposure proxies, and three half-collapse functional-loss weights.
+- General Households is the official-population occupancy denominator; mapped building count
+  and footprint area are alternative allocation proxies, not residence counts or fragility
+  measurements.
+- Confirmed Functionally Lost Residences remains missing at disclosure-group level until
+  confirmed residence evidence is geolocated; the scenario allocation never fills that
+  lower-bound field.
+- Pointwise lower and upper residence-loss bounds are not summed as a prefecture uncertainty
+  interval because they can originate from different scenarios in different grids.
 - Spatial Heat Anomaly C describes a 2021-2025 matching-season pattern. It is not a forecast
   for the next month and does not substitute for event-period station or forecast data.
-- Results remain inconclusive for the full deficit \(Gap_s(t)\) until effective cooled
-  capacity and expected older-person demand are observed or estimated.
+- Outdoor temperature is held common across effective-cooling and no-effective-cooling
+  states; it is a background modifier and not the earthquake treatment contrast.
+- Estimated Affected Population Age 65+ is a cooling-assessment population, not confirmed
+  loss of cooling. Effective placement is subtracted only with time-compatible verified or
+  explicitly scenario-based capacity.
+- When Effective Cooled Capacity or placement is missing, Cooling Capacity Gap and
+  Unprotected Older-Person-Days remain missing. The no-placement case is reported only as a
+  conservative demand-side bound.
+- Cooling Load Density W per m2, Scenario Cooling System COP, Scenario Peak Load Diversity
+  Factor, and Scenario Cooling Operating Hours per Day vary jointly in the approved Low,
+  Central, and High bundles. All use the same central assessment population. Grid power,
+  backup power, and non-cooling critical load remain missing rather than being set to zero.
+- Cooling-Loss-Related Incremental Mortality Risk Distribution uses a direct published
+  cooled-versus-uncooled high-heat contrast, not a general outdoor temperature-mortality
+  coefficient. Expected High-Heat Scenario Days are a five-year matching-period background,
+  not a forecast. The 95% limits vary only the published relative-odds parameter and omit
+  housing-loss, baseline-rate, heat-scenario, placement, and cross-population transfer
+  uncertainty.
 
 ## 7. Analytical Workflow
 
@@ -646,41 +1151,65 @@ sensitivity to omission of any one station; it is not a probabilistic confidence
 | 8. Construct the strict-quality historical satellite grid | MODIS Pixel ID, Historical Daytime Land Surface Temperature C, Historical Nighttime Land Surface Temperature C, MODIS Valid Observation Count, Historical Land Surface Temperature SD C | Strict quality screening, equal Terra-Aqua product weighting, and no gap filling | Historical MODIS and Station-Calibrated Heat Spatial Heterogeneity | Matching-season surface heat is spatially heterogeneous across Kumamoto Prefecture | Descriptively supported where both products and at least five strict-quality observations are available |
 | 9. Calibrate satellite heat against historical station air temperature | Station Name, Temperature Record Complete, Daily Maximum Air Temperature C, Daily Minimum Air Temperature C, Historical Daytime Land Surface Temperature C, Historical Nighttime Land Surface Temperature C | Mean-only, linear satellite, and satellite-plus-residual candidates compared by \(RMSE^{k}_{LOO}\) | Historical MODIS and Station-Calibrated Heat Spatial Heterogeneity | Satellite surface temperature can provide spatial information about near-surface daytime and nighttime heat rankings | Supported only if a satellite-based candidate outperforms the mean-only model out of station; otherwise rejected |
 | 10. Map population-referenced heat heterogeneity and prediction support | Station-Calibrated Historical Air Temperature C, Spatial Heat Anomaly C, Interpolation Uncertainty C, Total Population, MODIS Valid Observation Count | \(A^{k}_{g}\) and \(U^{k}_{g}\), with extrapolation and low-support pixels flagged | Historical MODIS and Station-Calibrated Heat Spatial Heterogeneity | Historically warmer populated locations may require stronger heat-protection planning after loss of housing function | Provides a historical vulnerability layer only; event risk still requires current observations or forecasts |
-| 11. Test readiness for the central cooling-deficit question | Functional Housing Loss Status, Estimated Affected Population Age 65+, Heat Exposure Status, Observed Evacuee Count, Cooling Loss Confirmed | Compare required inputs with the deficit definition in Section 1 | Deferred outputs in Section 8 | Verified effective cooled capacity must be compared with expected heat-vulnerable demand | Inconclusive until capacity and localized housing-loss inputs are available; historical spatial heat does not establish current displaced demand |
+| 11. Construct epicentral-distance and exposure weights | Epicentral Distance km, General Households, Mapped Building Count, Mapped Building Footprint Area m2 | \(h_{g,\lambda}\) and \(q_{g,s}\) across three decay scales and three exposure proxies | Functional Housing Loss and Older-Person Exposure | Structural residence loss is more plausibly concentrated near the epicenter and where residential exposure is present | Supported only as a transparent scenario assumption; no causal distance coefficient or building fragility is identified |
+| 12. Construct structural residence-loss totals | Full Collapse Buildings, Half Collapse Buildings, Structural Housing Loss Central Total Residences, Half-Collapse Functional Loss Weight Set | \(T_s=F+\theta_sH\), with partial damage excluded | Functional Housing Loss and Older-Person Exposure | Official structural damage totals can constrain an early functional-loss nowcast without treating all damage categories as uninhabitable | Partially supported; functional loss among half-collapse residences remains scenario-dependent |
+| 13. Allocate expected structural residence loss | Housing Loss Allocation Weight, Expected Functionally Lost Residences, Expected Functionally Lost Residences Lower Bound, Expected Functionally Lost Residences Upper Bound, Functional Housing Loss Status, Damage Evidence Cutoff | \(L_{g,s}=T_sq_{g,s}\), ensemble-median central allocation, and pointwise scenario range | Functional Housing Loss and Older-Person Exposure | Expected structural residence loss is spatially heterogeneous within Kumamoto Prefecture | Supported as a model-based scenario allocation, not as observed grid damage |
+| 14. Preserve confirmed evidence at reported geography | Confirmed Functionally Lost Residences, Municipality, Functional Housing Loss Status, Evidence Tier, Verification Status | No grid allocation without geolocation; contextual geography and evidence class retained | Functional Housing Loss and Older-Person Exposure | Confirmed or reported lower-bound evidence must remain separate from modeled expected loss | Supported at reported geography; current disclosure-group confirmed count remains unavailable |
+| 15. Estimate older-person exposure associated with structural residence loss | General Households, Population Age 65+, Estimated Affected Population Age 65+, Estimated Affected Population Age 65+ Lower Bound, Estimated Affected Population Age 65+ Upper Bound | \(E[N_{a,g}]=N_{a,g}\min(1,E[L_g]/G_g)\) and pointwise scenario bounds | Functional Housing Loss and Older-Person Exposure | Older residents associated with modeled structural residence loss are spatially heterogeneous | Supported only as proportional occupancy exposure; not observed displacement or shelter demand |
+| 16. Construct the cooling-protection assessment population | Estimated Affected Population Age 65+, Estimated Affected Population Age 65+ Lower Bound, Estimated Affected Population Age 65+ Upper Bound, Cooling Loss Confirmed | \(N^{need}_{g,t}=E[N_{65+,g}]\), with housing-scenario bounds and no claim of observed displacement | Older-Person Cooling Protection Need and Placement Deficit | Structural residence loss identifies older residents who require a cooling assessment, not everyone already proven uncooled | Supported as a conservative demand-side screening population; cooling-loss status remains partly unknown |
+| 17. Allocate effective cooled placement and calculate the residual deficit | Current Shelter Occupancy, Available Cooled Floor Area m2, HVAC Cooling Capacity kW Thermal, Effective Cooled Capacity, Cooling Capacity Gap, Unprotected Older-Person-Days, Verification Status | Capacity-constrained assignment \(x_{g,s,t}\), \(U_{g,t}=\max(0,N^{need}_{g,t}-\sum_sx_{g,s,t})\), and \(PD_g=\sum_tU_{g,t}\) | Older-Person Cooling Protection Need and Placement Deficit | Correct placement can restore the cooling protection lost with housing function | Inconclusive until time-stamped effective capacity and placement are verified; a no-placement upper bound may be shown separately |
+| 18. Estimate demand-side electricity required for protective cooling | Estimated Affected Population Age 65+, Power Demand Scenario, Minimum Shelter Living Area m2 per Person, Cooling Load Density W per m2, Cooling Thermal Load W per Person, Scenario Cooling System COP, Scenario Peak Load Diversity Factor, Scenario Cooling Operating Hours per Day, Cooling Thermal Load kW, Required Peak Cooling Electric Power kW, Required Daily Cooling Electricity kWh, Cooling Power Scenario Status, Municipality | \(q_z=a r_z\), \(Q_{g,z}=N^{need}_gq_z/1000\), \(P^{req}_{g,z}=Q_{g,z}f_z/COP_z\), and \(E^{req}_{g,z}=P^{req}_{g,z}h_z\) | Emergency Cooling Electricity Requirement Distribution | Emergency cooling-energy planning should be tied to the spatial distribution of older residents requiring cooling assessment | Supported as a Low/Central/High demand-side planning scenario; actual available power and the emergency power gap remain unidentified |
+| 19. Estimate the cooled-versus-uncooled one-month health-risk contrast | No-Placement Unprotected Older-Person-Days, Expected High-Heat Scenario Days, Baseline Mortality Rate per 100,000, Baseline Daily Mortality Probability, Effective-Cooling High-Heat Daily Mortality Probability, No-Effective-Cooling Relative Odds Ratio, Effective-Cooling 30-Day Mortality Risk, No-Effective-Cooling 30-Day Mortality Risk, Cooling-Loss Relative 30-Day Mortality Burden Increase %, Cooling-Loss Incremental Mortality Risk per 100,000, Incremental Cooling-Loss-Related Excess Deaths | \(M_m=100(r^{no\ cool}_m/r^{cool}_m-1)\), \(R_m=100000(r^{no\ cool}_m-r^{cool}_m)\), and \(\Delta D_m=(PD^{NP}_m/H)(r^{no\ cool}_m-r^{cool}_m)\), holding outdoor weather fixed | Cooling-Loss-Related Incremental Mortality Risk Distribution | Failure to restore cooling may increase mortality risk even when the outdoor weather itself is unchanged by the earthquake | Supported only as a literature-anchored, no-verified-placement planning scenario; daily risk accumulates across high-heat days, but no unestimated nonlinear duration-response multiplier is imposed |
+| 20. Aggregate completed planning results by municipality | Municipality, Expected Functionally Lost Residences, Expected Functionally Lost Residences Lower Bound, Expected Functionally Lost Residences Upper Bound, Estimated Affected Population Age 65+, Estimated Affected Population Age 65+ Lower Bound, Estimated Affected Population Age 65+ Upper Bound, No-Placement Unprotected Older-Person-Days, Expected High-Heat Scenario Days, Power Demand Scenario, Required Peak Cooling Electric Power kW, Required Daily Cooling Electricity kWh, Incremental Cooling-Loss-Related Excess Deaths, Cooling-Loss Relative 30-Day Mortality Burden Increase %, Cooling-Loss Relative 30-Day Mortality Burden Increase % Lower 95% CI, Cooling-Loss Relative 30-Day Mortality Burden Increase % Upper 95% CI | Municipality sum \(X_m=\sum_{g\in\mathcal{G}_m}X_g\), Central power-scenario selection, and descending ordering by central Estimated Affected Population Age 65+ | Municipality-Level Housing Loss, Cooling Demand, and Health-Risk Summary | Operational prioritization should jointly consider modeled structural loss, older-person cooling demand, electricity requirements, and relative health burden | Supported as an evidence-constrained municipality planning comparison; no actual placement, verified supply, or power gap is claimed |
 
-The checkpoint for this phase remains partial. Minami Ward Shelter and Cooling Risk
-Screening supports spatial priority screening, Event-Window Daytime and Nighttime Heat
-Scenario tests the station-based 30-day heat component, and Historical MODIS and Station-
-Calibrated Heat Spatial Heterogeneity can add a validated historical spatial pattern. The
-historical spatial output does not establish event-period grid temperature and none of the
-current outputs quantifies a shelter-level cooling deficit.
+The checkpoint closes the demand-side cooling-power chain and adds a literature-anchored
+health-planning scenario, but it does not identify operational supply or actual mortality
+effects. The completed screening, ambient-heat, and structural residence-loss outputs
+identify where older residents may require cooling assessment. Approved engineering bundles
+support peak-power and daily-energy planning scenarios. Effective cooled capacity, actual
+placement, observed unprotected person-days, and verified power supply remain non-final.
+Mortality is evaluated last as a no-verified-placement cooled-versus-uncooled scenario under
+identical historical-background outdoor weather.
 
 ## 8. Figure and Table Plan
 
-The planned output set links the existing population, early operational screening, and
-station-heat figures to the next spatial-estimation stages. Existing figures are retained
-as working outputs but return to pending while the critique findings are corrected. The
-MODIS-based output is intended to characterize historical spatial heat heterogeneity; it is
-not a weather forecast, indoor-temperature estimate, or substitute for station air
-temperature.
+The planned output set links the completed population, operational screening, ambient-heat,
+and structural residence-loss figures to a cooling-protection decision chain. Outdoor heat
+is held as a common background condition: the earthquake-related contrast is effective
+cooling versus loss of effective cooling. The MODIS-based output characterizes historical
+spatial heat heterogeneity; it is not a weather forecast or indoor-temperature estimate.
 
 ### Figures
 
 | title | what it expresses | figure type | subpanels | key variables | status |
 |---|---|---|---:|---|---|
-| Kumamoto Population and Older-Age Vulnerability Baseline | Establishes the prefecture-wide population baseline and spatial concentration of older residents before linking earthquake loss and heat exposure. | map | 2 | Total Population, Population Age 65+ Share, Population Age 65+, Municipality | pending |
-| Minami Ward Shelter and Cooling Risk Screening | Locates older residents, designated shelters, the reported Tomiai/Jonan damage concentration, verified unavailable facilities, and changing evacuation and water-outage observations without estimating a numerical cooling-capacity deficit. | map and line | 2 | Population Age 65+, Latitude, Longitude, Facility Name, Observation Time, Observed Evacuee Count, Observed Water Outage Households, Cooling Loss Confirmed, Habitability Status, Heat Protection Loss Mechanism, Evidence Tier, Verification Status | pending |
-| Event-Window Daytime and Nighttime Heat Scenario | Compares observed 2026 daytime and nighttime station temperatures with the matching 2021-2025 historical scenario while distinguishing complete and partial event days; the historical continuation is a scenario, not a weather forecast. | line | 2 | Station Name, Observation Date, Historical Year, Scenario Date, Event Day, Daily Maximum Air Temperature C, Daily Minimum Air Temperature C, Hot Day Indicator, Hot Night Indicator, Daily Observation Completeness %, Daily Record Status | pending |
-| Historical MODIS and Station-Calibrated Heat Spatial Heterogeneity | Uses matching-period historical MODIS daytime and nighttime land-surface temperature together with historical station air temperature to estimate a station-calibrated spatial heat pattern for Kumamoto Prefecture. | map | 3 | Historical Daytime Land Surface Temperature C, Historical Nighttime Land Surface Temperature C, MODIS Valid Observation Count, Station-Calibrated Historical Air Temperature C, Spatial Heat Anomaly C, Interpolation Uncertainty C | pending |
-| Functional Housing Loss and Older-Person Exposure | Separates the confirmed building-loss lower bound, expected functional housing loss, and estimated older population associated with localized housing loss. | map | 3 | Functional Housing Loss Status, Confirmed Functionally Lost Buildings, Expected Functionally Lost Buildings, Estimated Affected Population Age 65+, Estimation Status, Damage Evidence Cutoff | pending |
+| Kumamoto Population and Older-Age Vulnerability Baseline | Establishes the prefecture-wide population baseline and spatial concentration of older residents before linking earthquake loss and heat exposure. | map | 2 | Total Population, Population Age 65+ Share, Population Age 65+, Municipality | done |
+| Minami Ward Shelter and Cooling Risk Screening | Locates older residents, designated shelters, the reported Tomiai/Jonan damage concentration, verified unavailable facilities, and changing evacuation and water-outage observations without estimating a numerical cooling-capacity deficit. | map and line | 2 | Population Age 65+, Latitude, Longitude, Facility Name, Observation Time, Observed Evacuee Count, Observed Water Outage Households, Cooling Loss Confirmed, Habitability Status, Heat Protection Loss Mechanism, Evidence Tier, Verification Status | done |
+| Event-Window Daytime and Nighttime Heat Scenario | Compares observed 2026 daytime and nighttime station temperatures with the matching 2021-2025 historical scenario while distinguishing complete and partial event days; the historical continuation is a scenario, not a weather forecast. | line | 2 | Station Name, Observation Date, Historical Year, Scenario Date, Event Day, Daily Maximum Air Temperature C, Daily Minimum Air Temperature C, Hot Day Indicator, Hot Night Indicator, Daily Observation Completeness %, Daily Record Status | done |
+| Historical MODIS and Station-Calibrated Heat Spatial Heterogeneity | Uses matching-period historical MODIS daytime and nighttime land-surface temperature together with historical station air temperature to estimate a station-calibrated spatial heat pattern for Kumamoto Prefecture. | map | 6 | Historical Daytime Land Surface Temperature C, Historical Nighttime Land Surface Temperature C, MODIS Valid Observation Count, Station-Calibrated Historical Air Temperature C, Spatial Heat Anomaly C, Interpolation Uncertainty C | done |
+| Functional Housing Loss and Older-Person Exposure | Separates confirmed residence-loss evidence at its reported geography from the epicentral-distance structural residence-loss scenario and the associated older-person exposure estimate; modeled values are not observed damage or displacement. | map | 3 | Epicentral Distance km, Functional Housing Loss Status, Confirmed Functionally Lost Residences, Expected Functionally Lost Residences, Expected Functionally Lost Residences Lower Bound, Expected Functionally Lost Residences Upper Bound, Estimated Affected Population Age 65+, Estimated Affected Population Age 65+ Lower Bound, Estimated Affected Population Age 65+ Upper Bound, Estimation Status, Damage Evidence Cutoff | done |
+| Older-Person Cooling Protection Need and Placement Deficit | Maps the modeled older-person cooling-assessment population, a 30-day no-verified-placement demand-side bound, and nominal designated-shelter access. The early planning version does not treat unverified capacity as zero and does not claim an observed placement deficit. | map | 3 | Estimated Affected Population Age 65+, Estimated Affected Population Age 65+ Lower Bound, Estimated Affected Population Age 65+ Upper Bound, No-Placement Unprotected Older-Person-Days, No-Placement Unprotected Older-Person-Days Lower Bound, No-Placement Unprotected Older-Person-Days Upper Bound, Nearest Designated Shelter Distance m, Cooling Protection Scenario Status, Damage Evidence Cutoff | done |
+| Emergency Cooling Electricity Requirement Distribution | Maps Central-scenario municipality peak cooling power and daily cooling electricity using distinct unit-specific color scales, then compares prefecture totals across approved Low, Central, and High demand-side scenarios. It does not estimate available supply or an actual power gap. | map and bar | 3 | Estimated Affected Population Age 65+, Municipality, Power Demand Scenario, Minimum Shelter Living Area m2 per Person, Cooling Load Density W per m2, Cooling Thermal Load W per Person, Scenario Cooling System COP, Scenario Peak Load Diversity Factor, Scenario Cooling Operating Hours per Day, Cooling Thermal Load kW, Required Peak Cooling Electric Power kW, Required Daily Cooling Electricity kWh, Cooling Power Scenario Status | done |
+| Cooling-Loss-Related Incremental Mortality Risk Distribution | Maps five-year matching-period high-heat days, the literature-anchored absolute risk difference from losing effective cooling, and the relative increase in 30-day mortality burden under the no-verified-placement demand-side bound. Outdoor weather is fixed across cooling states; absolute expected deaths remain available for the municipality table rather than the figure. | map | 3 | Expected High-Heat Scenario Days, No-Placement Unprotected Older-Person-Days, Baseline Mortality Rate per 100,000, Baseline Daily Mortality Probability, Effective-Cooling High-Heat Daily Mortality Probability, No-Effective-Cooling Relative Odds Ratio, No-Effective-Cooling Relative Odds Ratio Lower 95% CI, No-Effective-Cooling Relative Odds Ratio Upper 95% CI, Effective-Cooling 30-Day Mortality Risk, No-Effective-Cooling 30-Day Mortality Risk, Cooling-Loss Relative 30-Day Mortality Burden Increase %, Cooling-Loss Relative 30-Day Mortality Burden Increase % Lower 95% CI, Cooling-Loss Relative 30-Day Mortality Burden Increase % Upper 95% CI, Cooling-Loss Incremental Mortality Risk per 100,000, Cooling-Loss Incremental Mortality Risk per 100,000 Lower 95% CI, Cooling-Loss Incremental Mortality Risk per 100,000 Upper 95% CI, Cooling-Loss Mortality Scenario Status | done |
 
 ### Tables
 
 | title | what it expresses | rows | columns | row meaning | column meaning | status |
 |---|---|---:|---:|---|---|---|
+| Municipality Housing Loss and Older-Person Cooling Need Summary | Compares modeled structural residence loss and the associated older population requiring cooling assessment while retaining compact scenario ranges. | 45 | 6 | one municipality, sorted by central Estimated Affected Population Age 65+ in descending order | Municipality; central Expected Functionally Lost Residences; compact lower-to-upper Expected Functionally Lost Residences scenario range; central Estimated Affected Population Age 65+; compact lower-to-upper Estimated Affected Population Age 65+ scenario range; No-Placement Unprotected Older-Person-Days | done |
+| Municipality Cooling Electricity Planning Summary | Translates the older-person cooling-assessment population into Central-scenario peak power and daily electricity requirements under the common historical heat scenario. | 45 | 6 | one municipality, sorted by central Estimated Affected Population Age 65+ in descending order | Municipality; Estimated Affected Population Age 65+; No-Placement Unprotected Older-Person-Days; Expected High-Heat Scenario Days; Central Required Peak Cooling Electric Power kW; Central Required Daily Cooling Electricity kWh | done |
+| Municipality Cooling-Loss Health-Risk Summary | Compares the literature-anchored 30-day health-risk contrast across municipalities without treating the scenario as observed or earthquake-attributable mortality. | 45 | 6 | one municipality, sorted by central Cooling-Loss Relative 30-Day Mortality Burden Increase % in descending order | Municipality; Expected High-Heat Scenario Days; Incremental Cooling-Loss-Related Excess Deaths; central, lower, and upper Cooling-Loss Relative 30-Day Mortality Burden Increase % | done |
 
-No table is currently included in the research results. The time-stamped evidence ledger
-is retained only as an internal analytical input.
+The three compact municipality tables use final scenario variables only and replace the
+previous 15-column combined workbook. Each table contains exactly six columns and serves a
+single decision stage. Housing-loss and affected-older-person lower and upper values are
+combined into readable scenario-range fields; the underlying endpoints are sums of
+pointwise grid bounds and are not jointly realized municipality confidence intervals.
+No-Placement Unprotected Older-Person-Days remains a demand-side planning bound rather than
+observed exposure. Electricity columns report Central demand only. The health-effect limits
+vary only the published cooling-effect parameter. Unverified placement, effective cooled
+capacity, available electric supply, and power gaps remain deferred and are not represented
+by blank or zero-valued columns.
 
 ### Deferred Outputs Required for the Full Research Objective
 
@@ -689,3 +1218,11 @@ is retained only as an internal analytical input.
   are acquired and confirmed in Section 4.
 - A building-loss calibration and validation output remains deferred until geolocated
   official inspection or damage-certificate labels become available.
+- The mortality map is a completed analytical draft only after user review. It uses the
+  no-verified-placement demand-side bound and a transferred cooled-versus-uncooled effect;
+  actual mortality impact remains deferred until event-period placement, cooling status,
+  and individual exposure are verified.
+- Electricity recommendations remain demand-side scenarios until cooling equipment,
+  coefficient of performance, operating hours, existing grid availability, and backup-
+  power capacity are verified. Required peak power in kW and daily energy in kWh must remain
+  separate quantities.
