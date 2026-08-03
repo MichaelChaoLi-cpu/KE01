@@ -45,6 +45,56 @@ class Source:
 
 STATIC_SOURCES = (
     Source(
+        "fdma-kumamoto-earthquake-report-26",
+        "https://www.fdma.go.jp/disaster/info/items/20260728kumamotojishin26.pdf",
+        (
+            "data/raw/earthquake/2026-07-28_kumamoto/fdma/"
+            "fdma_report_26_2026-08-01.pdf"
+        ),
+        "Latest acquired official housing-damage and evacuation snapshot.",
+        "Preliminary prefecture totals; municipality detail and exact locations are absent.",
+    ),
+    Source(
+        "fdma-kumamoto-earthquake-report-27",
+        "https://www.fdma.go.jp/disaster/info/items/20260728kumamotojishin27.pdf",
+        (
+            "data/raw/earthquake/2026-07-28_kumamoto/fdma/"
+            "fdma_report_27_2026-08-01_1130.pdf"
+        ),
+        "Intermediate official housing-damage snapshot.",
+        "Preliminary prefecture totals; municipality detail and exact locations are absent.",
+    ),
+    Source(
+        "fdma-kumamoto-earthquake-report-28",
+        "https://www.fdma.go.jp/disaster/info/items/20260728kumamotojishin28.pdf",
+        (
+            "data/raw/earthquake/2026-07-28_kumamoto/fdma/"
+            "fdma_report_28_2026-08-01_1700.pdf"
+        ),
+        "Latest acquired official housing-damage and evacuation snapshot.",
+        "Preliminary prefecture totals; municipality detail and exact locations are absent.",
+    ),
+    Source(
+        "kumamoto-city-disaster-headquarters-meetings-webpage",
+        "https://www.city.kumamoto.jp/kiji00372080/index.html",
+        (
+            "data/raw/earthquake/2026-07-28_kumamoto/kumamoto_city/"
+            "kumamoto_city_disaster_hq_meetings_2026-08-02.html"
+        ),
+        "Municipal time series for housing, shelter occupancy, and utility disruption.",
+        "The webpage is updated in place; the local file is a dated snapshot.",
+    ),
+    Source(
+        "kumamoto-city-disaster-headquarters-meeting-09",
+        "https://www.city.kumamoto.jp/kiji00372080/3_72080_512958_up_g5jebmeu.pdf",
+        (
+            "data/raw/earthquake/2026-07-28_kumamoto/kumamoto_city/"
+            "kumamoto_city_disaster_hq_meeting_09_2026-08-02.pdf"
+        ),
+        "Detailed municipal damage, shelter, utility, and heat-response evidence.",
+        "A multi-department meeting packet; figures have different observation times.",
+    ),
+    Source(
         "gsi-shelter-publication-prefecture-list",
         "https://hinanmap.gsi.go.jp/hinanjocp/defaultFtpData/publicHistoryCSV/prefectureListData.csv",
         "data/raw/shelters/gsi_designated_2026-08-02/prefectureListData.csv",

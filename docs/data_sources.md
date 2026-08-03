@@ -21,7 +21,7 @@ themselves, establish that the earthquake caused additional deaths.
 | Layer | Initial source | Spatial/temporal unit | Use | Main limitation |
 |---|---|---|---|---|
 | Damage snapshot | FDMA earthquake situation reports | Prefecture/event updates | Official evolving damage totals | Preliminary and not building-level |
-| Detailed damage evidence | GSI post-event aerial photographs | Sub-meter imagery, selected areas | Visual or model-based building damage classification | No official collapsed-building labels yet; cloud and coverage constraints |
+| Detailed damage evidence | Official incident reports, municipal inspection updates, geolocated ground evidence, and GSI post-event aerial photographs | Event, municipality, site, or image footprint | Build a versioned evidence registry for functional housing loss | Official totals may lack locations; overhead imagery misses roof-intact and internal failures |
 | Older population | e-Stat 2020 Census mesh table `T001231` | Statistical mesh | Population aged 65+ and related household measures | Six years before the event; requires sensitivity analysis or newer municipal controls |
 | Air temperature | JMA AMeDAS | Station, 10-minute/daily | Observed post-event heat and historical same-season baseline | Point observations; interpolation uncertainty |
 | Surface temperature | MODIS `MOD11A2.061` | 1 km, 8-day | Spatial surface-heat heterogeneity and climatological anomaly | Land-surface temperature, not 2 m air temperature; cloud/QA filtering required |
@@ -39,11 +39,12 @@ themselves, establish that the earthquake caused additional deaths.
 - Acute follow-up: event day through day 14 (2026-07-28 to 2026-08-11).
 - Extended follow-up: event day through day 30 (2026-07-28 to 2026-08-27).
 - Historical heat comparison: the same calendar windows in 2021-2025.
-- Spatial design: screen visible severe damage in the available post-event aerial imagery,
-  then aggregate supported damage evidence, population, heat, and accessibility to a
-  common small-area grid. Building-level causal attribution is deferred unless stronger
-  pre-event or official validation data become available. Use municipality or prefecture
-  outcomes only when finer health data cannot be obtained.
+- Spatial design: preserve official damage totals as time-stamped lower-bound snapshots;
+  geolocate official incidents, inspections, and ground evidence where possible; use
+  aerial imagery as supporting evidence for visible damage concentration rather than as
+  an exhaustive collapse detector; then aggregate supported functional-housing-loss
+  evidence, population, heat, and accessibility to a common small-area grid. Use
+  municipality or prefecture outcomes only when finer data cannot be obtained.
 
 ## Download plan
 
@@ -51,7 +52,7 @@ themselves, establish that the earthquake caused additional deaths.
 
 | Data | Geographic and temporal subset | Status | Purpose |
 |---|---|---|---|
-| Evolving FDMA, prefecture, and municipal damage reports | Event reports for the core and extended areas through day 30 | Initial FDMA report acquired; updates pending | Official damage, evacuation, and health context |
+| Evolving FDMA, prefecture, and municipal damage reports | Event reports for the core and extended areas through day 30 | FDMA reports 15 and 26-28 plus Kumamoto City meetings 1-9 acquired; other municipalities pending | Official damage, evacuation, utility, shelter, and health context |
 | GSI post-event aerial imagery and metadata | Acquire all available event-photo coverage across the prefecture while retaining explicit coverage limits | All official catalogues, 2,910 thumbnails, all 2,910 full-resolution photos, and 9 rapid-orthophoto sample tiles acquired | Visible-damage screening and coverage assessment |
 | Seismic intensity and ground-motion evidence | Kumamoto Prefecture event observations and any official gridded estimate | Pending | Separate earthquake hazard from observed damage |
 | Building footprints and administrative boundaries | All of Kumamoto Prefecture | 2020 small-area boundary and GSI vector-map building tiles at zooms 14 and 15 acquired | Prefecture-wide base map, building candidates, and spatial joins |
@@ -98,9 +99,12 @@ minimum, humidity or WBGT, and consecutive hot nights as separate candidate expo
 ## Building-damage recommendation
 
 Landsat's 30 m optical pixels are too coarse for reliable individual-house collapse
-classification. Use the GSI 2026 post-event aerial photographs for building-level work.
-Sentinel-1 coherence or other SAR change measures can be added as neighborhood-level
-damage proxies, while official damage assessments remain the preferred validation data.
+classification. GSI 2026 post-event aerial photographs can support geolocation, coverage
+assessment, and visible-damage hotspot screening, but they cannot exhaustively classify
+Japanese residential habitability from overhead appearance. Sentinel-1 coherence or
+other SAR change measures can be added as neighborhood-level damage proxies. Official
+inspections, incident reports, utility or access disruptions, and geolocated ground
+evidence remain the primary basis for functional housing-loss labels.
 Use the GSI vector-map zoom-15 building layer as the pre-event candidate geometry. Because
 the experimental layer contains both polygons and outline lines, includes buffered copies
 across adjacent tiles, and does not provide stable building identifiers, its raw decoded
@@ -118,6 +122,11 @@ The rapid-assessment extension is reproducible with
 `src/data/acquire_rapid_assessment_inputs.py`; its checksums and source limitations are in
 `data/raw/_manifests/kumamoto_2026_rapid_assessment.csv`. The 2026-08-02 snapshot added:
 
+- FDMA reports 26-28, providing intraday updates to prefecture housing-damage and
+  evacuation-instruction totals through 2026-08-01 at 17:00;
+- the Kumamoto City disaster-headquarters webpage through meeting 9 and the detailed
+  96-page meeting-9 packet, providing municipal and ward-level housing, shelter,
+  evacuation, outage, water-service, cooling, and heat-response evidence;
 - 1,315 official designated shelters and 1,713 designated emergency evacuation sites for
   Kumamoto Prefecture, in both CSV and GeoJSON;
 - the GSI 2026-07-31 interpreted surface-displacement-boundary PDF;
@@ -177,9 +186,14 @@ The initial manifest includes:
   2021-2026;
 - one FDMA pre-event heatstroke ambulance report for 2026-07-20 through 2026-07-26.
 
-The first FDMA earthquake report in the bundle is explicitly preliminary. Its housing
-damage columns are still blank, although it identifies specific structural failures.
-It therefore cannot yet supply a denominator or final count of collapsed homes. The
+FDMA report 15 is explicitly preliminary. Its housing-damage columns are still blank,
+although it identifies specific structural failures. Report 28 supplies the latest
+acquired prefecture-level preliminary snapshot of 181 fully collapsed, 245 half-collapsed,
+and 1,419 partially damaged residences, for a total of 1,845. Kumamoto City reports four
+fully collapsed residences and approximately 35 additional residences ranging from partial
+damage to half collapse in Minami Ward; its pre-assessment identifies Tomiai and Jonan as
+the main damage cluster. The remaining prefecture total still lacks municipality or
+building locations needed for grid allocation. The
 pre-event FDMA heatstroke report records 220 transports in Kumamoto Prefecture, of which
 134 were people aged 65 or older. The Kumamoto AMeDAS event-day file records a daily
 maximum of 38.5 degrees C and minimum of 27.8 degrees C on 2026-07-28.

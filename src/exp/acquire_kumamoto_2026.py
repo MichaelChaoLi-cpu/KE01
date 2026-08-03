@@ -21,7 +21,7 @@ from pathlib import Path
 
 
 EVENT_DATE = date(2026, 7, 28)
-SNAPSHOT_END = date(2026, 8, 2)
+SNAPSHOT_END = date(2026, 8, 3)
 USER_AGENT = "KE01-research-data-acquisition/1.0"
 
 
@@ -223,25 +223,33 @@ def main() -> int:
     for station_id, station_name in stations.items():
         for observation_date in date_range(EVENT_DATE, SNAPSHOT_END):
             day = observation_date.strftime("%Y%m%d")
-            url = f"https://www.jma.go.jp/bosai/amedas/data/point/{station_id}/{day}_00.json"
-            path = (
-                raw
-                / "weather"
-                / "jma_amedas"
-                / "event_window"
-                / station_name
-                / f"{day}_00.json"
-            )
-            status = download(url, path, optional=True)
-            records.append(
-                {
-                    "dataset_id": f"jma-amedas-{station_name}-{day}",
-                    "source_url": url,
-                    "relative_path": str(path.relative_to(root)),
-                    "status": status,
-                    "note": "JMA event-window observations; values are arrays of value and quality flag.",
-                }
-            )
+            for block_hour in range(0, 24, 3):
+                block = f"{block_hour:02d}"
+                url = (
+                    "https://www.jma.go.jp/bosai/amedas/data/point/"
+                    f"{station_id}/{day}_{block}.json"
+                )
+                path = (
+                    raw
+                    / "weather"
+                    / "jma_amedas"
+                    / "event_window"
+                    / station_name
+                    / f"{day}_{block}.json"
+                )
+                status = download(url, path, optional=True)
+                records.append(
+                    {
+                        "dataset_id": f"jma-amedas-{station_name}-{day}-{block}",
+                        "source_url": url,
+                        "relative_path": str(path.relative_to(root)),
+                        "status": status,
+                        "note": (
+                            "JMA event-window three-hour block; values are arrays of value "
+                            "and quality flag. Eight blocks form one complete day."
+                        ),
+                    }
+                )
 
     historical_pages = {
         "kumamoto": (
