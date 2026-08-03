@@ -35,6 +35,27 @@ STATIONS = {
         "minimum_temperature_index": 8,
         "mean_humidity_index": 9,
     },
+    "misumi": {
+        "id": "86216",
+        "mean_temperature_index": 4,
+        "maximum_temperature_index": 5,
+        "minimum_temperature_index": 6,
+        "mean_humidity_index": 7,
+    },
+    "kosa": {
+        "id": "86236",
+        "mean_temperature_index": 4,
+        "maximum_temperature_index": 5,
+        "minimum_temperature_index": 6,
+        "mean_humidity_index": 7,
+    },
+    "matsushima": {
+        "id": "86271",
+        "mean_temperature_index": 4,
+        "maximum_temperature_index": 5,
+        "minimum_temperature_index": 6,
+        "mean_humidity_index": 7,
+    },
     "yatsushiro": {
         "id": "86336",
         "mean_temperature_index": 4,
@@ -148,6 +169,18 @@ def main() -> None:
         raise ValueError(
             f"Expected {expected_rows} matched historical rows, found {len(historical)}."
         )
+    if historical["Station ID"].nunique() != len(STATIONS):
+        raise ValueError("Historical event-window station coverage is incomplete.")
+    expected_per_day = len(STATIONS) * 5
+    for column in (
+        "Daily Maximum Air Temperature C",
+        "Daily Minimum Air Temperature C",
+    ):
+        counts = historical.groupby("Event Day", observed=True)[column].count()
+        if not counts.reindex(range(30)).eq(expected_per_day).all():
+            raise ValueError(
+                f"Expected {expected_per_day} observations per event day for {column}."
+            )
     historical["Hot Day Indicator"] = pd.array(
         historical["Hot Day Indicator"], dtype="Int8"
     )

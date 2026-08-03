@@ -2,7 +2,7 @@
 """Event-Window Daytime and Nighttime Heat Scenario.
 
 Plan: Compare observed 2026 station temperatures with the calendar-matched
-2021-2025 historical scenario for event days 0-29.
+2021-2025 five-station historical scenario for event days 0-29.
 Framework: Section 5's descriptive station-heat design, Section 6's historical
 median and observed minimum-maximum envelope, and Section 7 workflow steps 6-7.
 """
@@ -34,11 +34,20 @@ DAY_TICKS = [0, 5, 10, 15, 20, 25, 29]
 
 
 def historical_summary(df: pd.DataFrame, value_col: str) -> pd.DataFrame:
-    """Return the calendar-matched observed range and median for each event day."""
-    counts = df.groupby("Event Day", observed=True)[value_col].count()
-    if not (counts.reindex(EVENT_DAYS) == 10).all():
+    """Return the pooled five-station historical range and median by event day."""
+    station_count = df["Station Name"].nunique()
+    year_count = df["Historical Year"].nunique()
+    expected_count = station_count * year_count
+    if station_count != 5 or year_count != 5:
         raise ValueError(
-            f"Expected 10 historical station-year observations per event day for {value_col}."
+            f"Expected five historical stations and five years, found "
+            f"{station_count} stations and {year_count} years."
+        )
+    counts = df.groupby("Event Day", observed=True)[value_col].count()
+    if not counts.reindex(EVENT_DAYS).eq(expected_count).all():
+        raise ValueError(
+            f"Expected {expected_count} historical station-year observations per "
+            f"event day for {value_col}."
         )
     return (
         df.groupby("Event Day", observed=True)[value_col]
@@ -88,14 +97,40 @@ def draw_panel(
     for station, station_df in event.groupby("Station Name", sort=True, observed=True):
         station_df = station_df.sort_values("Event Day")
         color = station_colors[station]
+        latest_event_day = int(event["Event Day"].max())
+        line_values = station_df[value_col].mask(
+            station_df["Event Day"].eq(latest_event_day)
+            & station_df["Daily Record Status"].eq("partial")
+        )
         ax.plot(
             station_df["Event Day"],
-            station_df[value_col],
+            line_values,
             color=color,
             linewidth=1.6,
             alpha=0.92,
             zorder=3,
         )
+        latest_partial_mask = (
+            station_df["Event Day"].eq(latest_event_day)
+            & station_df["Daily Record Status"].eq("partial")
+        )
+        latest_partial = station_df.loc[latest_partial_mask]
+        preceding = station_df.loc[
+            station_df["Event Day"].lt(latest_event_day)
+        ].tail(1)
+        if not latest_partial.empty and not preceding.empty:
+            provisional_segment = pd.concat(
+                [preceding, latest_partial], ignore_index=True
+            )
+            ax.plot(
+                provisional_segment["Event Day"],
+                provisional_segment[value_col],
+                color=color,
+                linewidth=1.6,
+                linestyle=(0, (3, 2)),
+                alpha=0.92,
+                zorder=3,
+            )
 
         complete = station_df[station_df["Daily Record Status"].eq("complete")]
         partial = station_df[station_df["Daily Record Status"].eq("partial")]
@@ -160,6 +195,26 @@ def main() -> None:
     stations = sorted(event["Station Name"].dropna().unique().tolist())
     if len(stations) != 5:
         raise ValueError(f"Expected five event stations, found {len(stations)}: {stations}")
+    historical_stations = sorted(
+        historical["Station Name"].dropna().unique().tolist()
+    )
+    if historical_stations != stations:
+        raise ValueError(
+            "Historical stations must exactly match event stations: "
+            f"historical={historical_stations}; event={stations}"
+        )
+
+    latest_partial = event.loc[
+        event["Event Day"].eq(event["Event Day"].max())
+        & event["Daily Record Status"].eq("partial"),
+        "Latest Observation Time",
+    ]
+    latest_cutoff = pd.to_datetime(latest_partial, utc=True).dt.tz_convert(
+        "Asia/Tokyo"
+    ).max()
+    latest_partial_label = "Latest partial-day segment"
+    if pd.notna(latest_cutoff):
+        latest_partial_label += f"; through {latest_cutoff:%b %d %H:%M JST}"
 
     sns.set_theme(style="whitegrid", context="paper")
     palette = sns.color_palette("colorblind", n_colors=len(stations))
@@ -203,7 +258,7 @@ def main() -> None:
             facecolor="#c8cdd3",
             edgecolor="none",
             alpha=0.52,
-            label="2021–2025 observed range (scenario, not forecast)",
+            label="2021–2025 pooled range (same five stations; scenario, not forecast)",
         ),
         Line2D(
             [0],
@@ -257,6 +312,18 @@ def main() -> None:
                 linewidth=0,
                 markersize=6,
                 label="Partial station-day",
+            ),
+            Line2D(
+                [0],
+                [0],
+                marker="o",
+                color="#555555",
+                markerfacecolor="white",
+                markeredgecolor="#555555",
+                linewidth=1.5,
+                linestyle=(0, (3, 2)),
+                markersize=6,
+                label=latest_partial_label,
             ),
         ]
     )

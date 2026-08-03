@@ -104,7 +104,7 @@ final analytical dataset.
 | Damage evidence | official geolocated or geographically bounded claims through 2026-08-02 | evidence claim | 9 | contextual confirmed/probable evidence only |
 | Service disruption | official shelter occupancy, water, and cooling-related reports through 2026-08-02 | time-stamped observation | 14 | Minami Ward operational screening |
 | Event heat | JMA daily summaries for five stations, 2026-07-28 to 2026-08-03 | station-day | 35 | observed event-window daytime and nighttime heat |
-| Historical event-window heat | JMA matching dates for Kumamoto and Yatsushiro, 2021-2025 | station-year-day | 300 | 30-day historical median and observed envelope |
+| Historical event-window heat | JMA matching dates for the same five event stations, 2021-2025 | station-year-day | 750 | 30-day pooled historical median and observed envelope |
 | Historical spatial heat | JMA matching dates for 17 stations, 2021-2025 | station-year-day | 2,550 | spatial calibration and municipality high-heat days |
 | MODIS surface heat | Terra MOD11A2 and Aqua MYD11A2 eight-day LST, matching periods in 2021-2025 | approximately 1 km pixel | 8,661 pixels from 80 source files | historical daytime/nighttime heat heterogeneity |
 | Mortality baseline | official all-cause deaths for 2020-2024 and 2020 population | municipality-age group | 135; the 45 age-65-plus rows are used | baseline mortality probability |
@@ -279,7 +279,7 @@ planning scenarios, not observed or earthquake-attributable deaths.
 
 ### Structural Housing-Loss Allocation
 
-For disclosure group (g), exposure proxy (k), and decay scale (lambda), the
+For disclosure group \(g\), exposure proxy \(k\), and decay scale \(\lambda\), the
 unnormalized and normalized spatial weights are:
 
 \[
@@ -287,33 +287,41 @@ w_{g,k,\lambda}=E_{g,k}\exp(-d_g/\lambda), \qquad
 q_{g,k,\lambda}=\frac{w_{g,k,\lambda}}{\sum_j w_{j,k,\lambda}}.
 \]
 
-(E_{g,k}) is General Households, Mapped Building Count, or Mapped Building
-Footprint Area m2; (d_g) is Epicentral Distance km; and (lambda) is 10, 20,
-or 40 km.
+\(w_{g,k,\lambda}\) is the unnormalized spatial weight and
+\(q_{g,k,\lambda}\) is the corresponding normalized allocation share.
+\(E_{g,k}\) is General Households, Mapped Building Count, or Mapped Building
+Footprint Area \(\mathrm{m}^2\); \(d_g\) is Epicentral Distance \(\mathrm{km}\);
+\(\lambda\) is the decay scale; and \(j\) indexes disclosure groups in the
+normalizing sum. The evaluated values of \(\lambda\) are \(10\), \(20\), and
+\(40\,\mathrm{km}\).
 
-For half-collapse weight (	heta), scenario total and group allocation are:
+For half-collapse weight \(\theta\), scenario total and group allocation are:
 
 \[
 T_{\theta}=F+\theta H, \qquad
 L_{g,k,\lambda,\theta}=T_{\theta}q_{g,k,\lambda}.
 \]
 
-(F) is Full Collapse Buildings, (H) is Half Collapse Buildings, and
-(	heta) is 0, 0.5, or 1. The 27 scenarios are the Cartesian product of three
-exposure proxies, three decay scales, and three values of (	heta). The central
+\(T_{\theta}\) is the scenario-wide structural residence-loss total and
+\(L_{g,k,\lambda,\theta}\) is the amount allocated to disclosure group \(g\).
+\(F\) is Full Collapse Buildings, \(H\) is Half Collapse Buildings, and
+\(\theta\) is \(0\), \(0.5\), or \(1\). The 27 scenarios are the Cartesian
+product of three exposure proxies, three decay scales, and three values of
+\(\theta\). The central
 surface is the normalized pointwise median constrained to
-(F+0.5H=303.5). Pointwise minima and maxima form the displayed sensitivity
+\(F+0.5H=303.5\). Pointwise minima and maxima form the displayed sensitivity
 bounds.
 
 The central affected older population is:
 
 \[
-N^{need}_{65+,g}=N_{65+,g}\min\left(1,\frac{L_g}{G_g}\right).
+N^{\mathrm{need}}_{65{+},g}
+=N_{65{+},g}\min\left(1,\frac{L_g}{G_g}\right).
 \]
 
-(N^{need}_{65+,g}) is Estimated Affected Population Age 65+;
-(N_{65+,g}) is Population Age 65+; (L_g) is Expected Functionally Lost
-Residences; and (G_g) is General Households. Lower and upper values substitute
+\(N^{\mathrm{need}}_{65{+},g}\) is Estimated Affected Population Age 65+;
+\(N_{65{+},g}\) is Population Age 65+; \(L_g\) is Expected Functionally Lost
+Residences; and \(G_g\) is General Households. Lower and upper values substitute
 the corresponding pointwise housing-loss bounds.
 
 ### Heat Scenario and Spatial Calibration
@@ -321,55 +329,64 @@ the corresponding pointwise housing-loss bounds.
 A high-heat day is defined as:
 
 \[
-I_{s,y,t}=1\{T^{max}_{s,y,t}\geq35\ \text{or}\ T^{min}_{s,y,t}\geq25\}.
+I_{s,y,t}
+=\mathbf{1}\!\left\{
+T^{\max}_{s,y,t}\geq 35\ \text{or}\ T^{\min}_{s,y,t}\geq 25
+\right\}.
 \]
 
-(I_{s,y,t}) is the high-heat indicator for station (s), historical year (y),
-and event-window day (t); (T^{max}_{s,y,t}) and (T^{min}_{s,y,t}) are JMA
+\(I_{s,y,t}\) is the high-heat indicator for station \(s\), historical year \(y\),
+and event-window day \(t\); \(T^{\max}_{s,y,t}\) and \(T^{\min}_{s,y,t}\) are JMA
 daily maximum and minimum air temperatures. Municipality Expected High-Heat
 Scenario Days are the five-year mean station counts interpolated from the four
 nearest stations using inverse-distance-squared weights.
 
 MODIS calibration candidates are compared by leave-one-station-out RMSE. The
 daytime selected model combines a linear satellite term with five-neighbor
-inverse-distance-squared residual interpolation (RMSE 0.696 C versus 1.325 C for
-the mean-only benchmark). The nighttime selected model is satellite-only (RMSE
-0.615 C versus 1.502 C). Both therefore pass the pre-specified improvement rule.
+inverse-distance-squared residual interpolation (RMSE
+\(0.696\,^\circ\mathrm{C}\) versus \(1.325\,^\circ\mathrm{C}\) for the
+mean-only benchmark). The nighttime selected model is satellite-only (RMSE
+\(0.615\,^\circ\mathrm{C}\) versus \(1.502\,^\circ\mathrm{C}\)). Both therefore
+pass the pre-specified improvement rule.
 
 ### Cooling Protection and Electricity Demand
 
 The no-verified-placement person-day bound is:
 
 \[
-PD^{NP}_g=30N^{need}_{65+,g}.
+PD^{\mathrm{NP}}_g=30\,N^{\mathrm{need}}_{65{+},g}.
 \]
 
-(PD^{NP}_g) is No-Placement Unprotected Older-Person-Days and
-(N^{need}_{65+,g}) is the cooling-assessment population defined above.
+\(PD^{\mathrm{NP}}_g\) is No-Placement Unprotected Older-Person-Days and
+\(N^{\mathrm{need}}_{65{+},g}\) is the cooling-assessment population defined
+above.
 
-For engineering scenario (z):
+For engineering scenario \(z\):
 
 \[
-q_z=a r_z, \qquad
-Q_{g,z}=\frac{N^{need}_{65+,g}q_z}{1000},
+q_z=a\,r_z, \qquad
+Q_{g,z}=\frac{N^{\mathrm{need}}_{65{+},g}q_z}{1000}.
 \]
 
-(q_z) is cooling thermal load in W per person; (a) is 3.5 m2 per person;
-(r_z) is Cooling Load Density W per m2; and (Q_{g,z}) is cooling thermal load
-in kW.
+\(q_z\) is cooling thermal load in \(\mathrm{W}\) per person; \(a\) is
+\(3.5\,\mathrm{m}^2\) per person; \(r_z\) is Cooling Load Density in
+\(\mathrm{W}/\mathrm{m}^2\); and \(Q_{g,z}\) is cooling thermal load in
+\(\mathrm{kW}\).
 
 \[
-P^{req}_{g,z}=\frac{Q_{g,z}f_z}{COP_z}, \qquad
-E^{req}_{g,z}=P^{req}_{g,z}h_z.
+P^{\mathrm{req}}_{g,z}
+=\frac{Q_{g,z}f_z}{\mathrm{COP}_z}, \qquad
+E^{\mathrm{req}}_{g,z}=P^{\mathrm{req}}_{g,z}h_z.
 \]
 
-(P^{req}_{g,z}) is Required Peak Cooling Electric Power kW; (f_z) is the peak
-diversity factor; (COP_z) is Scenario Cooling System COP; (E^{req}_{g,z}) is
-Required Daily Cooling Electricity kWh; and (h_z) is daily operating hours.
+\(P^{\mathrm{req}}_{g,z}\) is Required Peak Cooling Electric Power in
+\(\mathrm{kW}\); \(f_z\) is the peak diversity factor; \(\mathrm{COP}_z\) is
+Scenario Cooling System COP; \(E^{\mathrm{req}}_{g,z}\) is Required Daily
+Cooling Electricity in \(\mathrm{kWh}\); and \(h_z\) is daily operating hours.
 
 The parameter bundles are:
 
-| scenario | load density W/m2 | COP | diversity | hours/day |
+| scenario | load density \(\mathrm{W}/\mathrm{m}^2\) | \(\mathrm{COP}\) | diversity | hours/day |
 |---|---:|---:|---:|---:|
 | Low | 127 | 4.0 | 0.8 | 12 |
 | Central | 134 | 3.0 | 0.9 | 18 |
@@ -380,66 +397,83 @@ The parameter bundles are:
 The baseline daily probability is:
 
 \[
-p_{0,m}=\frac{B_m}{100000\times365.25}.
+p_{0,m}=\frac{B_m}{100{,}000\times365.25}.
 \]
 
-(p_{0,m}) is Baseline Daily Mortality Probability for municipality (m), and
-(B_m) is Baseline Mortality Rate per 100,000.
+\(p_{0,m}\) is Baseline Daily Mortality Probability for municipality \(m\), and
+\(B_m\) is Baseline Mortality Rate per \(100{,}000\).
 
-Define (o(p)=p/(1-p)) and (p(o)=o/(1+o)). Protected and unprotected
+Define the odds transform and its inverse as
+\(\operatorname{odds}(p)=p/(1-p)\) and
+\(\operatorname{prob}(o)=o/(1+o)\). Protected and unprotected
 high-heat daily probabilities are:
 
 \[
-p^{cool}_m=p\left(1.03\,o(p_{0,m})\right), \qquad
-p^{no}_m=p\left(\rho\,o(p^{cool}_m)\right).
+p^{\mathrm{cool}}_m
+=\operatorname{prob}\!\left(
+1.03\,\operatorname{odds}(p_{0,m})
+\right), \qquad
+p^{\mathrm{no}}_m
+=\operatorname{prob}\!\left[
+\rho\,\operatorname{odds}\!\left(p^{\mathrm{cool}}_m\right)
+\right].
 \]
 
-(p^{cool}_m) is Effective-Cooling High-Heat Daily Mortality Probability;
-(p^{no}_m) is the no-effective-cooling probability; 1.03 is the published
-with-cooling extreme-heat odds ratio; and (ho) is the no-cooling versus
-cooling relative odds ratio, 1.08 with 95% CI 1.01 to 1.15.
+\(p^{\mathrm{cool}}_m\) is Effective-Cooling High-Heat Daily Mortality
+Probability; \(p^{\mathrm{no}}_m\) is the no-effective-cooling probability;
+\(1.03\) is the published
+with-cooling extreme-heat odds ratio; and \(\rho\) is the no-cooling versus
+cooling relative odds ratio, \(1.08\) with 95% CI \(1.01\) to \(1.15\).
 
-For (H_m) expected high-heat days in the 30-day window:
+For \(H_m\) expected high-heat days in the 30-day window:
 
 \[
-r^{cool}_m=1-(1-p_{0,m})^{30-H_m}(1-p^{cool}_m)^{H_m},
+r^{\mathrm{cool}}_m
+=1-(1-p_{0,m})^{30-H_m}
+\left(1-p^{\mathrm{cool}}_m\right)^{H_m},
 \]
 
 \[
-r^{no}_m=1-(1-p_{0,m})^{30-H_m}(1-p^{no}_m)^{H_m}.
+r^{\mathrm{no}}_m
+=1-(1-p_{0,m})^{30-H_m}
+\left(1-p^{\mathrm{no}}_m\right)^{H_m}.
 \]
 
-(H_m) is Expected High-Heat Scenario Days; (r^{cool}_m) is
-Effective-Cooling 30-Day Mortality Risk; and (r^{no}_m) is
+\(H_m\) is Expected High-Heat Scenario Days; \(r^{\mathrm{cool}}_m\) is
+Effective-Cooling 30-Day Mortality Risk; and \(r^{\mathrm{no}}_m\) is
 No-Effective-Cooling 30-Day Mortality Risk.
 
 The reported contrasts are:
 
 \[
-M_m=100\left(\frac{r^{no}_m}{r^{cool}_m}-1\right), \qquad
-R_m=100000(r^{no}_m-r^{cool}_m),
+M_m
+=100\left(\frac{r^{\mathrm{no}}_m}{r^{\mathrm{cool}}_m}-1\right), \qquad
+R_m
+=100{,}000\left(r^{\mathrm{no}}_m-r^{\mathrm{cool}}_m\right).
 \]
 
 \[
-\Delta D_m=\frac{PD^{NP}_m}{30}(r^{no}_m-r^{cool}_m).
+\Delta D_m
+=\frac{PD^{\mathrm{NP}}_m}{30}
+\left(r^{\mathrm{no}}_m-r^{\mathrm{cool}}_m\right).
 \]
 
-(M_m) is Cooling-Loss Relative 30-Day Mortality Burden Increase %; (R_m) is
-Cooling-Loss Incremental Mortality Risk per 100,000; (Delta D_m) is
-Incremental Cooling-Loss-Related Excess Deaths; and (PD^{NP}_m) is municipality
+\(M_m\) is Cooling-Loss Relative 30-Day Mortality Burden Increase %; \(R_m\) is
+Cooling-Loss Incremental Mortality Risk per \(100{,}000\); \(\Delta D_m\) is
+Incremental Cooling-Loss-Related Excess Deaths; and \(PD^{\mathrm{NP}}_m\) is municipality
 No-Placement Unprotected Older-Person-Days. The lower and upper health scenarios
-vary only (ho).
+vary only \(\rho\).
 
 ### Municipality Aggregation
 
-For additive grid outcome (X_g):
+For additive grid outcome \(X_g\):
 
 \[
 X_m=\sum_{g\in\mathcal{G}_m}X_g.
 \]
 
-(X_m) is the municipality value, (X_g) is the disclosure-group value, and
-(mathcal{G}_m) is the set of groups assigned to municipality (m). Central
+\(X_m\) is the municipality value, \(X_g\) is the disclosure-group value, and
+\(\mathcal{G}_m\) is the set of groups assigned to municipality \(m\). Central
 power values are selected before aggregation. Pointwise bounds remain
 sensitivity endpoints rather than joint confidence intervals.
 
