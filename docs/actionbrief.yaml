@@ -135,7 +135,7 @@ datasetDictionary:
     datasetTemporalResolution: Static scenario assumptions
     datasetPreprocessingInfo: Encoded Low, Central, and High load density, COP, diversity, and operating-hour combinations; calculated demand while leaving verified supply and power gap missing.
   cooling_effect:
-    datasetSourceName: Katz et al. 2025 no-air-conditioning mortality effect
+    datasetSourceName: Katz et al. 2026 no-air-conditioning mortality effect
     datasetDescription: Published no-cooling versus cooling relative odds ratio used for the 30-day mortality planning contrast under identical outdoor heat.
     datasetAttribute: other
     datasetProvider: Katz et al., JAMA Internal Medicine
@@ -701,6 +701,7 @@ tableDictionary:
   table_municipality_housing_loss_and_older_person_cooling_need_summary:
     tableId: table_municipality_housing_loss_and_older_person_cooling_need_summary
     tablePath: data/results/tables/Table_municipality_housing_loss_and_older_person_cooling_need_summary.xlsx
+    tableSheet: Municipal Summary
     tableCaption: Municipality Housing Loss and Cooling Need
     tableAim: Compare modeled housing loss, affected older residents, and the no-placement bound across municipalities.
     tableExplanation: Reports 45 municipalities in six columns, including central and scenario-range housing loss and older-person exposure plus 30-day no-placement person-days; modeled values are not inspection counts or observed displacement.
@@ -708,6 +709,7 @@ tableDictionary:
   table_municipality_cooling_electricity_planning_summary:
     tableId: table_municipality_cooling_electricity_planning_summary
     tablePath: data/results/tables/Table_municipality_cooling_electricity_planning_summary.xlsx
+    tableSheet: Municipal Summary
     tableCaption: Municipality Cooling Electricity Planning Summary
     tableAim: Compare Central-scenario cooling electricity requirements across municipalities.
     tableExplanation: Reports affected older population, no-placement person-days, historical high-heat days, peak cooling power, and daily cooling electricity for 45 municipalities; demand does not imply a verified supply shortage.
@@ -715,6 +717,7 @@ tableDictionary:
   table_municipality_cooling_loss_health_risk_summary:
     tableId: table_municipality_cooling_loss_health_risk_summary
     tablePath: data/results/tables/Table_municipality_cooling_loss_health_risk_summary.xlsx
+    tableSheet: Municipal Summary
     tableCaption: Municipality Cooling-Loss Health-Risk Summary
     tableAim: Compare the 30-day cooled-versus-uncooled mortality planning contrast across municipalities.
     tableExplanation: Reports expected high-heat days, incremental excess-death scenarios, and central, lower, and upper relative mortality-burden increases for 45 municipalities. Values are literature-transferred planning scenarios, not observed deaths.

@@ -115,7 +115,7 @@ actually consumed by a completed figure, table, or estimation stage.
 | MODIS surface heat | Terra MOD11A2 and Aqua MYD11A2 eight-day LST, matching periods in 2021-2025 | approximately 1 km pixel | 8,661 pixels from 80 source files | historical daytime/nighttime heat heterogeneity |
 | Mortality baseline | official all-cause deaths for 2020-2024 and 2020 population | municipality-age group | 135; the 45 age-65-plus rows are used | baseline mortality probability |
 | Cooling engineering parameters | Japanese shelter-space, HVAC-load, and efficiency guidance | scenario bundle | Low, Central, High | peak power and daily electricity demand |
-| Cooling effect | Katz et al. (2025), JAMA Internal Medicine | published effect estimate | one central estimate and 95% CI | no-cooling versus cooling mortality contrast |
+| Cooling effect | Katz et al. (2026), JAMA Internal Medicine | published effect estimate | one central estimate and 95% CI | no-cooling versus cooling mortality contrast |
 
 ### Analysis Products Used by the Results
 
