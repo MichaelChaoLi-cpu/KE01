@@ -35,7 +35,7 @@ def main() -> int:
         ("Municipality", "name", "Kumamoto Prefecture municipality; Kumamoto City's five wards are consolidated.", "45-unit mortality geography."),
         ("Expected High-Heat Days", "days", "Five-year matching-period mean hot-day or hot-night count in the 30-day window.", "Historical scenario, not a 2026 forecast."),
         ("Incremental Excess Deaths (30 Days)", "expected deaths", "Central expected deaths without effective cooling minus with effective cooling.", "Planning scenario, not observed or earthquake-attributable mortality."),
-        ("Relative Mortality Burden Increase %", "%", "Central relative increase in modeled 30-day mortality burden without effective cooling.", "Outdoor heat is held fixed; Katz et al. (2025) effect is transferred."),
+        ("Relative Mortality Burden Increase %", "%", "Central relative increase in modeled 30-day mortality burden without effective cooling.", "Outdoor heat is held fixed; Katz et al. (2026) effect is transferred."),
         ("Relative Mortality Burden Increase % Lower 95% CI", "%", "Lower risk scenario from the published cooling-effect interval.", "Only cooling-effect parameter uncertainty is varied."),
         ("Relative Mortality Burden Increase % Upper 95% CI", "%", "Upper risk scenario from the published cooling-effect interval.", "Only cooling-effect parameter uncertainty is varied."),
     ]
