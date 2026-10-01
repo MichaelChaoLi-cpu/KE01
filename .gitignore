@@ -3,11 +3,11 @@
 /cache
 /.claude
 /.codex
-/exp
-/processed
-/raw
 /article
 **__pycache__**
 .env
 .DS_Store
-/results
+.frame-control/
+docs/frame-version.md
+docs/stage-control.md
+*.py[cod]
