@@ -1,14 +1,13 @@
-# MiliFrame local agent/runtime files
-.codex/
-.claude/
-.env
-CLAUDE.md
-AGENTS.md
+/config.local
+/tmp
+/cache
+/.claude
+/.codex
+/exp
+/processed
+/raw
 /article
-
-# Python generated files
-__pycache__/
-*.py[cod]
-
-# macOS metadata
+**__pycache__**
+.env
 .DS_Store
+/results
