@@ -11,3 +11,5 @@
 docs/frame-version.md
 docs/stage-control.md
 *.py[cod]
+/AGENTS.md
+/config
