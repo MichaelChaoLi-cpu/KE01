@@ -490,10 +490,24 @@ Minor Comments
 
 
 **Response:**
-[Response to be completed.]
+Thank you for this comment. Sections 2.2, 2.4 and 2.6 now explicitly report the fixed area assumption, the distance-decay scales and exposure-proxy definitions, and the provenance and interpretation of the engineering bundles. Supplementary Table S1 lists all five engineering parameters with units, Low/Central/High values, sources and rationale. It distinguishes Cabinet Office living-space guidance from the MLIT case-derived load benchmarks and from study-defined equipment and operating assumptions.
 
-"[Exact revised manuscript text]"
-(Page XX, Lines XX–XX)
+The differing range widths reflect these different bases: load-density endpoints come from two insulation conditions in one case, whereas COP, diversity and operating duration explore assumed equipment and operating choices. They are not comparable uncertainty intervals. We retain 3.5 m²/person in the reported bundles because a larger cooled-space requirement is not established for the target facilities. Section 2.6 explains the direct proportional scaling with area at fixed other inputs, rather than presenting an unsupported area range as an empirical sensitivity. It also discloses the source case's occupancy and labeling limitations and the constant-power assumption behind daily electricity. These clarifications do not change the reported engineering results.
+
+Section 2.2 corrects the description of the fixed area:
+
+"Low, Central, and High engineering bundles hold shelter area per person fixed and vary cooling load, system efficiency, peak diversity, and operating duration."
+(Page 7, Lines 122–123)
+
+Section 2.4 specifies the structural scenarios:
+
+"Housing-loss scenarios cross general households, mapped-building count and mapped footprint area with distance-decay scales of 10, 20 and 40 km and half-collapse weights of 0, 0.5 and 1, producing 27 allocations. The proxies are the census general-household count, mapped-building polygon count and summed mapped-building footprint area within each disclosure group. Building proxies are weighting variables, not counts of residences."
+(Page 9, Lines 163–168)
+
+Section 2.6 explains the parameter table and assumptions:
+
+"Table S1 reports all parameter values, units and sources. Area remains fixed at 3.5 m²/person as a minimum living-space proxy, not an elderly-specific cooled-floor-area standard. The load-density endpoints are insulation-dependent benchmarks from one gymnasium case, and 134 W/m² is their arithmetic midpoint. That case assumes 0.15 persons/m², whereas the adopted area implies approximately 0.286 persons/m²; the case also contains inconsistent gymnasium/office labeling. These differences limit transfer to emergency shelters. COP, diversity and operating hours are study-defined scenarios rather than government-prescribed values. The narrow load-density range reflects the two case benchmarks, while the broader efficiency and duration ranges explore equipment and operating choices; their widths are not comparable measures of uncertainty. Area is not varied in these bundles because a larger cooled-space requirement is not established for the target facilities. At fixed load density and other inputs, thermal load, electric demand and daily energy scale directly with area, so site-specific area can be substituted without treating this algebraic relationship as a validated facility design. Daily energy assumes constant scenario electric demand over the stated operating hours, not a measured load profile."
+(Page 13, Lines 255–270)
 
 ## Comment 7
 m1 – The 1.03 constant in Eq. 9 is not attributed in the text, although it corresponds to the odds ratio reported by Katz et al.

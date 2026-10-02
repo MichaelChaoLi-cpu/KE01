@@ -1532,3 +1532,136 @@ source-effect endpoint range, which excludes structural, engineering, baseline a
 - Image swaps are not tracked textual changes; old images are recoverable from backup. Same widths, corrected heights to preserve source aspect ratios.
 - All non-document/non-target-image package parts unchanged, including endnote XML and relationship bytes. Existing equations and non-table prose untouched.
 - Fresh clean and scoped visual checks: `Rev/docs/r3-c5-object-review.md`. No response completion or submission approval inferred.
+
+## reviewer-3/comment-6
+
+### part-01
+
+- Location: Section 2.2, final stages paragraph.
+- Reason: the code fixes area at 3.5 m²/person in all bundles.
+- Kila decisions: KILA-D-20261002-029, KILA-D-20261002-030
+- Mode: `replace`
+- Revises prior parts: none
+- Timestamp: 2026-10-02T12:25:13Z
+- Author: Kila
+- Markup SHA-256 before: `6ad3214ab2394e3f2f58bdaf8095b8d8b7b40d12b00f44f35bf0358ca3c90202`
+- Markup SHA-256 after: `92e1c3f6626c84308a2b43ec0971913c746a96606a7e662f34beb47424ffe180`
+- Revision IDs: `923, 924, 925, 926`
+- Backup: `/Users/lichao/Research/KE01/Rev/revision/.kila-backups/KE01.rev.markup.20261002T212513802647.reviewer-3-comment-6.part-01.docx`
+- Paragraph properties preserved: `true`
+- Run style source SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Formula verification: not applicable
+- Endnote hyperlinks preserved: `true`
+- Endnote hyperlink count: `0`
+- Endnote hyperlink XML SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Endnote relationships SHA-256: `absent`
+- Before:
+
+~~~~text
+Low, Central, and High engineering bundles vary shelter space, cooling load, system efficiency, peak diversity, and operating duration.
+~~~~
+
+- After:
+
+~~~~text
+Low, Central, and High engineering bundles hold shelter area per person fixed and vary cooling load, system efficiency, peak diversity, and operating duration.
+~~~~
+
+- Minimal tracked fragments:
+  1. `replace`
+     - Before: "vary"
+     - After: "hold"
+  2. `replace`
+     - Before: "space,"
+     - After: "area per person fixed and vary"
+
+### part-02
+
+- Location: Section 2.4, paragraph beginning Housing-loss scenarios.
+- Reason: make the full ensemble reproducible without implying that mapped polygons are dwellings.
+- Kila decisions: KILA-D-20261002-029, KILA-D-20261002-030
+- Mode: `replace`
+- Revises prior parts: reviewer-3/comment-5#part-02
+- Timestamp: 2026-10-02T12:25:14Z
+- Author: Kila
+- Markup SHA-256 before: `92e1c3f6626c84308a2b43ec0971913c746a96606a7e662f34beb47424ffe180`
+- Markup SHA-256 after: `9fa1782d23b120f8e8a65291db8e1adfb7c8d872ba6da273f2162a37dca3cca0`
+- Revision IDs: `927, 928, 929`
+- Backup: `/Users/lichao/Research/KE01/Rev/revision/.kila-backups/KE01.rev.markup.20261002T212514571133.reviewer-3-comment-6.part-02.docx`
+- Paragraph properties preserved: `true`
+- Run style source SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Formula verification: not applicable
+- Endnote hyperlinks preserved: `true`
+- Endnote hyperlink count: `0`
+- Endnote hyperlink XML SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Endnote relationships SHA-256: `absent`
+- Before:
+
+~~~~text
+Housing-loss scenarios cross general households, mapped-building count and mapped footprint area with three distance-decay scales and half-collapse weights of 0, 0.5 and 1, producing 27 allocations. Building proxies are weighting variables, not counts of residences.
+~~~~
+
+- After:
+
+~~~~text
+Housing-loss scenarios cross general households, mapped-building count and mapped footprint area with distance-decay scales of 10, 20 and 40 km and half-collapse weights of 0, 0.5 and 1, producing 27 allocations. The proxies are the census general-household count, mapped-building polygon count and summed mapped-building footprint area within each disclosure group. Building proxies are weighting variables, not counts of residences.
+~~~~
+
+- Minimal tracked fragments:
+  1. `delete`
+     - Before: "three "
+     - After: ""
+  2. `insert`
+     - Before: ""
+     - After: " of 10, 20 and 40 km"
+  3. `insert`
+     - Before: ""
+     - After: "The proxies are the census general-household count, mapped-building polygon count and summed mapped-building footprint area within each disclosure group. "
+
+### part-03
+
+- Location: Section 2.6, final sentence of the Low/Central/High bundle paragraph.
+- Reason: explain heterogeneous range provenance, address the requested consideration of area variation without inventing a new empirical range, and distinguish demand assumptions from standards and observations.
+- Kila decisions: KILA-D-20261002-029, KILA-D-20261002-030
+- Mode: `replace`
+- Revises prior parts: none
+- Timestamp: 2026-10-02T12:25:15Z
+- Author: Kila
+- Markup SHA-256 before: `9fa1782d23b120f8e8a65291db8e1adfb7c8d872ba6da273f2162a37dca3cca0`
+- Markup SHA-256 after: `f68ba4f317a3a61c4cbefd0469459cc181cca9f338d6c8dc28604363516aa11d`
+- Revision IDs: `930`
+- Backup: `/Users/lichao/Research/KE01/Rev/revision/.kila-backups/KE01.rev.markup.20261002T212515338414.reviewer-3-comment-6.part-03.docx`
+- Paragraph properties preserved: `true`
+- Run style source SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Formula verification: not applicable
+- Endnote hyperlinks preserved: `true`
+- Endnote hyperlink count: `0`
+- Endnote hyperlink XML SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Endnote relationships SHA-256: `absent`
+- Before:
+
+~~~~text
+These bundles bound engineering assumptions on the demand side.
+~~~~
+
+- After:
+
+~~~~text
+These bundles bound engineering assumptions on the demand side. Table S1 reports all parameter values, units and sources. Area remains fixed at 3.5 m²/person as a minimum living-space proxy, not an elderly-specific cooled-floor-area standard. The load-density endpoints are insulation-dependent benchmarks from one gymnasium case, and 134 W/m² is their arithmetic midpoint. That case assumes 0.15 persons/m², whereas the adopted area implies approximately 0.286 persons/m²; the case also contains inconsistent gymnasium/office labeling. These differences limit transfer to emergency shelters. COP, diversity and operating hours are study-defined scenarios rather than government-prescribed values. The narrow load-density range reflects the two case benchmarks, while the broader efficiency and duration ranges explore equipment and operating choices; their widths are not comparable measures of uncertainty. Area is not varied in these bundles because a larger cooled-space requirement is not established for the target facilities. At fixed load density and other inputs, thermal load, electric demand and daily energy scale directly with area, so site-specific area can be substituted without treating this algebraic relationship as a validated facility design. Daily energy assumes constant scenario electric demand over the stated operating hours, not a measured load profile.
+~~~~
+
+- Minimal tracked fragments:
+  1. `insert`
+     - Before: ""
+     - After: " Table S1 reports all parameter values, units and sources. Area remains fixed at 3.5 m²/person as a minimum living-space proxy, not an elderly-specific cooled-floor-area standard. The load-density endpoints are insulation-dependent benchmarks from one gymnasium case, and 134 W/m² is their arithmetic midpoint. That case assumes 0.15 persons/m², whereas the adopted area implies approximately 0.286 persons/m²; the case also contains inconsistent gymnasium/office labeling. These differences limit transfer to emergency shelters. COP, diversity and operating hours are study-defined scenarios rather than government-prescribed values. The narrow load-density range reflects the two case benchmarks, while the broader efficiency and duration ranges explore equipment and operating choices; their widths are not comparable measures of uncertainty. Area is not varied in these bundles because a larger cooled-space requirement is not established for the target facilities. At fixed load density and other inputs, thermal load, electric demand and daily energy scale directly with area, so site-specific area can be substituted without treating this algebraic relationship as a validated facility design. Daily energy assumes constant scenario electric demand over the stated operating hours, not a measured load profile."
+
+### reviewer-3/comment-6 — part-04 supplementary asset
+
+- Decision: KILA-D-20261002-029; implementation exception KILA-D-20261002-030.
+- Operation: create independent supplementary Table S1; no manuscript table replacement.
+- Before: no supplementary Table S1 artifact.
+- After: `Rev/revision/KE01.supplementary-table-S1.docx`, containing the complete approved P4 table, notes and source entries in `Rev/docs/proposal-r3-c6.md`.
+- Source: reproducible builder `src/analyses/build_r3c6_supplement.py`; exact five-row/six-column and note checks pass.
+- Asset SHA-256: b331e95a1742c9a4fa9417bc80d793e251603549636de6579f64bbf4c58d6f03.
+- Markup remains f68ba4f317a3a61c4cbefd0469459cc181cca9f338d6c8dc28604363516aa11d during this external asset operation; no revision IDs added by P4.
+- Visual review: final single-page render checked, including Japanese source titles; detailed receipt in `Rev/docs/r3-c6-implementation-verification.md`.
