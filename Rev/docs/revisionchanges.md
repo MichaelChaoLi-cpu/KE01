@@ -1665,3 +1665,116 @@ These bundles bound engineering assumptions on the demand side. Table S1 reports
 - Asset SHA-256: b331e95a1742c9a4fa9417bc80d793e251603549636de6579f64bbf4c58d6f03.
 - Markup remains f68ba4f317a3a61c4cbefd0469459cc181cca9f338d6c8dc28604363516aa11d during this external asset operation; no revision IDs added by P4.
 - Visual review: final single-page render checked, including Japanese source titles; detailed receipt in `Rev/docs/r3-c6-implementation-verification.md`.
+
+## reviewer-1/comment-4
+
+### part-01
+
+- Location: Section 2.5, paragraph beginning “Municipality heat heterogeneity”.
+- Reason: distinguish a historical planning exposure from an observed sequence or a meteorological prediction.
+- Kila decisions: KILA-D-20261002-033
+- Mode: `replace`
+- Revises prior parts: none
+- Timestamp: 2026-10-02T12:58:28Z
+- Author: Kila
+- Markup SHA-256 before: `f68ba4f317a3a61c4cbefd0469459cc181cca9f338d6c8dc28604363516aa11d`
+- Markup SHA-256 after: `1e6a509fcebb45024edc27564c5b5741b52faac5063330aed96418631ed76590`
+- Revision IDs: `931`
+- Backup: `Rev/revision/.kila-backups/KE01.rev.markup.20261002T215828495820.reviewer-1-comment-4.part-01.docx`
+- Paragraph properties preserved: `true`
+- Run style source SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Formula verification: not applicable
+- Endnote hyperlinks preserved: `true`
+- Endnote hyperlink count: `0`
+- Endnote hyperlink XML SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Endnote relationships SHA-256: `absent`
+- Before:
+
+~~~~text
+The resulting expected high-heat days preserve spatial differences during the relevant season.
+~~~~
+
+- After:
+
+~~~~text
+The resulting expected high-heat days preserve spatial differences during the relevant season. Fractional values arise from averaging calendar-matched counts over 2021–2025 and spatially weighting station values; they represent an expected exposure duration, not an observed sequence of partial days. The historical scenario supplies a common seasonal outdoor exposure for the two cooling states, not a forecast of the weather during the post-earthquake month.
+~~~~
+
+- Minimal tracked fragments:
+  1. `insert`
+     - Before: ""
+     - After: " Fractional values arise from averaging calendar-matched counts over 2021–2025 and spatially weighting station values; they represent an expected exposure duration, not an observed sequence of partial days. The historical scenario supplies a common seasonal outdoor exposure for the two cooling states, not a forecast of the weather during the post-earthquake month."
+
+### part-02
+
+- Location: Section 2.7, paragraph introducing Equation 10.
+- Reason: explain fractional powers and explicitly avoid claiming equivalence to a predictive expectation over weather realizations.
+- Kila decisions: KILA-D-20261002-033
+- Mode: `replace`
+- Revises prior parts: none
+- Timestamp: 2026-10-02T12:58:43Z
+- Author: Kila
+- Markup SHA-256 before: `1e6a509fcebb45024edc27564c5b5741b52faac5063330aed96418631ed76590`
+- Markup SHA-256 after: `1e1b994d33fa4eca153b3ef332e67e7f7c63e78f09cd1c6d0aae0ff9d43afe99`
+- Revision IDs: `932`
+- Backup: `Rev/revision/.kila-backups/KE01.rev.markup.20261002T215843953321.reviewer-1-comment-4.part-02.docx`
+- Paragraph properties preserved: `true`
+- Run style source SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Formula verification: not applicable
+- Endnote hyperlinks preserved: `true`
+- Endnote hyperlink count: `0`
+- Endnote hyperlink XML SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Endnote relationships SHA-256: `absent`
+- Before:
+
+~~~~text
+This protected state maintains effective cooling while retaining the same modeled outdoor sequence used by the unprotected state.
+~~~~
+
+- After:
+
+~~~~text
+This protected state maintains effective cooling while retaining the same modeled outdoor sequence used by the unprotected state. In Equations 10 and 11, the expected high-heat duration and its complement to 30 days enter directly as real-valued exponents of the corresponding daily survival probabilities, without rounding. This weights log survival by the expected duration in each heat state. It is a plug-in scenario approximation: risk evaluated at the mean duration need not equal mean risk across historical years because compounding is nonlinear.
+~~~~
+
+- Minimal tracked fragments:
+  1. `insert`
+     - Before: ""
+     - After: " In Equations 10 and 11, the expected high-heat duration and its complement to 30 days enter directly as real-valued exponents of the corresponding daily survival probabilities, without rounding. This weights log survival by the expected duration in each heat state. It is a plug-in scenario approximation: risk evaluated at the mean duration need not equal mean risk across historical years because compounding is nonlinear."
+
+### part-03
+
+- Location: Section 3.5, final sentence of the paragraph beginning “The fixed-weather health scenario”.
+- Reason: provide evidence for retaining the selected approximation without confusing population-weighted death counts, municipal risk rankings, or uncertainty sources.
+- Kila decisions: KILA-D-20261002-033
+- Mode: `replace`
+- Revises prior parts: none
+- Timestamp: 2026-10-02T13:02:01Z
+- Author: Kila
+- Markup SHA-256 before: `1e1b994d33fa4eca153b3ef332e67e7f7c63e78f09cd1c6d0aae0ff9d43afe99`
+- Markup SHA-256 after: `1b0926453462d1c3f94470362cd5369ae327599125ade72221d159309ea99f32`
+- Revision IDs: `933`
+- Backup: `Rev/revision/.kila-backups/KE01.rev.markup.20261002T220201164384.reviewer-1-comment-4.part-03.docx`
+- Paragraph properties preserved: `true`
+- Run style source SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Formula verification: not applicable
+- Endnote hyperlinks preserved: `true`
+- Endnote hyperlink count: `0`
+- Endnote hyperlink XML SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Endnote relationships SHA-256: `absent`
+- Before:
+
+~~~~text
+The small absolute magnitude and the larger relative contrast are compatible because the modeled exposed population and time horizon are limited.
+~~~~
+
+- After:
+
+~~~~text
+The small absolute magnitude and the larger relative contrast are compatible because the modeled exposed population and time horizon are limited. As an aggregation check, we calculate both cooling-state risks separately for each of the five annual interpolated heat-day scenarios and then average the risks. Compared with using mean heat days, the maximum municipal difference in incremental risk is 0.001059 per 100,000, with no change in municipal incremental-risk rankings. This supports the mean-day approximation under the specified baseline, effect parameters and missing-day treatment, but does not validate weather prediction or the transferred health effect.
+~~~~
+
+- Minimal tracked fragments:
+  1. `insert`
+     - Before: ""
+     - After: " As an aggregation check, we calculate both cooling-state risks separately for each of the five annual interpolated heat-day scenarios and then average the risks. Compared with using mean heat days, the maximum municipal difference in incremental risk is 0.001059 per 100,000, with no change in municipal incremental-risk rankings. This supports the mean-day approximation under the specified baseline, effect parameters and missing-day treatment, but does not validate weather prediction or the transferred health effect."

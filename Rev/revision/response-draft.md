@@ -222,10 +222,24 @@ counterfactual rather than a forecast.
 
 
 **Response:**
-[Response to be completed.]
+Thank you for requesting this clarification. Section 2.5 now explains that fractional high-heat days are expected durations obtained by averaging matching-calendar counts over 2021–2025 and spatially weighting station values. They are not observed partial days or a forecast of the post-earthquake month's weather. The historical scenario provides the same seasonal outdoor exposure for both cooling states, so the contrast concerns protection loss under fixed weather.
 
-"[Exact revised manuscript text]"
-(Page XX, Lines XX–XX)
+Section 2.7 explains that the expected duration and its complement to 30 days enter Equations 10 and 11 directly as real-valued survival exponents, without rounding. This weights log survival by duration. We explicitly acknowledge that this plug-in approximation is not generally equivalent to averaging annual risks because compounding is nonlinear. Section 3.5 reports the corresponding check: calculating both cooling-state risks for each annual scenario and then averaging changes municipal incremental risk by at most 0.001059 per 100,000, with no change in its municipal rankings. This supports retaining the approximation under the specified assumptions, not weather prediction or validation of the transferred health effect.
+
+Section 2.5 clarifies the exposure interpretation:
+
+"Fractional values arise from averaging calendar-matched counts over 2021–2025 and spatially weighting station values; they represent an expected exposure duration, not an observed sequence of partial days. The historical scenario supplies a common seasonal outdoor exposure for the two cooling states, not a forecast of the weather during the post-earthquake month."
+(Page 12, Lines 231–235)
+
+Section 2.7 explains the calculation and approximation:
+
+"In Equations 10 and 11, the expected high-heat duration and its complement to 30 days enter directly as real-valued exponents of the corresponding daily survival probabilities, without rounding. This weights log survival by the expected duration in each heat state. It is a plug-in scenario approximation: risk evaluated at the mean duration need not equal mean risk across historical years because compounding is nonlinear."
+(Pages 14–15, Lines 293–298)
+
+Section 3.5 reports the aggregation check:
+
+"As an aggregation check, we calculate both cooling-state risks separately for each of the five annual interpolated heat-day scenarios and then average the risks. Compared with using mean heat days, the maximum municipal difference in incremental risk is 0.001059 per 100,000, with no change in municipal incremental-risk rankings. This supports the mean-day approximation under the specified baseline, effect parameters and missing-day treatment, but does not validate weather prediction or the transferred health effect."
+(Pages 22–23, Lines 472–478)
 
 ## Comment 5
 (5) Section 2.7, Equation (9): The origin and interpretation of the 1.03 multiplier used to define the
