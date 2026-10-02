@@ -157,10 +157,61 @@ sensitivity test or alternative allocation based on available household/age stru
 
 
 **Response:**
-[Response to be completed.]
+Thank you for this comment. Section 2.4 now replaces the all-resident older-population input with a bounded estimate of residents aged 65 or older in general households. This aligns the population universe with the general-household denominator used in Equation 3. The estimate uses households containing an older member, all-resident older-population bounds and official municipal general-household older-population controls. Older-household weighting is the primary allocation; residual-capacity weighting provides a separate sensitivity.
 
-"[Exact revised manuscript text]"
-(Page XX, Lines XX–XX)
+The proportional housing-loss rule remains an explicit working assumption: within each disclosure group, housing loss is assumed not to be systematically associated with age composition. It produces an expected exposure count when household-specific residence and damage links are unavailable, rather than identifying affected individuals. The demographic alternative tests sensitivity to the spatial allocation of older residents; it does not test or establish equality of damage probabilities across age groups.
+
+Under the same household/20-km/0.5 structural scenario, the two feasible demographic allocations yield 202.041936 and 202.185459 expected exposed older residents, a difference of approximately 0.071%. Their municipal rank correlation is 0.999868, with the same top five in the same order and a maximum rank shift of one. Both match the same official municipal population controls. These close municipal results can coexist with different within-municipality allocations and are not validation of grid-level residence patterns. Section 4.5 explicitly retains this limitation. The revised Abstract, Results and associated figures and tables use the selected bounded allocation.
+
+The revised Abstract reports the selected population and associated demand:
+
+"The central allocation contains 303.5 functionally lost residences and approximately 202 affected residents aged 65 or older. Under the Central engineering scenario, their protection requires 28.427 kW of peak cooling power and 511.691 kWh of electricity per day across the prefecture."
+(Page 1, Lines 14–17)
+
+Section 2.4 defines the household-based population allocation and working assumption:
+
+"We associate structural housing loss with older residents by scaling each group's estimated general-household population aged 65 or older by its modeled share of general households lost. For each group, the lower bound is the number of households containing an older member; the upper bound is the all-resident older population where that lower bound is positive, and zero otherwise. Starting from the lower bound, we distribute the municipal remainder in proportion to older-household counts, subject to the upper bounds, to match official municipal general-household older-population controls. Groups are assigned to municipalities by representative points. Residual-capacity weighting is a separate demographic sensitivity. These allocations reproduce municipal controls but do not validate within-municipality residence patterns. Equation 3 assumes that housing loss is not systematically associated with age composition within a group; exposure is defined as zero where general households are zero."
+(Pages 9–10, Lines 179–190)
+
+Section 2.8 explains municipality aggregation:
+
+"Additive disclosure-group outcomes are summed using representative-point municipality assignments after the central scenario is selected at its defined analytical scale."
+(Page 15, Lines 297–298)
+
+The same section includes the demographic alternative among the sensitivity comparisons:
+
+"We additionally compare the selected primary with the corrected hybrid, bounded demographic alternative and 54 hypothetical shaking allocations. For the latter, nearest-station JMA intensity categories are assigned in projected coordinates, including neighbouring-prefecture stations and excluding the withdrawn Tomiai observation."
+(Page 15, Lines 310–313)
+
+Section 3.3 reports the alternative-allocation result:
+
+"Residual-capacity demographic weighting yields 202.185 exposed older residents, with a maximum rank shift of one."
+(Page 20, Lines 405–407)
+
+Section 3.4 reports electricity demand based on the updated population:
+
+"Peak power rises from 17.96 kW in the Low bundle to 28.427 kW in the Central bundle and 39.88 kW in the High bundle; corresponding daily electricity rises from 215.54 to 511.691 and 957.19 kWh."
+(Page 20, Lines 421–423)
+
+Section 3.5 reports the corresponding health contrast:
+
+"The prefecture-weighted central 30-day mortality-burden increase without effective cooling is 5.31%, with source-effect endpoint scenarios of 0.66% and 9.96%; these endpoints are not whole-model confidence limits."
+(Page 21, Lines 436–438)
+
+Section 4.5 states the unresolved ecological limitation:
+
+"Municipal calibration and demographic rank stability cannot verify within-group residence patterns or the assumed absence of systematic age-related loss differences."
+(Page 25, Lines 529–531)
+
+The Figure 5 note identifies the bounded older-population allocation:
+
+"Panels b and c use the household/20-km/0.5 primary and bounded general-household older-population allocation; panel a is contextual evidence, not independent validation."
+(Page 32, Lines 595–596)
+
+The Figure 6 note retains the distinction between a pointwise planning bound and a realized scenario:
+
+"Panel b maps the pointwise high 30-day no-placement older-person-day planning bound, derived from pointwise maxima across the 27 distance/proxy/half-collapse scenarios and not representing a jointly realized aggregate scenario."
+(Page 33, Lines 600–602)
 
 ## Comment 4
 (4) The manuscript uses the five-year mean number of matching-period high-heat station-days and
