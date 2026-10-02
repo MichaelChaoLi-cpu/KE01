@@ -176,10 +176,19 @@ by displacement; justify the choice to restrict exposure to functional housing l
 
 
 **Response:**
-[Response to be completed.]
+Thank you for this comment. The Abstract and Sections 1, 2.3 and 3.1 now explicitly restrict the target population to older residents associated with functional housing loss, explain the evidence-based reason for this boundary, and distinguish modeled exposure from broader shelter occupancy and observed displacement. The revised text states:
 
-"[Exact revised manuscript text]"
-(Page XX, Lines XX–XX)
+"The target is the housing-loss-related older population, not all displaced residents or everyone potentially requiring cooling after service disruptions."
+(Page 1, Lines 12–14)
+
+"This study asks where cooling protection for older residents associated with functional housing loss is most needed after the Kumamoto earthquake, how much peak power and daily electricity that protection would require, and how the modeled mortality burden differs if effective cooling is not restored during the next 30 days."
+(Page 4, Lines 64–67)
+
+"We restrict this population to the housing-loss pathway because reported building-damage totals constrain that pathway, whereas the available operational reports do not identify the older individuals displaced by each cause. Residents requiring protection solely because of service outages or precautionary evacuation are outside this modeled population. Association with housing loss does not establish actual displacement or loss of effective cooling for each individual."
+(Page 7, Lines 135–140)
+
+"These occupancy counts describe a broader, differently timed and geographically bounded population; they are not age-specific counts of residents associated with functional housing loss. Service disruptions and precautionary needs can also prompt shelter use. We therefore use occupancy as operational context, not as a calibration or validation total for modeled older-person exposure."
+(Page 16, Lines 317–322)
 
 ## Comment 2
 (M1.2)
