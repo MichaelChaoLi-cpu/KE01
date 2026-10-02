@@ -568,10 +568,10 @@ m1 – The 1.03 constant in Eq. 9 is not attributed in the text, although it cor
 
 
 **Response:**
-[Response to be completed.]
+Thank you for this comment. Section 2.7 now explicitly identifies 1.03 as the heat-associated mortality odds ratio among air-conditioned nursing homes in Katz et al. (2026), immediately following the citation to that study. The text distinguishes this multiplier from the cooling-loss effect and reports its source confidence interval:
 
-"[Exact revised manuscript text]"
-(Page XX, Lines XX–XX)
+"The effective-cooling multiplier of 1.03 is the heat-associated mortality odds ratio among air-conditioned nursing homes in the same study (95% confidence interval, 0.98–1.07), not an estimated cooling-loss effect."
+(Page 14, Lines 293–296)
 
 ## Comment 8
 m2 – The spatial calibration relies on relatively limited instrumental coverage, subsequently interpolated. It is suggested that
