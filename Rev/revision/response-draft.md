@@ -326,10 +326,24 @@ the 65+ population associated with housing loss.
 
 
 **Response:**
-[Response to be completed.]
+Thank you for this comment. Section 2.4 now explicitly states that Equation 3 assumes no systematic association between housing loss and age composition within a disclosure group. This is a screening assumption, not an empirically established independence relationship. The older-population input is now restricted to an estimated general-household population, with municipal controls and household-based bounds.
 
-"[Exact revised manuscript text]"
-(Page XX, Lines XX–XX)
+To assess sensitivity to the demographic distribution, we compare older-household weighting with residual-capacity weighting under the same structural loss scenario. They yield 202.042 and 202.185 expected exposed older residents, respectively, with a maximum municipal rank shift of one. This tests the spatial allocation of the older population, not whether older households actually experience the same loss probability as other households. Section 4.5 explicitly retains that unverified assumption and cautions that municipal calibration and rank stability do not validate within-group residence patterns.
+
+Section 2.4 states:
+
+"These allocations reproduce municipal controls but do not validate within-municipality residence patterns. Equation 3 assumes that housing loss is not systematically associated with age composition within a group; exposure is defined as zero where general households are zero."
+(Page 10, Lines 187–190)
+
+Section 3.3 reports the demographic sensitivity:
+
+"Residual-capacity demographic weighting yields 202.185 exposed older residents, with a maximum rank shift of one."
+(Page 20, Lines 405–407)
+
+Section 4.5 discusses the remaining limitation:
+
+"Municipal calibration and demographic rank stability cannot verify within-group residence patterns or the assumed absence of systematic age-related loss differences."
+(Page 25, Lines 529–531)
 
 ## Comment 3
 M2 | Transferability of the parameters used in the mortality-risk contrast
