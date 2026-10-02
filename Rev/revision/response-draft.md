@@ -93,10 +93,61 @@ median does not distort municipality-level rankings or uncertainty interpretatio
 
 
 **Response:**
-[Response to be completed.]
+Thank you for raising this issue. We no longer treat the normalized pointwise median as the primary surface. Section 2.4 now selects one coherent scenario using general households, a 20-km decay scale and a half-collapse weight of 0.5. The corrected hybrid is retained only as a sensitivity analysis. This choice makes the primary correspond to an actual scenario; it does not imply empirical optimization of its parameters.
 
-"[Exact revised manuscript text]"
-(Page XX, Lines XX–XX)
+We also checked normalization separately using the corrected scenario ensemble and the current bounded demographic allocation. The raw median sums to 234.940182 functional-loss units; multiplying all groups by the same positive factor, 1.291818187, restores the total to 303.5. All 45 municipal housing-loss and older-exposure rankings remain unchanged, and subsequent clipping affects no groups. Under fixed demographic weights, linear aggregation and nonbinding caps, a common positive multiplier preserves these rankings. This result concerns normalization within the hybrid, not equivalence between the hybrid and the coherent primary.
+
+The latter comparison is reported in Section 3.3: the corrected hybrid yields 216.546 exposed older residents, 7.18% more than the primary, with municipal exposure rank correlation 0.9818, a maximum rank shift of six and the same top-five set. Section 2.4 explicitly distinguishes pointwise sensitivity bounds from jointly realized scenario totals. The Abstract, downstream results and Figures 5–8 and Tables 1–3 now consistently use the coherent primary; neither normalization nor ranking stability is presented as external validation.
+
+The revised Abstract states:
+
+"The central allocation contains 303.5 functionally lost residences and approximately 202 affected residents aged 65 or older. Under the Central engineering scenario, their protection requires 28.427 kW of peak cooling power and 511.691 kWh of electricity per day across the prefecture."
+(Page 1, Lines 14–17)
+
+Section 2.4 defines the primary and the interpretation of sensitivity bounds:
+
+"The central surface is one coherent scenario using general households, a 20-km decay scale and a half-collapse weight of 0.5, giving 303.5 functional-loss units. Household counts align the allocation denominator with the target population; 20 km and 0.5 are transparent planning assumptions, not empirically optimized parameters or a calibrated loss fraction. The normalized pointwise-median surface, rebuilt after the zero-household correction, is retained only as a separate sensitivity. Pointwise minima and maxima form lower and upper sensitivity surfaces. Because each endpoint can arise from a different scenario at a different location, these surfaces are local sensitivity bounds rather than a jointly realized prefecture interval. Their sums must therefore retain that interpretation."
+(Page 9, Lines 170–178)
+
+Section 2.8 specifies aggregation:
+
+"Additive disclosure-group outcomes are summed using representative-point municipality assignments after the central scenario is selected at its defined analytical scale."
+(Page 15, Lines 297–298)
+
+The same section describes the comparison:
+
+"We additionally compare the selected primary with the corrected hybrid, bounded demographic alternative and 54 hypothetical shaking allocations. For the latter, nearest-station JMA intensity categories are assigned in projected coordinates, including neighbouring-prefecture stations and excluding the withdrawn Tomiai observation."
+(Page 15, Lines 310–313)
+
+Section 3.3 reports the difference between the primary and hybrid:
+
+"The corrected hybrid yields 216.546 exposed older residents, 7.18% above the selected primary; municipal exposure rank correlation is 0.9818, with a maximum rank shift of six and the same top-five set."
+(Pages 19–20, Lines 403–405)
+
+Section 3.4 updates electricity requirements:
+
+"Peak power rises from 17.96 kW in the Low bundle to 28.427 kW in the Central bundle and 39.88 kW in the High bundle; corresponding daily electricity rises from 215.54 to 511.691 and 957.19 kWh."
+(Page 20, Lines 421–423)
+
+Section 3.5 updates the health contrast:
+
+"The prefecture-weighted central 30-day mortality-burden increase without effective cooling is 5.31%, with source-effect endpoint scenarios of 0.66% and 9.96%; these endpoints are not whole-model confidence limits."
+(Page 21, Lines 436–438)
+
+Section 4.5 retains the limits on predictive interpretation:
+
+"The selected allocation is retained as transparent early demand screening, not validated municipal or building-level damage prediction. Report-share disagreement remains substantial; the closer descriptive agreement of shaking alternatives does not establish independent validity or justify post hoc selection. Nearest-station categories omit local site effects, source vulnerability curves are transferred beyond their original setting, and full-collapse shapes are used only as hypothetical functional-loss weights."
+(Page 25, Lines 523–529)
+
+The Figure 5 note identifies the primary specification:
+
+"Panels b and c use the household/20-km/0.5 primary and bounded general-household older-population allocation; panel a is contextual evidence, not independent validation."
+(Page 32, Lines 595–596)
+
+The Figure 6 note distinguishes the pointwise upper bound from a jointly realized scenario:
+
+"Panel b maps the pointwise high 30-day no-placement older-person-day planning bound, derived from pointwise maxima across the 27 distance/proxy/half-collapse scenarios and not representing a jointly realized aggregate scenario."
+(Page 33, Lines 600–602)
 
 ## Comment 3
 (3) Section 2.4, Equation (3): Older-person exposure assumes that the modeled household-loss share
