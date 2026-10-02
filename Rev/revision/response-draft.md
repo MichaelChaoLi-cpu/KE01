@@ -387,10 +387,24 @@ literature referring, where available, to community-dwelling older populations a
 
 
 **Response:**
-[Response to be completed.]
+Thank you for this comment. Sections 2.7, 4.4 and 4.5 now clarify the transferred estimand, discuss comparative evidence including Japanese populations, and distinguish source-effect uncertainty from uncertainty about transferability. The Ontario estimates remain scenario inputs rather than locally validated effects. Section 4.4 considers both the association between air-conditioning availability and lower heat-related mortality and the contrasting Japanese electricity-conservation and outage findings. In particular, it distinguishes the brief all-cause mortality increase after an outage from the absence of clear amplification of the temperature–mortality association. These studies provide relevant context but do not identify the cooling-loss effect among housing-displaced older residents. The revised text states:
 
-"[Exact revised manuscript text]"
-(Page XX, Lines XX–XX)
+"In the source study, the relative odds ratio compares heat-associated mortality odds ratios between nursing homes without and with air conditioning, rather than directly comparing mortality between displaced community residents with and without cooling. Applying this interaction to our two states assumes a shared reference baseline and transfers the source heat-effect contrast as a planning scenario, not a locally estimated effect."
+(Pages 14–15, Lines 294–299)
+
+"Comparative evidence supports attention to cooling but does not establish a transferable effect size: a multicountry longitudinal analysis including Japan associates greater residential air-conditioning prevalence with lower heat-related mortality, while measuring availability rather than actual use (Sera et al., 2020). After the 2011 earthquake, Japanese prefectures with larger electricity reductions showed lower rather than higher heat-related mortality, and daily electricity reduction did not significantly modify the heat–mortality association in Tokyo (Kim et al., 2017). Following the 2019 typhoon-related outage, an event study reports a short-lived increase in all-cause mortality and a longer increase in heat-related ambulance transport; a separate analysis finds stronger temperature-related ambulance risk under electricity reduction but no clear amplification of the temperature–mortality association (Yamasaki et al., 2024). These population-level studies concern air-conditioning prevalence, electricity conservation or outages, not verified loss of cooling among housing-displaced older residents, and therefore provide context rather than validation of our numerical contrast."
+(Page 26, Lines 550–563)
+
+"Transfer from institutional nursing-home residents to community-dwelling older residents may be affected by differences in frailty, care provision, housing, cooling access and climatic acclimatization. The source uses a local heat-index threshold, whereas this study uses station-calibrated air-temperature scenarios; housing-related cooling loss and repeated exposure over a 30-day displacement period are not directly observed in the source study. The direction and magnitude of transfer bias remain unquantified, and the reported confidence interval does not cover these population, exposure or duration mismatches."
+(Pages 28–29, Lines 611–618)
+
+The reference list now includes the comparative studies discussed in Section 4.4, including:
+
+"Sera, F., Hashizume, M., Honda, Y., Lavigne, E., Schwartz, J., Zanobetti, A., Tobias, A., Iñiguez, C., Vicedo-Cabrera, A. M., Blangiardo, M., Armstrong, B., & Gasparrini, A. (2020). Air Conditioning and Heat-related Mortality: A Multi-country Longitudinal Study. Epidemiology, 31(6), 779-787. https://doi.org/10.1097/EDE.0000000000001241"
+(Page 49, Lines 789–791)
+
+"Yamasaki, L., Kamada, T., Ng, C. F. S., Takane, Y., Nakajima, K., Yamaguchi, K., Oka, K., Honda, Y., Kim, Y., & Hashizume, M. (2024). Heat-related mortality and ambulance transport after a power outage in the Tokyo metropolitan area. Environmental Epidemiology, 8(2), e292. https://doi.org/10.1097/EE9.0000000000000292"
+(Page 50, Lines 803–805)
 
 ## Comment 4
 (M2.2)

@@ -1906,3 +1906,117 @@ Heat and health components add separate transfer uncertainties. The annual morta
   1. `insert`
      - Before: ""
      - After: " The annual mortality reference supports an illustrative common-baseline comparison but does not establish the absolute mortality level for the summer window. The source death counts concern Japanese nationals, whereas the census denominator includes all residents, and both include institutional residents rather than isolating the target general-household population. Holding the 2020 population fixed also omits subsequent demographic change. These mismatches can affect absolute incremental risks and expected-death magnitudes; sharing a baseline across cooling states does not remove them or guarantee unchanged spatial rankings. A matched seasonal baseline by age, municipality and residence setting would be needed to calibrate those quantities more directly; no empirical seasonal correction is applied here."
+
+## reviewer-3/comment-3
+
+### part-01
+
+- Location: Section 2.7, body paragraph 51, final sentence after the existing Katz citation.
+- Reason: clarify what is transferred and the additional common-baseline assumption without changing Equation 9.
+- Kila decisions: KILA-D-20261002-011, KILA-D-20261002-038, KILA-D-20261003-001
+- Mode: `replace`
+- Revises prior parts: none
+- Timestamp: 2026-10-02T22:55:29Z
+- Author: Kila
+- Markup SHA-256 before: `a83981f6df2fe159bff676aba52f2d582b1e235519ce314b7a115ebd409d6e80`
+- Markup SHA-256 after: `a9aa53ddd871b8ba8794203fb8b86b2a1d1f871d467b3fdf4bb312f3bc9e7175`
+- Revision IDs: `944`
+- Backup: `Rev/revision/.kila-backups/KE01.rev.markup.20261003T075529909217.reviewer-3-comment-3.part-01.docx`
+- Paragraph properties preserved: `true`
+- Run style source SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Formula verification: not applicable
+- Endnote hyperlinks preserved: `true`
+- Endnote hyperlink count: `0`
+- Endnote hyperlink XML SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Endnote relationships SHA-256: `absent`
+- Before:
+
+~~~~text
+Outdoor heat and the municipality baseline remain fixed across these states.
+~~~~
+
+- After:
+
+~~~~text
+Outdoor heat and the municipality baseline remain fixed across these states. In the source study, the relative odds ratio compares heat-associated mortality odds ratios between nursing homes without and with air conditioning, rather than directly comparing mortality between displaced community residents with and without cooling. Applying this interaction to our two states assumes a shared reference baseline and transfers the source heat-effect contrast as a planning scenario, not a locally estimated effect.
+~~~~
+
+- Minimal tracked fragments:
+  1. `insert`
+     - Before: ""
+     - After: " In the source study, the relative odds ratio compares heat-associated mortality odds ratios between nursing homes without and with air conditioning, rather than directly comparing mortality between displaced community residents with and without cooling. Applying this interaction to our two states assumes a shared reference baseline and transfers the source heat-effect contrast as a planning scenario, not a locally estimated effect."
+
+### part-02
+
+- Location: Section 4.4, body paragraph 96, after the interpretation of lost indoor protection.
+- Reason: supply relevant Japanese comparative evidence without selectively presenting only supportive findings or substituting morbidity estimates for mortality effects.
+- Kila decisions: KILA-D-20261002-011, KILA-D-20261002-038, KILA-D-20261003-001
+- Mode: `replace`
+- Revises prior parts: none
+- Timestamp: 2026-10-02T22:55:45Z
+- Author: Kila
+- Markup SHA-256 before: `a9aa53ddd871b8ba8794203fb8b86b2a1d1f871d467b3fdf4bb312f3bc9e7175`
+- Markup SHA-256 after: `a214947a86c2b5149a6a050ec8cc3c844bb078db65558603e64dbbee1e41f5c8`
+- Revision IDs: `945`
+- Backup: `Rev/revision/.kila-backups/KE01.rev.markup.20261003T075545364150.reviewer-3-comment-3.part-02.docx`
+- Paragraph properties preserved: `true`
+- Run style source SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Formula verification: not applicable
+- Endnote hyperlinks preserved: `true`
+- Endnote hyperlink count: `0`
+- Endnote hyperlink XML SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Endnote relationships SHA-256: `absent`
+- Before:
+
+~~~~text
+It represents the additional modeled burden that may accompany loss of indoor protection if suitable placement is not restored.
+~~~~
+
+- After:
+
+~~~~text
+It represents the additional modeled burden that may accompany loss of indoor protection if suitable placement is not restored. Comparative evidence supports attention to cooling but does not establish a transferable effect size: a multicountry longitudinal analysis including Japan associates greater residential air-conditioning prevalence with lower heat-related mortality, while measuring availability rather than actual use (Sera et al., 2020). After the 2011 earthquake, Japanese prefectures with larger electricity reductions showed lower rather than higher heat-related mortality, and daily electricity reduction did not significantly modify the heat–mortality association in Tokyo (Kim et al., 2017). Following the 2019 typhoon-related outage, an event study reports a short-lived increase in all-cause mortality and a longer increase in heat-related ambulance transport; a separate analysis finds stronger temperature-related ambulance risk under electricity reduction but no clear amplification of the temperature–mortality association (Yamasaki et al., 2024). These population-level studies concern air-conditioning prevalence, electricity conservation or outages, not verified loss of cooling among housing-displaced older residents, and therefore provide context rather than validation of our numerical contrast.
+~~~~
+
+- Minimal tracked fragments:
+  1. `insert`
+     - Before: ""
+     - After: " Comparative evidence supports attention to cooling but does not establish a transferable effect size: a multicountry longitudinal analysis including Japan associates greater residential air-conditioning prevalence with lower heat-related mortality, while measuring availability rather than actual use (Sera et al., 2020). After the 2011 earthquake, Japanese prefectures with larger electricity reductions showed lower rather than higher heat-related mortality, and daily electricity reduction did not significantly modify the heat–mortality association in Tokyo (Kim et al., 2017). Following the 2019 typhoon-related outage, an event study reports a short-lived increase in all-cause mortality and a longer increase in heat-related ambulance transport; a separate analysis finds stronger temperature-related ambulance risk under electricity reduction but no clear amplification of the temperature–mortality association (Yamasaki et al., 2024). These population-level studies concern air-conditioning prevalence, electricity conservation or outages, not verified loss of cooling among housing-displaced older residents, and therefore provide context rather than validation of our numerical contrast."
+
+### part-03
+
+- Location: Section 4.5, body paragraph 99, immediately after the existing Ontario nursing-home source sentence.
+- Reason: make specific transfer limitations explicit rather than treating the source interval as Japanese-population uncertainty.
+- Kila decisions: KILA-D-20261002-011, KILA-D-20261002-038, KILA-D-20261003-001
+- Mode: `replace`
+- Revises prior parts: none
+- Timestamp: 2026-10-02T22:56:21Z
+- Author: Kila
+- Markup SHA-256 before: `a214947a86c2b5149a6a050ec8cc3c844bb078db65558603e64dbbee1e41f5c8`
+- Markup SHA-256 after: `3f30b9c4643d5e656a1464ad1c0a13ba89337217ed3c183402c73df7238e8375`
+- Revision IDs: `946`
+- Backup: `Rev/revision/.kila-backups/KE01.rev.markup.20261003T075622018582.reviewer-3-comment-3.part-03.docx`
+- Paragraph properties preserved: `true`
+- Run style source SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Formula verification: not applicable
+- Endnote hyperlinks preserved: `true`
+- Endnote hyperlink count: `0`
+- Endnote hyperlink XML SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Endnote relationships SHA-256: `absent`
+- Before:
+
+~~~~text
+That interval represents effect-parameter uncertainty, not total model uncertainty.
+~~~~
+
+- After:
+
+~~~~text
+That interval represents effect-parameter uncertainty, not total model uncertainty. Transfer from institutional nursing-home residents to community-dwelling older residents may be affected by differences in frailty, care provision, housing, cooling access and climatic acclimatization. The source uses a local heat-index threshold, whereas this study uses station-calibrated air-temperature scenarios; housing-related cooling loss and repeated exposure over a 30-day displacement period are not directly observed in the source study. The direction and magnitude of transfer bias remain unquantified, and the reported confidence interval does not cover these population, exposure or duration mismatches.
+~~~~
+
+- Minimal tracked fragments:
+  1. `insert`
+     - Before: ""
+     - After: " Transfer from institutional nursing-home residents to community-dwelling older residents may be affected by differences in frailty, care provision, housing, cooling access and climatic acclimatization. The source uses a local heat-index threshold, whereas this study uses station-calibrated air-temperature scenarios; housing-related cooling loss and repeated exposure over a 30-day displacement period are not directly observed in the source study. The direction and magnitude of transfer bias remain unquantified, and the reported confidence interval does not cover these population, exposure or duration mismatches."
+
