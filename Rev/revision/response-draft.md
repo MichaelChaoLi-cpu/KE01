@@ -265,10 +265,15 @@ scenario would improve robustness.
 
 
 **Response:**
-[Response to be completed.]
+Thank you for highlighting this external-validity limitation. Sections 2.7 and 4.5 now explicitly distinguish the transferred Ontario nursing-home contrast from a locally estimated effect and describe differences in frailty, care, housing, cooling access, climatic acclimatization and exposure definition. Section 4.4 adds comparative evidence including Japanese populations, without treating those studies as validation of the numerical contrast. The mortality analysis remains an illustrative planning scenario. In addition to the source-effect endpoint scenarios, we add a hypothetical no-increment benchmark that retains all other inputs. This benchmark makes dependence on the transferred effect explicit; it is not a Japanese effect estimate, a confidence bound or evidence that the main result is robust to the absence of that effect. Section 2.7 states:
 
-"[Exact revised manuscript text]"
-(Page XX, Lines XX–XX)
+"Separately, we evaluate a hypothetical no-increment benchmark by setting the no-cooling relative odds ratio to 1 while retaining the effective-cooling heat multiplier of 1.03 and all other inputs. This benchmark tests the algebraic boundary of the transferred contrast, not a locally estimated effect or a confidence bound."
+(Page 16, Lines 333–336)
+
+Section 3.5 reports the result and its interpretation:
+
+"In the hypothetical no-increment benchmark, both cooling states have identical modeled risks in every municipality, yielding a 0% relative increase and zero incremental expected deaths, while total expected mortality remains positive. This algebraic result shows dependence on the assumed cooling contrast; it does not validate the transferred effect or establish robustness to its absence."
+(Page 23, Lines 481–485)
 
 ## Comment 7
 (7) The Low/Central/High engineering bundles are central to the reported 21.85–48.52 kW and

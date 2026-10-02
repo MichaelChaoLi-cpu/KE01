@@ -2020,3 +2020,79 @@ That interval represents effect-parameter uncertainty, not total model uncertain
      - Before: ""
      - After: " Transfer from institutional nursing-home residents to community-dwelling older residents may be affected by differences in frailty, care provision, housing, cooling access and climatic acclimatization. The source uses a local heat-index threshold, whereas this study uses station-calibrated air-temperature scenarios; housing-related cooling loss and repeated exposure over a 30-day displacement period are not directly observed in the source study. The direction and magnitude of transfer bias remain unquantified, and the reported confidence interval does not cover these population, exposure or duration mismatches."
 
+## reviewer-1/comment-6
+
+### part-01
+
+- Location: Section 2.8, body paragraph 61, final sentence of health-effect sensitivity.
+- Reason: define the requested alternative scenario distinctly from source confidence endpoints.
+- Kila decisions: KILA-D-20261003-003, KILA-D-20261003-004
+- Mode: `replace`
+- Revises prior parts: none
+- Timestamp: 2026-10-02T23:28:38Z
+- Author: Kila
+- Markup SHA-256 before: `89011af551143121ca6fcda9c3b94f701c2424120105843bea74f659375527c7`
+- Markup SHA-256 after: `83700fbf9cc53996f9e46ab48aab40d7ebc03f36569a1075b018e6413bb84638`
+- Revision IDs: `1014`
+- Backup: `Rev/revision/.kila-backups/KE01.rev.markup.20261003T082838833243.reviewer-1-comment-6.part-01.docx`
+- Paragraph properties preserved: `true`
+- Run style source SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Formula verification: not applicable
+- Endnote hyperlinks preserved: `true`
+- Endnote hyperlink count: `0`
+- Endnote hyperlink XML SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Endnote relationships SHA-256: `absent`
+- Before:
+
+~~~~text
+The resulting lower and upper burden values therefore capture effect-parameter uncertainty alone.
+~~~~
+
+- After:
+
+~~~~text
+The resulting lower and upper burden values therefore capture effect-parameter uncertainty alone. Separately, we evaluate a hypothetical no-increment benchmark by setting the no-cooling relative odds ratio to 1 while retaining the effective-cooling heat multiplier of 1.03 and all other inputs. This benchmark tests the algebraic boundary of the transferred contrast, not a locally estimated effect or a confidence bound.
+~~~~
+
+- Minimal tracked fragments:
+  1. `insert`
+     - Before: ""
+     - After: " Separately, we evaluate a hypothetical no-increment benchmark by setting the no-cooling relative odds ratio to 1 while retaining the effective-cooling heat multiplier of 1.03 and all other inputs. This benchmark tests the algebraic boundary of the transferred contrast, not a locally estimated effect or a confidence bound."
+
+### part-02
+
+- Location: Section 3.5, body paragraph 83, immediately after the primary and source-endpoint relative results.
+- Reason: report the alternative result without equating zero excess with zero mortality or presenting a tautology as validation.
+- Kila decisions: KILA-D-20261003-003, KILA-D-20261003-004
+- Mode: `replace`
+- Revises prior parts: none
+- Timestamp: 2026-10-02T23:28:57Z
+- Author: Kila
+- Markup SHA-256 before: `83700fbf9cc53996f9e46ab48aab40d7ebc03f36569a1075b018e6413bb84638`
+- Markup SHA-256 after: `7426e68fd5dc1839ef709a6e67cd9379ff01dffba5db883332c414b418155205`
+- Revision IDs: `1015`
+- Backup: `Rev/revision/.kila-backups/KE01.rev.markup.20261003T082857156343.reviewer-1-comment-6.part-02.docx`
+- Paragraph properties preserved: `true`
+- Run style source SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Formula verification: not applicable
+- Endnote hyperlinks preserved: `true`
+- Endnote hyperlink count: `0`
+- Endnote hyperlink XML SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Endnote relationships SHA-256: `absent`
+- Before:
+
+~~~~text
+These contrasts compare cooling states under the same outdoor conditions.
+~~~~
+
+- After:
+
+~~~~text
+These contrasts compare cooling states under the same outdoor conditions. In the hypothetical no-increment benchmark, both cooling states have identical modeled risks in every municipality, yielding a 0% relative increase and zero incremental expected deaths, while total expected mortality remains positive. This algebraic result shows dependence on the assumed cooling contrast; it does not validate the transferred effect or establish robustness to its absence.
+~~~~
+
+- Minimal tracked fragments:
+  1. `insert`
+     - Before: ""
+     - After: " In the hypothetical no-increment benchmark, both cooling states have identical modeled risks in every municipality, yielding a 0% relative increase and zero incremental expected deaths, while total expected mortality remains positive. This algebraic result shows dependence on the assumed cooling contrast; it does not validate the transferred effect or establish robustness to its absence."
+
