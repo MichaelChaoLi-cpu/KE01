@@ -250,10 +250,16 @@ depends on this parameterization.
 
 
 **Response:**
-[Response to be completed.]
+Thank you for this comment. Section 2.7 now identifies 1.03 as the heat-associated mortality odds ratio in air-conditioned nursing homes reported by Katz et al. (2026), explains its relationship to the relative odds ratio of 1.08, and defines a conditional one-factor sensitivity analysis; Section 3.5 reports its numerical results. The revised central estimate is 5.31%, rather than the earlier 5.34%, and varies from 5.22% to 5.38% over the tested multiplier values. This limited sensitivity does not resolve uncertainty about transferring the effect to displaced older residents.
 
-"[Exact revised manuscript text]"
-(Page XX, Lines XX–XX)
+"The effective-cooling multiplier of 1.03 is the heat-associated mortality odds ratio among air-conditioned nursing homes in the same study (95% confidence interval, 0.98–1.07), not an estimated cooling-loss effect. Multiplying it by the relative odds ratio of 1.08 gives a no-cooling heat multiplier of 1.1124, consistent with the study's rounded estimate of 1.11."
+(Pages 14–15, Lines 293–297)
+
+"In an additional one-factor diagnostic, we set the effective-cooling heat multiplier to 0.98, 1.00, 1.03 and 1.07 while fixing the relative odds ratio at 1.08 and all other inputs. The endpoints are the source interval for the effective-cooling multiplier, not joint confidence limits; covariance between effect estimates is not modeled. This diagnostic changes both cooling-state heat multipliers while retaining their odds-ratio contrast."
+(Page 16, Lines 333–337)
+
+"Across effective-cooling multipliers of 0.98, 1.00, 1.03 and 1.07, the aggregate relative burden increases are 5.22%, 5.26%, 5.31% and 5.38%, respectively, and incremental expected deaths range from 0.03392 to 0.03703. The central contrast is therefore only modestly sensitive to this multiplier over the tested range, conditional on the fixed relative odds ratio and other model inputs; this does not establish transferability to displaced older residents."
+(Pages 23–24, Lines 499–504)
 
 ## Comment 6
 (6) Sections 2.7 and 4.5: The health-effect estimate is transferred from Ontario nursing homes to the

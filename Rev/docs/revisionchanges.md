@@ -2096,3 +2096,116 @@ These contrasts compare cooling states under the same outdoor conditions. In the
      - Before: ""
      - After: " In the hypothetical no-increment benchmark, both cooling states have identical modeled risks in every municipality, yielding a 0% relative increase and zero incremental expected deaths, while total expected mortality remains positive. This algebraic result shows dependence on the assumed cooling contrast; it does not validate the transferred effect or establish robustness to its absence."
 
+## reviewer-1/comment-5
+
+### part-01
+
+- Location: Section 2.7, paragraph beginning “We apply effect estimates on the odds scale”.
+- Reason: identify the empirical source and distinguish the two effect parameters without altering Equation 9 or implying local calibration.
+- Kila decisions: KILA-D-20261003-006
+- Mode: `replace`
+- Revises prior parts: none
+- Timestamp: 2026-10-02T23:40:37Z
+- Author: Kila
+- Markup SHA-256 before: `7426e68fd5dc1839ef709a6e67cd9379ff01dffba5db883332c414b418155205`
+- Markup SHA-256 after: `3860095a88787c0cf09e08f8b596d9c99ef3d3dd2f81247530ef7a9fa7057367`
+- Revision IDs: `1016`
+- Backup: `Rev/revision/.kila-backups/KE01.rev.markup.20261003T084037315375.reviewer-1-comment-5.part-01.docx`
+- Paragraph properties preserved: `true`
+- Run style source SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Formula verification: not applicable
+- Endnote hyperlinks preserved: `true`
+- Endnote hyperlink count: `0`
+- Endnote hyperlink XML SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Endnote relationships SHA-256: `absent`
+- Before:
+
+~~~~text
+Outdoor heat and the municipality baseline remain fixed across these states.
+~~~~
+
+- After:
+
+~~~~text
+The effective-cooling multiplier of 1.03 is the heat-associated mortality odds ratio among air-conditioned nursing homes in the same study (95% confidence interval, 0.98–1.07), not an estimated cooling-loss effect. Multiplying it by the relative odds ratio of 1.08 gives a no-cooling heat multiplier of 1.1124, consistent with the study's rounded estimate of 1.11. Outdoor heat and the municipality baseline remain fixed across these states.
+~~~~
+
+- Minimal tracked fragments:
+  1. `insert`
+     - Before: ""
+     - After: "The effective-cooling multiplier of 1.03 is the heat-associated mortality odds ratio among air-conditioned nursing homes in the same study (95% confidence interval, 0.98–1.07), not an estimated cooling-loss effect. Multiplying it by the relative odds ratio of 1.08 gives a no-cooling heat multiplier of 1.1124, consistent with the study's rounded estimate of 1.11. "
+
+### part-02
+
+- Location: Section 2.7, final paragraph.
+- Reason: disclose the completed diagnostic without mislabeling it as joint uncertainty or changing the existing primary sensitivity.
+- Kila decisions: KILA-D-20261003-006
+- Mode: `replace`
+- Revises prior parts: none
+- Timestamp: 2026-10-02T23:40:49Z
+- Author: Kila
+- Markup SHA-256 before: `3860095a88787c0cf09e08f8b596d9c99ef3d3dd2f81247530ef7a9fa7057367`
+- Markup SHA-256 after: `dcae9f3797c4b4def0a0b61f634ef263ba21d60045584147363f62076e4d8cc6`
+- Revision IDs: `1017, 1018`
+- Backup: `Rev/revision/.kila-backups/KE01.rev.markup.20261003T084049815545.reviewer-1-comment-5.part-02.docx`
+- Paragraph properties preserved: `true`
+- Run style source SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Formula verification: not applicable
+- Endnote hyperlinks preserved: `true`
+- Endnote hyperlink count: `0`
+- Endnote hyperlink XML SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Endnote relationships SHA-256: `absent`
+- Before:
+
+~~~~text
+Health-effect sensitivity varies only the transferred no-cooling effect across its reported interval.
+~~~~
+
+- After:
+
+~~~~text
+In an additional one-factor diagnostic, we set the effective-cooling heat multiplier to 0.98, 1.00, 1.03 and 1.07 while fixing the relative odds ratio at 1.08 and all other inputs. The endpoints are the source interval for the effective-cooling multiplier, not joint confidence limits; covariance between effect estimates is not modeled. This diagnostic changes both cooling-state heat multipliers while retaining their odds-ratio contrast. The primary health-effect sensitivity varies only the transferred no-cooling effect across its reported interval.
+~~~~
+
+- Minimal tracked fragments:
+  1. `replace`
+     - Before: "Health-effect"
+     - After: "In an additional one-factor diagnostic, we set the effective-cooling heat multiplier to 0.98, 1.00, 1.03 and 1.07 while fixing the relative odds ratio at 1.08 and all other inputs. The endpoints are the source interval for the effective-cooling multiplier, not joint confidence limits; covariance between effect estimates is not modeled. This diagnostic changes both cooling-state heat multipliers while retaining their odds-ratio contrast. The primary health-effect"
+
+### part-03
+
+- Location: Section 3.5, paragraph beginning “The fixed-weather health scenario varies geographically”.
+- Reason: answer sensitivity of the central estimate using current rather than superseded 5.34% results.
+- Kila decisions: KILA-D-20261003-006
+- Mode: `replace`
+- Revises prior parts: none
+- Timestamp: 2026-10-02T23:41:01Z
+- Author: Kila
+- Markup SHA-256 before: `dcae9f3797c4b4def0a0b61f634ef263ba21d60045584147363f62076e4d8cc6`
+- Markup SHA-256 after: `b9c1a82d2dd84d017244a3c03f98e5c623ffcdb50a54e4d705773cfae1f3d00e`
+- Revision IDs: `1019`
+- Backup: `Rev/revision/.kila-backups/KE01.rev.markup.20261003T084102106086.reviewer-1-comment-5.part-03.docx`
+- Paragraph properties preserved: `true`
+- Run style source SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Formula verification: not applicable
+- Endnote hyperlinks preserved: `true`
+- Endnote hyperlink count: `0`
+- Endnote hyperlink XML SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Endnote relationships SHA-256: `absent`
+- Before:
+
+~~~~text
+Summed across municipalities, the central expected-death planning magnitude is 0.03565.
+~~~~
+
+- After:
+
+~~~~text
+Summed across municipalities, the central expected-death planning magnitude is 0.03565. Across effective-cooling multipliers of 0.98, 1.00, 1.03 and 1.07, the aggregate relative burden increases are 5.22%, 5.26%, 5.31% and 5.38%, respectively, and incremental expected deaths range from 0.03392 to 0.03703. The central contrast is therefore only modestly sensitive to this multiplier over the tested range, conditional on the fixed relative odds ratio and other model inputs; this does not establish transferability to displaced older residents.
+~~~~
+
+- Minimal tracked fragments:
+  1. `insert`
+     - Before: ""
+     - After: " Across effective-cooling multipliers of 0.98, 1.00, 1.03 and 1.07, the aggregate relative burden increases are 5.22%, 5.26%, 5.31% and 5.38%, respectively, and incremental expected deaths range from 0.03392 to 0.03703. The central contrast is therefore only modestly sensitive to this multiplier over the tested range, conditional on the fixed relative odds ratio and other model inputs; this does not establish transferability to displaced older residents."
+
