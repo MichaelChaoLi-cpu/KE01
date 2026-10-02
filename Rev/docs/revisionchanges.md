@@ -1778,3 +1778,131 @@ The small absolute magnitude and the larger relative contrast are compatible bec
   1. `insert`
      - Before: ""
      - After: " As an aggregation check, we calculate both cooling-state risks separately for each of the five annual interpolated heat-day scenarios and then average the risks. Compared with using mean heat days, the maximum municipal difference in incremental risk is 0.001059 per 100,000, with no change in municipal incremental-risk rankings. This supports the mean-day approximation under the specified baseline, effect parameters and missing-day treatment, but does not validate weather prediction or the transferred health effect."
+
+## reviewer-3/comment-9
+
+### part-01
+
+- Location: Section 2.2, body paragraph 19 beginning “The final stages combine”.
+- Reason: distinguish official numerator data from the study-constructed rate and make its temporal denominator explicit.
+- Kila decisions: KILA-D-20261002-011, KILA-D-20261002-035
+- Mode: `replace`
+- Revises prior parts: none
+- Timestamp: 2026-10-02T13:16:37Z
+- Author: Kila
+- Markup SHA-256 before: `1b0926453462d1c3f94470362cd5369ae327599125ade72221d159309ea99f32`
+- Markup SHA-256 after: `3bdfaad30194025ccb8637d46584f5d75115466a905e1e2c6871fdf710b19ab4`
+- Revision IDs: `934, 935, 936, 937, 938, 939, 940, 941`
+- Backup: `Rev/revision/.kila-backups/KE01.rev.markup.20261002T221637451504.reviewer-3-comment-9.part-01.docx`
+- Paragraph properties preserved: `true`
+- Run style source SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Formula verification: not applicable
+- Endnote hyperlinks preserved: `true`
+- Endnote hyperlink count: `0`
+- Endnote hyperlink XML SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Endnote relationships SHA-256: `absent`
+- Before:
+
+~~~~text
+The final stages combine official municipality mortality baselines, transparent engineering bundles, and a transferred cooling-effect estimate. The mortality baseline pools age-65-or-older all-cause deaths over five years against a fixed census denominator.
+~~~~
+
+- After:
+
+~~~~text
+The final stages combine municipality mortality references constructed from official death counts, transparent engineering bundles, and a transferred cooling-effect estimate. The mortality baseline pools age-65-or-older all-cause deaths over 2020–2024 and divides them by the fixed 2020 census population aged 65 or older multiplied by five years. This denominator approximates person-time rather than tracking annual population change.
+~~~~
+
+- Minimal tracked fragments:
+  1. `delete`
+     - Before: "official "
+     - After: ""
+  2. `replace`
+     - Before: "baselines"
+     - After: "references constructed from official death counts"
+  3. `insert`
+     - Before: ""
+     - After: "2020–2024 and divides them by the fixed 2020 census population aged 65 or older multiplied by "
+  4. `insert`
+     - Before: ""
+     - After: "."
+  5. `replace`
+     - Before: "against a fixed census"
+     - After: "This"
+  6. `insert`
+     - Before: ""
+     - After: " approximates person-time rather than tracking annual population change"
+
+### part-02
+
+- Location: Section 2.7, body paragraph 49 immediately before Equation 8.
+- Reason: explain what conversion does and does not establish; a common baseline does not itself provide seasonal calibration.
+- Kila decisions: KILA-D-20261002-011, KILA-D-20261002-035
+- Mode: `replace`
+- Revises prior parts: none
+- Timestamp: 2026-10-02T13:16:56Z
+- Author: Kila
+- Markup SHA-256 before: `3bdfaad30194025ccb8637d46584f5d75115466a905e1e2c6871fdf710b19ab4`
+- Markup SHA-256 after: `83554b1589e2402390b02ab6f0b62c9795b16e5225bbabfeea0a7a989f0f80de`
+- Revision IDs: `942`
+- Backup: `Rev/revision/.kila-backups/KE01.rev.markup.20261002T221656882140.reviewer-3-comment-9.part-02.docx`
+- Paragraph properties preserved: `true`
+- Run style source SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Formula verification: not applicable
+- Endnote hyperlinks preserved: `true`
+- Endnote hyperlink count: `0`
+- Endnote hyperlink XML SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Endnote relationships SHA-256: `absent`
+- Before:
+
+~~~~text
+This baseline anchors both cooling states, so differences arise only on high-heat days.
+~~~~
+
+- After:
+
+~~~~text
+This baseline anchors both cooling states, so differences arise only on high-heat days. Dividing the annual rate by 100,000 and 365.25 supplies a small-probability approximation to an average daily risk, not an observed summer or non-heat-day probability. We use it as a common reference for the fixed-weather cooling contrast; assigning it to ordinary days is a modeling assumption because the annual rate already averages across seasons and weather conditions.
+~~~~
+
+- Minimal tracked fragments:
+  1. `insert`
+     - Before: ""
+     - After: " Dividing the annual rate by 100,000 and 365.25 supplies a small-probability approximation to an average daily risk, not an observed summer or non-heat-day probability. We use it as a common reference for the fixed-weather cooling contrast; assigning it to ordinary days is a modeling assumption because the annual rate already averages across seasons and weather conditions."
+
+### part-03
+
+- Location: Section 4.5, body paragraph 99, transition from housing uncertainty to heat and health uncertainty.
+- Reason: explain adequacy only for the stated scenario purpose, identify unresolved population and seasonal mismatches, and avoid claiming robustness that has not been tested.
+- Kila decisions: KILA-D-20261002-011, KILA-D-20261002-035, KILA-D-20261002-036
+- Mode: `replace`
+- Revises prior parts: none
+- Timestamp: 2026-10-02T13:27:38Z
+- Author: Kila
+- Markup SHA-256 before: `83554b1589e2402390b02ab6f0b62c9795b16e5225bbabfeea0a7a989f0f80de`
+- Markup SHA-256 after: `a83981f6df2fe159bff676aba52f2d582b1e235519ce314b7a115ebd409d6e80`
+- Revision IDs: `943`
+- Backup: `Rev/revision/.kila-backups/KE01.rev.markup.20261002T222738217560.reviewer-3-comment-9.part-03.docx`
+- Paragraph properties preserved: `true`
+- Run style source SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Formula verification: not applicable
+- Endnote hyperlinks preserved: `true`
+- Endnote hyperlink count: `0`
+- Endnote hyperlink XML SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Endnote relationships SHA-256: `absent`
+- Before:
+
+~~~~text
+Heat and health components add separate transfer uncertainties.
+~~~~
+
+- After:
+
+~~~~text
+Heat and health components add separate transfer uncertainties. The annual mortality reference supports an illustrative common-baseline comparison but does not establish the absolute mortality level for the summer window. The source death counts concern Japanese nationals, whereas the census denominator includes all residents, and both include institutional residents rather than isolating the target general-household population. Holding the 2020 population fixed also omits subsequent demographic change. These mismatches can affect absolute incremental risks and expected-death magnitudes; sharing a baseline across cooling states does not remove them or guarantee unchanged spatial rankings. A matched seasonal baseline by age, municipality and residence setting would be needed to calibrate those quantities more directly; no empirical seasonal correction is applied here.
+~~~~
+
+- Minimal tracked fragments:
+  1. `insert`
+     - Before: ""
+     - After: " The annual mortality reference supports an illustrative common-baseline comparison but does not establish the absolute mortality level for the summer window. The source death counts concern Japanese nationals, whereas the census denominator includes all residents, and both include institutional residents rather than isolating the target general-household population. Holding the 2020 population fixed also omits subsequent demographic change. These mismatches can affect absolute incremental risks and expected-death magnitudes; sharing a baseline across cooling states does not remove them or guarantee unchanged spatial rankings. A matched seasonal baseline by age, municipality and residence setting would be needed to calibrate those quantities more directly; no empirical seasonal correction is applied here."

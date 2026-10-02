@@ -573,10 +573,24 @@ implications of this step and the adequacy of the baseline be discussed. (Sec. 2
 
 
 **Response:**
-[Response to be completed.]
+Thank you for this comment. Sections 2.2 and 2.7 now distinguish the constructed annual mortality reference from an observed summer baseline and explain the approximation in Equation 8. The reference pools official age-65-or-older death counts over 2020–2024 against five times the fixed 2020 census population. Dividing the annual rate by 100,000 and 365.25 supplies an average daily small-probability approximation. Applying that value to ordinary days is an explicit assumption, since annual mortality already averages across seasons and weather conditions.
 
-"[Exact revised manuscript text]"
-(Page XX, Lines XX–XX)
+We retain this common reference for an illustrative fixed-weather comparison, not as a calibrated summer mortality level. Section 4.5 now explains the nationality, residence-setting and fixed-population mismatches, their implications for absolute incremental risks and expected-death magnitudes, and the need for a matched seasonal baseline. Sharing a baseline across cooling states does not eliminate those limitations or establish ranking robustness. We do not apply an unsupported seasonal correction or claim a new baseline-sensitivity result.
+
+Section 2.2 specifies the source and denominator:
+
+"The final stages combine municipality mortality references constructed from official death counts, transparent engineering bundles, and a transferred cooling-effect estimate. The mortality baseline pools age-65-or-older all-cause deaths over 2020–2024 and divides them by the fixed 2020 census population aged 65 or older multiplied by five years. This denominator approximates person-time rather than tracking annual population change."
+(Page 7, Lines 119–124)
+
+Section 2.7 clarifies the daily conversion:
+
+"Dividing the annual rate by 100,000 and 365.25 supplies a small-probability approximation to an average daily risk, not an observed summer or non-heat-day probability. We use it as a common reference for the fixed-weather cooling contrast; assigning it to ordinary days is a modeling assumption because the annual rate already averages across seasons and weather conditions."
+(Page 14, Lines 283–287)
+
+Section 4.5 states the remaining limitations:
+
+"The annual mortality reference supports an illustrative common-baseline comparison but does not establish the absolute mortality level for the summer window. The source death counts concern Japanese nationals, whereas the census denominator includes all residents, and both include institutional residents rather than isolating the target general-household population. Holding the 2020 population fixed also omits subsequent demographic change. These mismatches can affect absolute incremental risks and expected-death magnitudes; sharing a baseline across cooling states does not remove them or guarantee unchanged spatial rankings. A matched seasonal baseline by age, municipality and residence setting would be needed to calibrate those quantities more directly; no empirical seasonal correction is applied here."
+(Page 27, Lines 574–583)
 
 ## Comment 10
 m4 – The analysis is constrained to the official snapshot available as of August 1, 2026. Given the progressively updated
