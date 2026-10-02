@@ -115,3 +115,199 @@ These surfaces do not estimate indoor temperature or forecast realized event-mon
      - Before: ""
      - After: " Improved station coverage does not by itself establish accuracy at unobserved peripheral locations, and geographic coverage does not eliminate extrapolation beyond sampled land-surface temperatures. Cross-validation scores are conditional on model selection using the same station sample, rather than independent validation, and the uncertainty surface is not a calibrated prediction interval."
 
+## reviewer-3/comment-10
+
+### part-01
+
+- Location: Section 2.1, paragraph beginning “The study covers Kumamoto Prefecture”.
+- Reason: Explain why the main cutoff remains fixed without claiming every input was available on the event date.
+- Kila decisions: KILA-D-20261002-016
+- Mode: `replace`
+- Revises prior parts: none
+- Timestamp: 2026-10-02T03:53:22Z
+- Author: Kila
+- Markup SHA-256 before: `1ea47c4023b98db9cb7e607e4d9f1f4065ed70364d63f923df1aed19e63bd14a`
+- Markup SHA-256 after: `e95b7395587d7b6814a7202a1490fe55862eb5a50b189d5c4415c49a6a679e05`
+- Revision IDs: `4`
+- Backup: `Rev/revision/.kila-backups/KE01.rev.markup.20261002T125322918651.reviewer-3-comment-10.part-01.docx`
+- Paragraph properties preserved: `true`
+- Run style source SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Formula verification: not applicable
+- Endnote hyperlinks preserved: `true`
+- Endnote hyperlink count: `0`
+- Endnote hyperlink XML SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Endnote relationships SHA-256: `absent`
+- Before:
+
+~~~~text
+Housing damage is constrained by the official snapshot available at 17:00 JST on August 1, and observed event heat extends through August 3.
+~~~~
+
+- After:
+
+~~~~text
+Housing damage is constrained by the official snapshot available at 17:00 JST on August 1, and observed event heat extends through August 3. We retain this early housing-damage cutoff for the main analysis and use later reported totals only in a separate retrospective sensitivity test; they are not treated as information available at the early cutoff.
+~~~~
+
+- Minimal tracked fragments:
+  1. `insert`
+     - Before: ""
+     - After: " We retain this early housing-damage cutoff for the main analysis and use later reported totals only in a separate retrospective sensitivity test; they are not treated as information available at the early cutoff."
+
+### part-02
+
+- Location: Section 2.2, paragraph beginning “The baseline combines”.
+- Reason: Identify the newer official evidence and avoid presenting early counts as the latest available.
+- Kila decisions: KILA-D-20261002-016
+- Mode: `replace`
+- Revises prior parts: none
+- Timestamp: 2026-10-02T04:30:27Z
+- Author: Kila
+- Markup SHA-256 before: `e95b7395587d7b6814a7202a1490fe55862eb5a50b189d5c4415c49a6a679e05`
+- Markup SHA-256 after: `c43d52f112becdaad84e9f85c7a4fe40a09143da38cb2e7b4b80a004bccdf9a9`
+- Revision IDs: `5, 6, 7, 8, 9, 10, 11`
+- Backup: `Rev/revision/.kila-backups/KE01.rev.markup.20261002T133028009540.reviewer-3-comment-10.part-02.docx`
+- Paragraph properties preserved: `true`
+- Run style source SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Formula verification: not applicable
+- Endnote hyperlinks preserved: `true`
+- Endnote hyperlink count: `0`
+- Endnote hyperlink XML SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Endnote relationships SHA-256: `absent`
+- Before:
+
+~~~~text
+The latest usable prefecture snapshot reports 181 fully collapsed and 245 half-collapsed residences, which constrain rather than locate the modeled loss.
+~~~~
+
+- After:
+
+~~~~text
+The August 1 prefecture snapshot reports 181 fully collapsed and 245 half-collapsed residential buildings, which constrain rather than locate the modeled loss. FDMA Report 65, dated September 24, 2026, at 17:00 JST, reports 2,270 fully collapsed and 6,357 half-collapsed residential buildings in Kumamoto Prefecture (https://www.fdma.go.jp/disaster/info/items/20260728kumamotojishin65.pdf). Both snapshots count buildings rather than households or people, and the later figures remain provisional.
+~~~~
+
+- Minimal tracked fragments:
+  1. `replace`
+     - Before: "latest"
+     - After: "August"
+  2. `replace`
+     - Before: "usable"
+     - After: "1"
+  3. `replace`
+     - Before: "residences"
+     - After: "residential buildings"
+  4. `insert`
+     - Before: ""
+     - After: " FDMA Report 65, dated September 24, 2026, at 17:00 JST, reports 2,270 fully collapsed and 6,357 half-collapsed residential buildings in Kumamoto Prefecture (https://www.fdma.go.jp/disaster/info/items/20260728kumamotojishin65.pdf). Both snapshots count buildings rather than households or people, and the later figures remain provisional."
+
+### part-03
+
+- Location: Section 2.8, paragraph beginning “The framework contains four distinct sensitivity classes”.
+- Reason: Specify exactly what the later-snapshot comparison changes and holds fixed.
+- Kila decisions: KILA-D-20261002-016
+- Mode: `replace`
+- Revises prior parts: none
+- Timestamp: 2026-10-02T04:30:39Z
+- Author: Kila
+- Markup SHA-256 before: `c43d52f112becdaad84e9f85c7a4fe40a09143da38cb2e7b4b80a004bccdf9a9`
+- Markup SHA-256 after: `03515e1f75abdd64e0210ab09342a4e1d3adfa43dbdff57f13508f66d154ecee`
+- Revision IDs: `12`
+- Backup: `Rev/revision/.kila-backups/KE01.rev.markup.20261002T133039134316.reviewer-3-comment-10.part-03.docx`
+- Paragraph properties preserved: `true`
+- Run style source SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Formula verification: not applicable
+- Endnote hyperlinks preserved: `true`
+- Endnote hyperlink count: `0`
+- Endnote hyperlink XML SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Endnote relationships SHA-256: `absent`
+- Before:
+
+~~~~text
+Keeping them separate makes each planning range traceable to its assumption.
+~~~~
+
+- After:
+
+~~~~text
+Keeping them separate makes each planning range traceable to its assumption. A separate retrospective snapshot test substitutes the September 24 full- and half-collapse totals while retaining the main spatial weights, population inputs, half-collapse weight of 0.5, and downstream assumptions. It tests sensitivity to the reported prefecture total, not changes in the observed geography of damage.
+~~~~
+
+- Minimal tracked fragments:
+  1. `insert`
+     - Before: ""
+     - After: " A separate retrospective snapshot test substitutes the September 24 full- and half-collapse totals while retaining the main spatial weights, population inputs, half-collapse weight of 0.5, and downstream assumptions. It tests sensitivity to the reported prefecture total, not changes in the observed geography of damage."
+
+### part-04
+
+- Location: Section 3.3, paragraph beginning “The total-constrained allocation”.
+- Reason: Quantify substantial magnitude sensitivity and qualify the mechanically unchanged ranking.
+- Kila decisions: KILA-D-20261002-016
+- Mode: `replace`
+- Revises prior parts: none
+- Timestamp: 2026-10-02T04:30:50Z
+- Author: Kila
+- Markup SHA-256 before: `03515e1f75abdd64e0210ab09342a4e1d3adfa43dbdff57f13508f66d154ecee`
+- Markup SHA-256 after: `e7f59d7aeaec0ca1544ea810b5fd035499a19ed4e708e05c29ada304c1bf03ed`
+- Revision IDs: `13`
+- Backup: `Rev/revision/.kila-backups/KE01.rev.markup.20261002T133050223731.reviewer-3-comment-10.part-04.docx`
+- Paragraph properties preserved: `true`
+- Run style source SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Formula verification: not applicable
+- Endnote hyperlinks preserved: `true`
+- Endnote hyperlink count: `0`
+- Endnote hyperlink XML SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Endnote relationships SHA-256: `absent`
+- Before:
+
+~~~~text
+Figure 5 connects geographically bounded official evidence to a central total of 303.5 functionally lost residences and the associated older-person exposure.
+~~~~
+
+- After:
+
+~~~~text
+Figure 5 connects geographically bounded official evidence to a central total of 303.5 functionally lost residences and the associated older-person exposure. In the total-only retrospective test, the later snapshot raises this constraint to 5,448.5, or 17.95 times the early value. Municipal rankings remain unchanged under fixed spatial weights and nonbinding household caps; this is a consequence of the test design, not evidence that actual territorial damage priorities remain unchanged.
+~~~~
+
+- Minimal tracked fragments:
+  1. `insert`
+     - Before: ""
+     - After: " In the total-only retrospective test, the later snapshot raises this constraint to 5,448.5, or 17.95 times the early value. Municipal rankings remain unchanged under fixed spatial weights and nonbinding household caps; this is a consequence of the test design, not evidence that actual territorial damage priorities remain unchanged."
+
+### part-05
+
+- Location: Section 4.5, paragraph beginning “Housing-loss geography remains”.
+- Reason: Explain temporal information limits without attributing the full increase to new damage or claiming geographic validation.
+- Kila decisions: KILA-D-20261002-016
+- Mode: `replace`
+- Revises prior parts: none
+- Timestamp: 2026-10-02T04:31:00Z
+- Author: Kila
+- Markup SHA-256 before: `e7f59d7aeaec0ca1544ea810b5fd035499a19ed4e708e05c29ada304c1bf03ed`
+- Markup SHA-256 after: `3ea7fbe58f85c8f666f0ee8051d3e45a87f2b49153a946f68d5503386d7b76e6`
+- Revision IDs: `14`
+- Backup: `Rev/revision/.kila-backups/KE01.rev.markup.20261002T133100481088.reviewer-3-comment-10.part-05.docx`
+- Paragraph properties preserved: `true`
+- Run style source SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Formula verification: not applicable
+- Endnote hyperlinks preserved: `true`
+- Endnote hyperlink count: `0`
+- Endnote hyperlink XML SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Endnote relationships SHA-256: `absent`
+- Before:
+
+~~~~text
+Housing-loss geography remains the largest structural uncertainty.
+~~~~
+
+- After:
+
+~~~~text
+Housing-loss geography remains the largest structural uncertainty. The early damage snapshot also limits the magnitude of estimated need. Later reported totals can reflect delayed assessment and classification changes as well as additional damage, so their increase cannot be interpreted solely as new physical losses after August 1. Operational priorities require updated local damage and displacement evidence rather than proportional rescaling of prefecture totals alone.
+~~~~
+
+- Minimal tracked fragments:
+  1. `insert`
+     - Before: ""
+     - After: " The early damage snapshot also limits the magnitude of estimated need. Later reported totals can reflect delayed assessment and classification changes as well as additional damage, so their increase cannot be interpreted solely as new physical losses after August 1. Operational priorities require updated local damage and displacement evidence rather than proportional rescaling of prefecture totals alone."
+

@@ -330,10 +330,22 @@ clarify whether their use could substantially change the results or the territor
 
 
 **Response:**
-[Response to be completed.]
+Thank you for this comment. Sections 2.1–2.2, 2.8, 3.3 and 4.5 now identify the later FDMA report and distinguish the early planning snapshot from a retrospective total-only sensitivity test. The later counts substantially increase the functional-loss constraint, while unchanged rankings under fixed spatial weights are a mechanical result rather than validation of territorial priorities. The revised text states:
 
-"[Exact revised manuscript text]"
-(Page XX, Lines XX–XX)
+"We retain this early housing-damage cutoff for the main analysis and use later reported totals only in a separate retrospective sensitivity test; they are not treated as information available at the early cutoff."
+(Page 5, Lines 79–82)
+
+"The August 1 prefecture snapshot reports 181 fully collapsed and 245 half-collapsed residential buildings, which constrain rather than locate the modeled loss. FDMA Report 65, dated September 24, 2026, at 17:00 JST, reports 2,270 fully collapsed and 6,357 half-collapsed residential buildings in Kumamoto Prefecture (https://www.fdma.go.jp/disaster/info/items/20260728kumamotojishin65.pdf). Both snapshots count buildings rather than households or people, and the later figures remain provisional."
+(Page 6, Lines 101–108)
+
+"A separate retrospective snapshot test substitutes the September 24 full- and half-collapse totals while retaining the main spatial weights, population inputs, half-collapse weight of 0.5, and downstream assumptions. It tests sensitivity to the reported prefecture total, not changes in the observed geography of damage."
+(Page 14, Lines 286–289)
+
+"In the total-only retrospective test, the later snapshot raises this constraint to 5,448.5, or 17.95 times the early value. Municipal rankings remain unchanged under fixed spatial weights and nonbinding household caps; this is a consequence of the test design, not evidence that actual territorial damage priorities remain unchanged."
+(Pages 16–17, Lines 337–340)
+
+"The early damage snapshot also limits the magnitude of estimated need. Later reported totals can reflect delayed assessment and classification changes as well as additional damage, so their increase cannot be interpreted solely as new physical losses after August 1. Operational priorities require updated local damage and displacement evidence rather than proportional rescaling of prefecture totals alone."
+(Page 22, Lines 454–459)
 
 ## Comment 11
 m5 – The Title and Abstract characterize the method as a spatial planning framework, whereas the outputs actually
