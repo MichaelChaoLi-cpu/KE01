@@ -265,10 +265,24 @@ interpretation.
 
 
 **Response:**
-[Response to be completed.]
+Thank you for this comment. Supplementary Table S1 now provides a compact parameter table with numerical values, units, sources and rationale for all five inputs. In Low/Central/High order, these are area 3.5/3.5/3.5 m²/person, cooling-load density 127/134/141 W/m², COP 4/3/2.5, diversity factor 0.8/0.9/1.0, and operating duration 12/18/24 h/day. Section 2.6 distinguishes the official minimum living-space proxy, case-derived load-density endpoints, the analyst midpoint and study-defined efficiency and operating assumptions. It also explains the limits of transferring the case benchmarks to emergency shelters.
 
-"[Exact revised manuscript text]"
-(Page XX, Lines XX–XX)
+The engineering parameters remain unchanged. The revised population allocation updates the demand estimates to 17.96–39.88 kW and 215.54–957.19 kWh/day, replacing the earlier values quoted in the comment. Section 3.4 and Figure 7 retain the distinction between modeled demand and verified supply shortages. Daily electricity is a constant-scenario-power calculation, not measured consumption.
+
+Section 2.6 states:
+
+"Table S1 reports all parameter values, units and sources. Area remains fixed at 3.5 m²/person as a minimum living-space proxy, not an elderly-specific cooled-floor-area standard. The load-density endpoints are insulation-dependent benchmarks from one gymnasium case, and 134 W/m² is their arithmetic midpoint. That case assumes 0.15 persons/m², whereas the adopted area implies approximately 0.286 persons/m²; the case also contains inconsistent gymnasium/office labeling. These differences limit transfer to emergency shelters. COP, diversity and operating hours are study-defined scenarios rather than government-prescribed values."
+(Page 13, Lines 255–262)
+
+Section 3.4 reports the updated requirements:
+
+"Peak power rises from 17.96 kW in the Low bundle to 28.427 kW in the Central bundle and 39.88 kW in the High bundle; corresponding daily electricity rises from 215.54 to 511.691 and 957.19 kWh."
+(Page 21, Lines 439–441)
+
+The Figure 7 note clarifies their interpretation:
+
+"All bundles use the same selected primary population; daily energy assumes constant scenario power over the specified operating hours, not measured consumption or a verified supply shortfall."
+(Page 34, Lines 627–629)
 
 ## Comment 8
 (8) The manuscript repeatedly and appropriately states that the outputs are planning quantities rather
