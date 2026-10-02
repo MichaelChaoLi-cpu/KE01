@@ -2209,3 +2209,41 @@ Summed across municipalities, the central expected-death planning magnitude is 0
      - Before: ""
      - After: " Across effective-cooling multipliers of 0.98, 1.00, 1.03 and 1.07, the aggregate relative burden increases are 5.22%, 5.26%, 5.31% and 5.38%, respectively, and incremental expected deaths range from 0.03392 to 0.03703. The central contrast is therefore only modestly sensitive to this multiplier over the tested range, conditional on the fixed relative odds ratio and other model inputs; this does not establish transferability to displaced older residents."
 
+## reviewer-3/comment-4
+
+### part-01
+
+- Location: Section 4.4, paragraph beginning The health comparison isolates the protective function of cooling.
+- Reason: Clarify the modeled estimate and conditional spatial drivers without changing results.
+- Kila decisions: KILA-D-20261003-009
+- Mode: `replace`
+- Revises prior parts: none
+- Timestamp: 2026-10-02T23:53:30Z
+- Author: Kila
+- Markup SHA-256 before: `b9c1a82d2dd84d017244a3c03f98e5c623ffcdb50a54e4d705773cfae1f3d00e`
+- Markup SHA-256 after: `168a6b94aa1f14918162108c3826de3f18094b7ae439e953bb1154d108009d17`
+- Revision IDs: `1020`
+- Backup: `Rev/revision/.kila-backups/KE01.rev.markup.20261003T085330379546.reviewer-3-comment-4.part-01.docx`
+- Paragraph properties preserved: `true`
+- Run style source SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Formula verification: not applicable
+- Endnote hyperlinks preserved: `true`
+- Endnote hyperlink count: `0`
+- Endnote hyperlink XML SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Endnote relationships SHA-256: `absent`
+- Before:
+
+~~~~text
+It represents the additional modeled burden that may accompany loss of indoor protection if suitable placement is not restored.
+~~~~
+
+- After:
+
+~~~~text
+It represents the additional modeled burden that may accompany loss of indoor protection if suitable placement is not restored. The prefecture-wide 5.31% increase is a model output obtained by applying transferred health parameters to local historical high-heat-day estimates and municipality mortality baselines, not evidence of an observed health effect in Kumamoto. Conditional on fixed effect parameters and a fixed baseline, differences in expected high-heat days determine the spatial variation in the relative contrast; expected-death magnitudes additionally depend on the modeled affected population.
+~~~~
+
+- Minimal tracked fragments:
+  1. `insert`
+     - Before: ""
+     - After: " The prefecture-wide 5.31% increase is a model output obtained by applying transferred health parameters to local historical high-heat-day estimates and municipality mortality baselines, not evidence of an observed health effect in Kumamoto. Conditional on fixed effect parameters and a fixed baseline, differences in expected high-heat days determine the spatial variation in the relative contrast; expected-death magnitudes additionally depend on the modeled affected population."

@@ -429,10 +429,10 @@ number of expected high-heat days.
 
 
 **Response:**
-[Response to be completed.]
+Thank you for this comment. Section 4.4 now explicitly identifies the prefecture-wide increase as a model output, not an observed health effect in Kumamoto, and explains its dependence on transferred parameters, mortality baselines and expected high-heat days. The current central estimate is 5.31%, rather than the earlier 5.34%. The revised text also distinguishes the relative contrast from expected-death magnitudes, which additionally depend on the modeled affected population:
 
-"[Exact revised manuscript text]"
-(Page XX, Lines XX–XX)
+"The prefecture-wide 5.31% increase is a model output obtained by applying transferred health parameters to local historical high-heat-day estimates and municipality mortality baselines, not evidence of an observed health effect in Kumamoto. Conditional on fixed effect parameters and a fixed baseline, differences in expected high-heat days determine the spatial variation in the relative contrast; expected-death magnitudes additionally depend on the modeled affected population."
+(Page 27, Lines 572–577)
 
 ## Comment 5
 M3 | Seismic hazard, local verification, and robustness of the central surface
