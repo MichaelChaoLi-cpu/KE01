@@ -56,10 +56,34 @@ minimum show how well alternative allocations reproduce the observed spatial pat
 
 
 **Response:**
-[Response to be completed.]
+Thank you for this comment. Sections 2.8 and 3.3 now quantify how the selected allocation and shaking-based alternatives agree with geographically bounded official damage reports. The comparisons keep report dates and damage categories separate and use municipal rank correlation, share total-variation distance and top-five overlap. They address the requested comparison of spatial patterns, rather than establishing independent predictive validation.
 
-"[Exact revised manuscript text]"
-(Page XX, Lines XX–XX)
+For the September 29 full-or-half reports, the primary allocation has a rank correlation of 0.7252, a share total-variation distance of 0.5845 and top-five overlap of 3/5. The shaking alternatives show closer descriptive agreement: correlations of 0.7732–0.8127, share distances of 0.2374–0.3855 and overlap of 4/5. Nevertheless, report-share disagreement remains substantial. The early July 31 comparison is particularly limited by incomplete reporting. We therefore retain the primary as transparent early demand screening, not a validated municipal or building-level damage prediction. Section 4.5 explains why reported zeros, differing outcomes and prior examination of report geography prevent an independent-validation claim; Figure 5a is explicitly identified as contextual evidence.
+
+Section 2.4 defines the primary allocation:
+
+"The central surface is one coherent scenario using general households, a 20-km decay scale and a half-collapse weight of 0.5, giving 303.5 functional-loss units. Household counts align the allocation denominator with the target population; 20 km and 0.5 are transparent planning assumptions, not empirically optimized parameters or a calibrated loss fraction."
+(Page 9, Lines 170–174)
+
+Section 2.8 specifies the comparison and its limitations:
+
+"We assess municipality rank correlations, rank shifts and top-five overlap. Separate comparisons with July 31 and September 29 prefectural reports use full collapse, large-scale-half plus half collapse, and their combined counts. Share total-variation distance is half the sum of absolute municipal share differences. Report dates and categories are kept distinct from the planning snapshot. These comparisons are descriptive rather than independent validation: outcomes and assessment completeness differ, report zeros are not verified negatives, and report geography was examined before developing the alternatives."
+(Page 16, Lines 321–328)
+
+Section 3.3 reports the quantitative findings:
+
+"Against September 29 full-or-half reports, the primary has rank correlation 0.7252, share total-variation distance 0.5845 and top-five overlap 3/5; the corresponding shaking ranges are 0.7732–0.8127, 0.2374–0.3855 and 4/5. The July 31 combined report has only five municipalities with positive counts; primary correlation is 0.3108 and share distance 0.9674. Thus stable high-exposure membership does not establish accurate reported-damage geography."
+(Page 20, Lines 411–416)
+
+Section 4.5 states the remaining evidence boundary:
+
+"The selected allocation is retained as transparent early demand screening, not validated municipal or building-level damage prediction. Report-share disagreement remains substantial; the closer descriptive agreement of shaking alternatives does not establish independent validity or justify post hoc selection. Nearest-station categories omit local site effects, source vulnerability curves are transferred beyond their original setting, and full-collapse shapes are used only as hypothetical functional-loss weights."
+(Page 25, Lines 523–529)
+
+The Figure 5 note clarifies the role of the mapped official evidence:
+
+"Panels b and c use the household/20-km/0.5 primary and bounded general-household older-population allocation; panel a is contextual evidence, not independent validation."
+(Page 32, Lines 595–596)
 
 ## Comment 2
 (2) Section 2.4, Equations (1)–(3): The “central surface” is constructed from a normalized pointwise
