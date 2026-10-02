@@ -464,3 +464,1071 @@ Reported Kumamoto City shelter occupancy peaked at 2,487 people, and the latest 
      - Before: ""
      - After: " These occupancy counts describe a broader, differently timed and geographically bounded population; they are not age-specific counts of residents associated with functional housing loss. Service disruptions and precautionary needs can also prompt shelter use. We therefore use occupancy as operational context, not as a calibration or validation total for modeled older-person exposure."
 
+## reviewer-3/comment-5
+
+### part-01
+
+- Location: 2.4: provenance and eligibility; approved bundle P01/23
+- Reason: Execute the approved linked R3/C5 primary-allocation reconciliation: 2.4: provenance and eligibility
+- Kila decisions: KILA-D-20261002-022
+- Mode: `replace`
+- Revises prior parts: none
+- Timestamp: 2026-10-02T06:52:34Z
+- Author: Kila
+- Markup SHA-256 before: `5ee25230c8358a0c371e34ba9ae83e1ede20e0ddda0db986a88cead6e487b86d`
+- Markup SHA-256 after: `0db734f5a6908fc5fbca7d6a570cbdfeddd3b990ba67e03bc51a3f8173350ca2`
+- Revision IDs: `20`
+- Backup: `Rev/revision/.kila-backups/KE01.rev.markup.20261002T155234522943.reviewer-3-comment-5.part-01.docx`
+- Paragraph properties preserved: `true`
+- Run style source SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Formula verification: not applicable
+- Endnote hyperlinks preserved: `true`
+- Endnote hyperlink count: `0`
+- Endnote hyperlink XML SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Endnote relationships SHA-256: `absent`
+- Before:
+
+~~~~text
+We construct disclosure-group allocation weights from an exposure proxy and exponential distance decay from the official epicenter.
+~~~~
+
+- After:
+
+~~~~text
+We construct disclosure-group allocation weights from an exposure proxy and exponential distance decay from the official epicenter. This is a study-defined total-constrained screening allocation, not a fitted damage-prediction model. Groups without general households receive zero allocation; the remaining weights are renormalized to conserve the scenario total.
+~~~~
+
+- Minimal tracked fragments:
+  1. `insert`
+     - Before: ""
+     - After: " This is a study-defined total-constrained screening allocation, not a fitted damage-prediction model. Groups without general households receive zero allocation; the remaining weights are renormalized to conserve the scenario total."
+
+### part-02
+
+- Location: 2.4: structural ensemble; approved bundle P02/23
+- Reason: Execute the approved linked R3/C5 primary-allocation reconciliation: 2.4: structural ensemble
+- Kila decisions: KILA-D-20261002-022
+- Mode: `replace`
+- Revises prior parts: none
+- Timestamp: 2026-10-02T06:52:35Z
+- Author: Kila
+- Markup SHA-256 before: `0db734f5a6908fc5fbca7d6a570cbdfeddd3b990ba67e03bc51a3f8173350ca2`
+- Markup SHA-256 after: `119cedaeec74284231acd9d16ff33312c187bc88b0deb91fe30c665183aa60b1`
+- Revision IDs: `21, 22, 23, 24, 25, 26, 27, 28, 29, 30`
+- Backup: `Rev/revision/.kila-backups/KE01.rev.markup.20261002T155235337973.reviewer-3-comment-5.part-02.docx`
+- Paragraph properties preserved: `true`
+- Run style source SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Formula verification: not applicable
+- Endnote hyperlinks preserved: `true`
+- Endnote hyperlink count: `0`
+- Endnote hyperlink XML SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Endnote relationships SHA-256: `absent`
+- Before:
+
+~~~~text
+Housing-loss scenarios cross three exposure proxies, three distance-decay scales, and three half-collapse weights, producing 27 allocations.
+~~~~
+
+- After:
+
+~~~~text
+Housing-loss scenarios cross general households, mapped-building count and mapped footprint area with three distance-decay scales and half-collapse weights of 0, 0.5 and 1, producing 27 allocations. Building proxies are weighting variables, not counts of residences.
+~~~~
+
+- Minimal tracked fragments:
+  1. `replace`
+     - Before: "three"
+     - After: "general"
+  2. `replace`
+     - Before: "exposure"
+     - After: "households,"
+  3. `replace`
+     - Before: "proxies,"
+     - After: "mapped-building count and mapped footprint area with"
+  4. `delete`
+     - Before: ","
+     - After: ""
+  5. `delete`
+     - Before: " three"
+     - After: ""
+  6. `insert`
+     - Before: ""
+     - After: " of 0, 0.5 and 1"
+  7. `insert`
+     - Before: ""
+     - After: " Building proxies are weighting variables, not counts of residences."
+
+### part-03
+
+- Location: 2.4: replace hybrid primary; approved bundle P03/23
+- Reason: Execute the approved linked R3/C5 primary-allocation reconciliation: 2.4: replace hybrid primary
+- Kila decisions: KILA-D-20261002-022
+- Mode: `replace`
+- Revises prior parts: none
+- Timestamp: 2026-10-02T06:52:35Z
+- Author: Kila
+- Markup SHA-256 before: `119cedaeec74284231acd9d16ff33312c187bc88b0deb91fe30c665183aa60b1`
+- Markup SHA-256 after: `e8fe575c91adbe1b6b553610cdaf48e3c274c82be601f216ac0d5d7c84041482`
+- Revision IDs: `31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52`
+- Backup: `Rev/revision/.kila-backups/KE01.rev.markup.20261002T155236197687.reviewer-3-comment-5.part-03.docx`
+- Paragraph properties preserved: `true`
+- Run style source SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Formula verification: not applicable
+- Endnote hyperlinks preserved: `true`
+- Endnote hyperlink count: `0`
+- Endnote hyperlink XML SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Endnote relationships SHA-256: `absent`
+- Before:
+
+~~~~text
+The central surface is the normalized pointwise median of the allocation scenarios constrained to the approved central functional-loss total.
+~~~~
+
+- After:
+
+~~~~text
+The central surface is one coherent scenario using general households, a 20-km decay scale and a half-collapse weight of 0.5, giving 303.5 functional-loss units. Household counts align the allocation denominator with the target population; 20 km and 0.5 are transparent planning assumptions, not empirically optimized parameters or a calibrated loss fraction. The normalized pointwise-median surface, rebuilt after the zero-household correction, is retained only as a separate sensitivity.
+~~~~
+
+- Minimal tracked fragments:
+  1. `replace`
+     - Before: "the"
+     - After: "one"
+  2. `replace`
+     - Before: "normalized"
+     - After: "coherent"
+  3. `replace`
+     - Before: "pointwise"
+     - After: "scenario"
+  4. `replace`
+     - Before: "median"
+     - After: "using general households, a 20-km decay scale and a half-collapse weight"
+  5. `insert`
+     - Before: ""
+     - After: " 0.5, giving 303.5 functional-loss units. Household counts align"
+  6. `replace`
+     - Before: "scenarios"
+     - After: "denominator"
+  7. `replace`
+     - Before: "constrained to"
+     - After: "with"
+  8. `replace`
+     - Before: "approved"
+     - After: "target"
+  9. `replace`
+     - Before: "central"
+     - After: "population;"
+  10. `replace`
+     - Before: "functional-loss"
+     - After: "20"
+  11. `replace`
+     - Before: "total"
+     - After: "km and 0"
+  12. `insert`
+     - Before: ""
+     - After: "5 are transparent planning assumptions, not empirically optimized parameters or a calibrated loss fraction. The normalized pointwise-median surface, rebuilt after the zero-household correction, is retained only as a separate sensitivity."
+
+### part-04
+
+- Location: 2.4: bounded demographic allocation and Eq. 3 assumption; approved bundle P04/23
+- Reason: Execute the approved linked R3/C5 primary-allocation reconciliation: 2.4: bounded demographic allocation and Eq. 3 assumption
+- Kila decisions: KILA-D-20261002-022
+- Mode: `replace`
+- Revises prior parts: none
+- Timestamp: 2026-10-02T06:52:36Z
+- Author: Kila
+- Markup SHA-256 before: `e8fe575c91adbe1b6b553610cdaf48e3c274c82be601f216ac0d5d7c84041482`
+- Markup SHA-256 after: `187b74f68ef184a75f1fceabef2894824595cfb242dc71c24340cc3395fd5b46`
+- Revision IDs: `53, 54`
+- Backup: `Rev/revision/.kila-backups/KE01.rev.markup.20261002T155236963129.reviewer-3-comment-5.part-04.docx`
+- Paragraph properties preserved: `true`
+- Run style source SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Formula verification: not applicable
+- Endnote hyperlinks preserved: `true`
+- Endnote hyperlink count: `0`
+- Endnote hyperlink XML SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Endnote relationships SHA-256: `absent`
+- Before:
+
+~~~~text
+We associate structural housing loss with older residents by scaling each group's population aged 65 or older by its modeled share of general households lost.
+~~~~
+
+- After:
+
+~~~~text
+We associate structural housing loss with older residents by scaling each group's estimated general-household population aged 65 or older by its modeled share of general households lost. For each group, the lower bound is the number of households containing an older member; the upper bound is the all-resident older population where that lower bound is positive, and zero otherwise. Starting from the lower bound, we distribute the municipal remainder in proportion to older-household counts, subject to the upper bounds, to match official municipal general-household older-population controls. Groups are assigned to municipalities by representative points. Residual-capacity weighting is a separate demographic sensitivity. These allocations reproduce municipal controls but do not validate within-municipality residence patterns. Equation 3 assumes that housing loss is not systematically associated with age composition within a group; exposure is defined as zero where general households are zero.
+~~~~
+
+- Minimal tracked fragments:
+  1. `insert`
+     - Before: ""
+     - After: " estimated general-household"
+  2. `insert`
+     - Before: ""
+     - After: " For each group, the lower bound is the number of households containing an older member; the upper bound is the all-resident older population where that lower bound is positive, and zero otherwise. Starting from the lower bound, we distribute the municipal remainder in proportion to older-household counts, subject to the upper bounds, to match official municipal general-household older-population controls. Groups are assigned to municipalities by representative points. Residual-capacity weighting is a separate demographic sensitivity. These allocations reproduce municipal controls but do not validate within-municipality residence patterns. Equation 3 assumes that housing loss is not systematically associated with age composition within a group; exposure is defined as zero where general households are zero."
+
+### part-05
+
+- Location: 2.4: Eq. 3 symbol definition; preserve OMML; approved bundle P05/23
+- Reason: Execute the approved linked R3/C5 primary-allocation reconciliation: 2.4: Eq. 3 symbol definition; preserve OMML
+- Kila decisions: KILA-D-20261002-022
+- Mode: `replace`
+- Revises prior parts: none
+- Timestamp: 2026-10-02T06:52:37Z
+- Author: Kila
+- Markup SHA-256 before: `187b74f68ef184a75f1fceabef2894824595cfb242dc71c24340cc3395fd5b46`
+- Markup SHA-256 after: `4d7afce46071c7058b7d71db339e73f6e23652ad491424efb4de8ef9be219f2c`
+- Revision IDs: `55, 56`
+- Backup: `Rev/revision/.kila-backups/KE01.rev.markup.20261002T155237601002.reviewer-3-comment-5.part-05.docx`
+- Paragraph properties preserved: `true`
+- Run style source SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Formula verification: not applicable
+- Endnote hyperlinks preserved: `true`
+- Endnote hyperlink count: `0`
+- Endnote hyperlink XML SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Endnote relationships SHA-256: `absent`
+- Before:
+
+~~~~text
+is the resident older population
+~~~~
+
+- After:
+
+~~~~text
+is the estimated general-household older population
+~~~~
+
+- Minimal tracked fragments:
+  1. `replace`
+     - Before: "resident"
+     - After: "estimated general-household"
+
+### part-06
+
+- Location: 2.8: consistent municipality geography; approved bundle P06/23
+- Reason: Execute the approved linked R3/C5 primary-allocation reconciliation: 2.8: consistent municipality geography
+- Kila decisions: KILA-D-20261002-022
+- Mode: `replace`
+- Revises prior parts: none
+- Timestamp: 2026-10-02T06:52:38Z
+- Author: Kila
+- Markup SHA-256 before: `4d7afce46071c7058b7d71db339e73f6e23652ad491424efb4de8ef9be219f2c`
+- Markup SHA-256 after: `c40e7daeaa7533ba610ff5e327e85325ad6262486d4c14161d8da7b225722ae3`
+- Revision IDs: `57, 58, 59, 60`
+- Backup: `Rev/revision/.kila-backups/KE01.rev.markup.20261002T155238231300.reviewer-3-comment-5.part-06.docx`
+- Paragraph properties preserved: `true`
+- Run style source SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Formula verification: not applicable
+- Endnote hyperlinks preserved: `true`
+- Endnote hyperlink count: `0`
+- Endnote hyperlink XML SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Endnote relationships SHA-256: `absent`
+- Before:
+
+~~~~text
+Additive disclosure-group outcomes are summed within municipality boundaries after the central scenario is selected at its defined analytical scale.
+~~~~
+
+- After:
+
+~~~~text
+Additive disclosure-group outcomes are summed using representative-point municipality assignments after the central scenario is selected at its defined analytical scale.
+~~~~
+
+- Minimal tracked fragments:
+  1. `replace`
+     - Before: "within"
+     - After: "using representative-point"
+  2. `replace`
+     - Before: "boundaries"
+     - After: "assignments"
+
+### part-07
+
+- Location: 2.8: shaking and report-comparison design; approved bundle P07/23
+- Reason: Execute the approved linked R3/C5 primary-allocation reconciliation: 2.8: shaking and report-comparison design
+- Kila decisions: KILA-D-20261002-022
+- Mode: `replace`
+- Revises prior parts: none
+- Timestamp: 2026-10-02T06:52:38Z
+- Author: Kila
+- Markup SHA-256 before: `c40e7daeaa7533ba610ff5e327e85325ad6262486d4c14161d8da7b225722ae3`
+- Markup SHA-256 after: `8c4ac3c5901d7e0f7779173f54b5107d43e3ba493660e4baa2e482211a65d7ed`
+- Revision IDs: `61`
+- Backup: `Rev/revision/.kila-backups/KE01.rev.markup.20261002T155238836509.reviewer-3-comment-5.part-07.docx`
+- Paragraph properties preserved: `true`
+- Run style source SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Formula verification: not applicable
+- Endnote hyperlinks preserved: `true`
+- Endnote hyperlink count: `0`
+- Endnote hyperlink XML SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Endnote relationships SHA-256: `absent`
+- Before:
+
+~~~~text
+Keeping them separate makes each planning range traceable to its assumption.
+~~~~
+
+- After:
+
+~~~~text
+Keeping them separate makes each planning range traceable to its assumption. We additionally compare the selected primary with the corrected hybrid, bounded demographic alternative and 54 hypothetical shaking allocations. For the latter, nearest-station JMA intensity categories are assigned in projected coordinates, including neighbouring-prefecture stations and excluding the withdrawn Tomiai observation. Three full-collapse vulnerability shapes from Suto et al. (2019, Equation 2 and Table 4; https://www.jstage.jst.go.jp/article/jaee/19/4/19_4_13/_pdf) are crossed with two category-endpoint evaluations, three exposure proxies and three half-collapse weights. The wooden, steel and light-steel normal-CDF shapes use location/scale pairs (6.87, 0.73), (7.25, 0.63) and (7.24, 0.60), respectively. The open upper endpoint of intensity 7 uses the limiting value of one, not an observed intensity. Relative weights are normalized with household-capacity constraints; no caps bind. These are hypothetical weighting shapes, not local material shares or validated functional-loss probabilities. We assess municipality rank correlations, rank shifts and top-five overlap. Separate comparisons with July 31 and September 29 prefectural reports use full collapse, large-scale-half plus half collapse, and their combined counts. Share total-variation distance is half the sum of absolute municipal share differences. Report dates and categories are kept distinct from the planning snapshot. These comparisons are descriptive rather than independent validation: outcomes and assessment completeness differ, report zeros are not verified negatives, and report geography was examined before developing the alternatives.
+~~~~
+
+- Minimal tracked fragments:
+  1. `insert`
+     - Before: ""
+     - After: " We additionally compare the selected primary with the corrected hybrid, bounded demographic alternative and 54 hypothetical shaking allocations. For the latter, nearest-station JMA intensity categories are assigned in projected coordinates, including neighbouring-prefecture stations and excluding the withdrawn Tomiai observation. Three full-collapse vulnerability shapes from Suto et al. (2019, Equation 2 and Table 4; https://www.jstage.jst.go.jp/article/jaee/19/4/19_4_13/_pdf) are crossed with two category-endpoint evaluations, three exposure proxies and three half-collapse weights. The wooden, steel and light-steel normal-CDF shapes use location/scale pairs (6.87, 0.73), (7.25, 0.63) and (7.24, 0.60), respectively. The open upper endpoint of intensity 7 uses the limiting value of one, not an observed intensity. Relative weights are normalized with household-capacity constraints; no caps bind. These are hypothetical weighting shapes, not local material shares or validated functional-loss probabilities. We assess municipality rank correlations, rank shifts and top-five overlap. Separate comparisons with July 31 and September 29 prefectural reports use full collapse, large-scale-half plus half collapse, and their combined counts. Share total-variation distance is half the sum of absolute municipal share differences. Report dates and categories are kept distinct from the planning snapshot. These comparisons are descriptive rather than independent validation: outcomes and assessment completeness differ, report zeros are not verified negatives, and report geography was examined before developing the alternatives."
+
+### part-08
+
+- Location: 3.3: prefecture exposure; approved bundle P08/23
+- Reason: Execute the approved linked R3/C5 primary-allocation reconciliation: 3.3: prefecture exposure
+- Kila decisions: KILA-D-20261002-022
+- Mode: `replace`
+- Revises prior parts: none
+- Timestamp: 2026-10-02T06:52:39Z
+- Author: Kila
+- Markup SHA-256 before: `8c4ac3c5901d7e0f7779173f54b5107d43e3ba493660e4baa2e482211a65d7ed`
+- Markup SHA-256 after: `165e50486e9ae1ff023fc5ee7319a1da5ee1ed67aab615a445ea24a307f7226b`
+- Revision IDs: `62, 63, 64, 65`
+- Backup: `Rev/revision/.kila-backups/KE01.rev.markup.20261002T155239444072.reviewer-3-comment-5.part-08.docx`
+- Paragraph properties preserved: `true`
+- Run style source SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Formula verification: not applicable
+- Endnote hyperlinks preserved: `true`
+- Endnote hyperlink count: `0`
+- Endnote hyperlink XML SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Endnote relationships SHA-256: `absent`
+- Before:
+
+~~~~text
+The central exposure totals 245.794 residents aged 65 or older across Kumamoto.
+~~~~
+
+- After:
+
+~~~~text
+The central exposure totals 202.042 residents aged 65 or older across Kumamoto.
+~~~~
+
+- Minimal tracked fragments:
+  1. `replace`
+     - Before: "245"
+     - After: "202"
+  2. `replace`
+     - Before: "794"
+     - After: "042"
+
+### part-09
+
+- Location: 3.3: municipality and person-day totals; approved bundle P09/23
+- Reason: Execute the approved linked R3/C5 primary-allocation reconciliation: 3.3: municipality and person-day totals
+- Kila decisions: KILA-D-20261002-022
+- Mode: `replace`
+- Revises prior parts: none
+- Timestamp: 2026-10-02T06:52:39Z
+- Author: Kila
+- Markup SHA-256 before: `165e50486e9ae1ff023fc5ee7319a1da5ee1ed67aab615a445ea24a307f7226b`
+- Markup SHA-256 after: `5a89e52a968f7363c19c77c1064dec1519d468126cec2661c99a17d3b12ea7e2`
+- Revision IDs: `66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91`
+- Backup: `Rev/revision/.kila-backups/KE01.rev.markup.20261002T155240084397.reviewer-3-comment-5.part-09.docx`
+- Paragraph properties preserved: `true`
+- Run style source SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Formula verification: not applicable
+- Endnote hyperlinks preserved: `true`
+- Endnote hyperlink count: `0`
+- Endnote hyperlink XML SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Endnote relationships SHA-256: `absent`
+- Before:
+
+~~~~text
+Table 1 reports 134.030 central functionally lost residences and 90.383 affected older residents in Kumamoto City, followed by 54.839 residences and 48.287 older residents in Yatsushiro City. Across all municipalities, the central totals are 303.5 residences, 245.794 older residents, and 7,373.815 no-placement older-person-days.
+~~~~
+
+- After:
+
+~~~~text
+Table 1 reports 156.259 central functionally lost residences and 84.543 affected older residents in Kumamoto City, followed by 38.188 residences and 29.708 older residents in Yatsushiro City. Across all municipalities, the central totals are 303.5 residences, 202.042 older residents, and 6,061.258 no-placement older-person-days.
+~~~~
+
+- Minimal tracked fragments:
+  1. `replace`
+     - Before: "134"
+     - After: "156"
+  2. `replace`
+     - Before: "030"
+     - After: "259"
+  3. `replace`
+     - Before: "90"
+     - After: "84"
+  4. `replace`
+     - Before: "383"
+     - After: "543"
+  5. `replace`
+     - Before: "54"
+     - After: "38"
+  6. `replace`
+     - Before: "839"
+     - After: "188"
+  7. `replace`
+     - Before: "48"
+     - After: "29"
+  8. `replace`
+     - Before: "287"
+     - After: "708"
+  9. `replace`
+     - Before: "245"
+     - After: "202"
+  10. `replace`
+     - Before: "794"
+     - After: "042"
+  11. `replace`
+     - Before: "7"
+     - After: "6"
+  12. `replace`
+     - Before: "373"
+     - After: "061"
+  13. `replace`
+     - Before: "815"
+     - After: "258"
+
+### part-10
+
+- Location: 3.3: validated sensitivity and limited agreement; approved bundle P10/23
+- Reason: Execute the approved linked R3/C5 primary-allocation reconciliation: 3.3: validated sensitivity and limited agreement
+- Kila decisions: KILA-D-20261002-022
+- Mode: `replace`
+- Revises prior parts: none
+- Timestamp: 2026-10-02T06:52:40Z
+- Author: Kila
+- Markup SHA-256 before: `5a89e52a968f7363c19c77c1064dec1519d468126cec2661c99a17d3b12ea7e2`
+- Markup SHA-256 after: `0cf007ab16017f7b4894b743de1c13fbde107ec9e2401ba41abe54f0839b18ff`
+- Revision IDs: `92`
+- Backup: `Rev/revision/.kila-backups/KE01.rev.markup.20261002T155240775319.reviewer-3-comment-5.part-10.docx`
+- Paragraph properties preserved: `true`
+- Run style source SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Formula verification: not applicable
+- Endnote hyperlinks preserved: `true`
+- Endnote hyperlink count: `0`
+- Endnote hyperlink XML SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Endnote relationships SHA-256: `absent`
+- Before:
+
+~~~~text
+The table's scenario ranges remain structural sensitivity summaries rather than inspection intervals.
+~~~~
+
+- After:
+
+~~~~text
+The table's scenario ranges remain structural sensitivity summaries rather than inspection intervals. The corrected hybrid yields 216.546 exposed older residents, 7.18% above the selected primary; municipal exposure rank correlation is 0.9818, with a maximum rank shift of six and the same top-five set. Residual-capacity demographic weighting yields 202.185 exposed older residents, with a maximum rank shift of one. Across the 54 shaking scenarios, exposure ranges from 133.49 to 363.43 and rank correlations from 0.8163 to 0.8978; maximum rank shifts are 16–24. All retain the exposure top-five set, but incremental-death top-five overlap is four of five. These ranges combine hazard, proxy and half-collapse assumptions and are not confidence intervals. Against September 29 full-or-half reports, the primary has rank correlation 0.7252, share total-variation distance 0.5845 and top-five overlap 3/5; the corresponding shaking ranges are 0.7732–0.8127, 0.2374–0.3855 and 4/5. The July 31 combined report has only five municipalities with positive counts; primary correlation is 0.3108 and share distance 0.9674. Thus stable high-exposure membership does not establish accurate reported-damage geography.
+~~~~
+
+- Minimal tracked fragments:
+  1. `insert`
+     - Before: ""
+     - After: " The corrected hybrid yields 216.546 exposed older residents, 7.18% above the selected primary; municipal exposure rank correlation is 0.9818, with a maximum rank shift of six and the same top-five set. Residual-capacity demographic weighting yields 202.185 exposed older residents, with a maximum rank shift of one. Across the 54 shaking scenarios, exposure ranges from 133.49 to 363.43 and rank correlations from 0.8163 to 0.8978; maximum rank shifts are 16–24. All retain the exposure top-five set, but incremental-death top-five overlap is four of five. These ranges combine hazard, proxy and half-collapse assumptions and are not confidence intervals. Against September 29 full-or-half reports, the primary has rank correlation 0.7252, share total-variation distance 0.5845 and top-five overlap 3/5; the corresponding shaking ranges are 0.7732–0.8127, 0.2374–0.3855 and 4/5. The July 31 combined report has only five municipalities with positive counts; primary correlation is 0.3108 and share distance 0.9674. Thus stable high-exposure membership does not establish accurate reported-damage geography."
+
+### part-11
+
+- Location: 3.4: engineering totals; approved bundle P11/23
+- Reason: Execute the approved linked R3/C5 primary-allocation reconciliation: 3.4: engineering totals
+- Kila decisions: KILA-D-20261002-022
+- Mode: `replace`
+- Revises prior parts: none
+- Timestamp: 2026-10-02T06:52:41Z
+- Author: Kila
+- Markup SHA-256 before: `0cf007ab16017f7b4894b743de1c13fbde107ec9e2401ba41abe54f0839b18ff`
+- Markup SHA-256 after: `1c47808dab965ecd8afacce1bb5e474cd9d0e3a5a00200426c65bff95353321f`
+- Revision IDs: `93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116`
+- Backup: `Rev/revision/.kila-backups/KE01.rev.markup.20261002T155241395887.reviewer-3-comment-5.part-11.docx`
+- Paragraph properties preserved: `true`
+- Run style source SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Formula verification: not applicable
+- Endnote hyperlinks preserved: `true`
+- Endnote hyperlink count: `0`
+- Endnote hyperlink XML SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Endnote relationships SHA-256: `absent`
+- Before:
+
+~~~~text
+Peak power rises from 21.85 kW in the Low bundle to 34.583 kW in the Central bundle and 48.52 kW in the High bundle; corresponding daily electricity rises from 262.21 to 622.497 and 1,164.47 kWh.
+~~~~
+
+- After:
+
+~~~~text
+Peak power rises from 17.96 kW in the Low bundle to 28.427 kW in the Central bundle and 39.88 kW in the High bundle; corresponding daily electricity rises from 215.54 to 511.691 and 957.19 kWh.
+~~~~
+
+- Minimal tracked fragments:
+  1. `replace`
+     - Before: "21"
+     - After: "17"
+  2. `replace`
+     - Before: "85"
+     - After: "96"
+  3. `replace`
+     - Before: "34"
+     - After: "28"
+  4. `replace`
+     - Before: "583"
+     - After: "427"
+  5. `replace`
+     - Before: "48"
+     - After: "39"
+  6. `replace`
+     - Before: "52"
+     - After: "88"
+  7. `replace`
+     - Before: "262"
+     - After: "215"
+  8. `replace`
+     - Before: "21"
+     - After: "54"
+  9. `replace`
+     - Before: "622"
+     - After: "511"
+  10. `replace`
+     - Before: "497"
+     - After: "691"
+  11. `replace`
+     - Before: "1,164"
+     - After: "957"
+  12. `replace`
+     - Before: "47"
+     - After: "19"
+
+### part-12
+
+- Location: 3.4: municipality engineering values; approved bundle P12/23
+- Reason: Execute the approved linked R3/C5 primary-allocation reconciliation: 3.4: municipality engineering values
+- Kila decisions: KILA-D-20261002-022
+- Mode: `replace`
+- Revises prior parts: none
+- Timestamp: 2026-10-02T06:52:41Z
+- Author: Kila
+- Markup SHA-256 before: `1c47808dab965ecd8afacce1bb5e474cd9d0e3a5a00200426c65bff95353321f`
+- Markup SHA-256 after: `63614c9dc2ed24229956626c16d62d55c0cc20087a08f430d414d3e1266fffec`
+- Revision IDs: `117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132`
+- Backup: `Rev/revision/.kila-backups/KE01.rev.markup.20261002T155242023321.reviewer-3-comment-5.part-12.docx`
+- Paragraph properties preserved: `true`
+- Run style source SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Formula verification: not applicable
+- Endnote hyperlinks preserved: `true`
+- Endnote hyperlink count: `0`
+- Endnote hyperlink XML SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Endnote relationships SHA-256: `absent`
+- Before:
+
+~~~~text
+Table 2 gives Kumamoto City a Central requirement of 12.717 kW and 228.903 kWh per day, followed by Yatsushiro City at 6.794 kW and 122.292 kWh per day.
+~~~~
+
+- After:
+
+~~~~text
+Table 2 gives Kumamoto City a Central requirement of 11.895 kW and 214.114 kWh per day, followed by Yatsushiro City at 4.180 kW and 75.238 kWh per day.
+~~~~
+
+- Minimal tracked fragments:
+  1. `replace`
+     - Before: "12"
+     - After: "11"
+  2. `replace`
+     - Before: "717"
+     - After: "895"
+  3. `replace`
+     - Before: "228"
+     - After: "214"
+  4. `replace`
+     - Before: "903"
+     - After: "114"
+  5. `replace`
+     - Before: "6"
+     - After: "4"
+  6. `replace`
+     - Before: "794"
+     - After: "180"
+  7. `replace`
+     - Before: "122"
+     - After: "75"
+  8. `replace`
+     - Before: "292"
+     - After: "238"
+
+### part-13
+
+- Location: 3.5: aggregate effect and uncertainty label; approved bundle P13/23
+- Reason: Execute the approved linked R3/C5 primary-allocation reconciliation: 3.5: aggregate effect and uncertainty label
+- Kila decisions: KILA-D-20261002-022
+- Mode: `replace`
+- Revises prior parts: none
+- Timestamp: 2026-10-02T06:52:42Z
+- Author: Kila
+- Markup SHA-256 before: `63614c9dc2ed24229956626c16d62d55c0cc20087a08f430d414d3e1266fffec`
+- Markup SHA-256 after: `c23233d5d8fcd7f0e7e5a84b7fcf4a76c69e5918fea69a92b8c48e243fee6099`
+- Revision IDs: `133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151`
+- Backup: `Rev/revision/.kila-backups/KE01.rev.markup.20261002T155242656182.reviewer-3-comment-5.part-13.docx`
+- Paragraph properties preserved: `true`
+- Run style source SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Formula verification: not applicable
+- Endnote hyperlinks preserved: `true`
+- Endnote hyperlink count: `0`
+- Endnote hyperlink XML SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Endnote relationships SHA-256: `absent`
+- Before:
+
+~~~~text
+The prefecture-weighted central 30-day mortality-burden increase without effective cooling is 5.34%, with a transferred-effect interval from 0.67% to 10.01%.
+~~~~
+
+- After:
+
+~~~~text
+The prefecture-weighted central 30-day mortality-burden increase without effective cooling is 5.31%, with source-effect endpoint scenarios of 0.66% and 9.96%; these endpoints are not whole-model confidence limits.
+~~~~
+
+- Minimal tracked fragments:
+  1. `replace`
+     - Before: "34"
+     - After: "31"
+  2. `replace`
+     - Before: "a"
+     - After: "source-effect"
+  3. `replace`
+     - Before: "transferred-effect"
+     - After: "endpoint"
+  4. `replace`
+     - Before: "interval"
+     - After: "scenarios"
+  5. `replace`
+     - Before: "from"
+     - After: "of"
+  6. `replace`
+     - Before: "67"
+     - After: "66"
+  7. `replace`
+     - Before: "to"
+     - After: "and"
+  8. `replace`
+     - Before: "10"
+     - After: "9"
+  9. `replace`
+     - Before: "01"
+     - After: "96"
+  10. `insert`
+     - Before: ""
+     - After: "; these endpoints are not whole-model confidence limits"
+
+### part-14
+
+- Location: 3.5: Kumamoto incremental expected deaths; approved bundle P14/23
+- Reason: Execute the approved linked R3/C5 primary-allocation reconciliation: 3.5: Kumamoto incremental expected deaths
+- Kila decisions: KILA-D-20261002-022
+- Mode: `replace`
+- Revises prior parts: none
+- Timestamp: 2026-10-02T06:52:43Z
+- Author: Kila
+- Markup SHA-256 before: `c23233d5d8fcd7f0e7e5a84b7fcf4a76c69e5918fea69a92b8c48e243fee6099`
+- Markup SHA-256 after: `3dba3f197a0fac13d49cffc3c466fdecead1af4b56bd8884c9eab4e1776143e3`
+- Revision IDs: `152, 153`
+- Backup: `Rev/revision/.kila-backups/KE01.rev.markup.20261002T155243270338.reviewer-3-comment-5.part-14.docx`
+- Paragraph properties preserved: `true`
+- Run style source SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Formula verification: not applicable
+- Endnote hyperlinks preserved: `true`
+- Endnote hyperlink count: `0`
+- Endnote hyperlink XML SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Endnote relationships SHA-256: `absent`
+- Before:
+
+~~~~text
+0.01797
+~~~~
+
+- After:
+
+~~~~text
+0.01681
+~~~~
+
+- Minimal tracked fragments:
+  1. `replace`
+     - Before: "01797"
+     - After: "01681"
+
+### part-15
+
+- Location: 3.5: prefecture incremental expected deaths; approved bundle P15/23
+- Reason: Execute the approved linked R3/C5 primary-allocation reconciliation: 3.5: prefecture incremental expected deaths
+- Kila decisions: KILA-D-20261002-022
+- Mode: `replace`
+- Revises prior parts: none
+- Timestamp: 2026-10-02T06:52:43Z
+- Author: Kila
+- Markup SHA-256 before: `3dba3f197a0fac13d49cffc3c466fdecead1af4b56bd8884c9eab4e1776143e3`
+- Markup SHA-256 after: `5cbba9e4b47cb1f9a39c55de28ece81971267b5a232aa2d4ceb7e882c9b4be35`
+- Revision IDs: `154, 155`
+- Backup: `Rev/revision/.kila-backups/KE01.rev.markup.20261002T155243882300.reviewer-3-comment-5.part-15.docx`
+- Paragraph properties preserved: `true`
+- Run style source SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Formula verification: not applicable
+- Endnote hyperlinks preserved: `true`
+- Endnote hyperlink count: `0`
+- Endnote hyperlink XML SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Endnote relationships SHA-256: `absent`
+- Before:
+
+~~~~text
+0.04380
+~~~~
+
+- After:
+
+~~~~text
+0.03565
+~~~~
+
+- Minimal tracked fragments:
+  1. `replace`
+     - Before: "04380"
+     - After: "03565"
+
+### part-16
+
+- Location: 4.5: explicit residual validity limits; approved bundle P16/23
+- Reason: Execute the approved linked R3/C5 primary-allocation reconciliation: 4.5: explicit residual validity limits
+- Kila decisions: KILA-D-20261002-022
+- Mode: `replace`
+- Revises prior parts: none
+- Timestamp: 2026-10-02T06:52:44Z
+- Author: Kila
+- Markup SHA-256 before: `5cbba9e4b47cb1f9a39c55de28ece81971267b5a232aa2d4ceb7e882c9b4be35`
+- Markup SHA-256 after: `b383bb6c97363eaea33dcceb7e814aa7147fce380a29d0e134d43a59ff7ba61d`
+- Revision IDs: `156`
+- Backup: `Rev/revision/.kila-backups/KE01.rev.markup.20261002T155244511481.reviewer-3-comment-5.part-16.docx`
+- Paragraph properties preserved: `true`
+- Run style source SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Formula verification: not applicable
+- Endnote hyperlinks preserved: `true`
+- Endnote hyperlink count: `0`
+- Endnote hyperlink XML SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Endnote relationships SHA-256: `absent`
+- Before:
+
+~~~~text
+In this study, epicentral distance remains an incomplete hazard representation, and the functional contribution of half-collapse varies across scenarios.
+~~~~
+
+- After:
+
+~~~~text
+In this study, epicentral distance remains an incomplete hazard representation, and the functional contribution of half-collapse varies across scenarios. The selected allocation is retained as transparent early demand screening, not validated municipal or building-level damage prediction. Report-share disagreement remains substantial; the closer descriptive agreement of shaking alternatives does not establish independent validity or justify post hoc selection. Nearest-station categories omit local site effects, source vulnerability curves are transferred beyond their original setting, and full-collapse shapes are used only as hypothetical functional-loss weights. Municipal calibration and demographic rank stability cannot verify within-group residence patterns or the assumed absence of systematic age-related loss differences.
+~~~~
+
+- Minimal tracked fragments:
+  1. `insert`
+     - Before: ""
+     - After: " The selected allocation is retained as transparent early demand screening, not validated municipal or building-level damage prediction. Report-share disagreement remains substantial; the closer descriptive agreement of shaking alternatives does not establish independent validity or justify post hoc selection. Nearest-station categories omit local site effects, source vulnerability curves are transferred beyond their original setting, and full-collapse shapes are used only as hypothetical functional-loss weights. Municipal calibration and demographic rank stability cannot verify within-group residence patterns or the assumed absence of systematic age-related loss differences."
+
+### part-17
+
+- Location: Abstract: exposure; approved bundle P17/23
+- Reason: Execute the approved linked R3/C5 primary-allocation reconciliation: Abstract: exposure
+- Kila decisions: KILA-D-20261002-022
+- Mode: `replace`
+- Revises prior parts: none
+- Timestamp: 2026-10-02T06:52:44Z
+- Author: Kila
+- Markup SHA-256 before: `b383bb6c97363eaea33dcceb7e814aa7147fce380a29d0e134d43a59ff7ba61d`
+- Markup SHA-256 after: `c6f2e20105f9b03dceb9560f67b6753b66aaf514d4760c5dbbf162f547a51c41`
+- Revision IDs: `157, 158`
+- Backup: `Rev/revision/.kila-backups/KE01.rev.markup.20261002T155245118071.reviewer-3-comment-5.part-17.docx`
+- Paragraph properties preserved: `true`
+- Run style source SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Formula verification: not applicable
+- Endnote hyperlinks preserved: `true`
+- Endnote hyperlink count: `0`
+- Endnote hyperlink XML SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Endnote relationships SHA-256: `absent`
+- Before:
+
+~~~~text
+approximately 246
+~~~~
+
+- After:
+
+~~~~text
+approximately 202
+~~~~
+
+- Minimal tracked fragments:
+  1. `replace`
+     - Before: "246"
+     - After: "202"
+
+### part-18
+
+- Location: Abstract: engineering; approved bundle P18/23
+- Reason: Execute the approved linked R3/C5 primary-allocation reconciliation: Abstract: engineering
+- Kila decisions: KILA-D-20261002-022
+- Mode: `replace`
+- Revises prior parts: none
+- Timestamp: 2026-10-02T06:52:45Z
+- Author: Kila
+- Markup SHA-256 before: `c6f2e20105f9b03dceb9560f67b6753b66aaf514d4760c5dbbf162f547a51c41`
+- Markup SHA-256 after: `fdd09681622d0d06d6e0d35b5f5999df0e77ccd4c5df1c09acd6af7b7f080cf3`
+- Revision IDs: `159, 160, 161, 162, 163, 164, 165, 166`
+- Backup: `Rev/revision/.kila-backups/KE01.rev.markup.20261002T155245704063.reviewer-3-comment-5.part-18.docx`
+- Paragraph properties preserved: `true`
+- Run style source SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Formula verification: not applicable
+- Endnote hyperlinks preserved: `true`
+- Endnote hyperlink count: `0`
+- Endnote hyperlink XML SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Endnote relationships SHA-256: `absent`
+- Before:
+
+~~~~text
+34.583 kW of peak cooling power and 622.497 kWh
+~~~~
+
+- After:
+
+~~~~text
+28.427 kW of peak cooling power and 511.691 kWh
+~~~~
+
+- Minimal tracked fragments:
+  1. `replace`
+     - Before: "34"
+     - After: "28"
+  2. `replace`
+     - Before: "583"
+     - After: "427"
+  3. `replace`
+     - Before: "622"
+     - After: "511"
+  4. `replace`
+     - Before: "497"
+     - After: "691"
+
+### part-19
+
+- Location: Abstract: health; approved bundle P19/23
+- Reason: Execute the approved linked R3/C5 primary-allocation reconciliation: Abstract: health
+- Kila decisions: KILA-D-20261002-022
+- Mode: `replace`
+- Revises prior parts: none
+- Timestamp: 2026-10-02T06:52:46Z
+- Author: Kila
+- Markup SHA-256 before: `fdd09681622d0d06d6e0d35b5f5999df0e77ccd4c5df1c09acd6af7b7f080cf3`
+- Markup SHA-256 after: `b2be73245c0c96ec1236eeb0289c3d9a8cebe269fbedb0b67634d84dceecffb0`
+- Revision IDs: `167, 168`
+- Backup: `Rev/revision/.kila-backups/KE01.rev.markup.20261002T155246288818.reviewer-3-comment-5.part-19.docx`
+- Paragraph properties preserved: `true`
+- Run style source SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Formula verification: not applicable
+- Endnote hyperlinks preserved: `true`
+- Endnote hyperlink count: `0`
+- Endnote hyperlink XML SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Endnote relationships SHA-256: `absent`
+- Before:
+
+~~~~text
+5.34%
+~~~~
+
+- After:
+
+~~~~text
+5.31%
+~~~~
+
+- Minimal tracked fragments:
+  1. `replace`
+     - Before: "34"
+     - After: "31"
+
+### part-20
+
+- Location: Figure 5 note; approved bundle P20/23
+- Reason: Execute the approved linked R3/C5 primary-allocation reconciliation: Figure 5 note
+- Kila decisions: KILA-D-20261002-022
+- Mode: `replace`
+- Revises prior parts: none
+- Timestamp: 2026-10-02T06:52:46Z
+- Author: Kila
+- Markup SHA-256 before: `b2be73245c0c96ec1236eeb0289c3d9a8cebe269fbedb0b67634d84dceecffb0`
+- Markup SHA-256 after: `c545abf37ad474c97edcd00037e805a5bb88f984d3f151eaef1c8fd0df34c441`
+- Revision IDs: `169`
+- Backup: `Rev/revision/.kila-backups/KE01.rev.markup.20261002T155246883880.reviewer-3-comment-5.part-20.docx`
+- Paragraph properties preserved: `true`
+- Run style source SHA-256: `c21d00426c037a67b0fba1fabff610e453e3a2a5424274c5287e40c65ce00d46`
+- Formula verification: not applicable
+- Endnote hyperlinks preserved: `true`
+- Endnote hyperlink count: `0`
+- Endnote hyperlink XML SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Endnote relationships SHA-256: `absent`
+- Before:
+
+~~~~text
+Note: Panel a maps geographically bounded official residence-loss evidence and the prefecture snapshot used to constrain scenario totals. Panel b maps central expected structural residence loss across disclosure groups with epicentral distance guides. Panel c maps the associated central exposure of residents aged 65 or older.
+~~~~
+
+- After:
+
+~~~~text
+Note: Panel a maps geographically bounded official residence-loss evidence and the prefecture snapshot used to constrain scenario totals. Panel b maps central expected structural residence loss across disclosure groups with epicentral distance guides. Panel c maps the associated central exposure of residents aged 65 or older. Panels b and c use the household/20-km/0.5 primary and bounded general-household older-population allocation; panel a is contextual evidence, not independent validation.
+~~~~
+
+- Minimal tracked fragments:
+  1. `insert`
+     - Before: ""
+     - After: " Panels b and c use the household/20-km/0.5 primary and bounded general-household older-population allocation; panel a is contextual evidence, not independent validation."
+
+### part-21
+
+- Location: Figure 6 note: envelope; approved bundle P21/23
+- Reason: Execute the approved linked R3/C5 primary-allocation reconciliation: Figure 6 note: envelope
+- Kila decisions: KILA-D-20261002-022
+- Mode: `replace`
+- Revises prior parts: none
+- Timestamp: 2026-10-02T06:52:47Z
+- Author: Kila
+- Markup SHA-256 before: `c545abf37ad474c97edcd00037e805a5bb88f984d3f151eaef1c8fd0df34c441`
+- Markup SHA-256 after: `a00de4d5bfc98fe83b2c7fc5c2a9cf8339458659914fb2956ea61c86bf546381`
+- Revision IDs: `170, 171, 172, 173, 174, 175, 176, 177`
+- Backup: `Rev/revision/.kila-backups/KE01.rev.markup.20261002T155247629876.reviewer-3-comment-5.part-21.docx`
+- Paragraph properties preserved: `true`
+- Run style source SHA-256: `c21d00426c037a67b0fba1fabff610e453e3a2a5424274c5287e40c65ce00d46`
+- Formula verification: not applicable
+- Endnote hyperlinks preserved: `true`
+- Endnote hyperlink count: `0`
+- Endnote hyperlink XML SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Endnote relationships SHA-256: `absent`
+- Before:
+
+~~~~text
+whose values are not additive
+~~~~
+
+- After:
+
+~~~~text
+derived from pointwise maxima across the 27 distance/proxy/half-collapse scenarios and not representing a jointly realized aggregate scenario
+~~~~
+
+- Minimal tracked fragments:
+  1. `replace`
+     - Before: "whose"
+     - After: "derived"
+  2. `replace`
+     - Before: "values"
+     - After: "from"
+  3. `replace`
+     - Before: "are"
+     - After: "pointwise maxima across the 27 distance/proxy/half-collapse scenarios and"
+  4. `replace`
+     - Before: "additive"
+     - After: "representing a jointly realized aggregate scenario"
+
+### part-22
+
+- Location: Figure 7 note; approved bundle P22/23
+- Reason: Execute the approved linked R3/C5 primary-allocation reconciliation: Figure 7 note
+- Kila decisions: KILA-D-20261002-022
+- Mode: `replace`
+- Revises prior parts: none
+- Timestamp: 2026-10-02T06:52:48Z
+- Author: Kila
+- Markup SHA-256 before: `a00de4d5bfc98fe83b2c7fc5c2a9cf8339458659914fb2956ea61c86bf546381`
+- Markup SHA-256 after: `4817619e08894e38ea7e23e334738ff99cbd55b50b970f8b75400a587b1ad078`
+- Revision IDs: `178`
+- Backup: `Rev/revision/.kila-backups/KE01.rev.markup.20261002T155248262936.reviewer-3-comment-5.part-22.docx`
+- Paragraph properties preserved: `true`
+- Run style source SHA-256: `c21d00426c037a67b0fba1fabff610e453e3a2a5424274c5287e40c65ce00d46`
+- Formula verification: not applicable
+- Endnote hyperlinks preserved: `true`
+- Endnote hyperlink count: `0`
+- Endnote hyperlink XML SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Endnote relationships SHA-256: `absent`
+- Before:
+
+~~~~text
+Note: Panel a maps Central-scenario required peak cooling electric power by municipality. Panel b maps Central-scenario required daily cooling electricity by municipality. Panel c compares prefecture-wide peak power and daily energy requirements under the Low, Central, and High engineering bundles.
+~~~~
+
+- After:
+
+~~~~text
+Note: Panel a maps Central-scenario required peak cooling electric power by municipality. Panel b maps Central-scenario required daily cooling electricity by municipality. Panel c compares prefecture-wide peak power and daily energy requirements under the Low, Central, and High engineering bundles. All bundles use the same selected primary population; daily energy assumes constant scenario power over the specified operating hours, not measured consumption or a verified supply shortfall.
+~~~~
+
+- Minimal tracked fragments:
+  1. `insert`
+     - Before: ""
+     - After: " All bundles use the same selected primary population; daily energy assumes constant scenario power over the specified operating hours, not measured consumption or a verified supply shortfall."
+
+### part-23
+
+- Location: Figure 8 note; approved bundle P23/23
+- Reason: Execute the approved linked R3/C5 primary-allocation reconciliation: Figure 8 note
+- Kila decisions: KILA-D-20261002-022
+- Mode: `replace`
+- Revises prior parts: none
+- Timestamp: 2026-10-02T06:52:48Z
+- Author: Kila
+- Markup SHA-256 before: `4817619e08894e38ea7e23e334738ff99cbd55b50b970f8b75400a587b1ad078`
+- Markup SHA-256 after: `07fe9213daa6647013e21e1a09e222d5cbc11818c7dfbaf12aa4d27803c9e6f5`
+- Revision IDs: `179, 180, 181, 182, 183, 184`
+- Backup: `Rev/revision/.kila-backups/KE01.rev.markup.20261002T155248884212.reviewer-3-comment-5.part-23.docx`
+- Paragraph properties preserved: `true`
+- Run style source SHA-256: `c21d00426c037a67b0fba1fabff610e453e3a2a5424274c5287e40c65ce00d46`
+- Formula verification: not applicable
+- Endnote hyperlinks preserved: `true`
+- Endnote hyperlink count: `0`
+- Endnote hyperlink XML SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Endnote relationships SHA-256: `absent`
+- Before:
+
+~~~~text
+transferred effect interval
+~~~~
+
+- After:
+
+~~~~text
+source-effect endpoint range, which excludes structural, engineering, baseline and transfer uncertainty
+~~~~
+
+- Minimal tracked fragments:
+  1. `replace`
+     - Before: "transferred"
+     - After: "source-effect"
+  2. `replace`
+     - Before: "effect"
+     - After: "endpoint"
+  3. `replace`
+     - Before: "interval"
+     - After: "range, which excludes structural, engineering, baseline and transfer uncertainty"
+
+### object-bundle-01 — explicitly approved execution exception
+
+- Date: 2026-10-02; author: Codex; comment: reviewer-3/comment-5.
+- Reason: implement figures and displayed table results approved by KILA-D-20261002-022; user separately authorizes agent object replacement in this turn.
+- Mode: scoped object-edit exception, not a normal one-paragraph edit invocation.
+- Location: Figures 5–8 and Tables 1–3; three continuous tables retained.
+- Exact changes: 369 cells; the complete before/after strings, coordinates and paired revision IDs for every cell are retained in `data/exp/revision_object_replacement/validation.json` under `changes`. Four image targets, replacement paths and SHA-256 values are in its `images` field.
+- Before hash: `f1e3c1af7f82876885bdc28045b293e7579326058b559654f97dc8b0a5d9abfd`.
+- After hash: `6ad3214ab2394e3f2f58bdaf8095b8d8b7b40d12b00f44f35bf0358ca3c90202`.
+- Backup: `data/exp/revision_object_replacement/before_objects.markup.docx`.
+- Existing revisions preserved exactly; 369 new insertion/deletion pairs; 472 insertions and 450 deletions total with unique IDs. Changed table cells preserve paragraph/run properties; no prior insertion is re-edited.
+- Image swaps are not tracked textual changes; old images are recoverable from backup. Same widths, corrected heights to preserve source aspect ratios.
+- All non-document/non-target-image package parts unchanged, including endnote XML and relationship bytes. Existing equations and non-table prose untouched.
+- Fresh clean and scoped visual checks: `Rev/docs/r3-c5-object-review.md`. No response completion or submission approval inferred.

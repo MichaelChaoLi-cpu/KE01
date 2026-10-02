@@ -264,10 +264,74 @@ elsewhere.
 
 
 **Response:**
-[Response to be completed.]
+Thank you for this detailed comment. Sections 2.4 and 2.8 now distinguish our study-defined, total-constrained screening allocation from a fitted or previously validated damage model. The primary surface is a single coherent household-proxy scenario with a 20-km decay scale and a half-collapse weight of 0.5, rather than a normalized pointwise median. These parameter values are transparent planning assumptions, not calibrated physical relationships. The corrected median surface remains a separate sensitivity analysis.
 
-"[Exact revised manuscript text]"
-(Page XX, Lines XX–XX)
+Observed shaking is now examined through 54 alternative allocations based on JMA intensity categories and transferred vulnerability shapes. Section 3.3 reports rank correlations, maximum rank shifts and top-five overlap, together with descriptive comparisons against dated municipal damage reports. The exposure top-five set remains stable across these alternatives, but lower-ranked municipalities and incremental-death priorities are less stable. Report-share disagreement remains substantial. Accordingly, Section 4.5 retains epicentral-distance allocation only as early demand screening: neither ranking stability nor closer agreement after examining report geography establishes independent validation. Figure 5a remains contextual evidence, not a validation sample. Figures 5–8, Tables 1–3 and the associated Abstract and Results now use the selected primary consistently.
+
+The revised Abstract states:
+
+"The central allocation contains 303.5 functionally lost residences and approximately 202 affected residents aged 65 or older. Under the Central engineering scenario, their protection requires 28.427 kW of peak cooling power and 511.691 kWh of electricity per day across the prefecture."
+(Page 1, Lines 14–17)
+
+Section 2.4 clarifies the allocation's provenance, assumptions and population definition:
+
+"This is a study-defined total-constrained screening allocation, not a fitted damage-prediction model. Groups without general households receive zero allocation; the remaining weights are renormalized to conserve the scenario total."
+(Page 8, Lines 155–158)
+
+"Housing-loss scenarios cross general households, mapped-building count and mapped footprint area with three distance-decay scales and half-collapse weights of 0, 0.5 and 1, producing 27 allocations. Building proxies are weighting variables, not counts of residences."
+(Pages 8–9, Lines 162–165)
+
+"The central surface is one coherent scenario using general households, a 20-km decay scale and a half-collapse weight of 0.5, giving 303.5 functional-loss units. Household counts align the allocation denominator with the target population; 20 km and 0.5 are transparent planning assumptions, not empirically optimized parameters or a calibrated loss fraction. The normalized pointwise-median surface, rebuilt after the zero-household correction, is retained only as a separate sensitivity."
+(Page 9, Lines 170–175)
+
+"Starting from the lower bound, we distribute the municipal remainder in proportion to older-household counts, subject to the upper bounds, to match official municipal general-household older-population controls."
+(Page 9, Lines 183–185)
+
+Section 2.8 describes consistent aggregation and the shaking alternatives:
+
+"Additive disclosure-group outcomes are summed using representative-point municipality assignments after the central scenario is selected at its defined analytical scale."
+(Page 15, Lines 297–298)
+
+"We additionally compare the selected primary with the corrected hybrid, bounded demographic alternative and 54 hypothetical shaking allocations. For the latter, nearest-station JMA intensity categories are assigned in projected coordinates, including neighbouring-prefecture stations and excluding the withdrawn Tomiai observation."
+(Page 15, Lines 310–313)
+
+Section 3.3 reports the structural sensitivity and geographic comparisons:
+
+"The corrected hybrid yields 216.546 exposed older residents, 7.18% above the selected primary; municipal exposure rank correlation is 0.9818, with a maximum rank shift of six and the same top-five set. Residual-capacity demographic weighting yields 202.185 exposed older residents, with a maximum rank shift of one. Across the 54 shaking scenarios, exposure ranges from 133.49 to 363.43 and rank correlations from 0.8163 to 0.8978; maximum rank shifts are 16–24. All retain the exposure top-five set, but incremental-death top-five overlap is four of five. These ranges combine hazard, proxy and half-collapse assumptions and are not confidence intervals. Against September 29 full-or-half reports, the primary has rank correlation 0.7252, share total-variation distance 0.5845 and top-five overlap 3/5; the corresponding shaking ranges are 0.7732–0.8127, 0.2374–0.3855 and 4/5. The July 31 combined report has only five municipalities with positive counts; primary correlation is 0.3108 and share distance 0.9674. Thus stable high-exposure membership does not establish accurate reported-damage geography."
+(Pages 19–20, Lines 403–416)
+
+Sections 3.4 and 3.5 update the downstream estimates:
+
+"Peak power rises from 17.96 kW in the Low bundle to 28.427 kW in the Central bundle and 39.88 kW in the High bundle; corresponding daily electricity rises from 215.54 to 511.691 and 957.19 kWh."
+(Page 20, Lines 421–423)
+
+"The prefecture-weighted central 30-day mortality-burden increase without effective cooling is 5.31%, with source-effect endpoint scenarios of 0.66% and 9.96%; these endpoints are not whole-model confidence limits."
+(Page 21, Lines 436–438)
+
+Section 4.5 states the remaining limitations:
+
+"The selected allocation is retained as transparent early demand screening, not validated municipal or building-level damage prediction. Report-share disagreement remains substantial; the closer descriptive agreement of shaking alternatives does not establish independent validity or justify post hoc selection. Nearest-station categories omit local site effects, source vulnerability curves are transferred beyond their original setting, and full-collapse shapes are used only as hypothetical functional-loss weights."
+(Page 25, Lines 523–529)
+
+The revised figure notes explain the interpretation of the updated outputs. Figure 5 states:
+
+"Panels b and c use the household/20-km/0.5 primary and bounded general-household older-population allocation; panel a is contextual evidence, not independent validation."
+(Page 32, Lines 595–596)
+
+Figure 6 states:
+
+"Panel b maps the pointwise high 30-day no-placement older-person-day planning bound, derived from pointwise maxima across the 27 distance/proxy/half-collapse scenarios and not representing a jointly realized aggregate scenario."
+(Page 33, Lines 600–602)
+
+Figure 7 states:
+
+"All bundles use the same selected primary population; daily energy assumes constant scenario power over the specified operating hours, not measured consumption or a verified supply shortfall."
+(Page 34, Lines 609–611)
+
+Figure 8 states:
+
+"Panel c maps the relative increase in 30-day mortality burden and reports the prefecture-weighted central contrast and source-effect endpoint range, which excludes structural, engineering, baseline and transfer uncertainty."
+(Page 35, Lines 616–618)
 
 ## Comment 6
 M4 | Transparency of parameters and sensitivity analysis
