@@ -42,10 +42,54 @@ framework can support the operational conclusions claimed.
 
 
 **Response:**
-[Response to be completed.]
+Thank you for this constructive assessment. The revised manuscript strengthens the justification and sensitivity interpretation of the allocation and health components while narrowing the operational claims to spatial screening and demand estimation. It now uses a coherent household-based primary allocation, constrains older-population allocation with municipal general-household controls, compares alternative allocations with geographically bounded damage reports, and distinguishes descriptive agreement from independent validation. The health analysis explains the historical heat-day approximation, tests the effective-cooling multiplier and a no-increment benchmark, and explicitly discusses limits on transferring the source effect to displaced older residents. Engineering assumptions remain demand-side scenarios rather than verified supply gaps.
 
-"[Exact revised manuscript text]"
-(Page XX, Lines XX–XX)
+The additional comparisons do not establish accurate building-level damage, a locally validated cooling effect, or an optimal deployment sequence. The revised Discussion distinguishes comparatively stable broad screening from less stable detailed rankings, and explains which additional field and operational observations are needed. Detailed responses to Comments 1–8 follow. The revised manuscript states:
+
+"The central surface is one coherent scenario using general households, a 20-km decay scale and a half-collapse weight of 0.5, giving 303.5 functional-loss units."
+(Page 9, Lines 176–177)
+
+"These allocations reproduce municipal controls but do not validate within-municipality residence patterns."
+(Page 10, Lines 193–194)
+
+"Equation 3 assumes that housing loss is not systematically associated with age composition within a group; exposure is defined as zero where general households are zero."
+(Page 10, Lines 194–196)
+
+"These comparisons are descriptive rather than independent validation: outcomes and assessment completeness differ, report zeros are not verified negatives, and report geography was examined before developing the alternatives."
+(Page 18, Lines 378–380)
+
+"The corrected hybrid yields 216.546 exposed older residents, 7.18% above the selected primary; municipal exposure rank correlation is 0.9818, with a maximum rank shift of six and the same top-five set."
+(Pages 21–22, Lines 455–457)
+
+"Residual-capacity demographic weighting yields 202.185 exposed older residents, with a maximum rank shift of one."
+(Page 22, Lines 457–459)
+
+"Against September 29 full-or-half reports, the primary has rank correlation 0.7252, share total-variation distance 0.5845 and top-five overlap 3/5; the corresponding shaking ranges are 0.7732–0.8127, 0.2374–0.3855 and 4/5."
+(Page 22, Lines 463–465)
+
+"These demand estimates support resource sizing but cannot establish whether local grid, generator, or fuel capacity is adequate."
+(Page 23, Lines 481–482)
+
+"In the hypothetical no-increment benchmark, both cooling states have identical modeled risks in every municipality, yielding a 0% relative increase and zero incremental expected deaths, while total expected mortality remains positive."
+(Page 23, Lines 491–494)
+
+"Across effective-cooling multipliers of 0.98, 1.00, 1.03 and 1.07, the aggregate relative burden increases are 5.22%, 5.26%, 5.31% and 5.38%, respectively, and incremental expected deaths range from 0.03392 to 0.03703."
+(Pages 23–24, Lines 500–502)
+
+"Compared with using mean heat days, the maximum municipal difference in incremental risk is 0.001059 per 100,000, with no change in municipal incremental-risk rankings."
+(Page 24, Lines 509–510)
+
+"Broad high-demand screening is therefore more stable than detailed municipal sequencing or health-burden priorities."
+(Page 26, Lines 549–551)
+
+"The framework supports spatial screening and demand estimation, not optimized resource allocation or deployment sequencing."
+(Page 27, Lines 580–582)
+
+"The prefecture-wide 5.31% increase is a model output obtained by applying transferred health parameters to local historical high-heat-day estimates and municipality mortality baselines, not evidence of an observed health effect in Kumamoto."
+(Page 27, Lines 590–592)
+
+"The direction and magnitude of transfer bias remain unquantified, and the reported confidence interval does not cover these population, exposure or duration mismatches."
+(Pages 30–31, Lines 662–664)
 
 ## Comment 1
 (1) Section 2.4 (Structural Housing-Loss Allocation): The spatial allocation is driven by exposure
