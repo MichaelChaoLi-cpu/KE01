@@ -319,10 +319,10 @@ implications are unstable.
 
 
 **Response:**
-[Response to be completed.]
+Thank you for this comment. Section 4.2 now synthesizes which planning conclusions remain stable within the tested scenarios and which priorities remain sensitive or unverified. It distinguishes retained high-exposure membership from changes in detailed rankings, explains why common engineering multipliers preserve rankings mechanically, and identifies the limits of calibration and health-effect sensitivity tests. The revised text states:
 
-"[Exact revised manuscript text]"
-(Page XX, Lines XX–XX)
+"Across the tested structural alternatives, the exposure top-five set is retained, but shaking scenarios shift individual exposure ranks by up to 24 places and retain only four of the five highest incremental-death municipalities. Broad high-demand screening is therefore more stable than detailed municipal sequencing or health-burden priorities. Engineering bundles preserve demand rankings because common per-person factors scale all municipalities, while changing resource quantities; this does not establish supply adequacy. Calibration tests do not establish stable priorities in unobserved areas: extending the MODIS station domain does not uniformly improve errors, and this temperature calibration is distinct from the threshold-day interpolation used in the mortality model. The latter's spatial error remains a limitation despite the small tested annual-aggregation difference. Health-effect sensitivities likewise support only conditional conclusions: the protected multiplier has a modest influence over its tested range, whereas the no-cooling effect endpoints materially change burden magnitude and the null-increment benchmark removes the modeled contrast. These separate tests support staged verification of high-demand areas, not a validated ordering of local deficits or a jointly quantified uncertainty range."
+(Pages 25–26, Lines 546–561)
 
 # Reviewer 3
 Major Comments

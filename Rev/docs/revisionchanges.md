@@ -2247,3 +2247,42 @@ It represents the additional modeled burden that may accompany loss of indoor pr
   1. `insert`
      - Before: ""
      - After: " The prefecture-wide 5.31% increase is a model output obtained by applying transferred health parameters to local historical high-heat-day estimates and municipality mortality baselines, not evidence of an observed health effect in Kumamoto. Conditional on fixed effect parameters and a fixed baseline, differences in expected high-heat days determine the spatial variation in the relative contrast; expected-death magnitudes additionally depend on the modeled affected population."
+
+## reviewer-1/comment-8
+
+### part-01
+
+- Location: Section4.2, final sentence of paragraph beginning “Spatial prioritization should consider older-person exposure”.
+- Reason: explicitly connect existing sensitivities to stable conclusions and unstable or unverified operational priorities without treating mechanical rank invariance as validation.
+- Kila decisions: KILA-D-20261003-011
+- Mode: `replace`
+- Revises prior parts: none
+- Timestamp: 2026-10-03T00:03:46Z
+- Author: Kila
+- Markup SHA-256 before: `168a6b94aa1f14918162108c3826de3f18094b7ae439e953bb1154d108009d17`
+- Markup SHA-256 after: `0e22d02b590126bd1257a06dfcd9b0897d253752baffb76fb5a74bff73a4343b`
+- Revision IDs: `1021`
+- Backup: `Rev/revision/.kila-backups/KE01.rev.markup.20261003T090347009652.reviewer-1-comment-8.part-01.docx`
+- Paragraph properties preserved: `true`
+- Run style source SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Formula verification: not applicable
+- Endnote hyperlinks preserved: `true`
+- Endnote hyperlink count: `0`
+- Endnote hyperlink XML SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Endnote relationships SHA-256: `absent`
+- Before:
+
+~~~~text
+The no-placement person-day bound should consequently trigger field verification and placement tracking rather than be interpreted as a measured deficit.
+~~~~
+
+- After:
+
+~~~~text
+The no-placement person-day bound should consequently trigger field verification and placement tracking rather than be interpreted as a measured deficit. Across the tested structural alternatives, the exposure top-five set is retained, but shaking scenarios shift individual exposure ranks by up to 24 places and retain only four of the five highest incremental-death municipalities. Broad high-demand screening is therefore more stable than detailed municipal sequencing or health-burden priorities. Engineering bundles preserve demand rankings because common per-person factors scale all municipalities, while changing resource quantities; this does not establish supply adequacy. Calibration tests do not establish stable priorities in unobserved areas: extending the MODIS station domain does not uniformly improve errors, and this temperature calibration is distinct from the threshold-day interpolation used in the mortality model. The latter's spatial error remains a limitation despite the small tested annual-aggregation difference. Health-effect sensitivities likewise support only conditional conclusions: the protected multiplier has a modest influence over its tested range, whereas the no-cooling effect endpoints materially change burden magnitude and the null-increment benchmark removes the modeled contrast. These separate tests support staged verification of high-demand areas, not a validated ordering of local deficits or a jointly quantified uncertainty range.
+~~~~
+
+- Minimal tracked fragments:
+  1. `insert`
+     - Before: ""
+     - After: " Across the tested structural alternatives, the exposure top-five set is retained, but shaking scenarios shift individual exposure ranks by up to 24 places and retain only four of the five highest incremental-death municipalities. Broad high-demand screening is therefore more stable than detailed municipal sequencing or health-burden priorities. Engineering bundles preserve demand rankings because common per-person factors scale all municipalities, while changing resource quantities; this does not establish supply adequacy. Calibration tests do not establish stable priorities in unobserved areas: extending the MODIS station domain does not uniformly improve errors, and this temperature calibration is distinct from the threshold-day interpolation used in the mortality model. The latter's spatial error remains a limitation despite the small tested annual-aggregation difference. Health-effect sensitivities likewise support only conditional conclusions: the protected multiplier has a modest influence over its tested range, whereas the no-cooling effect endpoints materially change burden magnitude and the null-increment benchmark removes the modeled contrast. These separate tests support staged verification of high-demand areas, not a validated ordering of local deficits or a jointly quantified uncertainty range."
