@@ -2286,3 +2286,241 @@ The no-placement person-day bound should consequently trigger field verification
   1. `insert`
      - Before: ""
      - After: " Across the tested structural alternatives, the exposure top-five set is retained, but shaking scenarios shift individual exposure ranks by up to 24 places and retain only four of the five highest incremental-death municipalities. Broad high-demand screening is therefore more stable than detailed municipal sequencing or health-burden priorities. Engineering bundles preserve demand rankings because common per-person factors scale all municipalities, while changing resource quantities; this does not establish supply adequacy. Calibration tests do not establish stable priorities in unobserved areas: extending the MODIS station domain does not uniformly improve errors, and this temperature calibration is distinct from the threshold-day interpolation used in the mortality model. The latter's spatial error remains a limitation despite the small tested annual-aggregation difference. Health-effect sensitivities likewise support only conditional conclusions: the protected multiplier has a modest influence over its tested range, whereas the no-cooling effect endpoints materially change burden magnitude and the null-increment benchmark removes the modeled contrast. These separate tests support staged verification of high-demand areas, not a validated ordering of local deficits or a jointly quantified uncertainty range."
+
+
+## reviewer-3/comment-12 — supplementary artifact
+
+### part-01
+
+- Decision: KILA-D-20261003-014
+- Action: Create complete supplementary Tables S2–S4; existing S1 unchanged.
+- Before: No S2–S4 document.
+- After: Rev/revision/KE01.supplementary-tables-S2-S4.docx; three continuous tables, each with 45 municipalities and one header.
+- Source: Fresh pre-bundle clean 07e84e9ec1e017ac6f47587bb1e91d079cb4f6d1a0cff632a240bb399f435064. All cell values and row order match source-cells.json exactly.
+- Artifact SHA256: 69b34730f3a41db2465c70ddea07a4a398534741bb70de711c62c50b5042c104
+- Visual review: All nine rendered supplementary pages verified before copy; copied artifact identical.
+
+## reviewer-3/comment-12
+
+### part-02
+
+- Location: Table 1, data rows11–45
+- Reason: Retain ten-row main excerpt and preserve full table in supplement
+- Kila decisions: KILA-D-20261003-013, KILA-D-20261003-014
+- Mode: `replace`
+- Revises prior parts: none
+- Timestamp: 2026-10-03T00:34:31Z
+- Author: Kila
+- Markup SHA-256 before: `0e22d02b590126bd1257a06dfcd9b0897d253752baffb76fb5a74bff73a4343b`
+- Markup SHA-256 after: `4f5c0e760f0b14403a8023c70c2a77904759e20424fc5953a2d4524dca010ec5`
+- Revision IDs: `1022, 1023, 1024, 1025, 1026, 1027, 1028, 1029, 1030, 1031, 1032, 1033, 1034, 1035, 1036, 1037, 1038, 1039, 1040, 1041, 1042, 1043, 1044, 1045, 1046, 1047, 1048, 1049, 1050, 1051, 1052, 1053, 1054, 1055, 1056`
+- Backup: `/Users/lichao/Research/KE01/Rev/revision/.kila-backups/KE01.rev.markup.20261003T093431698035.reviewer-3-comment-12.part-02.docx`
+- Paragraph properties preserved: `true`
+- Run style source SHA-256: `all original row/cell formatting preserved`
+- Formula verification: not applicable
+- Endnote hyperlinks preserved: `true`
+- Endnote hyperlink count: `0`
+- Endnote hyperlink XML SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Endnote relationships SHA-256: `absent`
+- Before:
+
+~~~~text
+[["Municipality", "Functionally Lost Residences (Primary)", "Functionally Lost Residences (Scenario Range)", "Affected Population Age 65+ (Primary)", "Affected Population Age 65+ (Scenario Range)", "No-Placement Older-Person-Days"], ["Kumamoto City", "156.3", "35.8–304.9", "84.5", "20.6–180.1", "2,536.3"], ["Yatsushiro City", "38.2", "11.1–154.9", "29.7", "8.5–124.9", "891.2"], ["Uki City", "23.2", "5.2–117.9", "18.8", "4.1–96.0", "563.2"], ["Uto City", "11.5", "2.6–38.5", "8.3", "1.8–27.2", "247.7"], ["Hikawa Town", "4.5", "0.9–24.4", "4.6", "0.9–25.4", "138.0"], ["Tamana City", "5.6", "0.8–24.7", "4.6", "0.7–21.4", "137.1"], ["Koshi City", "7.1", "1.3–19.5", "4.3", "0.8–12.4", "127.7"], ["Mashiki Town", "5.4", "1.4–11.3", "4.1", "1.0–8.9", "122.7"], ["Mifune Town", "3.9", "0.9–10.6", "3.3", "0.7–8.8", "99.9"], ["Kamiamakusa City", "3.6", "0.7–9.8", "3.4", "0.6–9.4", "103.2"], ["Kikuchi City", "3.3", "0.3–16.0", "2.7", "0.3–13.8", "81.5"], ["Arao City", "2.8", "0.2–14.3", "2.3", "0.2–12.3", "67.6"], ["Kosa Town", "2.8", "0.5–7.9", "2.8", "0.6–8.1", "83.7"], ["Misato Town", "2.5", "0.5–6.8", "2.8", "0.5–7.4", "82.9"], ["Yamaga City", "2.7", "0.2–11.8", "2.5", "0.2–10.8", "73.7"], ["Kikuyo Town", "5.7", "0.8–13.4", "2.6", "0.4–6.8", "78.9"], ["Hitoyoshi City", "2.2", "0.2–9.8", "1.7", "0.2–8.0", "51.7"], ["Amakusa City", "3.4", "0.2–14.0", "3.0", "0.2–12.4", "90.0"], ["Kashima Town", "2.2", "0.6–5.0", "1.5", "0.4–3.7", "43.9"], ["Ozu Town", "3.5", "0.4–10.6", "1.8", "0.2–6.3", "54.0"], ["Asagiri Town", "0.8", "0.1–5.4", "0.8", "0.1–5.4", "24.3"], ["Aso City", "1.0", "0.1–6.1", "0.9", "0.1–5.8", "27.8"], ["Nagasu Town", "1.1", "0.1–5.0", "0.9", "0.1–4.4", "27.1"], ["Yamato Town", "1.5", "0.2–3.6", "1.8", "0.2–4.1", "53.9"], ["Minamata City", "1.1", "0.1–6.3", "0.9", "0.1–5.4", "27.5"], ["Ashikita Town", "1.4", "0.1–4.0", "1.5", "0.1–4.2", "44.6"], ["Taragi Town", "0.6", "0.1–3.3", "0.6", "0.1–3.5", "18.3"], ["Nishiki Town", "0.6", "0.1–3.3", "0.5", "0.05–3.1", "14.7"], ["Minamiaso Village", "0.7", "0.1–2.3", "0.7", "0.05–2.2", "21.4"], ["Nankan Town", "0.4", "0.03–2.5", "0.4", "0.03–2.5", "11.8"], ["Nishihara Village", "0.7", "0.1–2.0", "0.6", "0.1–1.6", "16.9"], ["Yunomae Town", "0.2", "0.03–1.5", "0.2", "0.03–1.6", "7.0"], ["Gyokuto Town", "0.5", "0.1–1.3", "0.4", "0.1–1.3", "13.4"], ["Nagomi Town", "0.5", "0.03–1.7", "0.5", "0.03–1.9", "15.2"], ["Sagara Village", "0.3", "0.03–1.2", "0.3", "0.03–1.4", "9.6"], ["Takamori Town", "0.3", "0.02–1.2", "0.3", "0.02–1.2", "8.8"], ["Yamae Village", "0.2", "0.03–0.9", "0.2", "0.03–0.9", "6.9"], ["Tsunagi Town", "0.2", "0.01–0.8", "0.2", "0.01–0.8", "7.3"], ["Mizukami Village", "0.1", "0.01–0.4", "0.1", "0.01–0.5", "4.3"], ["Kuma Village", "0.2", "0.01–0.6", "0.2", "0.01–0.6", "6.7"], ["Reihoku Town", "0.2", "0.003–0.9", "0.2", "0.003–0.8", "5.4"], ["Itsuki Village", "0.2", "0.02–0.3", "0.2", "0.02–0.3", "6.1"], ["Oguni Town", "0.1", "0.002–0.7", "0.1", "0.002–0.7", "3.7"], ["Minamioguni Town", "0.1", "0.002–0.4", "0.1", "0.002–0.4", "2.5"], ["Ubuyama Village", "0.03", "0.0004–0.1", "0.03", "0.0004–0.1", "0.9"]]
+~~~~
+
+- After:
+
+~~~~text
+[["Municipality", "Functionally Lost Residences (Primary)", "Functionally Lost Residences (Scenario Range)", "Affected Population Age 65+ (Primary)", "Affected Population Age 65+ (Scenario Range)", "No-Placement Older-Person-Days"], ["Kumamoto City", "156.3", "35.8–304.9", "84.5", "20.6–180.1", "2,536.3"], ["Yatsushiro City", "38.2", "11.1–154.9", "29.7", "8.5–124.9", "891.2"], ["Uki City", "23.2", "5.2–117.9", "18.8", "4.1–96.0", "563.2"], ["Uto City", "11.5", "2.6–38.5", "8.3", "1.8–27.2", "247.7"], ["Hikawa Town", "4.5", "0.9–24.4", "4.6", "0.9–25.4", "138.0"], ["Tamana City", "5.6", "0.8–24.7", "4.6", "0.7–21.4", "137.1"], ["Koshi City", "7.1", "1.3–19.5", "4.3", "0.8–12.4", "127.7"], ["Mashiki Town", "5.4", "1.4–11.3", "4.1", "1.0–8.9", "122.7"], ["Mifune Town", "3.9", "0.9–10.6", "3.3", "0.7–8.8", "99.9"], ["Kamiamakusa City", "3.6", "0.7–9.8", "3.4", "0.6–9.4", "103.2"]]
+~~~~
+
+- Minimal tracked fragments:
+  1. `delete-rows`
+     - Before: "[[\"Municipality\", \"Functionally Lost Residences (Primary)\", \"Functionally Lost Residences (Scenario Range)\", \"Affected Population Age 65+ (Primary)\", \"Affected Population Age 65+ (Scenario Range)\", \"No-Placement Older-Person-Days\"], [\"Kumamoto City\", \"156.3\", \"35.8–304.9\", \"84.5\", \"20.6–180.1\", \"2,536.3\"], [\"Yatsushiro City\", \"38.2\", \"11.1–154.9\", \"29.7\", \"8.5–124.9\", \"891.2\"], [\"Uki City\", \"23.2\", \"5.2–117.9\", \"18.8\", \"4.1–96.0\", \"563.2\"], [\"Uto City\", \"11.5\", \"2.6–38.5\", \"8.3\", \"1.8–27.2\", \"247.7\"], [\"Hikawa Town\", \"4.5\", \"0.9–24.4\", \"4.6\", \"0.9–25.4\", \"138.0\"], [\"Tamana City\", \"5.6\", \"0.8–24.7\", \"4.6\", \"0.7–21.4\", \"137.1\"], [\"Koshi City\", \"7.1\", \"1.3–19.5\", \"4.3\", \"0.8–12.4\", \"127.7\"], [\"Mashiki Town\", \"5.4\", \"1.4–11.3\", \"4.1\", \"1.0–8.9\", \"122.7\"], [\"Mifune Town\", \"3.9\", \"0.9–10.6\", \"3.3\", \"0.7–8.8\", \"99.9\"], [\"Kamiamakusa City\", \"3.6\", \"0.7–9.8\", \"3.4\", \"0.6–9.4\", \"103.2\"], [\"Kikuchi City\", \"3.3\", \"0.3–16.0\", \"2.7\", \"0.3–13.8\", \"81.5\"], [\"Arao City\", \"2.8\", \"0.2–14.3\", \"2.3\", \"0.2–12.3\", \"67.6\"], [\"Kosa Town\", \"2.8\", \"0.5–7.9\", \"2.8\", \"0.6–8.1\", \"83.7\"], [\"Misato Town\", \"2.5\", \"0.5–6.8\", \"2.8\", \"0.5–7.4\", \"82.9\"], [\"Yamaga City\", \"2.7\", \"0.2–11.8\", \"2.5\", \"0.2–10.8\", \"73.7\"], [\"Kikuyo Town\", \"5.7\", \"0.8–13.4\", \"2.6\", \"0.4–6.8\", \"78.9\"], [\"Hitoyoshi City\", \"2.2\", \"0.2–9.8\", \"1.7\", \"0.2–8.0\", \"51.7\"], [\"Amakusa City\", \"3.4\", \"0.2–14.0\", \"3.0\", \"0.2–12.4\", \"90.0\"], [\"Kashima Town\", \"2.2\", \"0.6–5.0\", \"1.5\", \"0.4–3.7\", \"43.9\"], [\"Ozu Town\", \"3.5\", \"0.4–10.6\", \"1.8\", \"0.2–6.3\", \"54.0\"], [\"Asagiri Town\", \"0.8\", \"0.1–5.4\", \"0.8\", \"0.1–5.4\", \"24.3\"], [\"Aso City\", \"1.0\", \"0.1–6.1\", \"0.9\", \"0.1–5.8\", \"27.8\"], [\"Nagasu Town\", \"1.1\", \"0.1–5.0\", \"0.9\", \"0.1–4.4\", \"27.1\"], [\"Yamato Town\", \"1.5\", \"0.2–3.6\", \"1.8\", \"0.2–4.1\", \"53.9\"], [\"Minamata City\", \"1.1\", \"0.1–6.3\", \"0.9\", \"0.1–5.4\", \"27.5\"], [\"Ashikita Town\", \"1.4\", \"0.1–4.0\", \"1.5\", \"0.1–4.2\", \"44.6\"], [\"Taragi Town\", \"0.6\", \"0.1–3.3\", \"0.6\", \"0.1–3.5\", \"18.3\"], [\"Nishiki Town\", \"0.6\", \"0.1–3.3\", \"0.5\", \"0.05–3.1\", \"14.7\"], [\"Minamiaso Village\", \"0.7\", \"0.1–2.3\", \"0.7\", \"0.05–2.2\", \"21.4\"], [\"Nankan Town\", \"0.4\", \"0.03–2.5\", \"0.4\", \"0.03–2.5\", \"11.8\"], [\"Nishihara Village\", \"0.7\", \"0.1–2.0\", \"0.6\", \"0.1–1.6\", \"16.9\"], [\"Yunomae Town\", \"0.2\", \"0.03–1.5\", \"0.2\", \"0.03–1.6\", \"7.0\"], [\"Gyokuto Town\", \"0.5\", \"0.1–1.3\", \"0.4\", \"0.1–1.3\", \"13.4\"], [\"Nagomi Town\", \"0.5\", \"0.03–1.7\", \"0.5\", \"0.03–1.9\", \"15.2\"], [\"Sagara Village\", \"0.3\", \"0.03–1.2\", \"0.3\", \"0.03–1.4\", \"9.6\"], [\"Takamori Town\", \"0.3\", \"0.02–1.2\", \"0.3\", \"0.02–1.2\", \"8.8\"], [\"Yamae Village\", \"0.2\", \"0.03–0.9\", \"0.2\", \"0.03–0.9\", \"6.9\"], [\"Tsunagi Town\", \"0.2\", \"0.01–0.8\", \"0.2\", \"0.01–0.8\", \"7.3\"], [\"Mizukami Village\", \"0.1\", \"0.01–0.4\", \"0.1\", \"0.01–0.5\", \"4.3\"], [\"Kuma Village\", \"0.2\", \"0.01–0.6\", \"0.2\", \"0.01–0.6\", \"6.7\"], [\"Reihoku Town\", \"0.2\", \"0.003–0.9\", \"0.2\", \"0.003–0.8\", \"5.4\"], [\"Itsuki Village\", \"0.2\", \"0.02–0.3\", \"0.2\", \"0.02–0.3\", \"6.1\"], [\"Oguni Town\", \"0.1\", \"0.002–0.7\", \"0.1\", \"0.002–0.7\", \"3.7\"], [\"Minamioguni Town\", \"0.1\", \"0.002–0.4\", \"0.1\", \"0.002–0.4\", \"2.5\"], [\"Ubuyama Village\", \"0.03\", \"0.0004–0.1\", \"0.03\", \"0.0004–0.1\", \"0.9\"]]"
+     - After: "[[\"Municipality\", \"Functionally Lost Residences (Primary)\", \"Functionally Lost Residences (Scenario Range)\", \"Affected Population Age 65+ (Primary)\", \"Affected Population Age 65+ (Scenario Range)\", \"No-Placement Older-Person-Days\"], [\"Kumamoto City\", \"156.3\", \"35.8–304.9\", \"84.5\", \"20.6–180.1\", \"2,536.3\"], [\"Yatsushiro City\", \"38.2\", \"11.1–154.9\", \"29.7\", \"8.5–124.9\", \"891.2\"], [\"Uki City\", \"23.2\", \"5.2–117.9\", \"18.8\", \"4.1–96.0\", \"563.2\"], [\"Uto City\", \"11.5\", \"2.6–38.5\", \"8.3\", \"1.8–27.2\", \"247.7\"], [\"Hikawa Town\", \"4.5\", \"0.9–24.4\", \"4.6\", \"0.9–25.4\", \"138.0\"], [\"Tamana City\", \"5.6\", \"0.8–24.7\", \"4.6\", \"0.7–21.4\", \"137.1\"], [\"Koshi City\", \"7.1\", \"1.3–19.5\", \"4.3\", \"0.8–12.4\", \"127.7\"], [\"Mashiki Town\", \"5.4\", \"1.4–11.3\", \"4.1\", \"1.0–8.9\", \"122.7\"], [\"Mifune Town\", \"3.9\", \"0.9–10.6\", \"3.3\", \"0.7–8.8\", \"99.9\"], [\"Kamiamakusa City\", \"3.6\", \"0.7–9.8\", \"3.4\", \"0.6–9.4\", \"103.2\"]]"
+
+### part-03
+
+- Location: Table 2, data rows11–45
+- Reason: Retain ten-row main excerpt and preserve full table in supplement
+- Kila decisions: KILA-D-20261003-013, KILA-D-20261003-014
+- Mode: `replace`
+- Revises prior parts: none
+- Timestamp: 2026-10-03T00:34:31Z
+- Author: Kila
+- Markup SHA-256 before: `4f5c0e760f0b14403a8023c70c2a77904759e20424fc5953a2d4524dca010ec5`
+- Markup SHA-256 after: `65359974be4132901ca91a7326407ea4af641a0c3b5b7c439491a4e8cfc7ea5c`
+- Revision IDs: `1057, 1058, 1059, 1060, 1061, 1062, 1063, 1064, 1065, 1066, 1067, 1068, 1069, 1070, 1071, 1072, 1073, 1074, 1075, 1076, 1077, 1078, 1079, 1080, 1081, 1082, 1083, 1084, 1085, 1086, 1087, 1088, 1089, 1090, 1091`
+- Backup: `/Users/lichao/Research/KE01/Rev/revision/.kila-backups/KE01.rev.markup.20261003T093431987943.reviewer-3-comment-12.part-03.docx`
+- Paragraph properties preserved: `true`
+- Run style source SHA-256: `all original row/cell formatting preserved`
+- Formula verification: not applicable
+- Endnote hyperlinks preserved: `true`
+- Endnote hyperlink count: `0`
+- Endnote hyperlink XML SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Endnote relationships SHA-256: `absent`
+- Before:
+
+~~~~text
+[["Municipality", "Affected Population Age 65+ (Central)", "No-Placement Older-Person-Days", "Expected High-Heat Days", "Peak Cooling Power kW (Central)", "Daily Cooling Electricity kWh (Central)"], ["Kumamoto City", "84.5", "2,536.3", "23.4", "11.90", "214.1"], ["Yatsushiro City", "29.7", "891.2", "19.0", "4.18", "75.2"], ["Uki City", "18.8", "563.2", "20.0", "2.64", "47.5"], ["Uto City", "8.3", "247.7", "20.8", "1.16", "20.9"], ["Hikawa Town", "4.6", "138.0", "19.0", "0.65", "11.7"], ["Tamana City", "4.6", "137.1", "23.4", "0.64", "11.6"], ["Koshi City", "4.3", "127.7", "17.7", "0.60", "10.8"], ["Mashiki Town", "4.1", "122.7", "12.0", "0.58", "10.4"], ["Mifune Town", "3.3", "99.9", "14.2", "0.47", "8.4"], ["Kamiamakusa City", "3.4", "103.2", "18.2", "0.48", "8.7"], ["Kikuchi City", "2.7", "81.5", "13.6", "0.38", "6.9"], ["Arao City", "2.3", "67.6", "22.7", "0.32", "5.7"], ["Kosa Town", "2.8", "83.7", "14.4", "0.39", "7.1"], ["Misato Town", "2.8", "82.9", "14.9", "0.39", "7.0"], ["Yamaga City", "2.5", "73.7", "13.7", "0.35", "6.2"], ["Kikuyo Town", "2.6", "78.9", "10.8", "0.37", "6.7"], ["Hitoyoshi City", "1.7", "51.7", "11.1", "0.24", "4.4"], ["Amakusa City", "3.0", "90.0", "17.9", "0.42", "7.6"], ["Kashima Town", "1.5", "43.9", "17.6", "0.21", "3.7"], ["Ozu Town", "1.8", "54.0", "10.1", "0.25", "4.6"], ["Asagiri Town", "0.8", "24.3", "10.6", "0.11", "2.1"], ["Aso City", "0.9", "27.8", "0.4", "0.13", "2.4"], ["Nagasu Town", "0.9", "27.1", "23.6", "0.13", "2.3"], ["Yamato Town", "1.8", "53.9", "4.8", "0.25", "4.6"], ["Minamata City", "0.9", "27.5", "15.9", "0.13", "2.3"], ["Ashikita Town", "1.5", "44.6", "16.2", "0.21", "3.8"], ["Taragi Town", "0.6", "18.3", "11.0", "0.09", "1.5"], ["Nishiki Town", "0.5", "14.7", "11.0", "0.07", "1.2"], ["Minamiaso Village", "0.7", "21.4", "2.2", "0.10", "1.8"], ["Nankan Town", "0.4", "11.8", "18.9", "0.06", "1.0"], ["Nishihara Village", "0.6", "16.9", "7.3", "0.08", "1.4"], ["Yunomae Town", "0.2", "7.0", "11.3", "0.03", "0.6"], ["Gyokuto Town", "0.4", "13.4", "21.3", "0.06", "1.1"], ["Nagomi Town", "0.5", "15.2", "16.1", "0.07", "1.3"], ["Sagara Village", "0.3", "9.6", "11.5", "0.05", "0.8"], ["Takamori Town", "0.3", "8.8", "0.6", "0.04", "0.7"], ["Yamae Village", "0.2", "6.9", "12.3", "0.03", "0.6"], ["Tsunagi Town", "0.2", "7.3", "16.0", "0.03", "0.6"], ["Mizukami Village", "0.1", "4.3", "12.3", "0.02", "0.4"], ["Kuma Village", "0.2", "6.7", "12.7", "0.03", "0.6"], ["Reihoku Town", "0.2", "5.4", "17.9", "0.03", "0.5"], ["Itsuki Village", "0.2", "6.1", "14.1", "0.03", "0.5"], ["Oguni Town", "0.1", "3.7", "1.4", "0.02", "0.3"], ["Minamioguni Town", "0.1", "2.5", "1.2", "0.01", "0.2"], ["Ubuyama Village", "0.03", "0.9", "1.0", "0.004", "0.1"]]
+~~~~
+
+- After:
+
+~~~~text
+[["Municipality", "Affected Population Age 65+ (Central)", "No-Placement Older-Person-Days", "Expected High-Heat Days", "Peak Cooling Power kW (Central)", "Daily Cooling Electricity kWh (Central)"], ["Kumamoto City", "84.5", "2,536.3", "23.4", "11.90", "214.1"], ["Yatsushiro City", "29.7", "891.2", "19.0", "4.18", "75.2"], ["Uki City", "18.8", "563.2", "20.0", "2.64", "47.5"], ["Uto City", "8.3", "247.7", "20.8", "1.16", "20.9"], ["Hikawa Town", "4.6", "138.0", "19.0", "0.65", "11.7"], ["Tamana City", "4.6", "137.1", "23.4", "0.64", "11.6"], ["Koshi City", "4.3", "127.7", "17.7", "0.60", "10.8"], ["Mashiki Town", "4.1", "122.7", "12.0", "0.58", "10.4"], ["Mifune Town", "3.3", "99.9", "14.2", "0.47", "8.4"], ["Kamiamakusa City", "3.4", "103.2", "18.2", "0.48", "8.7"]]
+~~~~
+
+- Minimal tracked fragments:
+  1. `delete-rows`
+     - Before: "[[\"Municipality\", \"Affected Population Age 65+ (Central)\", \"No-Placement Older-Person-Days\", \"Expected High-Heat Days\", \"Peak Cooling Power kW (Central)\", \"Daily Cooling Electricity kWh (Central)\"], [\"Kumamoto City\", \"84.5\", \"2,536.3\", \"23.4\", \"11.90\", \"214.1\"], [\"Yatsushiro City\", \"29.7\", \"891.2\", \"19.0\", \"4.18\", \"75.2\"], [\"Uki City\", \"18.8\", \"563.2\", \"20.0\", \"2.64\", \"47.5\"], [\"Uto City\", \"8.3\", \"247.7\", \"20.8\", \"1.16\", \"20.9\"], [\"Hikawa Town\", \"4.6\", \"138.0\", \"19.0\", \"0.65\", \"11.7\"], [\"Tamana City\", \"4.6\", \"137.1\", \"23.4\", \"0.64\", \"11.6\"], [\"Koshi City\", \"4.3\", \"127.7\", \"17.7\", \"0.60\", \"10.8\"], [\"Mashiki Town\", \"4.1\", \"122.7\", \"12.0\", \"0.58\", \"10.4\"], [\"Mifune Town\", \"3.3\", \"99.9\", \"14.2\", \"0.47\", \"8.4\"], [\"Kamiamakusa City\", \"3.4\", \"103.2\", \"18.2\", \"0.48\", \"8.7\"], [\"Kikuchi City\", \"2.7\", \"81.5\", \"13.6\", \"0.38\", \"6.9\"], [\"Arao City\", \"2.3\", \"67.6\", \"22.7\", \"0.32\", \"5.7\"], [\"Kosa Town\", \"2.8\", \"83.7\", \"14.4\", \"0.39\", \"7.1\"], [\"Misato Town\", \"2.8\", \"82.9\", \"14.9\", \"0.39\", \"7.0\"], [\"Yamaga City\", \"2.5\", \"73.7\", \"13.7\", \"0.35\", \"6.2\"], [\"Kikuyo Town\", \"2.6\", \"78.9\", \"10.8\", \"0.37\", \"6.7\"], [\"Hitoyoshi City\", \"1.7\", \"51.7\", \"11.1\", \"0.24\", \"4.4\"], [\"Amakusa City\", \"3.0\", \"90.0\", \"17.9\", \"0.42\", \"7.6\"], [\"Kashima Town\", \"1.5\", \"43.9\", \"17.6\", \"0.21\", \"3.7\"], [\"Ozu Town\", \"1.8\", \"54.0\", \"10.1\", \"0.25\", \"4.6\"], [\"Asagiri Town\", \"0.8\", \"24.3\", \"10.6\", \"0.11\", \"2.1\"], [\"Aso City\", \"0.9\", \"27.8\", \"0.4\", \"0.13\", \"2.4\"], [\"Nagasu Town\", \"0.9\", \"27.1\", \"23.6\", \"0.13\", \"2.3\"], [\"Yamato Town\", \"1.8\", \"53.9\", \"4.8\", \"0.25\", \"4.6\"], [\"Minamata City\", \"0.9\", \"27.5\", \"15.9\", \"0.13\", \"2.3\"], [\"Ashikita Town\", \"1.5\", \"44.6\", \"16.2\", \"0.21\", \"3.8\"], [\"Taragi Town\", \"0.6\", \"18.3\", \"11.0\", \"0.09\", \"1.5\"], [\"Nishiki Town\", \"0.5\", \"14.7\", \"11.0\", \"0.07\", \"1.2\"], [\"Minamiaso Village\", \"0.7\", \"21.4\", \"2.2\", \"0.10\", \"1.8\"], [\"Nankan Town\", \"0.4\", \"11.8\", \"18.9\", \"0.06\", \"1.0\"], [\"Nishihara Village\", \"0.6\", \"16.9\", \"7.3\", \"0.08\", \"1.4\"], [\"Yunomae Town\", \"0.2\", \"7.0\", \"11.3\", \"0.03\", \"0.6\"], [\"Gyokuto Town\", \"0.4\", \"13.4\", \"21.3\", \"0.06\", \"1.1\"], [\"Nagomi Town\", \"0.5\", \"15.2\", \"16.1\", \"0.07\", \"1.3\"], [\"Sagara Village\", \"0.3\", \"9.6\", \"11.5\", \"0.05\", \"0.8\"], [\"Takamori Town\", \"0.3\", \"8.8\", \"0.6\", \"0.04\", \"0.7\"], [\"Yamae Village\", \"0.2\", \"6.9\", \"12.3\", \"0.03\", \"0.6\"], [\"Tsunagi Town\", \"0.2\", \"7.3\", \"16.0\", \"0.03\", \"0.6\"], [\"Mizukami Village\", \"0.1\", \"4.3\", \"12.3\", \"0.02\", \"0.4\"], [\"Kuma Village\", \"0.2\", \"6.7\", \"12.7\", \"0.03\", \"0.6\"], [\"Reihoku Town\", \"0.2\", \"5.4\", \"17.9\", \"0.03\", \"0.5\"], [\"Itsuki Village\", \"0.2\", \"6.1\", \"14.1\", \"0.03\", \"0.5\"], [\"Oguni Town\", \"0.1\", \"3.7\", \"1.4\", \"0.02\", \"0.3\"], [\"Minamioguni Town\", \"0.1\", \"2.5\", \"1.2\", \"0.01\", \"0.2\"], [\"Ubuyama Village\", \"0.03\", \"0.9\", \"1.0\", \"0.004\", \"0.1\"]]"
+     - After: "[[\"Municipality\", \"Affected Population Age 65+ (Central)\", \"No-Placement Older-Person-Days\", \"Expected High-Heat Days\", \"Peak Cooling Power kW (Central)\", \"Daily Cooling Electricity kWh (Central)\"], [\"Kumamoto City\", \"84.5\", \"2,536.3\", \"23.4\", \"11.90\", \"214.1\"], [\"Yatsushiro City\", \"29.7\", \"891.2\", \"19.0\", \"4.18\", \"75.2\"], [\"Uki City\", \"18.8\", \"563.2\", \"20.0\", \"2.64\", \"47.5\"], [\"Uto City\", \"8.3\", \"247.7\", \"20.8\", \"1.16\", \"20.9\"], [\"Hikawa Town\", \"4.6\", \"138.0\", \"19.0\", \"0.65\", \"11.7\"], [\"Tamana City\", \"4.6\", \"137.1\", \"23.4\", \"0.64\", \"11.6\"], [\"Koshi City\", \"4.3\", \"127.7\", \"17.7\", \"0.60\", \"10.8\"], [\"Mashiki Town\", \"4.1\", \"122.7\", \"12.0\", \"0.58\", \"10.4\"], [\"Mifune Town\", \"3.3\", \"99.9\", \"14.2\", \"0.47\", \"8.4\"], [\"Kamiamakusa City\", \"3.4\", \"103.2\", \"18.2\", \"0.48\", \"8.7\"]]"
+
+### part-04
+
+- Location: Table 3, data rows11–45
+- Reason: Retain ten-row main excerpt and preserve full table in supplement
+- Kila decisions: KILA-D-20261003-013, KILA-D-20261003-014
+- Mode: `replace`
+- Revises prior parts: none
+- Timestamp: 2026-10-03T00:34:32Z
+- Author: Kila
+- Markup SHA-256 before: `65359974be4132901ca91a7326407ea4af641a0c3b5b7c439491a4e8cfc7ea5c`
+- Markup SHA-256 after: `cb864ee87e5998616d64cdca3d2cd5a829ecce4e6beaf04eebe7cb5244150ebb`
+- Revision IDs: `1092, 1093, 1094, 1095, 1096, 1097, 1098, 1099, 1100, 1101, 1102, 1103, 1104, 1105, 1106, 1107, 1108, 1109, 1110, 1111, 1112, 1113, 1114, 1115, 1116, 1117, 1118, 1119, 1120, 1121, 1122, 1123, 1124, 1125, 1126`
+- Backup: `/Users/lichao/Research/KE01/Rev/revision/.kila-backups/KE01.rev.markup.20261003T093432300637.reviewer-3-comment-12.part-04.docx`
+- Paragraph properties preserved: `true`
+- Run style source SHA-256: `all original row/cell formatting preserved`
+- Formula verification: not applicable
+- Endnote hyperlinks preserved: `true`
+- Endnote hyperlink count: `0`
+- Endnote hyperlink XML SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Endnote relationships SHA-256: `absent`
+- Before:
+
+~~~~text
+[["Municipality", "Expected High-Heat Days", "Incremental Excess Deaths (30 Days)", "Relative Mortality Burden Increase %", "Relative Mortality Burden Increase % Lower Effect Scenario", "Relative Mortality Burden Increase % Upper Effect Scenario"], ["Nagasu Town", "23.6", "0.00017", "6.32", "0.79", "11.86"], ["Kumamoto City", "23.4", "0.01681", "6.26", "0.78", "11.74"], ["Tamana City", "23.4", "0.00098", "6.26", "0.78", "11.74"], ["Arao City", "22.7", "0.00046", "6.09", "0.76", "11.42"], ["Gyokuto Town", "21.3", "0.00008", "5.71", "0.71", "10.71"], ["Uto City", "20.8", "0.00154", "5.60", "0.70", "10.49"], ["Uki City", "20.0", "0.00345", "5.39", "0.67", "10.10"], ["Yatsushiro City", "19.0", "0.00531", "5.12", "0.64", "9.60"], ["Hikawa Town", "19.0", "0.00089", "5.12", "0.64", "9.60"], ["Nankan Town", "18.9", "0.00008", "5.08", "0.64", "9.53"], ["Kamiamakusa City", "18.2", "0.00062", "4.91", "0.61", "9.21"], ["Reihoku Town", "17.9", "0.00003", "4.83", "0.60", "9.05"], ["Amakusa City", "17.9", "0.00055", "4.82", "0.60", "9.03"], ["Koshi City", "17.7", "0.00060", "4.76", "0.59", "8.92"], ["Kashima Town", "17.6", "0.00026", "4.73", "0.59", "8.86"], ["Ashikita Town", "16.2", "0.00025", "4.36", "0.54", "8.17"], ["Nagomi Town", "16.1", "0.00008", "4.35", "0.54", "8.16"], ["Tsunagi Town", "16.0", "0.00004", "4.32", "0.54", "8.10"], ["Minamata City", "15.9", "0.00013", "4.30", "0.54", "8.06"], ["Misato Town", "14.9", "0.00045", "4.02", "0.50", "7.54"], ["Kosa Town", "14.4", "0.00037", "3.89", "0.49", "7.30"], ["Mifune Town", "14.2", "0.00041", "3.84", "0.48", "7.20"], ["Itsuki Village", "14.1", "0.00003", "3.81", "0.48", "7.14"], ["Yamaga City", "13.7", "0.00032", "3.71", "0.46", "6.96"], ["Kikuchi City", "13.6", "0.00034", "3.69", "0.46", "6.92"], ["Kuma Village", "12.7", "0.00004", "3.43", "0.43", "6.43"], ["Yamae Village", "12.3", "0.00002", "3.34", "0.42", "6.26"], ["Mizukami Village", "12.3", "0.00002", "3.32", "0.42", "6.23"], ["Mashiki Town", "12.0", "0.00038", "3.24", "0.41", "6.08"], ["Sagara Village", "11.5", "0.00003", "3.13", "0.39", "5.87"], ["Yunomae Town", "11.3", "0.00003", "3.05", "0.38", "5.73"], ["Hitoyoshi City", "11.1", "0.00018", "3.02", "0.38", "5.66"], ["Taragi Town", "11.0", "0.00006", "2.99", "0.37", "5.60"], ["Nishiki Town", "11.0", "0.00005", "2.97", "0.37", "5.57"], ["Kikuyo Town", "10.8", "0.00019", "2.92", "0.37", "5.48"], ["Asagiri Town", "10.6", "0.00008", "2.89", "0.36", "5.41"], ["Ozu Town", "10.1", "0.00015", "2.74", "0.34", "5.14"], ["Nishihara Village", "7.3", "0.00004", "1.99", "0.25", "3.73"], ["Yamato Town", "4.8", "0.00009", "1.31", "0.16", "2.45"], ["Minamiaso Village", "2.2", "0.00001", "0.59", "0.07", "1.11"], ["Oguni Town", "1.4", "0.000002", "0.37", "0.05", "0.70"], ["Minamioguni Town", "1.2", "0.000001", "0.33", "0.04", "0.62"], ["Ubuyama Village", "1.0", "0.0000003", "0.27", "0.03", "0.51"], ["Takamori Town", "0.6", "0.000001", "0.15", "0.02", "0.28"], ["Aso City", "0.4", "0.000003", "0.10", "0.01", "0.18"]]
+~~~~
+
+- After:
+
+~~~~text
+[["Municipality", "Expected High-Heat Days", "Incremental Excess Deaths (30 Days)", "Relative Mortality Burden Increase %", "Relative Mortality Burden Increase % Lower Effect Scenario", "Relative Mortality Burden Increase % Upper Effect Scenario"], ["Nagasu Town", "23.6", "0.00017", "6.32", "0.79", "11.86"], ["Kumamoto City", "23.4", "0.01681", "6.26", "0.78", "11.74"], ["Tamana City", "23.4", "0.00098", "6.26", "0.78", "11.74"], ["Arao City", "22.7", "0.00046", "6.09", "0.76", "11.42"], ["Gyokuto Town", "21.3", "0.00008", "5.71", "0.71", "10.71"], ["Uto City", "20.8", "0.00154", "5.60", "0.70", "10.49"], ["Uki City", "20.0", "0.00345", "5.39", "0.67", "10.10"], ["Yatsushiro City", "19.0", "0.00531", "5.12", "0.64", "9.60"], ["Hikawa Town", "19.0", "0.00089", "5.12", "0.64", "9.60"], ["Nankan Town", "18.9", "0.00008", "5.08", "0.64", "9.53"]]
+~~~~
+
+- Minimal tracked fragments:
+  1. `delete-rows`
+     - Before: "[[\"Municipality\", \"Expected High-Heat Days\", \"Incremental Excess Deaths (30 Days)\", \"Relative Mortality Burden Increase %\", \"Relative Mortality Burden Increase % Lower Effect Scenario\", \"Relative Mortality Burden Increase % Upper Effect Scenario\"], [\"Nagasu Town\", \"23.6\", \"0.00017\", \"6.32\", \"0.79\", \"11.86\"], [\"Kumamoto City\", \"23.4\", \"0.01681\", \"6.26\", \"0.78\", \"11.74\"], [\"Tamana City\", \"23.4\", \"0.00098\", \"6.26\", \"0.78\", \"11.74\"], [\"Arao City\", \"22.7\", \"0.00046\", \"6.09\", \"0.76\", \"11.42\"], [\"Gyokuto Town\", \"21.3\", \"0.00008\", \"5.71\", \"0.71\", \"10.71\"], [\"Uto City\", \"20.8\", \"0.00154\", \"5.60\", \"0.70\", \"10.49\"], [\"Uki City\", \"20.0\", \"0.00345\", \"5.39\", \"0.67\", \"10.10\"], [\"Yatsushiro City\", \"19.0\", \"0.00531\", \"5.12\", \"0.64\", \"9.60\"], [\"Hikawa Town\", \"19.0\", \"0.00089\", \"5.12\", \"0.64\", \"9.60\"], [\"Nankan Town\", \"18.9\", \"0.00008\", \"5.08\", \"0.64\", \"9.53\"], [\"Kamiamakusa City\", \"18.2\", \"0.00062\", \"4.91\", \"0.61\", \"9.21\"], [\"Reihoku Town\", \"17.9\", \"0.00003\", \"4.83\", \"0.60\", \"9.05\"], [\"Amakusa City\", \"17.9\", \"0.00055\", \"4.82\", \"0.60\", \"9.03\"], [\"Koshi City\", \"17.7\", \"0.00060\", \"4.76\", \"0.59\", \"8.92\"], [\"Kashima Town\", \"17.6\", \"0.00026\", \"4.73\", \"0.59\", \"8.86\"], [\"Ashikita Town\", \"16.2\", \"0.00025\", \"4.36\", \"0.54\", \"8.17\"], [\"Nagomi Town\", \"16.1\", \"0.00008\", \"4.35\", \"0.54\", \"8.16\"], [\"Tsunagi Town\", \"16.0\", \"0.00004\", \"4.32\", \"0.54\", \"8.10\"], [\"Minamata City\", \"15.9\", \"0.00013\", \"4.30\", \"0.54\", \"8.06\"], [\"Misato Town\", \"14.9\", \"0.00045\", \"4.02\", \"0.50\", \"7.54\"], [\"Kosa Town\", \"14.4\", \"0.00037\", \"3.89\", \"0.49\", \"7.30\"], [\"Mifune Town\", \"14.2\", \"0.00041\", \"3.84\", \"0.48\", \"7.20\"], [\"Itsuki Village\", \"14.1\", \"0.00003\", \"3.81\", \"0.48\", \"7.14\"], [\"Yamaga City\", \"13.7\", \"0.00032\", \"3.71\", \"0.46\", \"6.96\"], [\"Kikuchi City\", \"13.6\", \"0.00034\", \"3.69\", \"0.46\", \"6.92\"], [\"Kuma Village\", \"12.7\", \"0.00004\", \"3.43\", \"0.43\", \"6.43\"], [\"Yamae Village\", \"12.3\", \"0.00002\", \"3.34\", \"0.42\", \"6.26\"], [\"Mizukami Village\", \"12.3\", \"0.00002\", \"3.32\", \"0.42\", \"6.23\"], [\"Mashiki Town\", \"12.0\", \"0.00038\", \"3.24\", \"0.41\", \"6.08\"], [\"Sagara Village\", \"11.5\", \"0.00003\", \"3.13\", \"0.39\", \"5.87\"], [\"Yunomae Town\", \"11.3\", \"0.00003\", \"3.05\", \"0.38\", \"5.73\"], [\"Hitoyoshi City\", \"11.1\", \"0.00018\", \"3.02\", \"0.38\", \"5.66\"], [\"Taragi Town\", \"11.0\", \"0.00006\", \"2.99\", \"0.37\", \"5.60\"], [\"Nishiki Town\", \"11.0\", \"0.00005\", \"2.97\", \"0.37\", \"5.57\"], [\"Kikuyo Town\", \"10.8\", \"0.00019\", \"2.92\", \"0.37\", \"5.48\"], [\"Asagiri Town\", \"10.6\", \"0.00008\", \"2.89\", \"0.36\", \"5.41\"], [\"Ozu Town\", \"10.1\", \"0.00015\", \"2.74\", \"0.34\", \"5.14\"], [\"Nishihara Village\", \"7.3\", \"0.00004\", \"1.99\", \"0.25\", \"3.73\"], [\"Yamato Town\", \"4.8\", \"0.00009\", \"1.31\", \"0.16\", \"2.45\"], [\"Minamiaso Village\", \"2.2\", \"0.00001\", \"0.59\", \"0.07\", \"1.11\"], [\"Oguni Town\", \"1.4\", \"0.000002\", \"0.37\", \"0.05\", \"0.70\"], [\"Minamioguni Town\", \"1.2\", \"0.000001\", \"0.33\", \"0.04\", \"0.62\"], [\"Ubuyama Village\", \"1.0\", \"0.0000003\", \"0.27\", \"0.03\", \"0.51\"], [\"Takamori Town\", \"0.6\", \"0.000001\", \"0.15\", \"0.02\", \"0.28\"], [\"Aso City\", \"0.4\", \"0.000003\", \"0.10\", \"0.01\", \"0.18\"]]"
+     - After: "[[\"Municipality\", \"Expected High-Heat Days\", \"Incremental Excess Deaths (30 Days)\", \"Relative Mortality Burden Increase %\", \"Relative Mortality Burden Increase % Lower Effect Scenario\", \"Relative Mortality Burden Increase % Upper Effect Scenario\"], [\"Nagasu Town\", \"23.6\", \"0.00017\", \"6.32\", \"0.79\", \"11.86\"], [\"Kumamoto City\", \"23.4\", \"0.01681\", \"6.26\", \"0.78\", \"11.74\"], [\"Tamana City\", \"23.4\", \"0.00098\", \"6.26\", \"0.78\", \"11.74\"], [\"Arao City\", \"22.7\", \"0.00046\", \"6.09\", \"0.76\", \"11.42\"], [\"Gyokuto Town\", \"21.3\", \"0.00008\", \"5.71\", \"0.71\", \"10.71\"], [\"Uto City\", \"20.8\", \"0.00154\", \"5.60\", \"0.70\", \"10.49\"], [\"Uki City\", \"20.0\", \"0.00345\", \"5.39\", \"0.67\", \"10.10\"], [\"Yatsushiro City\", \"19.0\", \"0.00531\", \"5.12\", \"0.64\", \"9.60\"], [\"Hikawa Town\", \"19.0\", \"0.00089\", \"5.12\", \"0.64\", \"9.60\"], [\"Nankan Town\", \"18.9\", \"0.00008\", \"5.08\", \"0.64\", \"9.53\"]]"
+
+### part-05
+
+- Location: Table 1 caption
+- Reason: Explain excerpt and point to complete supplement
+- Kila decisions: KILA-D-20261003-014
+- Mode: `replace`
+- Revises prior parts: none
+- Timestamp: 2026-10-03T00:34:32Z
+- Author: Kila
+- Markup SHA-256 before: `cb864ee87e5998616d64cdca3d2cd5a829ecce4e6beaf04eebe7cb5244150ebb`
+- Markup SHA-256 after: `9c2c2a695d5df9b35149d29f70616584428e84c0af9a234079762b6594d13fff`
+- Revision IDs: `1127`
+- Backup: `/Users/lichao/Research/KE01/Rev/revision/.kila-backups/KE01.rev.markup.20261003T093432720087.reviewer-3-comment-12.part-05.docx`
+- Paragraph properties preserved: `true`
+- Run style source SHA-256: `5017784f5cca96911d02c75702284e2458f97a555bee88c1cf2aa939b54390c5`
+- Formula verification: not applicable
+- Endnote hyperlinks preserved: `true`
+- Endnote hyperlink count: `0`
+- Endnote hyperlink XML SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Endnote relationships SHA-256: `absent`
+- Before:
+
+~~~~text
+Table 1. Municipality Housing Loss and Cooling Need
+~~~~
+
+- After:
+
+~~~~text
+Table 1. Municipality Housing Loss and Cooling Need. Ten municipalities are shown in the existing table order; Table S2 provides all 45 municipalities. This excerpt is not a validated intervention ranking.
+~~~~
+
+- Minimal tracked fragments:
+  1. `insert`
+     - Before: ""
+     - After: ". Ten municipalities are shown in the existing table order; Table S2 provides all 45 municipalities. This excerpt is not a validated intervention ranking."
+
+### part-06
+
+- Location: Table 2 caption
+- Reason: Explain excerpt and point to complete supplement
+- Kila decisions: KILA-D-20261003-014
+- Mode: `replace`
+- Revises prior parts: none
+- Timestamp: 2026-10-03T00:34:32Z
+- Author: Kila
+- Markup SHA-256 before: `9c2c2a695d5df9b35149d29f70616584428e84c0af9a234079762b6594d13fff`
+- Markup SHA-256 after: `640a635266ea9fe20b905a52d2fdbfe34c7d071f47a622e75d10152ba51eb4c4`
+- Revision IDs: `1128`
+- Backup: `/Users/lichao/Research/KE01/Rev/revision/.kila-backups/KE01.rev.markup.20261003T093433152683.reviewer-3-comment-12.part-06.docx`
+- Paragraph properties preserved: `true`
+- Run style source SHA-256: `5017784f5cca96911d02c75702284e2458f97a555bee88c1cf2aa939b54390c5`
+- Formula verification: not applicable
+- Endnote hyperlinks preserved: `true`
+- Endnote hyperlink count: `0`
+- Endnote hyperlink XML SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Endnote relationships SHA-256: `absent`
+- Before:
+
+~~~~text
+Table 2. Municipality Cooling Electricity Planning Summary
+~~~~
+
+- After:
+
+~~~~text
+Table 2. Municipality Cooling Electricity Planning Summary. Ten municipalities are shown in the existing table order; Table S3 provides all 45 municipalities. This excerpt is not a validated intervention ranking.
+~~~~
+
+- Minimal tracked fragments:
+  1. `insert`
+     - Before: ""
+     - After: ". Ten municipalities are shown in the existing table order; Table S3 provides all 45 municipalities. This excerpt is not a validated intervention ranking."
+
+### part-07
+
+- Location: Table 3 caption
+- Reason: Explain excerpt and point to complete supplement
+- Kila decisions: KILA-D-20261003-014
+- Mode: `replace`
+- Revises prior parts: none
+- Timestamp: 2026-10-03T00:34:33Z
+- Author: Kila
+- Markup SHA-256 before: `640a635266ea9fe20b905a52d2fdbfe34c7d071f47a622e75d10152ba51eb4c4`
+- Markup SHA-256 after: `fcf9c721c8776d947fa257e4e62c6d399fe721fd235b0bb02531c40a4eb4bb66`
+- Revision IDs: `1129`
+- Backup: `/Users/lichao/Research/KE01/Rev/revision/.kila-backups/KE01.rev.markup.20261003T093433530097.reviewer-3-comment-12.part-07.docx`
+- Paragraph properties preserved: `true`
+- Run style source SHA-256: `5017784f5cca96911d02c75702284e2458f97a555bee88c1cf2aa939b54390c5`
+- Formula verification: not applicable
+- Endnote hyperlinks preserved: `true`
+- Endnote hyperlink count: `0`
+- Endnote hyperlink XML SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Endnote relationships SHA-256: `absent`
+- Before:
+
+~~~~text
+Table 3. Municipality Cooling-Loss Health-Risk Summary
+~~~~
+
+- After:
+
+~~~~text
+Table 3. Municipality Cooling-Loss Health-Risk Summary. Ten municipalities are shown in the existing table order; Table S4 provides all 45 municipalities. This excerpt is not a validated intervention ranking.
+~~~~
+
+- Minimal tracked fragments:
+  1. `insert`
+     - Before: ""
+     - After: ". Ten municipalities are shown in the existing table order; Table S4 provides all 45 municipalities. This excerpt is not a validated intervention ranking."
+

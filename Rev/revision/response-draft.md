@@ -662,7 +662,23 @@ concise versions be produced in the main text, with complete versions provided a
 
 
 **Response:**
-[Response to be completed.]
+Thank you for this suggestion. Tables 1–3 now present concise, continuous tables containing ten municipalities in the existing order, while supplementary Tables S2–S4 provide the complete results for all 45 municipalities. The captions identify the full versions and clarify that the excerpts do not constitute validated intervention rankings. The tables retain the reduced display precision already used in the revised manuscript; small expected-death estimates retain sufficient decimal places to avoid rounding nonzero estimates to zero.
 
-"[Exact revised manuscript text]"
-(Page XX, Lines XX–XX)
+"Table 1. Municipality Housing Loss and Cooling Need. Ten municipalities are shown in the existing table order; Table S2 provides all 45 municipalities. This excerpt is not a validated intervention ranking."
+(Page 40, Lines 738–739)
+
+"Table 2. Municipality Cooling Electricity Planning Summary. Ten municipalities are shown in the existing table order; Table S3 provides all 45 municipalities. This excerpt is not a validated intervention ranking."
+(Page 41, Lines 740–741)
+
+"Table 3. Municipality Cooling-Loss Health-Risk Summary. Ten municipalities are shown in the existing table order; Table S4 provides all 45 municipalities. This excerpt is not a validated intervention ranking."
+(Page 42, Lines 742–743)
+
+The shortened housing-loss table ends with its tenth municipality:
+
+"Kamiamakusa City"
+(Page 40, Table 1, final municipality row)
+
+The shortened health-risk table likewise ends with its tenth municipality:
+
+"Nankan Town"
+(Page 42, Table 3, final municipality row)
