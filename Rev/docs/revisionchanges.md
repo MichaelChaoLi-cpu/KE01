@@ -2720,3 +2720,116 @@ A transparent spatial chain can convert incomplete early earthquake evidence int
      - Before: "priorities"
      - After: "indicators"
 
+## editor/overall-comment
+
+### part-01
+
+- Location: Section4.1 final sentence
+- Reason: explain conceptual and scholarly value without claiming that a scenario model empirically validates a mechanism.
+- Kila decisions: KILA-D-20261003-019
+- Mode: `replace`
+- Revises prior parts: none
+- Timestamp: 2026-10-03T01:30:34Z
+- Author: Kila
+- Markup SHA-256 before: `58fe55daffb02217c76db3a582bcb5bcc3ff82d67f050c2fb6eb13d666342f69`
+- Markup SHA-256 after: `54cb968aeeecf549bf2654a87c145dbfaa601e1b82e78726c5fd46c52002ef87`
+- Revision IDs: `1144`
+- Backup: `Rev/revision/.kila-backups/KE01.rev.markup.20261003T103034719255.editor-overall-comment.part-01.docx`
+- Paragraph properties preserved: `true`
+- Run style source SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Formula verification: not applicable
+- Endnote hyperlinks preserved: `true`
+- Endnote hyperlink count: `0`
+- Endnote hyperlink XML SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Endnote relationships SHA-256: `absent`
+- Before:
+
+~~~~text
+The framework is therefore useful precisely during the interval when detailed evidence remains incomplete.
+~~~~
+
+- After:
+
+~~~~text
+The framework is therefore useful precisely during the interval when detailed evidence remains incomplete. Conceptually, the fixed-weather comparison treats housing-mediated thermal protection as a link between physical damage and health vulnerability, rather than treating outdoor heat alone as the exposure of interest. The contribution is to make that link explicit in a common spatial accounting chain, not to establish a new causal effect of housing damage on mortality. This distinction also frames a testable question for future research: whether observed restoration of effective indoor cooling reduces the additional health burden among residents who lose housing-based protection.
+~~~~
+
+- Minimal tracked fragments:
+  1. `insert`
+     - Before: ""
+     - After: " Conceptually, the fixed-weather comparison treats housing-mediated thermal protection as a link between physical damage and health vulnerability, rather than treating outdoor heat alone as the exposure of interest. The contribution is to make that link explicit in a common spatial accounting chain, not to establish a new causal effect of housing damage on mortality. This distinction also frames a testable question for future research: whether observed restoration of effective indoor cooling reduces the additional health burden among residents who lose housing-based protection."
+
+### part-02
+
+- Location: Section4.2, sentence immediately before nominal-shelter-access discussion
+- Reason: identify intended users, equity-related assessment implications and boundaries of coverage.
+- Kila decisions: KILA-D-20261003-019
+- Mode: `replace`
+- Revises prior parts: none
+- Timestamp: 2026-10-03T01:30:45Z
+- Author: Kila
+- Markup SHA-256 before: `54cb968aeeecf549bf2654a87c145dbfaa601e1b82e78726c5fd46c52002ef87`
+- Markup SHA-256 after: `235381c93acdee102a5723a9d176fb522e6aba84a79d7c0aa23624e93558ab34`
+- Revision IDs: `1145`
+- Backup: `Rev/revision/.kila-backups/KE01.rev.markup.20261003T103045829505.editor-overall-comment.part-02.docx`
+- Paragraph properties preserved: `true`
+- Run style source SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Formula verification: not applicable
+- Endnote hyperlinks preserved: `true`
+- Endnote hyperlink count: `0`
+- Endnote hyperlink XML SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Endnote relationships SHA-256: `absent`
+- Before:
+
+~~~~text
+This approach directs assessment toward both concentrated demand and dispersed vulnerability.
+~~~~
+
+- After:
+
+~~~~text
+This approach directs assessment toward both concentrated demand and dispersed vulnerability. For municipal emergency and public-health teams, the intended use is to identify where to verify older residents' protection needs, including less densely populated communities that may be overlooked by population totals alone. A policy implication is to assess effective cooled placement as a service to be maintained, rather than equating a listed shelter with delivered protection. Such screening can inform outreach and facility checks, but cannot determine individual eligibility or replace assessments of residents outside the modeled housing-loss population.
+~~~~
+
+- Minimal tracked fragments:
+  1. `insert`
+     - Before: ""
+     - After: " For municipal emergency and public-health teams, the intended use is to identify where to verify older residents' protection needs, including less densely populated communities that may be overlooked by population totals alone. A policy implication is to assess effective cooled placement as a service to be maintained, rather than equating a listed shelter with delivered protection. Such screening can inform outreach and facility checks, but cannot determine individual eligibility or replace assessments of residents outside the modeled housing-loss population."
+
+### part-03
+
+- Location: Section4.3, original sentence after engineering bundle explanation
+- Reason: specify a feasible information-to-decision process and professional roles without asserting legal duties or tested effectiveness.
+- Kila decisions: KILA-D-20261003-019
+- Mode: `replace`
+- Revises prior parts: none
+- Timestamp: 2026-10-03T01:31:01Z
+- Author: Kila
+- Markup SHA-256 before: `235381c93acdee102a5723a9d176fb522e6aba84a79d7c0aa23624e93558ab34`
+- Markup SHA-256 after: `738f4aa410bebf7dd85575ab40d7087c51f284d2c805b35b7313ccf0d5850a0c`
+- Revision IDs: `1146`
+- Backup: `Rev/revision/.kila-backups/KE01.rev.markup.20261003T103101781606.editor-overall-comment.part-03.docx`
+- Paragraph properties preserved: `true`
+- Run style source SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Formula verification: not applicable
+- Endnote hyperlinks preserved: `true`
+- Endnote hyperlink count: `0`
+- Endnote hyperlink XML SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Endnote relationships SHA-256: `absent`
+- Before:
+
+~~~~text
+Emergency managers can revise these parameters for a specific facility while retaining the same transparent calculation chain.
+~~~~
+
+- After:
+
+~~~~text
+Emergency managers can revise these parameters for a specific facility while retaining the same transparent calculation chain. A practical implementation would connect municipal emergency coordinators, public-health and welfare teams, shelter operators, and electricity providers through a time-stamped assessment record. Coordinators could commission local checks, welfare teams verify affected residents and placement needs, shelter operators document occupancy and cooling performance, and electricity providers assess feasible supply. Verified information would then replace the corresponding screening assumptions before deployment decisions are made. These are proposed coordination roles, not an evaluated governance arrangement or a claim that the model determines resource assignments.
+~~~~
+
+- Minimal tracked fragments:
+  1. `insert`
+     - Before: ""
+     - After: " A practical implementation would connect municipal emergency coordinators, public-health and welfare teams, shelter operators, and electricity providers through a time-stamped assessment record. Coordinators could commission local checks, welfare teams verify affected residents and placement needs, shelter operators document occupancy and cooling performance, and electricity providers assess feasible supply. Verified information would then replace the corresponding screening assumptions before deployment decisions are made. These are proposed coordination roles, not an evaluated governance arrangement or a claim that the model determines resource assignments."
+

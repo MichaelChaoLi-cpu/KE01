@@ -22,10 +22,24 @@ Read your reviewers’ comments in our peer review platform.
 Before you can submit your revision, you must respond to reviews in our peer review platform.
 
 **Response:**
-[Response to be completed.]
+Thank you for the opportunity to revise the manuscript and for emphasizing the significance and implementation of the findings. The revised manuscript clarifies its scope as spatial screening and demand estimation, strengthens the allocation and sensitivity analyses, and expands the discussion of relevant literature and the limits of transferred health effects. The point-by-point responses below explain these methodological changes and their remaining limitations.
 
-"[Exact revised manuscript text]"
-(Page XX, Lines XX–XX)
+Sections 4.1–4.3 now further articulate the conceptual contribution, intended beneficiaries, policy implications, and a proposed coordination process. Section 4.1 explains housing-mediated thermal protection as the link between physical damage and health vulnerability under fixed outdoor weather, while distinguishing this conceptual contribution from causal validation. Section 4.2 identifies municipal emergency and public-health teams as intended users and emphasizes effective cooled placement rather than nominal shelter availability. Section 4.3 specifies how local assessment, placement verification, shelter operation and electricity-supply assessment could inform deployment decisions. These additions describe proposed uses and research directions, not demonstrated policy effects or an evaluated governance arrangement.
+
+Section 4.1 clarifies the conceptual contribution:
+
+"Conceptually, the fixed-weather comparison treats housing-mediated thermal protection as a link between physical damage and health vulnerability, rather than treating outdoor heat alone as the exposure of interest. The contribution is to make that link explicit in a common spatial accounting chain, not to establish a new causal effect of housing damage on mortality. This distinction also frames a testable question for future research: whether observed restoration of effective indoor cooling reduces the additional health burden among residents who lose housing-based protection."
+(Page 25, Lines 529–536)
+
+Section 4.2 identifies intended users and the policy implication:
+
+"For municipal emergency and public-health teams, the intended use is to identify where to verify older residents' protection needs, including less densely populated communities that may be overlooked by population totals alone. A policy implication is to assess effective cooled placement as a service to be maintained, rather than equating a listed shelter with delivered protection. Such screening can inform outreach and facility checks, but cannot determine individual eligibility or replace assessments of residents outside the modeled housing-loss population."
+(Pages 25–26, Lines 544–550)
+
+Section 4.3 describes proposed coordination and implementation:
+
+"A practical implementation would connect municipal emergency coordinators, public-health and welfare teams, shelter operators, and electricity providers through a time-stamped assessment record. Coordinators could commission local checks, welfare teams verify affected residents and placement needs, shelter operators document occupancy and cooling performance, and electricity providers assess feasible supply. Verified information would then replace the corresponding screening assumptions before deployment decisions are made. These are proposed coordination roles, not an evaluated governance arrangement or a claim that the model determines resource assignments."
+(Page 27, Lines 585–593)
 
 # Reviewer 1
 Review Report for Sustainable Cities and Society
