@@ -2524,3 +2524,199 @@ Table 3. Municipality Cooling-Loss Health-Risk Summary. Ten municipalities are s
      - Before: ""
      - After: ". Ten municipalities are shown in the existing table order; Table S4 provides all 45 municipalities. This excerpt is not a validated intervention ranking."
 
+## reviewer-3/comment-11
+
+### part-01
+
+- Location: manuscript title
+- Reason: label the demonstrated decision level without implying optimal allocation.
+- Kila decisions: KILA-D-20261003-016
+- Mode: `replace`
+- Revises prior parts: none
+- Timestamp: 2026-10-03T00:55:41Z
+- Author: Kila
+- Markup SHA-256 before: `fcf9c721c8776d947fa257e4e62c6d399fe721fd235b0bb02531c40a4eb4bb66`
+- Markup SHA-256 after: `339ad34d609aad0c3d86c8d6ca513ee24e4f132572c7c48097989d8303e48e27`
+- Revision IDs: `1130, 1131`
+- Backup: `Rev/revision/.kila-backups/KE01.rev.markup.20261003T095541615196.reviewer-3-comment-11.part-01.docx`
+- Paragraph properties preserved: `true`
+- Run style source SHA-256: `b33caaa3dee77b9971f1452cd0b4d1f6a194fdec16bca75d1735ecac6ddb456f`
+- Formula verification: not applicable
+- Endnote hyperlinks preserved: `true`
+- Endnote hyperlink count: `0`
+- Endnote hyperlink XML SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Endnote relationships SHA-256: `absent`
+- Before:
+
+~~~~text
+From Functional Housing Loss to Emergency Cooling Protection: A Spatial Planning Framework for Older Residents after the 2026 Kumamoto Earthquake
+~~~~
+
+- After:
+
+~~~~text
+From Functional Housing Loss to Emergency Cooling Protection: A Spatial Screening Framework for Older Residents after the 2026 Kumamoto Earthquake
+~~~~
+
+- Minimal tracked fragments:
+  1. `replace`
+     - Before: "Planning"
+     - After: "Screening"
+
+### part-02
+
+- Location: Abstract, second sentence
+- Reason: align the Abstract with the revised title while preserving the target-population boundary and all numbers.
+- Kila decisions: KILA-D-20261003-016
+- Mode: `replace`
+- Revises prior parts: none
+- Timestamp: 2026-10-03T00:55:51Z
+- Author: Kila
+- Markup SHA-256 before: `339ad34d609aad0c3d86c8d6ca513ee24e4f132572c7c48097989d8303e48e27`
+- Markup SHA-256 after: `044032c06d31ebb2be2135dce7c774b37cf2e49fac2fd7b21d0457e3d5684f49`
+- Revision IDs: `1132`
+- Backup: `Rev/revision/.kila-backups/KE01.rev.markup.20261003T095551775639.reviewer-3-comment-11.part-02.docx`
+- Paragraph properties preserved: `true`
+- Run style source SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Formula verification: not applicable
+- Endnote hyperlinks preserved: `true`
+- Endnote hyperlink count: `0`
+- Endnote hyperlink XML SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Endnote relationships SHA-256: `absent`
+- Before:
+
+~~~~text
+We develop an evidence-constrained spatial framework for Kumamoto Prefecture that allocates official residence-damage totals across census disclosure groups, estimates the older population associated with functional housing loss, and links this population to cooling placement, electricity demand, and a fixed-weather mortality-risk contrast.
+~~~~
+
+- After:
+
+~~~~text
+We develop an evidence-constrained spatial screening framework for Kumamoto Prefecture that allocates official residence-damage totals across census disclosure groups, estimates the older population associated with functional housing loss, and links this population to cooling placement, electricity demand, and a fixed-weather mortality-risk contrast.
+~~~~
+
+- Minimal tracked fragments:
+  1. `insert`
+     - Before: ""
+     - After: " screening"
+
+### part-03
+
+- Location: final sentence of Introduction
+- Reason: remove ambiguity about what priorities the evidence actually establishes.
+- Kila decisions: KILA-D-20261003-016
+- Mode: `replace`
+- Revises prior parts: none
+- Timestamp: 2026-10-03T00:56:01Z
+- Author: Kila
+- Markup SHA-256 before: `044032c06d31ebb2be2135dce7c774b37cf2e49fac2fd7b21d0457e3d5684f49`
+- Markup SHA-256 after: `3a847c7da38226efd0c0404002ebaafb399b4cfc16861202a0a2287be804d569`
+- Revision IDs: `1133, 1134, 1135, 1136, 1137, 1138`
+- Backup: `Rev/revision/.kila-backups/KE01.rev.markup.20261003T095601516836.reviewer-3-comment-11.part-03.docx`
+- Paragraph properties preserved: `true`
+- Run style source SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Formula verification: not applicable
+- Endnote hyperlinks preserved: `true`
+- Endnote hyperlink count: `0`
+- Endnote hyperlink XML SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Endnote relationships SHA-256: `absent`
+- Before:
+
+~~~~text
+The contribution is an auditable early-response framework that produces bounded priorities without presenting scenarios as observed damage, displacement, shortages, or deaths.
+~~~~
+
+- After:
+
+~~~~text
+The contribution is an auditable early-response framework that supports spatial screening and demand estimation without presenting scenarios as observed damage, displacement, shortages, or deaths.
+~~~~
+
+- Minimal tracked fragments:
+  1. `replace`
+     - Before: "produces"
+     - After: "supports"
+  2. `replace`
+     - Before: "bounded"
+     - After: "spatial"
+  3. `replace`
+     - Before: "priorities"
+     - After: "screening and demand estimation"
+
+### part-04
+
+- Location: final sentence of Section4.3 Electricity Planning and Operational Use
+- Reason: explicitly distinguish assessment support from operational optimization.
+- Kila decisions: KILA-D-20261003-016
+- Mode: `replace`
+- Revises prior parts: none
+- Timestamp: 2026-10-03T00:56:11Z
+- Author: Kila
+- Markup SHA-256 before: `3a847c7da38226efd0c0404002ebaafb399b4cfc16861202a0a2287be804d569`
+- Markup SHA-256 after: `a3f9ab7e57f94048b023fcc43dec8298faa724af6ebbf3f3ade9ca5937bc5768`
+- Revision IDs: `1139`
+- Backup: `Rev/revision/.kila-backups/KE01.rev.markup.20261003T095611506824.reviewer-3-comment-11.part-04.docx`
+- Paragraph properties preserved: `true`
+- Run style source SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Formula verification: not applicable
+- Endnote hyperlinks preserved: `true`
+- Endnote hyperlink count: `0`
+- Endnote hyperlink XML SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Endnote relationships SHA-256: `absent`
+- Before:
+
+~~~~text
+The current outputs therefore prioritize supply assessment but do not rank confirmed power gaps.
+~~~~
+
+- After:
+
+~~~~text
+The current outputs therefore prioritize supply assessment but do not rank confirmed power gaps. The framework supports spatial screening and demand estimation, not optimized resource allocation or deployment sequencing.
+~~~~
+
+- Minimal tracked fragments:
+  1. `insert`
+     - Before: ""
+     - After: " The framework supports spatial screening and demand estimation, not optimized resource allocation or deployment sequencing."
+
+### part-05
+
+- Location: first sentence of Conclusion
+- Reason: match the title and demonstrated outputs while retaining the following operational limits.
+- Kila decisions: KILA-D-20261003-016
+- Mode: `replace`
+- Revises prior parts: none
+- Timestamp: 2026-10-03T00:56:33Z
+- Author: Kila
+- Markup SHA-256 before: `a3f9ab7e57f94048b023fcc43dec8298faa724af6ebbf3f3ade9ca5937bc5768`
+- Markup SHA-256 after: `58fe55daffb02217c76db3a582bcb5bcc3ff82d67f050c2fb6eb13d666342f69`
+- Revision IDs: `1140, 1141, 1142, 1143`
+- Backup: `Rev/revision/.kila-backups/KE01.rev.markup.20261003T095633364252.reviewer-3-comment-11.part-05.docx`
+- Paragraph properties preserved: `true`
+- Run style source SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Formula verification: not applicable
+- Endnote hyperlinks preserved: `true`
+- Endnote hyperlink count: `0`
+- Endnote hyperlink XML SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Endnote relationships SHA-256: `absent`
+- Before:
+
+~~~~text
+A transparent spatial chain can convert incomplete early earthquake evidence into bounded priorities for older-person cooling protection, electricity demand, and health-risk assessment.
+~~~~
+
+- After:
+
+~~~~text
+A transparent spatial chain can convert incomplete early earthquake evidence into screening indicators for older-person cooling protection, electricity demand, and health-risk assessment.
+~~~~
+
+- Minimal tracked fragments:
+  1. `replace`
+     - Before: "bounded"
+     - After: "screening"
+  2. `replace`
+     - Before: "priorities"
+     - After: "indicators"
+

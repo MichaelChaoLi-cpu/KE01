@@ -651,10 +651,22 @@ Optional Comments
 
 
 **Response:**
-[Response to be completed.]
+Thank you for identifying this inconsistency. The revised Title, Abstract, Introduction, Section 4.3, and Conclusion consistently describe the framework as supporting spatial screening and demand estimation, rather than optimized resource allocation or deployment sequencing. The title now uses "Spatial Screening Framework," and the operational discussion explicitly states the decision level supported by the outputs. These clarifications do not change the numerical results.
 
-"[Exact revised manuscript text]"
-(Page XX, Lines XX–XX)
+"From Functional Housing Loss to Emergency Cooling Protection: A Spatial Screening Framework for Older Residents after the 2026 Kumamoto Earthquake"
+(Page 1, Lines 1–3)
+
+"We develop an evidence-constrained spatial screening framework for Kumamoto Prefecture that allocates official residence-damage totals across census disclosure groups, estimates the older population associated with functional housing loss, and links this population to cooling placement, electricity demand, and a fixed-weather mortality-risk contrast."
+(Page 1, Lines 8–12)
+
+"The contribution is an auditable early-response framework that supports spatial screening and demand estimation without presenting scenarios as observed damage, displacement, shortages, or deaths."
+(Page 4, Lines 71–73)
+
+"The framework supports spatial screening and demand estimation, not optimized resource allocation or deployment sequencing."
+(Page 27, Lines 580–582)
+
+"A transparent spatial chain can convert incomplete early earthquake evidence into screening indicators for older-person cooling protection, electricity demand, and health-risk assessment."
+(Page 31, Lines 676–678)
 
 ## Comment 12
 o1 – Tables 1-3 (three panels each, high decimal precision) may be cumbersome for operational users. It is suggested that
