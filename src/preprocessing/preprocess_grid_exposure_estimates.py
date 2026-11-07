@@ -27,6 +27,7 @@ DAMAGE_SNAPSHOTS = (
 OUTPUT = ROOT / "data/processed/kumamoto_grid_exposure_estimates_preprocessed.parquet"
 
 MAP_CRS = "EPSG:6670"
+MAIN_DAMAGE_CUTOFF = "2026-08-01T17:00:00+09:00"
 EPICENTER_LATITUDE = 32.6
 EPICENTER_LONGITUDE = 130.7
 DISTANCE_DECAY_SCALES_KM = (10.0, 20.0, 40.0)
@@ -61,7 +62,7 @@ def require(condition: bool, message: str) -> None:
         raise ValueError(message)
 
 
-def latest_prefecture_damage() -> pd.Series:
+def latest_prefecture_damage(cutoff: str = MAIN_DAMAGE_CUTOFF) -> pd.Series:
     require(DAMAGE_SNAPSHOTS.is_file(), f"Missing source: {DAMAGE_SNAPSHOTS}")
     snapshots = pd.read_parquet(DAMAGE_SNAPSHOTS)
     required = {
@@ -81,6 +82,8 @@ def latest_prefecture_damage() -> pd.Series:
     eligible["Observation Time"] = pd.to_datetime(
         eligible["Observation Time"], utc=True, errors="raise"
     )
+    eligible = eligible.loc[eligible["Observation Time"] <= pd.Timestamp(cutoff)]
+    require(not eligible.empty, f"No damage snapshot at or before {cutoff}")
     return eligible.sort_values("Observation Time").iloc[-1]
 
 
@@ -130,13 +133,14 @@ def affected_population(
     return population.to_numpy(dtype=float) * residence_loss_share
 
 
-def build_estimates() -> gpd.GeoDataFrame:
+def build_estimates(damage: pd.Series | None = None) -> gpd.GeoDataFrame:
     require(SOURCE.is_file(), f"Missing source: {SOURCE}")
     source = gpd.read_parquet(SOURCE)
     missing = sorted(set(BASE_COLUMNS) - set(source.columns))
     require(not missing, f"Spatial foundation is missing columns: {missing}")
 
-    damage = latest_prefecture_damage()
+    if damage is None:
+        damage = latest_prefecture_damage()
     full_collapse = float(damage["Full Collapse Buildings"])
     half_collapse = float(damage["Half Collapse Buildings"])
     central_total = full_collapse + 0.5 * half_collapse
