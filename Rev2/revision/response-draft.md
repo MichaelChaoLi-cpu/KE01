@@ -78,10 +78,10 @@ Thank you for this clarification. Section 3.3 now makes explicit that agreement 
 
 
 **Response:**
-[Response to be completed after the corresponding revision is verified.]
+Thank you for this comment. The Abstract now labels the 5.31% contrast as an illustrative scenario using transferred health parameters. Section 3.5 retains its explanation of the no-increment benchmark as an algebraic result, not independent evidence of robustness. The revised Abstract states:
 
-"[Exact revised manuscript text]"
-(Page XX, Lines XX–XX)
+"With the same outdoor heat sequence in both states, loss of effective cooling raises the prefecture-weighted modeled 30-day mortality burden by 5.31% in an illustrative scenario using transferred health parameters."
+(Page 1, Lines 18–20)
 
 ## Comment 4
 (4) The retrospective analysis indicates that the later reported housing-damage total is approximately 17.95 times the initial value. This substantial difference highlights the sensitivity of estimated cooling and electricity requirements to the timing and completeness of disaster reporting. The practical implications of this limitation should be emphasized when discussing the applicability of the framework to emergency resource planning.

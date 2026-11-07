@@ -232,3 +232,41 @@ The framework keeps outdoor heat fixed, distinguishes functional housing-loss sc
      - Before: ""
      - After: " The distance-based primary serves as a reference for preliminary screening, without implying greater geographic accuracy than the tested shaking alternatives."
 
+## reviewer-1/comment-3
+
+### part-01
+
+- Location: Abstract, fixed-weather 5.31 percent mortality-burden sentence
+- Reason: Approved eight-word illustrative transferred-parameter qualifier only
+- Kila decisions: KILA-D-20261107-013
+- Mode: `replace`
+- Revises prior parts: none
+- Timestamp: 2026-11-07T04:17:28Z
+- Author: Kila
+- Markup SHA-256 before: `ee896e0da290911cf817212bd2ef1633e2782ae657843c888f5c3a4ad927d82c`
+- Markup SHA-256 after: `9ab615a50fa520419eac752f31994ac838ad6ec76b64690642c79ba25b783baa`
+- Revision IDs: `7`
+- Backup: `Rev2/revision/.kila-backups/KE01.rev2.markup.20261107T131816931504.reviewer-1-comment-3.part-01.docx`
+- Paragraph properties preserved: `true`
+- Run style source SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Formula verification: not applicable
+- Endnote hyperlinks preserved: `true`
+- Endnote hyperlink count: `0`
+- Endnote hyperlink XML SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Endnote relationships SHA-256: `absent`
+- Before:
+
+~~~~text
+With the same outdoor heat sequence in both states, loss of effective cooling raises the prefecture-weighted modeled 30-day mortality burden by 5.31%.
+~~~~
+
+- After:
+
+~~~~text
+With the same outdoor heat sequence in both states, loss of effective cooling raises the prefecture-weighted modeled 30-day mortality burden by 5.31% in an illustrative scenario using transferred health parameters.
+~~~~
+
+- Minimal tracked fragments:
+  1. `insert`
+     - Before: ""
+     - After: " in an illustrative scenario using transferred health parameters"
