@@ -45,10 +45,7 @@ Review Report for Sustainable Cities and Society Manuscript Number: SCSI-D-26-09
 
 
 **Response:**
-[Response to be completed after the corresponding revision is verified.]
-
-"[Exact revised manuscript text]"
-(Page XX, Lines XX–XX)
+Thank you for your positive assessment and constructive suggestions. The revision clarifies the role of the primary allocation, the scope of demographic sensitivity, the illustrative mortality scenario, and the implications of reporting updates for emergency resource planning. Detailed responses follow.
 
 ## Comment 1
 (1) The additional comparisons with official damage reports are useful. However, the primary allocation still shows substantial spatial disagreement (total-variation distance = 0.5845), while the shaking-based alternatives demonstrate closer agreement. The authors should briefly clarify why the distance-based allocation remains the preferred primary scenario despite these findings and ensure that its limitations are reflected in the conclusions.
