@@ -98,10 +98,7 @@ I particularly appreciate the replacement of the central surface with a coherent
 
 
 **Response:**
-[Response to be completed after the corresponding revision is verified.]
-
-"[Exact revised manuscript text]"
-(Page XX, Lines XX–XX)
+Thank you for your positive assessment and helpful optional suggestions. The Conclusion clarifies the primary allocation's screening role. The Abstract identifies the housing-damage snapshot date, and Section 3.3 reports the retrospective population and electricity estimates. Detailed responses follow.
 
 ## Comment 1
 o1 – Interpretation of the primary allocation:
