@@ -112,10 +112,10 @@ Section 3.3 shows that, in the comparison with the September 29 reports, the pri
 
 
 **Response:**
-[Response to be completed after the corresponding revision is verified.]
+Thank you for this suggestion. The Conclusion presents the primary allocation as a reference for preliminary screening and directs responders to verify placement and cooling performance:
 
-"[Exact revised manuscript text]"
-(Page XX, Lines XX–XX)
+"The distance-based primary serves as a reference for preliminary screening, without implying greater geographic accuracy than the tested shaking alternatives. Its outputs identify where responders should verify placement and cooling performance and how much demand-side capacity may be required."
+(Page 34, Lines 746–749)
 
 ## Comment 2
 o2 – Temporal reference of the estimated quantities:
