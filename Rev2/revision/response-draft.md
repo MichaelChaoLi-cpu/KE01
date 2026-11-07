@@ -88,7 +88,7 @@ Review Report for Sustainable Cities and Society Manuscript Number: SCSI-D-26-09
 Thank you for highlighting this practical implication. Section 4.3 now connects the 17.95-fold retrospective increase in the functional-loss constraint to the need to update resource estimates as damage assessments become more complete. It also recommends staged preparation with repeated local checks of placement and power availability. The revised text states:
 
 "In the retrospective test, the 17.95-fold increase in the loss constraint illustrates how reporting updates can change the scale of resource requirements. Emergency planning should therefore update demand estimates as assessments become more complete and use staged preparation with repeated local checks of placement and power availability."
-(Pages 28–29, Lines 613–617)
+(Pages 28–29, Lines 616–620)
 
 # Reviewer 3
 
@@ -120,7 +120,10 @@ The retrospective test in Section 3.3 raises the functional-loss constraint to 5
 
 
 **Response:**
-[Response to be completed after the corresponding revision is verified.]
+Thank you for these suggestions. The Abstract now identifies the August 1, 2026 housing-damage snapshot underlying the central estimates. Section 3.3 adds the existing retrospective estimates for older residents, peak power and daily electricity under unchanged spatial weights, bounded demographic allocation and Central engineering parameters. The revised passages are:
 
-"[Exact revised manuscript text]"
-(Page XX, Lines XX–XX)
+"The central allocation, based on the August 1, 2026 housing-damage snapshot, contains 303.5 functionally lost residences and approximately 202 affected residents aged 65 or older."
+(Page 1, Lines 14–16)
+
+"In the total-only retrospective test, the later snapshot raises this constraint to 5,448.5, or 17.95 times the early value. With unchanged spatial weights, bounded demographic allocation and Central engineering parameters, the September 24, 2026 snapshot yields a cooling-assessment population of 3,627.102 residents aged 65 or older, requiring 510.333 kW of peak cooling power and 9,185.999 kWh of electricity per day."
+(Page 21, Lines 447–452)
