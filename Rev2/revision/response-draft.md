@@ -2,21 +2,16 @@
 
 # Revision Summary
 
-Thank you to the editor and reviewers for their careful review.
+Thank you to the editor and reviewers for their careful review. This minor revision clarifies scenario interpretation and emergency-planning implications.
 
-[Opening summary to be completed after the revisions.]
+The main clarifications are:
 
-The main changes in the revised manuscript are:
+- Clarify the primary allocation's screening role and the interpretation of demographic sensitivity.
+- Identify the mortality contrast as an illustrative scenario using transferred health parameters.
+- State the early damage-snapshot date and report retrospective population and electricity estimates.
+- Explain the implications of reporting updates for demand estimates and staged emergency planning.
 
-- [Revision summary item 1: describe the major manuscript-level change.]
-- [Revision summary item 2: describe the major theoretical or conceptual change.]
-- [Revision summary item 3: describe the major methodological or robustness-check change.]
-- [Revision summary item 4: describe the major results, discussion, table, or figure change.]
-- [Revision summary item 5: describe language polishing, consistency checks, or formatting changes.]
-
-[Overview of the completed responses to be added after the revisions.]
-
-Finally, we would like to express our sincere gratitude to the editor and reviewers. We hope that these changes meet your expectations, and we look forward to receiving your decision on the improved version of our manuscript.
+Point-by-point responses follow. Thank you again for your constructive guidance.
 
 # Editor
 
@@ -31,10 +26,7 @@ Note: If the reviewers have recommended citations, please only include them if y
 Please submit your revision by Dec 07, 2026.
 
 **Response:**
-[Response to be completed after the corresponding revision is verified.]
-
-"[Exact revised manuscript text]"
-(Page XX, Lines XX–XX)
+Thank you for the opportunity to revise the manuscript. We address the reviewers' comments through focused clarifications and provide point-by-point responses below.
 
 # Reviewer 1
 Review Report for Sustainable Cities and Society Manuscript Number: SCSI-D-26-09591R1
@@ -55,10 +47,10 @@ Thank you for your positive assessment and constructive suggestions. The revisio
 Thank you for this comment. Section 2.4 now explains the retained primary as a parsimonious reference for linked planning comparisons, and the Conclusion clarifies its preliminary-screening role relative to the tested shaking alternatives. The revised passages state:
 
 "We retain this distance-based specification as a parsimonious reference for linked planning comparisons, without the nearest-station assignments and transferred vulnerability curves used in the shaking-based alternatives."
-(Page 10, Lines 191–193)
+(Page 10, Lines 192–194)
 
 "The distance-based primary serves as a reference for preliminary screening, without implying greater geographic accuracy than the tested shaking alternatives."
-(Page 34, Lines 746–748)
+(Page 34, Lines 747–749)
 
 ## Comment 2
 (2) The revised older-population allocation and demographic sensitivity analysis represent meaningful improvements. However, the close agreement between alternative demographic allocations does not test whether older households experience different probabilities of housing damage. This distinction should remain explicit when interpreting the robustness of the estimated exposed population.
@@ -68,7 +60,7 @@ Thank you for this comment. Section 2.4 now explains the retained primary as a p
 Thank you for this clarification. Section 3.3 now makes explicit that agreement between the demographic allocations is conditional on the shared housing-loss rule and does not test age-specific housing-damage probabilities. The revised passage states:
 
 "Residual-capacity demographic weighting yields 202.185 exposed older residents, with a maximum rank shift of one. Agreement between the demographic allocations is conditional on the same housing-loss rule and does not test whether older households have different probabilities of housing damage."
-(Page 22, Lines 471–474)
+(Page 22, Lines 475–478)
 
 ## Comment 3
 (3) The additional mortality-risk sensitivity analyses and discussion of parameter transferability are appreciated. Nevertheless, the central 5.31% mortality-burden increase remains dependent on healtheffect parameters transferred from Ontario nursing homes. The authors should ensure that this result is consistently presented as an illustrative scenario rather than a locally validated health effect. The hypothetical no-increment scenario should not be interpreted as independent evidence of robustness.
@@ -88,7 +80,7 @@ Thank you for this comment. The Abstract now labels the 5.31% contrast as an ill
 Thank you for highlighting this practical implication. Section 4.3 now connects the 17.95-fold retrospective increase in the functional-loss constraint to the need to update resource estimates as damage assessments become more complete. It also recommends staged preparation with repeated local checks of placement and power availability. The revised text states:
 
 "In the retrospective test, the 17.95-fold increase in the loss constraint illustrates how reporting updates can change the scale of resource requirements. Emergency planning should therefore update demand estimates as assessments become more complete and use staged preparation with repeated local checks of placement and power availability."
-(Pages 28–29, Lines 616–620)
+(Page 29, Lines 622–626)
 
 # Reviewer 3
 
@@ -109,7 +101,7 @@ Section 3.3 shows that, in the comparison with the September 29 reports, the pri
 Thank you for this suggestion. The Conclusion presents the primary allocation as a reference for preliminary screening and directs responders to verify placement and cooling performance:
 
 "The distance-based primary serves as a reference for preliminary screening, without implying greater geographic accuracy than the tested shaking alternatives. Its outputs identify where responders should verify placement and cooling performance and how much demand-side capacity may be required."
-(Page 34, Lines 746–749)
+(Page 34, Lines 747–750)
 
 ## Comment 2
 o2 – Temporal reference of the estimated quantities:
@@ -123,4 +115,4 @@ Thank you for these suggestions. The Abstract now identifies the August 1, 2026 
 (Page 1, Lines 14–16)
 
 "In the total-only retrospective test, the later snapshot raises this constraint to 5,448.5, or 17.95 times the early value. With unchanged spatial weights, bounded demographic allocation and Central engineering parameters, the September 24, 2026 snapshot yields a cooling-assessment population of 3,627.102 residents aged 65 or older, requiring 510.333 kW of peak cooling power and 9,185.999 kWh of electricity per day."
-(Page 21, Lines 447–452)
+(Page 21, Lines 451–456)
