@@ -55,10 +55,13 @@ Review Report for Sustainable Cities and Society Manuscript Number: SCSI-D-26-09
 
 
 **Response:**
-[Response to be completed after the corresponding revision is verified.]
+Thank you for this comment. Section 2.4 now explains the retained primary as a parsimonious reference for linked planning comparisons, and the Conclusion clarifies its preliminary-screening role relative to the tested shaking alternatives. The revised passages state:
 
-"[Exact revised manuscript text]"
-(Page XX, Lines XX–XX)
+"We retain this distance-based specification as a parsimonious reference for linked planning comparisons, without the nearest-station assignments and transferred vulnerability curves used in the shaking-based alternatives."
+(Page 10, Lines 191–193)
+
+"The distance-based primary serves as a reference for preliminary screening, without implying greater geographic accuracy than the tested shaking alternatives."
+(Page 34, Lines 746–748)
 
 ## Comment 2
 (2) The revised older-population allocation and demographic sensitivity analysis represent meaningful improvements. However, the close agreement between alternative demographic allocations does not test whether older households experience different probabilities of housing damage. This distinction should remain explicit when interpreting the robustness of the estimated exposed population.

@@ -155,3 +155,80 @@ Residual-capacity demographic weighting yields 202.185 exposed older residents, 
   1. `insert`
      - Before: ""
      - After: " Agreement between the demographic allocations is conditional on the same housing-loss rule and does not test whether older households have different probabilities of housing damage."
+
+## reviewer-1/comment-1
+
+### part-01
+
+- Location: Section 2.4, coherent central-scenario assumptions paragraph
+- Reason: Human-approved concise reference-scenario rationale only
+- Kila decisions: KILA-D-20261107-009
+- Mode: `replace`
+- Revises prior parts: none
+- Timestamp: 2026-11-07T03:51:56Z
+- Author: Kila
+- Markup SHA-256 before: `b0954510725da1b911bbc22da0ed0f67711dda4e83bfabd715a5f092eb5231c1`
+- Markup SHA-256 after: `0146829c36da0bce67e5ae0254b0f10b332fea36b535d6d0740012f8cda02f79`
+- Revision IDs: `5`
+- Backup: `Rev2/revision/.kila-backups/KE01.rev2.markup.20261107T125216153799.reviewer-1-comment-1.part-01.docx`
+- Paragraph properties preserved: `true`
+- Run style source SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Formula verification: not applicable
+- Endnote hyperlinks preserved: `true`
+- Endnote hyperlink count: `0`
+- Endnote hyperlink XML SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Endnote relationships SHA-256: `absent`
+- Before:
+
+~~~~text
+Household counts align the allocation denominator with the target population; 20 km and 0.5 are transparent planning assumptions, not empirically optimized parameters or a calibrated loss fraction.
+~~~~
+
+- After:
+
+~~~~text
+Household counts align the allocation denominator with the target population; 20 km and 0.5 are transparent planning assumptions, not empirically optimized parameters or a calibrated loss fraction. We retain this distance-based specification as a parsimonious reference for linked planning comparisons, without the nearest-station assignments and transferred vulnerability curves used in the shaking-based alternatives.
+~~~~
+
+- Minimal tracked fragments:
+  1. `insert`
+     - Before: ""
+     - After: " We retain this distance-based specification as a parsimonious reference for linked planning comparisons, without the nearest-station assignments and transferred vulnerability curves used in the shaking-based alternatives."
+
+### part-02
+
+- Location: Section 5 Conclusion, framework interpretation sentence
+- Reason: Human-approved concise preliminary-screening and accuracy boundary only
+- Kila decisions: KILA-D-20261107-009
+- Mode: `replace`
+- Revises prior parts: none
+- Timestamp: 2026-11-07T03:53:46Z
+- Author: Kila
+- Markup SHA-256 before: `0146829c36da0bce67e5ae0254b0f10b332fea36b535d6d0740012f8cda02f79`
+- Markup SHA-256 after: `ee896e0da290911cf817212bd2ef1633e2782ae657843c888f5c3a4ad927d82c`
+- Revision IDs: `6`
+- Backup: `Rev2/revision/.kila-backups/KE01.rev2.markup.20261107T125413388213.reviewer-1-comment-1.part-02.docx`
+- Paragraph properties preserved: `true`
+- Run style source SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Formula verification: not applicable
+- Endnote hyperlinks preserved: `true`
+- Endnote hyperlink count: `0`
+- Endnote hyperlink XML SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Endnote relationships SHA-256: `absent`
+- Before:
+
+~~~~text
+The framework keeps outdoor heat fixed, distinguishes functional housing-loss scenarios from inspected damage, and separates resource demand from verified supply.
+~~~~
+
+- After:
+
+~~~~text
+The framework keeps outdoor heat fixed, distinguishes functional housing-loss scenarios from inspected damage, and separates resource demand from verified supply. The distance-based primary serves as a reference for preliminary screening, without implying greater geographic accuracy than the tested shaking alternatives.
+~~~~
+
+- Minimal tracked fragments:
+  1. `insert`
+     - Before: ""
+     - After: " The distance-based primary serves as a reference for preliminary screening, without implying greater geographic accuracy than the tested shaking alternatives."
+
