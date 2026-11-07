@@ -2833,3 +2833,485 @@ Emergency managers can revise these parameters for a specific facility while ret
      - Before: ""
      - After: " A practical implementation would connect municipal emergency coordinators, public-health and welfare teams, shelter operators, and electricity providers through a time-stamped assessment record. Coordinators could commission local checks, welfare teams verify affected residents and placement needs, shelter operators document occupancy and cooling performance, and electricity providers assess feasible supply. Verified information would then replace the corresponding screening assumptions before deployment decisions are made. These are proposed coordination roles, not an evaluated governance arrangement or a claim that the model determines resource assignments."
 
+### contribution-01
+
+- Location: Introduction, end of the second paragraph, before “This study asks”.
+- Reason: articulate the specific connection between the literatures already discussed; avoid an unsupported claim of absolute novelty.
+- Kila decisions: KILA-D-20261005-002, KILA-D-20261005-003
+- Mode: `replace`
+- Revises prior parts: none
+- Timestamp: 2026-10-05T08:19:38Z
+- Author: Kila
+- Markup SHA-256 before: `3a0c4be3de37c5fe815e1dd3301c9ba4d91393779dd8f9b80a6315e619ca53b1`
+- Markup SHA-256 after: `4725f9eaa4359287f71a16b046c40638d82eb4056b303f86ecd1fe632481055b`
+- Revision IDs: `1244, 1245`
+- Backup: `/Users/lichao/Research/KE01/Rev/revision/.kila-backups/KE01.rev.markup.20261005T171938996728.editor-overall-comment.contribution-01.docx`
+- Paragraph properties preserved: `true`
+- Run style source SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Formula verification: not applicable
+- Endnote hyperlinks preserved: `true`
+- Endnote hyperlink count: `0`
+- Endnote hyperlink XML SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Endnote relationships SHA-256: `absent`
+- Before:
+
+~~~~text
+In this study, a common spatial chain also keeps observed context, modeled allocation, and planning scenarios separate.
+~~~~
+
+- After:
+
+~~~~text
+In this study, a common spatial chain also keeps observed context, modeled allocation, and planning scenarios separate.
+
+These strands of research address complementary but different parts of the response problem: damage assessment characterizes physical loss, shelter-energy research examines service provision, and heat-health research evaluates vulnerability and protection. The integration question is how early housing-damage information can inform the thermal protection needs of older residents and the electricity required to meet those needs. We address this question by treating loss of housing-based cooling as an interruption of a protective service under unchanged outdoor heat. The resulting spatial framework connects housing loss, older-person exposure, cooling requirements, and a fixed-weather health contrast during the early response period.
+~~~~
+
+- Minimal tracked fragments:
+  1. `insert-paragraph`
+     - Before: ""
+     - After: "These strands of research address complementary but different parts of the response problem: damage assessment characterizes physical loss, shelter-energy research examines service provision, and heat-health research evaluates vulnerability and protection. The integration question is how early housing-damage information can inform the thermal protection needs of older residents and the electricity required to meet those needs. We address this question by treating loss of housing-based cooling as an interruption of a protective service under unchanged outdoor heat. The resulting spatial framework connects housing loss, older-person exposure, cooling requirements, and a fixed-weather health contrast during the early response period."
+
+### contribution-02
+
+- Location: Section 4.1, sentence beginning “Conceptually”.
+- Reason: define a conceptual contribution without claiming discovery or causal validation of a new theory. A new cascading-risk citation is not required for this bounded study interpretation; formal comparison with that literature would require a separately approved reference addition.
+- Kila decisions: KILA-D-20261005-002, KILA-D-20261005-003
+- Mode: `reedit`
+- Revises prior parts: editor/overall-comment#part-01
+- Timestamp: 2026-10-05T08:19:39Z
+- Author: Kila
+- Markup SHA-256 before: `4725f9eaa4359287f71a16b046c40638d82eb4056b303f86ecd1fe632481055b`
+- Markup SHA-256 after: `9c61815fa3d29c169078c38bf91d29abb91ed05e62326c0ce91470a1e979268e`
+- Revision IDs: `258`
+- Backup: `/Users/lichao/Research/KE01/Rev/revision/.kila-backups/KE01.rev.markup.20261005T171939876239.editor-overall-comment.contribution-02.docx`
+- Paragraph properties preserved: `true`
+- Run style source SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Formula verification: not applicable
+- Endnote hyperlinks preserved: `true`
+- Endnote hyperlink count: `0`
+- Endnote hyperlink XML SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Endnote relationships SHA-256: `absent`
+- Before:
+
+~~~~text
+Conceptually, the fixed-weather comparison treats housing-mediated thermal protection as a link between physical damage and health vulnerability, rather than treating outdoor heat alone as the exposure of interest.
+~~~~
+
+- After:
+
+~~~~text
+The theoretical relevance of the fixed-weather comparison is to distinguish the loss of housing-mediated thermal protection from an increase in outdoor heat. Housing functionality mediates the modeled pathway from physical damage to health vulnerability: when a residence becomes unusable, the protective service it provides must be restored elsewhere. In this interpretation, the cascade concerns the interruption and replacement of protection, not a modeled increase in the meteorological hazard. The scholarly contribution is to operationalize this link between damage assessment and continuity of health-protective urban services through a common spatial accounting framework.
+~~~~
+
+- Minimal tracked fragments:
+  1. `replace`
+     - Before: "Conceptually,"
+     - After: "The theoretical relevance of"
+  2. `replace`
+     - Before: "treats"
+     - After: "is to distinguish the loss of"
+  3. `replace`
+     - Before: "as"
+     - After: "from an increase in outdoor heat. Housing functionality mediates the modeled pathway from physical damage to health vulnerability: when"
+  4. `insert`
+     - Before: ""
+     - After: " residence becomes unusable, the protective service it provides must be restored elsewhere. In this interpretation, the cascade concerns the interruption and replacement of protection, not a modeled increase in the meteorological hazard. The scholarly contribution is to operationalize this"
+  5. `replace`
+     - Before: "physical"
+     - After: "damage"
+  6. `replace`
+     - Before: "damage"
+     - After: "assessment"
+  7. `replace`
+     - Before: "health vulnerability, rather than treating outdoor heat alone as the exposure"
+     - After: "continuity"
+  8. `replace`
+     - Before: "interest"
+     - After: "health-protective urban services through a common spatial accounting framework"
+
+### contribution-03
+
+- Location: Section 4.2, before the paragraph passage beginning “For municipal emergency”.
+- Reason: state the proposed policy objective separately from descriptions of model outputs and agency roles; no claim that this is an existing statutory standard.
+- Kila decisions: KILA-D-20261005-002, KILA-D-20261005-003
+- Mode: `replace`
+- Revises prior parts: none
+- Timestamp: 2026-10-05T08:19:40Z
+- Author: Kila
+- Markup SHA-256 before: `9c61815fa3d29c169078c38bf91d29abb91ed05e62326c0ce91470a1e979268e`
+- Markup SHA-256 after: `177e92d6f85ffd8852a456d59605273761f8f24e95cedfd06e6b6db5485389e0`
+- Revision IDs: `1246, 1247, 1248`
+- Backup: `/Users/lichao/Research/KE01/Rev/revision/.kila-backups/KE01.rev.markup.20261005T171940584220.editor-overall-comment.contribution-03.docx`
+- Paragraph properties preserved: `true`
+- Run style source SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Formula verification: not applicable
+- Endnote hyperlinks preserved: `true`
+- Endnote hyperlink count: `0`
+- Endnote hyperlink XML SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Endnote relationships SHA-256: `absent`
+- Before:
+
+~~~~text
+For municipal emergency and public-health teams, the intended use is to identify where to verify older residents' protection needs, including less densely populated communities that may be overlooked by population totals alone.
+~~~~
+
+- After:
+
+~~~~text
+The policy implication is to define continuity of effective cooling as an emergency service objective alongside shelter provision. For older residents unable to return to habitable housing, this objective concerns access to usable cooled accommodation throughout the protection period. It links housing assistance, public-health outreach, and emergency energy provision through a shared protection objective, with local verification determining whether that objective is met.
+
+For municipal emergency and public-health teams, the intended use is to identify where to verify older residents' protection needs, including less densely populated communities that may be overlooked by population totals alone.
+~~~~
+
+- Minimal tracked fragments:
+  1. `insert-paragraph`
+     - Before: ""
+     - After: "The policy implication is to define continuity of effective cooling as an emergency service objective alongside shelter provision. For older residents unable to return to habitable housing, this objective concerns access to usable cooled accommodation throughout the protection period. It links housing assistance, public-health outreach, and emergency energy provision through a shared protection objective, with local verification determining whether that objective is met."
+
+### contribution-04
+
+- Location: end of Section 4.2.
+- Reason: connect the existing ranking-sensitivity findings to a concrete planning use without changing results or removing qualifications.
+- Kila decisions: KILA-D-20261005-002, KILA-D-20261005-003
+- Mode: `replace`
+- Revises prior parts: none
+- Timestamp: 2026-10-05T08:19:41Z
+- Author: Kila
+- Markup SHA-256 before: `177e92d6f85ffd8852a456d59605273761f8f24e95cedfd06e6b6db5485389e0`
+- Markup SHA-256 after: `615f903a363407da3179cb4b9050d704120d8b1bdb8ee0c68b3a7264774e3369`
+- Revision IDs: `1249, 1250`
+- Backup: `/Users/lichao/Research/KE01/Rev/revision/.kila-backups/KE01.rev.markup.20261005T171941286278.editor-overall-comment.contribution-04.docx`
+- Paragraph properties preserved: `true`
+- Run style source SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Formula verification: not applicable
+- Endnote hyperlinks preserved: `true`
+- Endnote hyperlink count: `0`
+- Endnote hyperlink XML SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Endnote relationships SHA-256: `absent`
+- Before:
+
+~~~~text
+These separate tests support staged verification of high-demand areas, not a validated ordering of local deficits or a jointly quantified uncertainty range.
+~~~~
+
+- After:
+
+~~~~text
+These separate tests support staged verification of high-demand areas, not a validated ordering of local deficits or a jointly quantified uncertainty range.
+
+The planning implication is to distinguish the geography of protection needs from the geography of available facilities. Municipality totals support preliminary resource staging, while disclosure-group estimates identify areas for local assessment. The retained exposure top-five set supports broad screening; changes in detailed rankings favor flexible staging and verification before deployment. These results support a sequence from estimated population need to verified placement and facility-specific energy assessment, rather than using any single map as a deployment plan.
+~~~~
+
+- Minimal tracked fragments:
+  1. `insert-paragraph`
+     - Before: ""
+     - After: "The planning implication is to distinguish the geography of protection needs from the geography of available facilities. Municipality totals support preliminary resource staging, while disclosure-group estimates identify areas for local assessment. The retained exposure top-five set supports broad screening; changes in detailed rankings favor flexible staging and verification before deployment. These results support a sequence from estimated population need to verified placement and facility-specific energy assessment, rather than using any single map as a deployment plan."
+
+### contribution-05
+
+- Location: Section 4.3, before “A practical implementation”.
+- Reason: explain what the calculation chain enables operationally, while preserving the existing distinction between proposed implementation and evaluated governance.
+- Kila decisions: KILA-D-20261005-002, KILA-D-20261005-003
+- Mode: `replace`
+- Revises prior parts: none
+- Timestamp: 2026-10-05T08:19:41Z
+- Author: Kila
+- Markup SHA-256 before: `615f903a363407da3179cb4b9050d704120d8b1bdb8ee0c68b3a7264774e3369`
+- Markup SHA-256 after: `041ab851149ddb181b8a21795d67ddf892cf3e2f446d7168e26736c4275c7f8b`
+- Revision IDs: `1251, 1252, 1253`
+- Backup: `/Users/lichao/Research/KE01/Rev/revision/.kila-backups/KE01.rev.markup.20261005T171941988637.editor-overall-comment.contribution-05.docx`
+- Paragraph properties preserved: `true`
+- Run style source SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Formula verification: not applicable
+- Endnote hyperlinks preserved: `true`
+- Endnote hyperlink count: `0`
+- Endnote hyperlink XML SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Endnote relationships SHA-256: `absent`
+- Before:
+
+~~~~text
+A practical implementation would connect municipal emergency coordinators, public-health and welfare teams, shelter operators, and electricity providers through a time-stamped assessment record.
+~~~~
+
+- After:
+
+~~~~text
+The practical contribution is a shared accounting basis through which response teams can translate updated field information into revised requirements. Verified housing and placement records update the population requiring protection; usable cooled area and equipment performance update power and daily energy estimates. Peak demand informs electrical-capacity checks, whereas daily energy informs sustained operation and fuel planning. The linked calculations identify which quantities different teams need to verify and allow assumptions to be replaced as operational information becomes available.
+
+A practical implementation would connect municipal emergency coordinators, public-health and welfare teams, shelter operators, and electricity providers through a time-stamped assessment record.
+~~~~
+
+- Minimal tracked fragments:
+  1. `insert-paragraph`
+     - Before: ""
+     - After: "The practical contribution is a shared accounting basis through which response teams can translate updated field information into revised requirements. Verified housing and placement records update the population requiring protection; usable cooled area and equipment performance update power and daily energy estimates. Peak demand informs electrical-capacity checks, whereas daily energy informs sustained operation and fuel planning. The linked calculations identify which quantities different teams need to verify and allow assumptions to be replaced as operational information becomes available."
+
+### deduplicate-01
+
+- Location: Section 4.1
+- Reason: Approved deduplication or literature bridge; citations remain human-owned.
+- Kila decisions: KILA-D-20261005-004, KILA-D-20261005-005
+- Mode: `reedit`
+- Revises prior parts: editor/overall-comment#part-01
+- Timestamp: 2026-10-05T09:34:22Z
+- Author: Kila
+- Markup SHA-256 before: `b731bd992344a9a1d02f9ef35b3916796d84ba786bff3c46dc58308d55ad4f4c`
+- Markup SHA-256 after: `945d6ea3d946c7293422fdef6184701569e31146ee56187539add108c9485bf7`
+- Revision IDs: `260`
+- Backup: `/Users/lichao/Research/KE01/Rev/revision/.kila-backups/KE01.rev.markup.20261005T183422309065.editor-overall-comment.deduplicate-01.docx`
+- Paragraph properties preserved: `true`
+- Run style source SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Formula verification: not applicable
+- Endnote hyperlinks preserved: `true`
+- Endnote hyperlink count: `0`
+- Endnote hyperlink XML SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Endnote relationships SHA-256: `absent`
+- Before:
+
+~~~~text
+The contribution is to make that link explicit in a common spatial accounting chain, not to establish a new causal effect of housing damage on mortality.
+~~~~
+
+- After:
+
+~~~~text
+This contribution does not establish a new causal effect of housing damage on mortality.
+~~~~
+
+- Minimal tracked fragments:
+  1. `replace`
+     - Before: "The"
+     - After: "This"
+  2. `replace`
+     - Before: "is to make that link explicit in a common spatial accounting chain,"
+     - After: "does"
+  3. `delete`
+     - Before: " to"
+     - After: ""
+
+### deduplicate-02
+
+- Location: Section 4.2
+- Reason: Approved deduplication or literature bridge; citations remain human-owned.
+- Kila decisions: KILA-D-20261005-004, KILA-D-20261005-005
+- Mode: `reedit`
+- Revises prior parts: editor/overall-comment#part-02
+- Timestamp: 2026-10-05T09:34:22Z
+- Author: Kila
+- Markup SHA-256 before: `945d6ea3d946c7293422fdef6184701569e31146ee56187539add108c9485bf7`
+- Markup SHA-256 after: `982d6afe14257536d25b1f7fdda8772624bf2be923b66c27ac17c069069ecf72`
+- Revision IDs: `268`
+- Backup: `/Users/lichao/Research/KE01/Rev/revision/.kila-backups/KE01.rev.markup.20261005T183423180234.editor-overall-comment.deduplicate-02.docx`
+- Paragraph properties preserved: `true`
+- Run style source SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Formula verification: not applicable
+- Endnote hyperlinks preserved: `true`
+- Endnote hyperlink count: `0`
+- Endnote hyperlink XML SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Endnote relationships SHA-256: `absent`
+- Before:
+
+~~~~text
+A policy implication is to assess effective cooled placement as a service to be maintained, rather than equating a listed shelter with delivered protection. 
+~~~~
+
+- After:
+
+~~~~text
+
+~~~~
+
+- Minimal tracked fragments:
+  1. `delete`
+     - Before: "A policy implication is to assess effective cooled placement as a service to be maintained, rather than equating a listed shelter with delivered protection. "
+     - After: ""
+
+### deduplicate-03
+
+- Location: Section 4.2
+- Reason: Approved deduplication or literature bridge; citations remain human-owned.
+- Kila decisions: KILA-D-20261005-004, KILA-D-20261005-005
+- Mode: `reedit`
+- Revises prior parts: editor/overall-comment#contribution-04
+- Timestamp: 2026-10-05T09:34:23Z
+- Author: Kila
+- Markup SHA-256 before: `982d6afe14257536d25b1f7fdda8772624bf2be923b66c27ac17c069069ecf72`
+- Markup SHA-256 after: `e6c3a2be834bb5862900c6f38435a608ea66195bc75d17b377393272d6b8a87d`
+- Revision IDs: `272`
+- Backup: `/Users/lichao/Research/KE01/Rev/revision/.kila-backups/KE01.rev.markup.20261005T183424160869.editor-overall-comment.deduplicate-03.docx`
+- Paragraph properties preserved: `true`
+- Run style source SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Formula verification: not applicable
+- Endnote hyperlinks preserved: `true`
+- Endnote hyperlink count: `0`
+- Endnote hyperlink XML SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Endnote relationships SHA-256: `absent`
+- Before:
+
+~~~~text
+Municipality totals support preliminary resource staging, while disclosure-group estimates identify areas for local assessment. 
+~~~~
+
+- After:
+
+~~~~text
+
+~~~~
+
+- Minimal tracked fragments:
+  1. `delete`
+     - Before: "Municipality totals support preliminary resource staging, while disclosure-group estimates identify areas for local assessment. "
+     - After: ""
+
+### deduplicate-04
+
+- Location: Section 4.3
+- Reason: Approved deduplication or literature bridge; citations remain human-owned.
+- Kila decisions: KILA-D-20261005-004, KILA-D-20261005-005
+- Mode: `reedit`
+- Revises prior parts: editor/overall-comment#contribution-05
+- Timestamp: 2026-10-05T09:34:24Z
+- Author: Kila
+- Markup SHA-256 before: `e6c3a2be834bb5862900c6f38435a608ea66195bc75d17b377393272d6b8a87d`
+- Markup SHA-256 after: `744e30a9070aaee7e9e38bd46747590195689e7024407bbbf0836671d8ed69e9`
+- Revision IDs: `278`
+- Backup: `/Users/lichao/Research/KE01/Rev/revision/.kila-backups/KE01.rev.markup.20261005T183425044707.editor-overall-comment.deduplicate-04.docx`
+- Paragraph properties preserved: `true`
+- Run style source SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Formula verification: not applicable
+- Endnote hyperlinks preserved: `true`
+- Endnote hyperlink count: `0`
+- Endnote hyperlink XML SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Endnote relationships SHA-256: `absent`
+- Before:
+
+~~~~text
+Peak demand informs electrical-capacity checks, whereas daily energy informs sustained operation and fuel planning. 
+~~~~
+
+- After:
+
+~~~~text
+
+~~~~
+
+- Minimal tracked fragments:
+  1. `delete`
+     - Before: "Peak demand informs electrical-capacity checks, whereas daily energy informs sustained operation and fuel planning. "
+     - After: ""
+
+### deduplicate-05
+
+- Location: Section Introduction
+- Reason: Approved deduplication or literature bridge; citations remain human-owned.
+- Kila decisions: KILA-D-20261005-004, KILA-D-20261005-005
+- Mode: `reedit`
+- Revises prior parts: editor/overall-comment#contribution-01
+- Timestamp: 2026-10-05T09:34:25Z
+- Author: Kila
+- Markup SHA-256 before: `744e30a9070aaee7e9e38bd46747590195689e7024407bbbf0836671d8ed69e9`
+- Markup SHA-256 after: `960d4a8a564d2b61287d51204855cd6f709612f2ff537d1db0bc95b3a641be2d`
+- Revision IDs: `23`
+- Backup: `/Users/lichao/Research/KE01/Rev/revision/.kila-backups/KE01.rev.markup.20261005T183425890843.editor-overall-comment.deduplicate-05.docx`
+- Paragraph properties preserved: `true`
+- Run style source SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Formula verification: not applicable
+- Endnote hyperlinks preserved: `true`
+- Endnote hyperlink count: `0`
+- Endnote hyperlink XML SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Endnote relationships SHA-256: `absent`
+- Before:
+
+~~~~text
+The integration question is how early housing-damage information can inform the thermal protection needs of older residents and the electricity required to meet those needs.
+~~~~
+
+- After:
+
+~~~~text
+Modeling of concurrent heat waves and blackouts illustrates how disruption of cooling provision can amplify heat-related health risks. The integration question is how early housing-damage information can inform the thermal protection needs of older residents and the electricity required to meet those needs.
+~~~~
+
+- Minimal tracked fragments:
+  1. `insert`
+     - Before: ""
+     - After: "Modeling of concurrent heat waves and blackouts illustrates how disruption of cooling provision can amplify heat-related health risks. "
+
+### deduplicate-06
+
+- Location: Section 4.1
+- Reason: Approved deduplication or literature bridge; citations remain human-owned.
+- Kila decisions: KILA-D-20261005-004, KILA-D-20261005-005
+- Mode: `reedit`
+- Revises prior parts: editor/overall-comment#contribution-02
+- Timestamp: 2026-10-05T09:34:26Z
+- Author: Kila
+- Markup SHA-256 before: `960d4a8a564d2b61287d51204855cd6f709612f2ff537d1db0bc95b3a641be2d`
+- Markup SHA-256 after: `34796fc71667c5bfd1ed55ca28782f7917c2e0aeb2dc51eda08b1e0668563ca1`
+- Revision IDs: `260`
+- Backup: `/Users/lichao/Research/KE01/Rev/revision/.kila-backups/KE01.rev.markup.20261005T183426732120.editor-overall-comment.deduplicate-06.docx`
+- Paragraph properties preserved: `true`
+- Run style source SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Formula verification: not applicable
+- Endnote hyperlinks preserved: `true`
+- Endnote hyperlink count: `0`
+- Endnote hyperlink XML SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Endnote relationships SHA-256: `absent`
+- Before:
+
+~~~~text
+In this interpretation, the cascade concerns the interruption and replacement of protection, not a modeled increase in the meteorological hazard.
+~~~~
+
+- After:
+
+~~~~text
+Research on cascading risks emphasizes how dependencies and vulnerabilities shape impacts beyond the initiating hazard. In this interpretation, the cascade concerns the interruption and replacement of protection, not a modeled increase in the meteorological hazard.
+~~~~
+
+- Minimal tracked fragments:
+  1. `insert`
+     - Before: ""
+     - After: "Research on cascading risks emphasizes how dependencies and vulnerabilities shape impacts beyond the initiating hazard. "
+
+### antecedent-01
+
+- Location: Section 4.1 final sentence
+- Reason: Clarify the approved protection-loss versus outdoor-heat distinction without changing the research question.
+- Kila decisions: KILA-D-20261005-006
+- Mode: `reedit`
+- Revises prior parts: editor/overall-comment#part-01
+- Timestamp: 2026-10-05T09:57:48Z
+- Author: Kila
+- Markup SHA-256 before: `46ae8cf2c4b34ee952c1dd545ea2024470f43b8b6f7acbe51a9413014f413d69`
+- Markup SHA-256 after: `6ecca3a6c4fd9133622a4c4b0858d7f76e7adb4cf59f5e7fdffe7a726c1e59f0`
+- Revision IDs: `264`
+- Backup: `/Users/lichao/Research/KE01/Rev/revision/.kila-backups/KE01.rev.markup.20261005T185748280185.editor-overall-comment.antecedent-01.docx`
+- Paragraph properties preserved: `true`
+- Run style source SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Formula verification: not applicable
+- Endnote hyperlinks preserved: `true`
+- Endnote hyperlink count: `0`
+- Endnote hyperlink XML SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Endnote relationships SHA-256: `absent`
+- Before:
+
+~~~~text
+This distinction also frames a testable question for future research: whether observed restoration of effective indoor cooling reduces the additional health burden among residents who lose housing-based protection.
+~~~~
+
+- After:
+
+~~~~text
+The distinction between loss of housing-based thermal protection and increased outdoor heat also frames a testable question for future research: whether observed restoration of effective indoor cooling reduces the additional health burden among residents who lose housing-based protection.
+~~~~
+
+- Minimal tracked fragments:
+  1. `replace`
+     - Before: "This"
+     - After: "The"
+  2. `insert`
+     - Before: ""
+     - After: " between loss of housing-based thermal protection and increased outdoor heat"
+

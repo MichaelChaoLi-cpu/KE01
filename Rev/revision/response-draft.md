@@ -4,13 +4,15 @@
 
 Thank you to the editor and reviewers for their careful review.
 
-[Revision summary to be completed after the manuscript revisions.]
+The main revisions are:
 
-- [Major manuscript-level change.]
-- [Theoretical or conceptual change.]
-- [Methodological or robustness-check change.]
-- [Results, discussion, table, or figure change.]
-- [Language, consistency, or formatting change.]
+- Clarify the framework as spatial screening and demand estimation, with an explicit distinction between modeled housing-loss-related needs and observed displacement, supply gaps, or causal health effects.
+- Replace the hybrid primary surface with a coherent household-based allocation and introduce bounded older-population allocation using municipal general-household controls, with structural and demographic sensitivity comparisons.
+- Add descriptive comparisons with geographically bounded damage reports, retrospective damage-total sensitivity, and checks of heat-surface coverage and annual heat-day aggregation, while clarifying their limits as validation evidence.
+- Explain the mortality baseline and transferred cooling-effect parameters, add effect-multiplier and no-increment diagnostics, and distinguish effect-parameter ranges from whole-model uncertainty.
+- Align figures and tables with the primary scenario, provide complete supplementary tables, and clarify the literature integration gap and theoretical, scholarly, policy, planning, and practical contributions.
+
+We thank the editor and reviewers again for their constructive comments and careful consideration of our revised manuscript.
 
 # Editor
 
@@ -24,22 +26,30 @@ Before you can submit your revision, you must respond to reviews in our peer rev
 **Response:**
 Thank you for the opportunity to revise the manuscript and for emphasizing the significance and implementation of the findings. The revised manuscript clarifies its scope as spatial screening and demand estimation, strengthens the allocation and sensitivity analyses, and expands the discussion of relevant literature and the limits of transferred health effects. The point-by-point responses below explain these methodological changes and their remaining limitations.
 
-Sections 4.1–4.3 now further articulate the conceptual contribution, intended beneficiaries, policy implications, and a proposed coordination process. Section 4.1 explains housing-mediated thermal protection as the link between physical damage and health vulnerability under fixed outdoor weather, while distinguishing this conceptual contribution from causal validation. Section 4.2 identifies municipal emergency and public-health teams as intended users and emphasizes effective cooled placement rather than nominal shelter availability. Section 4.3 specifies how local assessment, placement verification, shelter operation and electricity-supply assessment could inform deployment decisions. These additions describe proposed uses and research directions, not demonstrated policy effects or an evaluated governance arrangement.
+The Introduction now explicitly connects damage assessment, shelter-energy research and heat-health research, and identifies the integration question addressed by this study. Sections 4.1–4.3 distinguish its theoretical and scholarly contribution from its policy, planning and practical implications. The findings matter because loss of usable housing can interrupt thermal protection without any increase in outdoor heat. The framework links this protection need to spatial assessment and electricity requirements for municipal emergency and public-health teams, shelter operators and electricity providers. Section 4.2 separates continuity of effective cooling as a policy objective from the spatial sequence of resource staging, local verification and facility assessment. Section 4.3 explains how updated field information can revise population, power and daily energy requirements, alongside proposed coordination roles. Section 4.1 also identifies restoration of effective indoor cooling as a question for future empirical research. These are supported planning interpretations and proposed uses, not demonstrated policy effects or an evaluated governance arrangement.
 
-Section 4.1 clarifies the conceptual contribution:
+The Introduction makes the connection between the existing research strands explicit:
 
-"Conceptually, the fixed-weather comparison treats housing-mediated thermal protection as a link between physical damage and health vulnerability, rather than treating outdoor heat alone as the exposure of interest. The contribution is to make that link explicit in a common spatial accounting chain, not to establish a new causal effect of housing damage on mortality. This distinction also frames a testable question for future research: whether observed restoration of effective indoor cooling reduces the additional health burden among residents who lose housing-based protection."
-(Page 25, Lines 529–536)
+"These strands of research address complementary but different parts of the response problem: damage assessment characterizes physical loss, shelter-energy research examines service provision, and heat-health research evaluates vulnerability and protection. Modeling of concurrent heat waves and blackouts illustrates how disruption of cooling provision can amplify heat-related health risks (Stone et al., 2023). The integration question is how early housing-damage information can inform the thermal protection needs of older residents and the electricity required to meet those needs. We address this question by treating loss of housing-based cooling as an interruption of a protective service under unchanged outdoor heat. The resulting spatial framework connects housing loss, older-person exposure, cooling requirements, and a fixed-weather health contrast during the early response period."
+(Pages 4–5, Lines 65–75)
 
-Section 4.2 identifies intended users and the policy implication:
+Section 4.1 states the theoretical and scholarly contribution:
 
-"For municipal emergency and public-health teams, the intended use is to identify where to verify older residents' protection needs, including less densely populated communities that may be overlooked by population totals alone. A policy implication is to assess effective cooled placement as a service to be maintained, rather than equating a listed shelter with delivered protection. Such screening can inform outreach and facility checks, but cannot determine individual eligibility or replace assessments of residents outside the modeled housing-loss population."
-(Pages 25–26, Lines 544–550)
+"The theoretical relevance of the fixed-weather comparison is to distinguish the loss of housing-mediated thermal protection from an increase in outdoor heat. Housing functionality mediates the modeled pathway from physical damage to health vulnerability: when a residence becomes unusable, the protective service it provides must be restored elsewhere. Research on cascading risks emphasizes how dependencies and vulnerabilities shape impacts beyond the initiating hazard (Pescaroli & Alexander, 2018). In this interpretation, the cascade concerns the interruption and replacement of protection, not a modeled increase in the meteorological hazard. The scholarly contribution is to operationalize this link between damage assessment and continuity of health-protective urban services through a common spatial accounting framework."
+(Pages 25–26, Lines 539–549)
 
-Section 4.3 describes proposed coordination and implementation:
+Section 4.2 distinguishes the policy objective from the spatial planning implications:
 
-"A practical implementation would connect municipal emergency coordinators, public-health and welfare teams, shelter operators, and electricity providers through a time-stamped assessment record. Coordinators could commission local checks, welfare teams verify affected residents and placement needs, shelter operators document occupancy and cooling performance, and electricity providers assess feasible supply. Verified information would then replace the corresponding screening assumptions before deployment decisions are made. These are proposed coordination roles, not an evaluated governance arrangement or a claim that the model determines resource assignments."
-(Page 27, Lines 585–593)
+"The policy implication is to define continuity of effective cooling as an emergency service objective alongside shelter provision. For older residents unable to return to habitable housing, this objective concerns access to usable cooled accommodation throughout the protection period. It links housing assistance, public-health outreach, and emergency energy provision through a shared protection objective, with local verification determining whether that objective is met."
+(Page 26, Lines 561–567)
+
+"The planning implication is to distinguish the geography of protection needs from the geography of available facilities. The retained exposure top-five set supports broad screening; changes in detailed rankings favor flexible staging and verification before deployment. These results support a sequence from estimated population need to verified placement and facility-specific energy assessment, rather than using any single map as a deployment plan."
+(Page 28, Lines 598–603)
+
+Section 4.3 explains the practical use of the linked calculations:
+
+"The practical contribution is a shared accounting basis through which response teams can translate updated field information into revised requirements. Verified housing and placement records update the population requiring protection; usable cooled area and equipment performance update power and daily energy estimates. The linked calculations identify which quantities different teams need to verify and allow assumptions to be replaced as operational information becomes available."
+(Pages 28–29, Lines 613–618)
 
 # Reviewer 1
 Review Report for Sustainable Cities and Society
@@ -61,49 +71,49 @@ Thank you for this constructive assessment. The revised manuscript strengthens t
 The additional comparisons do not establish accurate building-level damage, a locally validated cooling effect, or an optimal deployment sequence. The revised Discussion distinguishes comparatively stable broad screening from less stable detailed rankings, and explains which additional field and operational observations are needed. Detailed responses to Comments 1–8 follow. The revised manuscript states:
 
 "The central surface is one coherent scenario using general households, a 20-km decay scale and a half-collapse weight of 0.5, giving 303.5 functional-loss units."
-(Page 9, Lines 176–177)
+(Page 10, Lines 187–188)
 
 "These allocations reproduce municipal controls but do not validate within-municipality residence patterns."
-(Page 10, Lines 193–194)
+(Page 10, Lines 204–205)
 
 "Equation 3 assumes that housing loss is not systematically associated with age composition within a group; exposure is defined as zero where general households are zero."
-(Page 10, Lines 194–196)
+(Page 10, Lines 205–207)
 
 "These comparisons are descriptive rather than independent validation: outcomes and assessment completeness differ, report zeros are not verified negatives, and report geography was examined before developing the alternatives."
-(Page 18, Lines 378–380)
+(Page 19, Lines 389–391)
 
 "The corrected hybrid yields 216.546 exposed older residents, 7.18% above the selected primary; municipal exposure rank correlation is 0.9818, with a maximum rank shift of six and the same top-five set."
-(Pages 21–22, Lines 455–457)
+(Page 22, Lines 465–467)
 
 "Residual-capacity demographic weighting yields 202.185 exposed older residents, with a maximum rank shift of one."
-(Page 22, Lines 457–459)
+(Page 22, Lines 467–469)
 
 "Against September 29 full-or-half reports, the primary has rank correlation 0.7252, share total-variation distance 0.5845 and top-five overlap 3/5; the corresponding shaking ranges are 0.7732–0.8127, 0.2374–0.3855 and 4/5."
-(Page 22, Lines 463–465)
+(Page 22, Lines 473–475)
 
 "These demand estimates support resource sizing but cannot establish whether local grid, generator, or fuel capacity is adequate."
-(Page 23, Lines 481–482)
+(Page 23, Lines 491–492)
 
 "In the hypothetical no-increment benchmark, both cooling states have identical modeled risks in every municipality, yielding a 0% relative increase and zero incremental expected deaths, while total expected mortality remains positive."
-(Page 23, Lines 491–494)
+(Pages 23–24, Lines 501–504)
 
 "Across effective-cooling multipliers of 0.98, 1.00, 1.03 and 1.07, the aggregate relative burden increases are 5.22%, 5.26%, 5.31% and 5.38%, respectively, and incremental expected deaths range from 0.03392 to 0.03703."
-(Pages 23–24, Lines 500–502)
+(Page 24, Lines 510–512)
 
 "Compared with using mean heat days, the maximum municipal difference in incremental risk is 0.001059 per 100,000, with no change in municipal incremental-risk rankings."
-(Page 24, Lines 509–510)
+(Page 24, Lines 519–520)
 
 "Broad high-demand screening is therefore more stable than detailed municipal sequencing or health-burden priorities."
-(Page 26, Lines 549–551)
+(Page 27, Lines 584–586)
 
 "The framework supports spatial screening and demand estimation, not optimized resource allocation or deployment sequencing."
-(Page 27, Lines 580–582)
+(Page 29, Lines 635–636)
 
 "The prefecture-wide 5.31% increase is a model output obtained by applying transferred health parameters to local historical high-heat-day estimates and municipality mortality baselines, not evidence of an observed health effect in Kumamoto."
-(Page 27, Lines 590–592)
+(Page 30, Lines 644–646)
 
 "The direction and magnitude of transfer bias remain unquantified, and the reported confidence interval does not cover these population, exposure or duration mismatches."
-(Pages 30–31, Lines 662–664)
+(Page 33, Lines 716–718)
 
 ## Comment 1
 (1) Section 2.4 (Structural Housing-Loss Allocation): The spatial allocation is driven by exposure
@@ -121,27 +131,27 @@ For the September 29 full-or-half reports, the primary allocation has a rank cor
 Section 2.4 defines the primary allocation:
 
 "The central surface is one coherent scenario using general households, a 20-km decay scale and a half-collapse weight of 0.5, giving 303.5 functional-loss units. Household counts align the allocation denominator with the target population; 20 km and 0.5 are transparent planning assumptions, not empirically optimized parameters or a calibrated loss fraction."
-(Page 9, Lines 170–174)
+(Page 10, Lines 187–191)
 
 Section 2.8 specifies the comparison and its limitations:
 
 "We assess municipality rank correlations, rank shifts and top-five overlap. Separate comparisons with July 31 and September 29 prefectural reports use full collapse, large-scale-half plus half collapse, and their combined counts. Share total-variation distance is half the sum of absolute municipal share differences. Report dates and categories are kept distinct from the planning snapshot. These comparisons are descriptive rather than independent validation: outcomes and assessment completeness differ, report zeros are not verified negatives, and report geography was examined before developing the alternatives."
-(Page 16, Lines 321–328)
+(Pages 18–19, Lines 384–391)
 
 Section 3.3 reports the quantitative findings:
 
 "Against September 29 full-or-half reports, the primary has rank correlation 0.7252, share total-variation distance 0.5845 and top-five overlap 3/5; the corresponding shaking ranges are 0.7732–0.8127, 0.2374–0.3855 and 4/5. The July 31 combined report has only five municipalities with positive counts; primary correlation is 0.3108 and share distance 0.9674. Thus stable high-exposure membership does not establish accurate reported-damage geography."
-(Page 20, Lines 411–416)
+(Page 22, Lines 473–478)
 
 Section 4.5 states the remaining evidence boundary:
 
 "The selected allocation is retained as transparent early demand screening, not validated municipal or building-level damage prediction. Report-share disagreement remains substantial; the closer descriptive agreement of shaking alternatives does not establish independent validity or justify post hoc selection. Nearest-station categories omit local site effects, source vulnerability curves are transferred beyond their original setting, and full-collapse shapes are used only as hypothetical functional-loss weights."
-(Page 25, Lines 523–529)
+(Pages 31–32, Lines 681–687)
 
 The Figure 5 note clarifies the role of the mapped official evidence:
 
 "Panels b and c use the household/20-km/0.5 primary and bounded general-household older-population allocation; panel a is contextual evidence, not independent validation."
-(Page 32, Lines 595–596)
+(Page 39, Lines 770–771)
 
 ## Comment 2
 (2) Section 2.4, Equations (1)–(3): The “central surface” is constructed from a normalized pointwise
@@ -165,47 +175,47 @@ The revised Abstract states:
 Section 2.4 defines the primary and the interpretation of sensitivity bounds:
 
 "The central surface is one coherent scenario using general households, a 20-km decay scale and a half-collapse weight of 0.5, giving 303.5 functional-loss units. Household counts align the allocation denominator with the target population; 20 km and 0.5 are transparent planning assumptions, not empirically optimized parameters or a calibrated loss fraction. The normalized pointwise-median surface, rebuilt after the zero-household correction, is retained only as a separate sensitivity. Pointwise minima and maxima form lower and upper sensitivity surfaces. Because each endpoint can arise from a different scenario at a different location, these surfaces are local sensitivity bounds rather than a jointly realized prefecture interval. Their sums must therefore retain that interpretation."
-(Page 9, Lines 170–178)
+(Page 10, Lines 187–195)
 
 Section 2.8 specifies aggregation:
 
 "Additive disclosure-group outcomes are summed using representative-point municipality assignments after the central scenario is selected at its defined analytical scale."
-(Page 15, Lines 297–298)
+(Page 17, Lines 360–361)
 
 The same section describes the comparison:
 
-"We additionally compare the selected primary with the corrected hybrid, bounded demographic alternative and 54 hypothetical shaking allocations. For the latter, nearest-station JMA intensity categories are assigned in projected coordinates, including neighbouring-prefecture stations and excluding the withdrawn Tomiai observation."
-(Page 15, Lines 310–313)
+"We additionally compare the selected primary with the corrected hybrid, bounded demographic alternative and 54 hypothetical shaking allocations. For the latter, nearest-station JMA intensity categories are assigned in projected coordinates, including neighboring-prefecture stations and excluding the withdrawn Tomiai observation."
+(Page 18, Lines 373–376)
 
 Section 3.3 reports the difference between the primary and hybrid:
 
 "The corrected hybrid yields 216.546 exposed older residents, 7.18% above the selected primary; municipal exposure rank correlation is 0.9818, with a maximum rank shift of six and the same top-five set."
-(Pages 19–20, Lines 403–405)
+(Page 22, Lines 465–467)
 
 Section 3.4 updates electricity requirements:
 
 "Peak power rises from 17.96 kW in the Low bundle to 28.427 kW in the Central bundle and 39.88 kW in the High bundle; corresponding daily electricity rises from 215.54 to 511.691 and 957.19 kWh."
-(Page 20, Lines 421–423)
+(Page 23, Lines 483–485)
 
 Section 3.5 updates the health contrast:
 
 "The prefecture-weighted central 30-day mortality-burden increase without effective cooling is 5.31%, with source-effect endpoint scenarios of 0.66% and 9.96%; these endpoints are not whole-model confidence limits."
-(Page 21, Lines 436–438)
+(Page 23, Lines 498–500)
 
 Section 4.5 retains the limits on predictive interpretation:
 
 "The selected allocation is retained as transparent early demand screening, not validated municipal or building-level damage prediction. Report-share disagreement remains substantial; the closer descriptive agreement of shaking alternatives does not establish independent validity or justify post hoc selection. Nearest-station categories omit local site effects, source vulnerability curves are transferred beyond their original setting, and full-collapse shapes are used only as hypothetical functional-loss weights."
-(Page 25, Lines 523–529)
+(Pages 31–32, Lines 681–687)
 
 The Figure 5 note identifies the primary specification:
 
 "Panels b and c use the household/20-km/0.5 primary and bounded general-household older-population allocation; panel a is contextual evidence, not independent validation."
-(Page 32, Lines 595–596)
+(Page 39, Lines 770–771)
 
 The Figure 6 note distinguishes the pointwise upper bound from a jointly realized scenario:
 
 "Panel b maps the pointwise high 30-day no-placement older-person-day planning bound, derived from pointwise maxima across the 27 distance/proxy/half-collapse scenarios and not representing a jointly realized aggregate scenario."
-(Page 33, Lines 600–602)
+(Page 40, Lines 775–777)
 
 ## Comment 3
 (3) Section 2.4, Equation (3): Older-person exposure assumes that the modeled household-loss share
@@ -229,47 +239,47 @@ The revised Abstract reports the selected population and associated demand:
 Section 2.4 defines the household-based population allocation and working assumption:
 
 "We associate structural housing loss with older residents by scaling each group's estimated general-household population aged 65 or older by its modeled share of general households lost. For each group, the lower bound is the number of households containing an older member; the upper bound is the all-resident older population where that lower bound is positive, and zero otherwise. Starting from the lower bound, we distribute the municipal remainder in proportion to older-household counts, subject to the upper bounds, to match official municipal general-household older-population controls. Groups are assigned to municipalities by representative points. Residual-capacity weighting is a separate demographic sensitivity. These allocations reproduce municipal controls but do not validate within-municipality residence patterns. Equation 3 assumes that housing loss is not systematically associated with age composition within a group; exposure is defined as zero where general households are zero."
-(Pages 9–10, Lines 179–190)
+(Page 10, Lines 196–207)
 
 Section 2.8 explains municipality aggregation:
 
 "Additive disclosure-group outcomes are summed using representative-point municipality assignments after the central scenario is selected at its defined analytical scale."
-(Page 15, Lines 297–298)
+(Page 17, Lines 360–361)
 
 The same section includes the demographic alternative among the sensitivity comparisons:
 
-"We additionally compare the selected primary with the corrected hybrid, bounded demographic alternative and 54 hypothetical shaking allocations. For the latter, nearest-station JMA intensity categories are assigned in projected coordinates, including neighbouring-prefecture stations and excluding the withdrawn Tomiai observation."
-(Page 15, Lines 310–313)
+"We additionally compare the selected primary with the corrected hybrid, bounded demographic alternative and 54 hypothetical shaking allocations. For the latter, nearest-station JMA intensity categories are assigned in projected coordinates, including neighboring-prefecture stations and excluding the withdrawn Tomiai observation."
+(Page 18, Lines 373–376)
 
 Section 3.3 reports the alternative-allocation result:
 
 "Residual-capacity demographic weighting yields 202.185 exposed older residents, with a maximum rank shift of one."
-(Page 20, Lines 405–407)
+(Page 22, Lines 467–469)
 
 Section 3.4 reports electricity demand based on the updated population:
 
 "Peak power rises from 17.96 kW in the Low bundle to 28.427 kW in the Central bundle and 39.88 kW in the High bundle; corresponding daily electricity rises from 215.54 to 511.691 and 957.19 kWh."
-(Page 20, Lines 421–423)
+(Page 23, Lines 483–485)
 
 Section 3.5 reports the corresponding health contrast:
 
 "The prefecture-weighted central 30-day mortality-burden increase without effective cooling is 5.31%, with source-effect endpoint scenarios of 0.66% and 9.96%; these endpoints are not whole-model confidence limits."
-(Page 21, Lines 436–438)
+(Page 23, Lines 498–500)
 
 Section 4.5 states the unresolved ecological limitation:
 
 "Municipal calibration and demographic rank stability cannot verify within-group residence patterns or the assumed absence of systematic age-related loss differences."
-(Page 25, Lines 529–531)
+(Page 32, Lines 687–689)
 
 The Figure 5 note identifies the bounded older-population allocation:
 
 "Panels b and c use the household/20-km/0.5 primary and bounded general-household older-population allocation; panel a is contextual evidence, not independent validation."
-(Page 32, Lines 595–596)
+(Page 39, Lines 770–771)
 
 The Figure 6 note retains the distinction between a pointwise planning bound and a realized scenario:
 
 "Panel b maps the pointwise high 30-day no-placement older-person-day planning bound, derived from pointwise maxima across the 27 distance/proxy/half-collapse scenarios and not representing a jointly realized aggregate scenario."
-(Page 33, Lines 600–602)
+(Page 40, Lines 775–777)
 
 ## Comment 4
 (4) The manuscript uses the five-year mean number of matching-period high-heat station-days and
@@ -287,17 +297,17 @@ Section 2.7 explains that the expected duration and its complement to 30 days en
 Section 2.5 clarifies the exposure interpretation:
 
 "Fractional values arise from averaging calendar-matched counts over 2021–2025 and spatially weighting station values; they represent an expected exposure duration, not an observed sequence of partial days. The historical scenario supplies a common seasonal outdoor exposure for the two cooling states, not a forecast of the weather during the post-earthquake month."
-(Page 12, Lines 231–235)
+(Page 12, Lines 245–249)
 
 Section 2.7 explains the calculation and approximation:
 
 "In Equations 10 and 11, the expected high-heat duration and its complement to 30 days enter directly as real-valued exponents of the corresponding daily survival probabilities, without rounding. This weights log survival by the expected duration in each heat state. It is a plug-in scenario approximation: risk evaluated at the mean duration need not equal mean risk across historical years because compounding is nonlinear."
-(Pages 14–15, Lines 293–298)
+(Page 16, Lines 321–326)
 
 Section 3.5 reports the aggregation check:
 
 "As an aggregation check, we calculate both cooling-state risks separately for each of the five annual interpolated heat-day scenarios and then average the risks. Compared with using mean heat days, the maximum municipal difference in incremental risk is 0.001059 per 100,000, with no change in municipal incremental-risk rankings. This supports the mean-day approximation under the specified baseline, effect parameters and missing-day treatment, but does not validate weather prediction or the transferred health effect."
-(Pages 22–23, Lines 472–478)
+(Page 24, Lines 517–523)
 
 ## Comment 5
 (5) Section 2.7, Equation (9): The origin and interpretation of the 1.03 multiplier used to define the
@@ -311,13 +321,13 @@ depends on this parameterization.
 Thank you for this comment. Section 2.7 now identifies 1.03 as the heat-associated mortality odds ratio in air-conditioned nursing homes reported by Katz et al. (2026), explains its relationship to the relative odds ratio of 1.08, and defines a conditional one-factor sensitivity analysis; Section 3.5 reports its numerical results. The revised central estimate is 5.31%, rather than the earlier 5.34%, and varies from 5.22% to 5.38% over the tested multiplier values. This limited sensitivity does not resolve uncertainty about transferring the effect to displaced older residents.
 
 "The effective-cooling multiplier of 1.03 is the heat-associated mortality odds ratio among air-conditioned nursing homes in the same study (95% confidence interval, 0.98–1.07), not an estimated cooling-loss effect. Multiplying it by the relative odds ratio of 1.08 gives a no-cooling heat multiplier of 1.1124, consistent with the study's rounded estimate of 1.11."
-(Pages 14–15, Lines 293–297)
+(Page 15, Lines 305–309)
 
 "In an additional one-factor diagnostic, we set the effective-cooling heat multiplier to 0.98, 1.00, 1.03 and 1.07 while fixing the relative odds ratio at 1.08 and all other inputs. The endpoints are the source interval for the effective-cooling multiplier, not joint confidence limits; covariance between effect estimates is not modeled. This diagnostic changes both cooling-state heat multipliers while retaining their odds-ratio contrast."
-(Page 16, Lines 333–337)
+(Page 17, Lines 345–349)
 
 "Across effective-cooling multipliers of 0.98, 1.00, 1.03 and 1.07, the aggregate relative burden increases are 5.22%, 5.26%, 5.31% and 5.38%, respectively, and incremental expected deaths range from 0.03392 to 0.03703. The central contrast is therefore only modestly sensitive to this multiplier over the tested range, conditional on the fixed relative odds ratio and other model inputs; this does not establish transferability to displaced older residents."
-(Pages 23–24, Lines 499–504)
+(Page 24, Lines 510–515)
 
 ## Comment 6
 (6) Sections 2.7 and 4.5: The health-effect estimate is transferred from Ontario nursing homes to the
@@ -332,12 +342,12 @@ scenario would improve robustness.
 Thank you for highlighting this external-validity limitation. Sections 2.7 and 4.5 now explicitly distinguish the transferred Ontario nursing-home contrast from a locally estimated effect and describe differences in frailty, care, housing, cooling access, climatic acclimatization and exposure definition. Section 4.4 adds comparative evidence including Japanese populations, without treating those studies as validation of the numerical contrast. The mortality analysis remains an illustrative planning scenario. In addition to the source-effect endpoint scenarios, we add a hypothetical no-increment benchmark that retains all other inputs. This benchmark makes dependence on the transferred effect explicit; it is not a Japanese effect estimate, a confidence bound or evidence that the main result is robust to the absence of that effect. Section 2.7 states:
 
 "Separately, we evaluate a hypothetical no-increment benchmark by setting the no-cooling relative odds ratio to 1 while retaining the effective-cooling heat multiplier of 1.03 and all other inputs. This benchmark tests the algebraic boundary of the transferred contrast, not a locally estimated effect or a confidence bound."
-(Page 16, Lines 333–336)
+(Page 17, Lines 354–357)
 
 Section 3.5 reports the result and its interpretation:
 
 "In the hypothetical no-increment benchmark, both cooling states have identical modeled risks in every municipality, yielding a 0% relative increase and zero incremental expected deaths, while total expected mortality remains positive. This algebraic result shows dependence on the assumed cooling contrast; it does not validate the transferred effect or establish robustness to its absence."
-(Page 23, Lines 481–485)
+(Pages 23–24, Lines 501–505)
 
 ## Comment 7
 (7) The Low/Central/High engineering bundles are central to the reported 21.85–48.52 kW and
@@ -355,17 +365,17 @@ The engineering parameters remain unchanged. The revised population allocation u
 Section 2.6 states:
 
 "Table S1 reports all parameter values, units and sources. Area remains fixed at 3.5 m²/person as a minimum living-space proxy, not an elderly-specific cooled-floor-area standard. The load-density endpoints are insulation-dependent benchmarks from one gymnasium case, and 134 W/m² is their arithmetic midpoint. That case assumes 0.15 persons/m², whereas the adopted area implies approximately 0.286 persons/m²; the case also contains inconsistent gymnasium/office labeling. These differences limit transfer to emergency shelters. COP, diversity and operating hours are study-defined scenarios rather than government-prescribed values."
-(Page 13, Lines 255–262)
+(Pages 13–14, Lines 273–280)
 
 Section 3.4 reports the updated requirements:
 
 "Peak power rises from 17.96 kW in the Low bundle to 28.427 kW in the Central bundle and 39.88 kW in the High bundle; corresponding daily electricity rises from 215.54 to 511.691 and 957.19 kWh."
-(Page 21, Lines 439–441)
+(Page 23, Lines 483–485)
 
 The Figure 7 note clarifies their interpretation:
 
 "All bundles use the same selected primary population; daily energy assumes constant scenario power over the specified operating hours, not measured consumption or a verified supply shortfall."
-(Page 34, Lines 627–629)
+(Page 41, Lines 784–786)
 
 ## Comment 8
 (8) The manuscript repeatedly and appropriately states that the outputs are planning quantities rather
@@ -380,7 +390,7 @@ implications are unstable.
 Thank you for this comment. Section 4.2 now synthesizes which planning conclusions remain stable within the tested scenarios and which priorities remain sensitive or unverified. It distinguishes retained high-exposure membership from changes in detailed rankings, explains why common engineering multipliers preserve rankings mechanically, and identifies the limits of calibration and health-effect sensitivity tests. The revised text states:
 
 "Across the tested structural alternatives, the exposure top-five set is retained, but shaking scenarios shift individual exposure ranks by up to 24 places and retain only four of the five highest incremental-death municipalities. Broad high-demand screening is therefore more stable than detailed municipal sequencing or health-burden priorities. Engineering bundles preserve demand rankings because common per-person factors scale all municipalities, while changing resource quantities; this does not establish supply adequacy. Calibration tests do not establish stable priorities in unobserved areas: extending the MODIS station domain does not uniformly improve errors, and this temperature calibration is distinct from the threshold-day interpolation used in the mortality model. The latter's spatial error remains a limitation despite the small tested annual-aggregation difference. Health-effect sensitivities likewise support only conditional conclusions: the protected multiplier has a modest influence over its tested range, whereas the no-cooling effect endpoints materially change burden magnitude and the null-increment benchmark removes the modeled contrast. These separate tests support staged verification of high-demand areas, not a validated ordering of local deficits or a jointly quantified uncertainty range."
-(Pages 25–26, Lines 546–561)
+(Pages 27–28, Lines 582–597)
 
 # Reviewer 3
 Major Comments
@@ -405,13 +415,13 @@ Thank you for this comment. The Abstract and Sections 1, 2.3 and 3.1 now explici
 (Page 1, Lines 12–14)
 
 "This study asks where cooling protection for older residents associated with functional housing loss is most needed after the Kumamoto earthquake, how much peak power and daily electricity that protection would require, and how the modeled mortality burden differs if effective cooling is not restored during the next 30 days."
-(Page 4, Lines 64–67)
+(Page 5, Lines 76–79)
 
 "We restrict this population to the housing-loss pathway because reported building-damage totals constrain that pathway, whereas the available operational reports do not identify the older individuals displaced by each cause. Residents requiring protection solely because of service outages or precautionary evacuation are outside this modeled population. Association with housing loss does not establish actual displacement or loss of effective cooling for each individual."
-(Page 7, Lines 135–140)
+(Page 8, Lines 150–155)
 
 "These occupancy counts describe a broader, differently timed and geographically bounded population; they are not age-specific counts of residents associated with functional housing loss. Service disruptions and precautionary needs can also prompt shelter use. We therefore use occupancy as operational context, not as a calibration or validation total for modeled older-person exposure."
-(Page 16, Lines 317–322)
+(Page 20, Lines 415–420)
 
 ## Comment 2
 (M1.2)
@@ -430,17 +440,17 @@ To assess sensitivity to the demographic distribution, we compare older-househol
 Section 2.4 states:
 
 "These allocations reproduce municipal controls but do not validate within-municipality residence patterns. Equation 3 assumes that housing loss is not systematically associated with age composition within a group; exposure is defined as zero where general households are zero."
-(Page 10, Lines 187–190)
+(Page 10, Lines 204–207)
 
 Section 3.3 reports the demographic sensitivity:
 
 "Residual-capacity demographic weighting yields 202.185 exposed older residents, with a maximum rank shift of one."
-(Page 20, Lines 405–407)
+(Page 22, Lines 467–469)
 
 Section 4.5 discusses the remaining limitation:
 
 "Municipal calibration and demographic rank stability cannot verify within-group residence patterns or the assumed absence of systematic age-related loss differences."
-(Page 25, Lines 529–531)
+(Page 32, Lines 687–689)
 
 ## Comment 3
 M2 | Transferability of the parameters used in the mortality-risk contrast
@@ -459,21 +469,21 @@ literature referring, where available, to community-dwelling older populations a
 Thank you for this comment. Sections 2.7, 4.4 and 4.5 now clarify the transferred estimand, discuss comparative evidence including Japanese populations, and distinguish source-effect uncertainty from uncertainty about transferability. The Ontario estimates remain scenario inputs rather than locally validated effects. Section 4.4 considers both the association between air-conditioning availability and lower heat-related mortality and the contrasting Japanese electricity-conservation and outage findings. In particular, it distinguishes the brief all-cause mortality increase after an outage from the absence of clear amplification of the temperature–mortality association. These studies provide relevant context but do not identify the cooling-loss effect among housing-displaced older residents. The revised text states:
 
 "In the source study, the relative odds ratio compares heat-associated mortality odds ratios between nursing homes without and with air conditioning, rather than directly comparing mortality between displaced community residents with and without cooling. Applying this interaction to our two states assumes a shared reference baseline and transfers the source heat-effect contrast as a planning scenario, not a locally estimated effect."
-(Pages 14–15, Lines 294–299)
+(Page 15, Lines 310–315)
 
 "Comparative evidence supports attention to cooling but does not establish a transferable effect size: a multicountry longitudinal analysis including Japan associates greater residential air-conditioning prevalence with lower heat-related mortality, while measuring availability rather than actual use (Sera et al., 2020). After the 2011 earthquake, Japanese prefectures with larger electricity reductions showed lower rather than higher heat-related mortality, and daily electricity reduction did not significantly modify the heat–mortality association in Tokyo (Kim et al., 2017). Following the 2019 typhoon-related outage, an event study reports a short-lived increase in all-cause mortality and a longer increase in heat-related ambulance transport; a separate analysis finds stronger temperature-related ambulance risk under electricity reduction but no clear amplification of the temperature–mortality association (Yamasaki et al., 2024). These population-level studies concern air-conditioning prevalence, electricity conservation or outages, not verified loss of cooling among housing-displaced older residents, and therefore provide context rather than validation of our numerical contrast."
-(Page 26, Lines 550–563)
+(Pages 30–31, Lines 649–663)
 
 "Transfer from institutional nursing-home residents to community-dwelling older residents may be affected by differences in frailty, care provision, housing, cooling access and climatic acclimatization. The source uses a local heat-index threshold, whereas this study uses station-calibrated air-temperature scenarios; housing-related cooling loss and repeated exposure over a 30-day displacement period are not directly observed in the source study. The direction and magnitude of transfer bias remain unquantified, and the reported confidence interval does not cover these population, exposure or duration mismatches."
-(Pages 28–29, Lines 611–618)
+(Page 33, Lines 711–718)
 
 The reference list now includes the comparative studies discussed in Section 4.4, including:
 
 "Sera, F., Hashizume, M., Honda, Y., Lavigne, E., Schwartz, J., Zanobetti, A., Tobias, A., Iñiguez, C., Vicedo-Cabrera, A. M., Blangiardo, M., Armstrong, B., & Gasparrini, A. (2020). Air Conditioning and Heat-related Mortality: A Multi-country Longitudinal Study. Epidemiology, 31(6), 779-787. https://doi.org/10.1097/EDE.0000000000001241"
-(Page 49, Lines 789–791)
+(Page 48, Lines 894–896)
 
 "Yamasaki, L., Kamada, T., Ng, C. F. S., Takane, Y., Nakajima, K., Yamaguchi, K., Oka, K., Honda, Y., Kim, Y., & Hashizume, M. (2024). Heat-related mortality and ambulance transport after a power outage in the Tokyo metropolitan area. Environmental Epidemiology, 8(2), e292. https://doi.org/10.1097/EE9.0000000000000292"
-(Page 50, Lines 803–805)
+(Page 49, Lines 912–914)
 
 ## Comment 4
 (M2.2)
@@ -490,7 +500,7 @@ number of expected high-heat days.
 Thank you for this comment. Section 4.4 now explicitly identifies the prefecture-wide increase as a model output, not an observed health effect in Kumamoto, and explains its dependence on transferred parameters, mortality baselines and expected high-heat days. The current central estimate is 5.31%, rather than the earlier 5.34%. The revised text also distinguishes the relative contrast from expected-death magnitudes, which additionally depend on the modeled affected population:
 
 "The prefecture-wide 5.31% increase is a model output obtained by applying transferred health parameters to local historical high-heat-day estimates and municipality mortality baselines, not evidence of an observed health effect in Kumamoto. Conditional on fixed effect parameters and a fixed baseline, differences in expected high-heat days determine the spatial variation in the relative contrast; expected-death magnitudes additionally depend on the modeled affected population."
-(Page 27, Lines 572–577)
+(Page 30, Lines 644–649)
 
 ## Comment 5
 M3 | Seismic hazard, local verification, and robustness of the central surface
@@ -527,62 +537,62 @@ The revised Abstract states:
 Section 2.4 clarifies the allocation's provenance, assumptions and population definition:
 
 "This is a study-defined total-constrained screening allocation, not a fitted damage-prediction model. Groups without general households receive zero allocation; the remaining weights are renormalized to conserve the scenario total."
-(Page 8, Lines 155–158)
+(Page 9, Lines 170–173)
 
-"Housing-loss scenarios cross general households, mapped-building count and mapped footprint area with three distance-decay scales and half-collapse weights of 0, 0.5 and 1, producing 27 allocations. Building proxies are weighting variables, not counts of residences."
-(Pages 8–9, Lines 162–165)
+"Housing-loss scenarios cross general households, mapped-building count and mapped footprint area with distance-decay scales of 10, 20 and 40 km and half-collapse weights of 0, 0.5 and 1, producing 27 allocations. The proxies are the census general-household count, mapped-building polygon count and summed mapped-building footprint area within each disclosure group. Building proxies are weighting variables, not counts of residences."
+(Page 9, Lines 177–182)
 
 "The central surface is one coherent scenario using general households, a 20-km decay scale and a half-collapse weight of 0.5, giving 303.5 functional-loss units. Household counts align the allocation denominator with the target population; 20 km and 0.5 are transparent planning assumptions, not empirically optimized parameters or a calibrated loss fraction. The normalized pointwise-median surface, rebuilt after the zero-household correction, is retained only as a separate sensitivity."
-(Page 9, Lines 170–175)
+(Page 10, Lines 187–192)
 
 "Starting from the lower bound, we distribute the municipal remainder in proportion to older-household counts, subject to the upper bounds, to match official municipal general-household older-population controls."
-(Page 9, Lines 183–185)
+(Page 10, Lines 200–202)
 
 Section 2.8 describes consistent aggregation and the shaking alternatives:
 
 "Additive disclosure-group outcomes are summed using representative-point municipality assignments after the central scenario is selected at its defined analytical scale."
-(Page 15, Lines 297–298)
+(Page 17, Lines 360–361)
 
-"We additionally compare the selected primary with the corrected hybrid, bounded demographic alternative and 54 hypothetical shaking allocations. For the latter, nearest-station JMA intensity categories are assigned in projected coordinates, including neighbouring-prefecture stations and excluding the withdrawn Tomiai observation."
-(Page 15, Lines 310–313)
+"We additionally compare the selected primary with the corrected hybrid, bounded demographic alternative and 54 hypothetical shaking allocations. For the latter, nearest-station JMA intensity categories are assigned in projected coordinates, including neighboring-prefecture stations and excluding the withdrawn Tomiai observation."
+(Page 18, Lines 373–376)
 
 Section 3.3 reports the structural sensitivity and geographic comparisons:
 
 "The corrected hybrid yields 216.546 exposed older residents, 7.18% above the selected primary; municipal exposure rank correlation is 0.9818, with a maximum rank shift of six and the same top-five set. Residual-capacity demographic weighting yields 202.185 exposed older residents, with a maximum rank shift of one. Across the 54 shaking scenarios, exposure ranges from 133.49 to 363.43 and rank correlations from 0.8163 to 0.8978; maximum rank shifts are 16–24. All retain the exposure top-five set, but incremental-death top-five overlap is four of five. These ranges combine hazard, proxy and half-collapse assumptions and are not confidence intervals. Against September 29 full-or-half reports, the primary has rank correlation 0.7252, share total-variation distance 0.5845 and top-five overlap 3/5; the corresponding shaking ranges are 0.7732–0.8127, 0.2374–0.3855 and 4/5. The July 31 combined report has only five municipalities with positive counts; primary correlation is 0.3108 and share distance 0.9674. Thus stable high-exposure membership does not establish accurate reported-damage geography."
-(Pages 19–20, Lines 403–416)
+(Page 22, Lines 465–478)
 
 Sections 3.4 and 3.5 update the downstream estimates:
 
 "Peak power rises from 17.96 kW in the Low bundle to 28.427 kW in the Central bundle and 39.88 kW in the High bundle; corresponding daily electricity rises from 215.54 to 511.691 and 957.19 kWh."
-(Page 20, Lines 421–423)
+(Page 23, Lines 483–485)
 
 "The prefecture-weighted central 30-day mortality-burden increase without effective cooling is 5.31%, with source-effect endpoint scenarios of 0.66% and 9.96%; these endpoints are not whole-model confidence limits."
-(Page 21, Lines 436–438)
+(Page 23, Lines 498–500)
 
 Section 4.5 states the remaining limitations:
 
 "The selected allocation is retained as transparent early demand screening, not validated municipal or building-level damage prediction. Report-share disagreement remains substantial; the closer descriptive agreement of shaking alternatives does not establish independent validity or justify post hoc selection. Nearest-station categories omit local site effects, source vulnerability curves are transferred beyond their original setting, and full-collapse shapes are used only as hypothetical functional-loss weights."
-(Page 25, Lines 523–529)
+(Pages 31–32, Lines 681–687)
 
 The revised figure notes explain the interpretation of the updated outputs. Figure 5 states:
 
 "Panels b and c use the household/20-km/0.5 primary and bounded general-household older-population allocation; panel a is contextual evidence, not independent validation."
-(Page 32, Lines 595–596)
+(Page 39, Lines 770–771)
 
 Figure 6 states:
 
 "Panel b maps the pointwise high 30-day no-placement older-person-day planning bound, derived from pointwise maxima across the 27 distance/proxy/half-collapse scenarios and not representing a jointly realized aggregate scenario."
-(Page 33, Lines 600–602)
+(Page 40, Lines 775–777)
 
 Figure 7 states:
 
 "All bundles use the same selected primary population; daily energy assumes constant scenario power over the specified operating hours, not measured consumption or a verified supply shortfall."
-(Page 34, Lines 609–611)
+(Page 41, Lines 784–786)
 
 Figure 8 states:
 
 "Panel c maps the relative increase in 30-day mortality burden and reports the prefecture-weighted central contrast and source-effect endpoint range, which excludes structural, engineering, baseline and transfer uncertainty."
-(Page 35, Lines 616–618)
+(Page 42, Lines 791–793)
 
 ## Comment 6
 M4 | Transparency of parameters and sensitivity analysis
@@ -608,17 +618,17 @@ The differing range widths reflect these different bases: load-density endpoints
 Section 2.2 corrects the description of the fixed area:
 
 "Low, Central, and High engineering bundles hold shelter area per person fixed and vary cooling load, system efficiency, peak diversity, and operating duration."
-(Page 7, Lines 122–123)
+(Page 7, Lines 136–137)
 
 Section 2.4 specifies the structural scenarios:
 
 "Housing-loss scenarios cross general households, mapped-building count and mapped footprint area with distance-decay scales of 10, 20 and 40 km and half-collapse weights of 0, 0.5 and 1, producing 27 allocations. The proxies are the census general-household count, mapped-building polygon count and summed mapped-building footprint area within each disclosure group. Building proxies are weighting variables, not counts of residences."
-(Page 9, Lines 163–168)
+(Page 9, Lines 177–182)
 
 Section 2.6 explains the parameter table and assumptions:
 
 "Table S1 reports all parameter values, units and sources. Area remains fixed at 3.5 m²/person as a minimum living-space proxy, not an elderly-specific cooled-floor-area standard. The load-density endpoints are insulation-dependent benchmarks from one gymnasium case, and 134 W/m² is their arithmetic midpoint. That case assumes 0.15 persons/m², whereas the adopted area implies approximately 0.286 persons/m²; the case also contains inconsistent gymnasium/office labeling. These differences limit transfer to emergency shelters. COP, diversity and operating hours are study-defined scenarios rather than government-prescribed values. The narrow load-density range reflects the two case benchmarks, while the broader efficiency and duration ranges explore equipment and operating choices; their widths are not comparable measures of uncertainty. Area is not varied in these bundles because a larger cooled-space requirement is not established for the target facilities. At fixed load density and other inputs, thermal load, electric demand and daily energy scale directly with area, so site-specific area can be substituted without treating this algebraic relationship as a validated facility design. Daily energy assumes constant scenario electric demand over the stated operating hours, not a measured load profile."
-(Page 13, Lines 255–270)
+(Pages 13–14, Lines 273–288)
 
 ## Comment 7
 m1 – The 1.03 constant in Eq. 9 is not attributed in the text, although it corresponds to the odds ratio reported by Katz et al.
@@ -629,7 +639,7 @@ m1 – The 1.03 constant in Eq. 9 is not attributed in the text, although it cor
 Thank you for this comment. Section 2.7 now explicitly identifies 1.03 as the heat-associated mortality odds ratio among air-conditioned nursing homes in Katz et al. (2026), immediately following the citation to that study. The text distinguishes this multiplier from the cooling-loss effect and reports its source confidence interval:
 
 "The effective-cooling multiplier of 1.03 is the heat-associated mortality odds ratio among air-conditioned nursing homes in the same study (95% confidence interval, 0.98–1.07), not an estimated cooling-loss effect."
-(Page 14, Lines 293–296)
+(Page 15, Lines 305–308)
 
 ## Comment 8
 m2 – The spatial calibration relies on relatively limited instrumental coverage, subsequently interpolated. It is suggested that
@@ -641,13 +651,13 @@ error alone. (Sec. 2.5; Sec. 3.2)
 Thank you for this comment. Sections 2.5, 3.2 and 4.5 now distinguish geographic support from predictor-range extrapolation, report a neighboring-station sensitivity test, and explain why expanded coverage does not by itself validate peripheral estimates. The original calibration remains the main specification because the extension does not uniformly improve prediction error. The revised text states:
 
 "To assess peripheral representativeness, we quantify displayed pixels outside the station convex hull and outside the station-sampled land-surface-temperature range. A sensitivity test adds eligible neighboring stations within 30 and 50 km of the prefectural boundary while retaining the original daytime and nighttime model specifications and MODIS quality rules. New stations require complete temperature pairs for the 150 matching-period days in 2021–2025 and an eligible MODIS pixel within 5 km. Prediction errors are evaluated by holding out each original Kumamoto station in turn; these temperature-calibration tests do not alter the separate high-heat-day interpolation."
-(Page 10, Lines 183–191)
+(Page 12, Lines 231–239)
 
 "Nevertheless, 33.4% of displayed pixels lie outside the station convex hull, and 61.1% of daytime and 31.3% of nighttime pixels lie outside the station-sampled land-surface-temperature range. Adding 23 eligible stations within 30 km changes daytime/nighttime RMSE to 0.763/0.571 °C; adding 44 within 50 km changes it to 0.716/0.563 °C. The 50 km extension removes geographic hull extrapolation for displayed pixels but does not uniformly improve prediction error. We therefore retain the original calibration as the main specification and report the extension as a sensitivity test."
-(Pages 15–16, Lines 314–320)
+(Page 21, Lines 435–441)
 
 "Improved station coverage does not by itself establish accuracy at unobserved peripheral locations, and geographic coverage does not eliminate extrapolation beyond sampled land-surface temperatures. Cross-validation scores are conditional on model selection using the same station sample, rather than independent validation, and the uncertainty surface is not a calibrated prediction interval."
-(Pages 21–22, Lines 449–453)
+(Pages 32–33, Lines 704–709)
 
 ## Comment 9
 m3 – The mortality baseline used in Eq. 8 derives from the all-cause mortality of the population aged ≥65, aggregated over
@@ -663,17 +673,17 @@ We retain this common reference for an illustrative fixed-weather comparison, no
 Section 2.2 specifies the source and denominator:
 
 "The final stages combine municipality mortality references constructed from official death counts, transparent engineering bundles, and a transferred cooling-effect estimate. The mortality baseline pools age-65-or-older all-cause deaths over 2020–2024 and divides them by the fixed 2020 census population aged 65 or older multiplied by five years. This denominator approximates person-time rather than tracking annual population change."
-(Page 7, Lines 119–124)
+(Page 7, Lines 131–136)
 
 Section 2.7 clarifies the daily conversion:
 
 "Dividing the annual rate by 100,000 and 365.25 supplies a small-probability approximation to an average daily risk, not an observed summer or non-heat-day probability. We use it as a common reference for the fixed-weather cooling contrast; assigning it to ordinary days is a modeling assumption because the annual rate already averages across seasons and weather conditions."
-(Page 14, Lines 283–287)
+(Pages 14–15, Lines 295–299)
 
 Section 4.5 states the remaining limitations:
 
 "The annual mortality reference supports an illustrative common-baseline comparison but does not establish the absolute mortality level for the summer window. The source death counts concern Japanese nationals, whereas the census denominator includes all residents, and both include institutional residents rather than isolating the target general-household population. Holding the 2020 population fixed also omits subsequent demographic change. These mismatches can affect absolute incremental risks and expected-death magnitudes; sharing a baseline across cooling states does not remove them or guarantee unchanged spatial rankings. A matched seasonal baseline by age, municipality and residence setting would be needed to calibrate those quantities more directly; no empirical seasonal correction is applied here."
-(Page 27, Lines 574–583)
+(Page 32, Lines 692–701)
 
 ## Comment 10
 m4 – The analysis is constrained to the official snapshot available as of August 1, 2026. Given the progressively updated
@@ -685,19 +695,19 @@ clarify whether their use could substantially change the results or the territor
 Thank you for this comment. Sections 2.1–2.2, 2.8, 3.3 and 4.5 now identify the later FDMA report and distinguish the early planning snapshot from a retrospective total-only sensitivity test. The later counts substantially increase the functional-loss constraint, while unchanged rankings under fixed spatial weights are a mechanical result rather than validation of territorial priorities. The revised text states:
 
 "We retain this early housing-damage cutoff for the main analysis and use later reported totals only in a separate retrospective sensitivity test; they are not treated as information available at the early cutoff."
-(Page 5, Lines 79–82)
+(Page 5, Lines 93–96)
 
 "The August 1 prefecture snapshot reports 181 fully collapsed and 245 half-collapsed residential buildings, which constrain rather than locate the modeled loss. FDMA Report 65, dated September 24, 2026, at 17:00 JST, reports 2,270 fully collapsed and 6,357 half-collapsed residential buildings in Kumamoto Prefecture (https://www.fdma.go.jp/disaster/info/items/20260728kumamotojishin65.pdf). Both snapshots count buildings rather than households or people, and the later figures remain provisional."
-(Page 6, Lines 101–108)
+(Pages 6–7, Lines 115–122)
 
 "A separate retrospective snapshot test substitutes the September 24 full- and half-collapse totals while retaining the main spatial weights, population inputs, half-collapse weight of 0.5, and downstream assumptions. It tests sensitivity to the reported prefecture total, not changes in the observed geography of damage."
-(Page 14, Lines 286–289)
+(Page 19, Lines 391–395)
 
 "In the total-only retrospective test, the later snapshot raises this constraint to 5,448.5, or 17.95 times the early value. Municipal rankings remain unchanged under fixed spatial weights and nonbinding household caps; this is a consequence of the test design, not evidence that actual territorial damage priorities remain unchanged."
-(Pages 16–17, Lines 337–340)
+(Page 21, Lines 447–450)
 
 "The early damage snapshot also limits the magnitude of estimated need. Later reported totals can reflect delayed assessment and classification changes as well as additional damage, so their increase cannot be interpreted solely as new physical losses after August 1. Operational priorities require updated local damage and displacement evidence rather than proportional rescaling of prefecture totals alone."
-(Page 22, Lines 454–459)
+(Page 31, Lines 673–678)
 
 ## Comment 11
 m5 – The Title and Abstract characterize the method as a spatial planning framework, whereas the outputs actually
@@ -718,13 +728,13 @@ Thank you for identifying this inconsistency. The revised Title, Abstract, Intro
 (Page 1, Lines 8–12)
 
 "The contribution is an auditable early-response framework that supports spatial screening and demand estimation without presenting scenarios as observed damage, displacement, shortages, or deaths."
-(Page 4, Lines 71–73)
+(Page 5, Lines 82–84)
 
 "The framework supports spatial screening and demand estimation, not optimized resource allocation or deployment sequencing."
-(Page 27, Lines 580–582)
+(Page 29, Lines 635–636)
 
 "A transparent spatial chain can convert incomplete early earthquake evidence into screening indicators for older-person cooling protection, electricity demand, and health-risk assessment."
-(Page 31, Lines 676–678)
+(Page 34, Lines 730–732)
 
 ## Comment 12
 o1 – Tables 1-3 (three panels each, high decimal precision) may be cumbersome for operational users. It is suggested that
@@ -732,23 +742,23 @@ concise versions be produced in the main text, with complete versions provided a
 
 
 **Response:**
-Thank you for this suggestion. Tables 1–3 now present concise, continuous tables containing ten municipalities in the existing order, while supplementary Tables S2–S4 provide the complete results for all 45 municipalities. The captions identify the full versions and clarify that the excerpts do not constitute validated intervention rankings. The tables retain the reduced display precision already used in the revised manuscript; small expected-death estimates retain sufficient decimal places to avoid rounding nonzero estimates to zero.
+Thank you for this suggestion. Tables 1–3 now present concise, continuous tables containing ten municipalities in the existing order, while supplementary Tables S2–S4 provide the complete results for all 45 municipalities. The table notes identify the corresponding complete supplementary tables. The tables retain the reduced display precision already used in the revised manuscript; small expected-death estimates retain sufficient decimal places to avoid rounding nonzero estimates to zero.
 
-"Table 1. Municipality Housing Loss and Cooling Need. Ten municipalities are shown in the existing table order; Table S2 provides all 45 municipalities. This excerpt is not a validated intervention ranking."
-(Page 40, Lines 738–739)
+"Note: Ten municipalities are shown in the existing table order; Table S2 provides all 45 municipalities."
+(Page 43, Table 1, table note)
 
-"Table 2. Municipality Cooling Electricity Planning Summary. Ten municipalities are shown in the existing table order; Table S3 provides all 45 municipalities. This excerpt is not a validated intervention ranking."
-(Page 41, Lines 740–741)
+"Note: Ten municipalities are shown in the existing table order; Table S3 provides all 45 municipalities."
+(Page 44, Table 2, table note)
 
-"Table 3. Municipality Cooling-Loss Health-Risk Summary. Ten municipalities are shown in the existing table order; Table S4 provides all 45 municipalities. This excerpt is not a validated intervention ranking."
-(Page 42, Lines 742–743)
+"Note: Ten municipalities are shown in the existing table order; Table S4 provides all 45 municipalities."
+(Page 45, Table 3, table note)
 
 The shortened housing-loss table ends with its tenth municipality:
 
 "Kamiamakusa City"
-(Page 40, Table 1, final municipality row)
+(Page 43, Table 1, final municipality row)
 
 The shortened health-risk table likewise ends with its tenth municipality:
 
 "Nankan Town"
-(Page 42, Table 3, final municipality row)
+(Page 45, Table 3, final municipality row)
