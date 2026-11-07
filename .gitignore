@@ -23,4 +23,11 @@ Rev/docs/*
 !Rev/revision/
 Rev/revision/*
 !Rev/revision/response-draft.md
+Rev2/*
+!Rev2/docs/
+Rev2/docs/*
+!Rev2/docs/revisionchanges.md
+!Rev2/revision/
+Rev2/revision/*
+!Rev2/revision/response-draft.md
 # END manuscript revision workspace
