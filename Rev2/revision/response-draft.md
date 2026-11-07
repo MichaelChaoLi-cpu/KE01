@@ -65,10 +65,10 @@ Review Report for Sustainable Cities and Society Manuscript Number: SCSI-D-26-09
 
 
 **Response:**
-[Response to be completed after the corresponding revision is verified.]
+Thank you for this clarification. Section 3.3 now makes explicit that agreement between the demographic allocations is conditional on the shared housing-loss rule and does not test age-specific housing-damage probabilities. The revised passage states:
 
-"[Exact revised manuscript text]"
-(Page XX, Lines XX–XX)
+"Residual-capacity demographic weighting yields 202.185 exposed older residents, with a maximum rank shift of one. Agreement between the demographic allocations is conditional on the same housing-loss rule and does not test whether older households have different probabilities of housing damage."
+(Page 22, Lines 471–474)
 
 ## Comment 3
 (3) The additional mortality-risk sensitivity analyses and discussion of parameter transferability are appreciated. Nevertheless, the central 5.31% mortality-burden increase remains dependent on healtheffect parameters transferred from Ontario nursing homes. The authors should ensure that this result is consistently presented as an illustrative scenario rather than a locally validated health effect. The hypothetical no-increment scenario should not be interpreted as independent evidence of robustness.

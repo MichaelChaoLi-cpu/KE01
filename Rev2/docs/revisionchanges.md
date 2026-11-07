@@ -117,3 +117,41 @@ In the total-only retrospective test, the later snapshot raises this constraint 
      - Before: ""
      - After: " With unchanged spatial weights, bounded demographic allocation and Central engineering parameters, the September 24, 2026 snapshot yields a cooling-assessment population of 3,627.102 residents aged 65 or older, requiring 510.333 kW of peak cooling power and 9,185.999 kWh of electricity per day."
 
+## reviewer-1/comment-2
+
+### part-01
+
+- Location: Section 3.3, residual-capacity demographic weighting result
+- Reason: Approved local clarification that demographic agreement does not test age-specific housing-damage probability
+- Kila decisions: KILA-D-20261107-007
+- Mode: `replace`
+- Revises prior parts: none
+- Timestamp: 2026-11-07T03:30:59Z
+- Author: Kila
+- Markup SHA-256 before: `b94e1312141a63c5a256e96a69998a4a673ac34f44762461ff872b0db89fbdb0`
+- Markup SHA-256 after: `b0954510725da1b911bbc22da0ed0f67711dda4e83bfabd715a5f092eb5231c1`
+- Revision IDs: `4`
+- Backup: `Rev2/revision/.kila-backups/KE01.rev2.markup.20261107T123121461021.reviewer-1-comment-2.part-01.docx`
+- Paragraph properties preserved: `true`
+- Run style source SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Formula verification: not applicable
+- Endnote hyperlinks preserved: `true`
+- Endnote hyperlink count: `0`
+- Endnote hyperlink XML SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Endnote relationships SHA-256: `absent`
+- Before:
+
+~~~~text
+Residual-capacity demographic weighting yields 202.185 exposed older residents, with a maximum rank shift of one.
+~~~~
+
+- After:
+
+~~~~text
+Residual-capacity demographic weighting yields 202.185 exposed older residents, with a maximum rank shift of one. Agreement between the demographic allocations is conditional on the same housing-loss rule and does not test whether older households have different probabilities of housing damage.
+~~~~
+
+- Minimal tracked fragments:
+  1. `insert`
+     - Before: ""
+     - After: " Agreement between the demographic allocations is conditional on the same housing-loss rule and does not test whether older households have different probabilities of housing damage."
